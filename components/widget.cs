@@ -15,6 +15,7 @@ namespace SOFOK_System.components
     {
         private categories _category;
         private double _cost;
+        private int _id;
 
         public event EventHandler OnSelect = null;
         public widget()
@@ -32,10 +33,8 @@ namespace SOFOK_System.components
         public double Cost { get => _cost; set { _cost = value; lbl_Price.Text = _cost.ToString("C2"); } }
         public String Store { get => lbl_store.Text; set => lbl_store.Text = value; }
         public Image Icon { get => img.Image; set => img.Image = value; }
+        public int ID { get =>_id; set{ _cost = value; lbl_ID.Text = _cost.ToString(); } }
 
-        private void widget_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

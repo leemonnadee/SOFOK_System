@@ -138,8 +138,35 @@
     <Reference Include="Bunifu.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.Utils.1.0.6\lib\net\Bunifu.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\4thyr 1st sem\COGNATE\BARANGAY INFORMATION SYSTEM(final)\BARANGAY INFORMATION SYSTEM(final)\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\important files\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet.Async, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Renci.SshNet.Async.1.4.0\lib\net40\Renci.SshNet.Async.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -149,50 +176,158 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="revenue.cs" />
+    <Compile Include="sofok_administrator\adminmerchantsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sofok_administrator\adminmerchantsales.Designer.cs">
+      <DependentUpon>adminmerchantsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sofok_administrator\adminregistermerchant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sofok_administrator\adminregistermerchant.Designer.cs">
+      <DependentUpon>adminregistermerchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantsales.Designer.cs">
+      <DependentUpon>merchantsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sofok_administrator\adminmainfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sofok_administrator\adminmainfrm.Designer.cs">
+      <DependentUpon>adminmainfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sofok_administrator\adminprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sofok_administrator\adminprofile.Designer.cs">
+      <DependentUpon>adminprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\orderwidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\orderwidget.Designer.cs">
+      <DependentUpon>orderwidget.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\widget.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\widget.Designer.cs">
       <DependentUpon>widget.cs</DependentUpon>
     </Compile>
-    <Compile Include="choosepayment.cs">
+    <Compile Include="Sofok_customer\choosepayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="choosepayment.Designer.cs">
+    <Compile Include="Sofok_customer\choosepayment.Designer.cs">
       <DependentUpon>choosepayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Sofok_customer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Sofok_customer\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mainpage.cs">
+    <Compile Include="Sofok_Merchants\loginform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mainpage.Designer.cs">
+    <Compile Include="Sofok_Merchants\loginform.Designer.cs">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_customer\Mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_customer\Mainpage.Designer.cs">
       <DependentUpon>Mainpage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="seat.cs">
+    <Compile Include="Sofok_customer\seat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seat.Designer.cs">
+    <Compile Include="Sofok_customer\seat.Designer.cs">
       <DependentUpon>seat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sofok_Merchants\merchantaccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantaccounts.Designer.cs">
+      <DependentUpon>merchantaccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantmainfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantmainfrm.Designer.cs">
+      <DependentUpon>merchantmainfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantorders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantorders.Designer.cs">
+      <DependentUpon>merchantorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantproducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantproducts.Designer.cs">
+      <DependentUpon>merchantproducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\merchantprofile.Designer.cs">
+      <DependentUpon>merchantprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\registermerchant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\registermerchant.Designer.cs">
+      <DependentUpon>registermerchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testform.Designer.cs">
+      <DependentUpon>testform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sofok_administrator\adminmerchantsales.resx">
+      <DependentUpon>adminmerchantsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sofok_administrator\adminregistermerchant.resx">
+      <DependentUpon>adminregistermerchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\merchantsales.resx">
+      <DependentUpon>merchantsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sofok_administrator\adminmainfrm.resx">
+      <DependentUpon>adminmainfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sofok_administrator\adminprofile.resx">
+      <DependentUpon>adminprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\orderwidget.resx">
+      <DependentUpon>orderwidget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\widget.resx">
       <DependentUpon>widget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="choosepayment.resx">
+    <EmbeddedResource Include="Sofok_customer\choosepayment.resx">
       <DependentUpon>choosepayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Sofok_customer\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mainpage.resx">
+    <EmbeddedResource Include="Sofok_Merchants\loginform.resx">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_customer\Mainpage.resx">
       <DependentUpon>Mainpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -206,10 +341,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="seat.resx">
+    <EmbeddedResource Include="Sofok_customer\seat.resx">
       <DependentUpon>seat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\merchantaccounts.resx">
+      <DependentUpon>merchantaccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\merchantmainfrm.resx">
+      <DependentUpon>merchantmainfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\merchantorders.resx">
+      <DependentUpon>merchantorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\merchantproducts.resx">
+      <DependentUpon>merchantproducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\merchantprofile.resx">
+      <DependentUpon>merchantprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\registermerchant.resx">
+      <DependentUpon>registermerchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testform.resx">
+      <DependentUpon>testform.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\revenue.datasource" />
+    <None Include="Sofok_customer\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -263,6 +421,147 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Close_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\sofok logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\sofok logo gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\login_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\stall_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\pencil_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\tableware_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\food_bar_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\id number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\stall orange_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\peso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\search_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\user_shield_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\take_away_food_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\order orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\food orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\user orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\sales orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\birthday_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\wedding_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\gender_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\call_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\envelope_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\iphone_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\home_address_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\user_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\phone_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\lock_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Logout_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Logout_26px ORANGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\dinner_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\dashboard_layout_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\soda_bottle_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\hamburger_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\total_sales_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\total_sales_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\sales_performance_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\purchase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\profit_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\category.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
