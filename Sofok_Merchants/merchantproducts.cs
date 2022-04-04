@@ -52,7 +52,7 @@ namespace SOFOK_System
                     //cm = new MySqlCommand("insert into tbl_products(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`,product_icon)value('','" + productnametxt.Text + "','" + prodcategtxt.Text + "','" + prodpricetxt.Text + "','" + 1 + "',@product_icon)");
                     mycommand.Parameters.AddWithValue("@product_icon", arrImage);
                     myreader1 = mycommand.ExecuteReader();
-                    MessageBox.Show("Succesfully Added");
+                    MessageBox.Show("Succesfully Added!");
                     productflowlayout.Refresh();
 
 
@@ -126,7 +126,7 @@ namespace SOFOK_System
             productflowlayout.Controls.Add(w);
 
 
-
+            
 
         }
 
