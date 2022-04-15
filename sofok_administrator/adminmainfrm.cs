@@ -56,5 +56,16 @@ namespace SOFOK_System
             container.Controls.Add(register);
             register.Show();
         }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you wish to logout?", "logout", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                loginform lf = new loginform();
+                lf.Show();
+                this.Hide();
+            }
+        }
     }
 }

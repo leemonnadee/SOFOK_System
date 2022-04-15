@@ -34,13 +34,22 @@ namespace SOFOK_System
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-          
+           if (combo_log.Text.Equals("Costumer"))
+            {
+                Mainpage MainCostumer = new Mainpage();
+                MainCostumer.Show();
+                this.Hide();
+             
+            }
+            else { 
             loginAuth();
+            }
         }
 
 
 
         public void getMerchantID() {
+        
             string query2 = "SELECT tbl_merchant.merchant_id FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + passwordtxt.Text + "'; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
@@ -76,9 +85,14 @@ namespace SOFOK_System
 
                 try
                 {
+                    var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+                    var str = passwordtxt.Text;
+                    var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
 
                     //connection query you can try on  workbench first 
-                    string query = "Select * from tbl_account where username='" + usernametxt.Text + "' and password='" + passwordtxt.Text + "'and log_as='" + combo_log.Text + "'";
+                    string query = "Select * from tbl_account where username='" + usernametxt.Text + "' and password='" + encryptPassword + "'and log_as='" + combo_log.Text + "'";
                  
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
@@ -101,22 +115,23 @@ namespace SOFOK_System
                         if (myreader1.Read())
                         {
 
-                            if (combo_log.Text.Equals("Administrator"))
-                            {
-                                this.Hide();
-                                adminmainfrm af = new adminmainfrm();
-                                af.Show();
-                                this.Hide();
-                            }
-                            else
-                            {
-                                MessageBox.Show("success");
-                                merchantmainfrm mf = new merchantmainfrm();
-                                mf.Show();
-                                this.Hide();
-                             
+                        if (combo_log.Text.Equals("Administrator"))
+                        {
+                            this.Hide();
+                            adminmainfrm af = new adminmainfrm();
+                            af.Show();
+                            this.Hide();
+                        }
+                      
+                        else
+                        {
+                        
+                            merchantmainfrm mf = new merchantmainfrm();
+                            mf.Show();
+                            this.Hide();
 
-                            }
+
+                        }
 
                         getMerchantID();
 

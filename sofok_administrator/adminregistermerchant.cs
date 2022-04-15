@@ -63,7 +63,12 @@ namespace SOFOK_System
         public void create_acc() {
             try
             {
-                string query = "INSERT INTO `tbl_account`(`acc_id`, `username`, `password`, `log_as`) VALUES ('','" + txt_email.Text + "','" + txt_password.Text + "','Merchant')";
+                var key = "b14ca5898a4e4133bbce2ea2315a1916";
+          
+                var str = txt_password.Text;
+                var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+        
+                string query = "INSERT INTO `tbl_account`(`acc_id`, `username`, `password`, `log_as`) VALUES ('','" + txt_email.Text + "','" + encryptPassword + "','Merchant')";
                 string id = "SELECT acc_id FROM `tbl_account` ORDER BY acc_id DESC LIMIT 1";
 
                 MySqlConnection conn = new MySqlConnection(mycon);
@@ -112,9 +117,8 @@ namespace SOFOK_System
 
 
         }
+
       
-
-
         private void save_btn_Click(object sender, EventArgs e)
         {
             create_acc();

@@ -180,6 +180,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncryptDecryptPassword.cs" />
     <Compile Include="revenue.cs" />
     <Compile Include="sofok_administrator\adminmerchantsales.cs">
       <SubType>Form</SubType>
@@ -223,16 +224,16 @@
     <Compile Include="components\widget.Designer.cs">
       <DependentUpon>widget.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sofok_customer\choosepayment.cs">
+    <Compile Include="Sofok_costumer\choosepayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sofok_customer\choosepayment.Designer.cs">
+    <Compile Include="Sofok_costumer\choosepayment.Designer.cs">
       <DependentUpon>choosepayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sofok_customer\frmMain.cs">
+    <Compile Include="Sofok_costumer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sofok_customer\frmMain.Designer.cs">
+    <Compile Include="Sofok_costumer\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Sofok_Merchants\loginform.cs">
@@ -241,18 +242,18 @@
     <Compile Include="Sofok_Merchants\loginform.Designer.cs">
       <DependentUpon>loginform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sofok_customer\Mainpage.cs">
+    <Compile Include="Sofok_costumer\Mainpage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sofok_customer\Mainpage.Designer.cs">
+    <Compile Include="Sofok_costumer\Mainpage.Designer.cs">
       <DependentUpon>Mainpage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sofok_customer\seat.cs">
+    <Compile Include="Sofok_costumer\seat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sofok_customer\seat.Designer.cs">
+    <Compile Include="Sofok_costumer\seat.Designer.cs">
       <DependentUpon>seat.cs</DependentUpon>
     </Compile>
     <Compile Include="Sofok_Merchants\merchantaccounts.cs">
@@ -318,16 +319,16 @@
     <EmbeddedResource Include="components\widget.resx">
       <DependentUpon>widget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sofok_customer\choosepayment.resx">
+    <EmbeddedResource Include="Sofok_costumer\choosepayment.resx">
       <DependentUpon>choosepayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sofok_customer\frmMain.resx">
+    <EmbeddedResource Include="Sofok_costumer\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sofok_customer\Mainpage.resx">
+    <EmbeddedResource Include="Sofok_costumer\Mainpage.resx">
       <DependentUpon>Mainpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -341,7 +342,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sofok_customer\seat.resx">
+    <EmbeddedResource Include="Sofok_costumer\seat.resx">
       <DependentUpon>seat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\merchantaccounts.resx">
@@ -367,7 +368,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\revenue.datasource" />
-    <None Include="Sofok_customer\packages.config" />
+    <None Include="Sofok_costumer\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

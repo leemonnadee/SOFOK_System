@@ -31,9 +31,10 @@ namespace SOFOK_System
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminmainfrm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.container = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -45,9 +46,11 @@ namespace SOFOK_System
             this.adminprofilebtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.merchantsalesbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuAppBar1 = new Bunifu.Utils.BunifuAppBar();
+            this.logoutbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
+            this.bunifuPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // docker
@@ -249,6 +252,7 @@ namespace SOFOK_System
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 10;
             this.bunifuPanel3.BorderThickness = 0;
+            this.bunifuPanel3.Controls.Add(this.logoutbtn);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bunifuPanel3.Location = new System.Drawing.Point(0, 620);
             this.bunifuPanel3.Name = "bunifuPanel3";
@@ -292,11 +296,11 @@ namespace SOFOK_System
             this.merchantaccountsbtn.ColorContrastOnClick = 45;
             this.merchantaccountsbtn.ColorContrastOnHover = 45;
             this.merchantaccountsbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.merchantaccountsbtn.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.merchantaccountsbtn.CustomizableEdges = borderEdges3;
             this.merchantaccountsbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.merchantaccountsbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.merchantaccountsbtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -385,11 +389,11 @@ namespace SOFOK_System
             this.adminprofilebtn.ColorContrastOnClick = 45;
             this.adminprofilebtn.ColorContrastOnHover = 45;
             this.adminprofilebtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.adminprofilebtn.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.adminprofilebtn.CustomizableEdges = borderEdges4;
             this.adminprofilebtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.adminprofilebtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.adminprofilebtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -478,11 +482,11 @@ namespace SOFOK_System
             this.merchantsalesbtn.ColorContrastOnClick = 45;
             this.merchantsalesbtn.ColorContrastOnHover = 45;
             this.merchantsalesbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.merchantsalesbtn.CustomizableEdges = borderEdges4;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.merchantsalesbtn.CustomizableEdges = borderEdges5;
             this.merchantsalesbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.merchantsalesbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.merchantsalesbtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -568,6 +572,99 @@ namespace SOFOK_System
             this.bunifuAppBar1.Title = "A D M I N";
             this.bunifuAppBar1.TitleMargin = new System.Windows.Forms.Padding(47, 12, 0, 0);
             // 
+            // logoutbtn
+            // 
+            this.logoutbtn.AllowAnimations = true;
+            this.logoutbtn.AllowMouseEffects = true;
+            this.logoutbtn.AllowToggling = false;
+            this.logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.logoutbtn.AnimationSpeed = 200;
+            this.logoutbtn.AutoGenerateColors = false;
+            this.logoutbtn.AutoRoundBorders = false;
+            this.logoutbtn.AutoSizeLeftIcon = true;
+            this.logoutbtn.AutoSizeRightIcon = true;
+            this.logoutbtn.BackColor = System.Drawing.Color.Transparent;
+            this.logoutbtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.logoutbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoutbtn.BackgroundImage")));
+            this.logoutbtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.logoutbtn.ButtonText = "LOGOUT";
+            this.logoutbtn.ButtonTextMarginLeft = 0;
+            this.logoutbtn.ColorContrastOnClick = 45;
+            this.logoutbtn.ColorContrastOnHover = 45;
+            this.logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.logoutbtn.CustomizableEdges = borderEdges2;
+            this.logoutbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.logoutbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.logoutbtn.DisabledFillColor = System.Drawing.Color.Empty;
+            this.logoutbtn.DisabledForecolor = System.Drawing.Color.Empty;
+            this.logoutbtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.logoutbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbtn.ForeColor = System.Drawing.Color.White;
+            this.logoutbtn.IconLeft = global::SOFOK_System.Properties.Resources.Logout_26px;
+            this.logoutbtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutbtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.logoutbtn.IconLeftPadding = new System.Windows.Forms.Padding(70, 3, 3, 3);
+            this.logoutbtn.IconMarginLeft = 11;
+            this.logoutbtn.IconPadding = 10;
+            this.logoutbtn.IconRight = null;
+            this.logoutbtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.logoutbtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.logoutbtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.logoutbtn.IconSize = 25;
+            this.logoutbtn.IdleBorderColor = System.Drawing.Color.Empty;
+            this.logoutbtn.IdleBorderRadius = 0;
+            this.logoutbtn.IdleBorderThickness = 0;
+            this.logoutbtn.IdleFillColor = System.Drawing.Color.Empty;
+            this.logoutbtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.Logout_26px;
+            this.logoutbtn.IdleIconRightImage = null;
+            this.logoutbtn.IndicateFocus = false;
+            this.logoutbtn.Location = new System.Drawing.Point(0, 72);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.logoutbtn.OnDisabledState.BorderRadius = 1;
+            this.logoutbtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.logoutbtn.OnDisabledState.BorderThickness = 1;
+            this.logoutbtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.logoutbtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.logoutbtn.OnDisabledState.IconLeftImage = null;
+            this.logoutbtn.OnDisabledState.IconRightImage = null;
+            this.logoutbtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
+            this.logoutbtn.onHoverState.BorderRadius = 1;
+            this.logoutbtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.logoutbtn.onHoverState.BorderThickness = 1;
+            this.logoutbtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
+            this.logoutbtn.onHoverState.ForeColor = System.Drawing.Color.DarkOrange;
+            this.logoutbtn.onHoverState.IconLeftImage = global::SOFOK_System.Properties.Resources.Logout_26px_ORANGE;
+            this.logoutbtn.onHoverState.IconRightImage = null;
+            this.logoutbtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
+            this.logoutbtn.OnIdleState.BorderRadius = 1;
+            this.logoutbtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.logoutbtn.OnIdleState.BorderThickness = 1;
+            this.logoutbtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
+            this.logoutbtn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.logoutbtn.OnIdleState.IconLeftImage = global::SOFOK_System.Properties.Resources.Logout_26px;
+            this.logoutbtn.OnIdleState.IconRightImage = null;
+            this.logoutbtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
+            this.logoutbtn.OnPressedState.BorderRadius = 1;
+            this.logoutbtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.logoutbtn.OnPressedState.BorderThickness = 1;
+            this.logoutbtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
+            this.logoutbtn.OnPressedState.ForeColor = System.Drawing.Color.DarkOrange;
+            this.logoutbtn.OnPressedState.IconLeftImage = null;
+            this.logoutbtn.OnPressedState.IconRightImage = null;
+            this.logoutbtn.Size = new System.Drawing.Size(262, 36);
+            this.logoutbtn.TabIndex = 9;
+            this.logoutbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoutbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.logoutbtn.TextMarginLeft = 0;
+            this.logoutbtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.logoutbtn.UseDefaultRadiusAndThickness = true;
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
+            // 
             // adminmainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +681,7 @@ namespace SOFOK_System
             this.container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -601,5 +699,6 @@ namespace SOFOK_System
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton registermerchantbtn;
         private Bunifu.UI.WinForms.BunifuPanel container;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton logoutbtn;
     }
 }
