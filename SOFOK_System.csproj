@@ -563,5 +563,8 @@
   <ItemGroup>
     <None Include="src\category.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sofok_administrator\test\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
