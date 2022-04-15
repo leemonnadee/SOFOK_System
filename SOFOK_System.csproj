@@ -256,12 +256,6 @@
     <Compile Include="Sofok_costumer\seat.Designer.cs">
       <DependentUpon>seat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sofok_Merchants\merchantaccounts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sofok_Merchants\merchantaccounts.Designer.cs">
-      <DependentUpon>merchantaccounts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sofok_Merchants\merchantmainfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,9 +338,6 @@
     </Compile>
     <EmbeddedResource Include="Sofok_costumer\seat.resx">
       <DependentUpon>seat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sofok_Merchants\merchantaccounts.resx">
-      <DependentUpon>merchantaccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\merchantmainfrm.resx">
       <DependentUpon>merchantmainfrm.cs</DependentUpon>

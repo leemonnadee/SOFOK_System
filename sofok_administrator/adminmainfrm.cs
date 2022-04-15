@@ -37,15 +37,7 @@ namespace SOFOK_System
             adminprofile.Show();
         }
 
-        private void merchantaccountsbtn_Click(object sender, EventArgs e)
-        {
-            //open form in panel
-            //container.Controls.Clear();
-            merchantaccounts merchantaccounts = new merchantaccounts();
-            merchantaccounts.TopLevel = false;
-            container.Controls.Add(merchantaccounts);
-            merchantaccounts.Show();
-        }
+  
 
         private void registermerchantbtn_Click(object sender, EventArgs e)
         {
