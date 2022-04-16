@@ -17,6 +17,7 @@ namespace SOFOK_System
         
         //set connection
         string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+
         public adminprofile()
         {
            
@@ -61,7 +62,7 @@ namespace SOFOK_System
 
 
 
-        //clear inputs
+        //clear inputs function
         public void clear() {
             txt_email.Text = ("");
             txt_password.Text = ("");
@@ -73,7 +74,7 @@ namespace SOFOK_System
 
         }
 
-        //create admin acc
+        //create admin acc function
         public void create_acc()
         {
             if (txt_email.Text.Equals("") ||
@@ -176,7 +177,7 @@ namespace SOFOK_System
 
 
 
-
+        // date format to wed,date-month-year
         public void dateformat()
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
@@ -185,6 +186,7 @@ namespace SOFOK_System
            
 
         }
+        //date format to 21-12-30
         public void dateformatreturn()
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
@@ -197,7 +199,7 @@ namespace SOFOK_System
 
 
 
-
+        //show data in tables
         public void showalldata()
         {
 
@@ -228,7 +230,7 @@ namespace SOFOK_System
 
 
 
-
+        //delete function
         public void deleteAccount()
         {
 
@@ -264,6 +266,53 @@ namespace SOFOK_System
         }
 
 
+        //update function
+        public void update_accounts()
+        {
+
+            //encryption key
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+
+            // set encryption key on password field
+            var str = txt_password.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+
+            try
+            {
+                var gender = combo_log.SelectedItem.ToString();
+                dateformatreturn();
+                string query = "UPDATE `tbl_account` SET `username`='" + txt_email.Text + "',`password`='" + encryptPassword + "' WHERE acc_id='" + lbl_id.Text + "'";
+                string query2 = "UPDATE `tbl_admin` SET `name`='"+txt_name.Text+"',`birthdate`='"+dateTimePicker1.Text+"',`address`='"+txt_address.Text+"',`gender`='"+gender+"',`contact`='"+txt_mobile.Text+"' WHERE `admin_id`='"+txt_id.Text+"'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+                MySqlCommand mycommand2 = new MySqlCommand(query2, conn);
+
+
+                MySqlDataReader myreader1;
+                MySqlDataReader myreader2;
+
+                conn.Open();
+                myreader2 = mycommand2.ExecuteReader();
+                conn.Close();
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+
+                conn.Close();
+                clear();
+                showalldata();
+                dateformat();
+                MessageBox.Show("Update successfully", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Email is already taken", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
 
 
 
@@ -297,15 +346,35 @@ namespace SOFOK_System
 
 
 
- 
-        
+
+
+
 
 
 
         //update button
         private void btn_update_Click(object sender, EventArgs e)
         {
+            if (txt_email.Text.Equals("") ||
+             txt_address.Text.Equals("") ||
+             txt_mobile.Text.Equals("") ||
+             txt_password.Text.Equals("") ||
+             txt_name.Text.Equals(""))
+            {
 
+
+
+                MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            else
+            {
+                update_accounts();
+                btn_delete.Enabled = false;
+                btn_update.Enabled = false;
+                save_btn.Enabled = true;
+            }
         }
 
 
@@ -313,6 +382,7 @@ namespace SOFOK_System
         private void save_btn_Click(object sender, EventArgs e)
         {
             create_acc();
+        
         }
 
         private void adminprofile_Load(object sender, EventArgs e)
@@ -322,6 +392,9 @@ namespace SOFOK_System
             timer1.Start();
             lbl_id.Visible = false;
             txt_id.Visible = false;
+            btn_delete.Enabled = false;
+            btn_update.Enabled = false;
+            save_btn.Enabled = true;
             dateformat();
             showalldata();
         }
@@ -400,10 +473,7 @@ namespace SOFOK_System
             timer1.Start();
         }
 
-        private void bunifuShadowPanel2_ControlAdded(object sender, ControlEventArgs e)
-        {
-
-        }
+      
     }
     }
 
