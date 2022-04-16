@@ -558,5 +558,8 @@
   <ItemGroup>
     <Folder Include="sofok_administrator\test\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_bg.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

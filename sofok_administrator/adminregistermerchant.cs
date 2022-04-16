@@ -20,8 +20,7 @@ namespace SOFOK_System
             InitializeComponent();
    
         }
-
-
+       
         //show ALl data in table
         public void showalldata()
         {
@@ -259,6 +258,7 @@ namespace SOFOK_System
             if (txt_email.Text.Equals("") ||
                txt_merchant.Text.Equals("") ||
                txt_storename.Text.Equals(""))
+             
             {
                 MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -324,9 +324,10 @@ namespace SOFOK_System
         //update btn
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (txt_email.Text.Equals ("") ||
-          txt_merchant.Text .Equals("") ||
-          txt_storename.Text.Equals(""))
+            if (txt_email.Text.Equals("") ||
+          txt_merchant.Text.Equals("") ||
+          txt_storename.Text.Equals("")||
+             txt_password.Text.Equals(""))
             {
                 MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
