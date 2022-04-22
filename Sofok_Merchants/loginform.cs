@@ -25,6 +25,8 @@ namespace SOFOK_System
         public class UserDisplay
         {
             public static string MerchantID;
+            public static string merchantName;
+
         }
 
             private void btn_exit_Click(object sender, EventArgs e)
@@ -137,9 +139,7 @@ namespace SOFOK_System
 
 
                         }
-                        MessageBox.Show(UserDisplay.MerchantID);
-                    
-
+                        
                         // always close
 
                         conn.Close();
