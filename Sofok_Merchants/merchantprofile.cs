@@ -33,6 +33,9 @@ namespace SOFOK_System
         private void merchantprofile_Load(object sender, EventArgs e)
         {
             merchant_id.Text = loginform.UserDisplay.MerchantID;
+          
         }
+
+     
     }
 }

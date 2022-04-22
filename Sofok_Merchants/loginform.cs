@@ -49,8 +49,12 @@ namespace SOFOK_System
 
 
         public void getMerchantID() {
-        
-            string query2 = "SELECT tbl_merchant.merchant_id FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + passwordtxt.Text + "'; ";
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.merchant_id FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -128,12 +132,13 @@ namespace SOFOK_System
                         
                             merchantmainfrm mf = new merchantmainfrm();
                             mf.Show();
+                            getMerchantID();
                             this.Hide();
 
 
                         }
-
-                        getMerchantID();
+                        MessageBox.Show(UserDisplay.MerchantID);
+                    
 
                         // always close
 
