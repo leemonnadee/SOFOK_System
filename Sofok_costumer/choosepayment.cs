@@ -34,5 +34,10 @@ namespace SOFOK_System
             this.Hide();
             fr.MaximizeBox = true;
         }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

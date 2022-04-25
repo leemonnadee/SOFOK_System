@@ -1,4 +1,5 @@
-﻿using SOFOK_System.components;
+﻿using MySql.Data.MySqlClient;
+using SOFOK_System.components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,9 @@ using static SOFOK_System.components.widget;
 namespace SOFOK_System
 {
     public partial class frmMain : Form
-    {
+    { string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+        //MySqlCommand cm;
+        String prod_name;
         private static bool Enable;
 
         public frmMain()
@@ -38,19 +41,22 @@ namespace SOFOK_System
       
         
         
-        public  void AddItem(String name, double cost, categories category, String icon,String store) {
-         
+        public  void AddItem(String name, double cost, categories category, String icon, String store, int id) {
+
             var w = new widget()
             {
 
                 Title = name,
                 Cost = cost,
                 Category = category,
-               
+
+
                 Icon = Image.FromFile("icons/" + icon),
-                Store = store
+                Store = store,
+                ID = id
             };
             pn1.Controls.Add(w);
+
             w.OnSelect += (ss, ee) =>
             {
                 var wgd = (widget)ss;
@@ -61,12 +67,15 @@ namespace SOFOK_System
                         item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) + 1;
                         item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(wgd.lbl_Price.Text.Replace("₱", ""))).ToString("C2");
                         item.Cells[3].Value = store;
+                        item.Cells[4].Value = id;
                         CalculateTotal();
                         return;
                     }
                     
                 }
-                grid.Rows.Add(new object[] { wgd.lbl_Title.Text, 1, wgd.lbl_Price.Text,store });
+               
+                grid.Rows.Add(new object[] { wgd.lbl_Title.Text, 1, wgd.lbl_Price.Text,store,id });
+                
                 CalculateTotal();
 
 
@@ -96,14 +105,49 @@ namespace SOFOK_System
 
             }
         }
-   
-        private void frmMain_Shown(object sender, EventArgs e)
+        public void displayProductsAll()
         {
-         
-            AddItem("Burger",20, categories.burger, "coke.png", "asdasd 1");
+            try
+            {
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             
+            }
+            string query2 = "SELECT * FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                prod_name = myreaderfetch.GetString("prod_name");
+                String cat = myreaderfetch.GetString("product_category");
+
+                String store_name = myreaderfetch.GetString("merchant_store");
+                double price_prod = myreaderfetch.GetDouble("prod_price");
+                int prod_id = myreaderfetch.GetInt32("prod_id");
+
+
+
+
+
+                AddItem(prod_name, price_prod, categories.burger, "coke.png", store_name, prod_id);
+            }
+
         }
 
+        private void frmMain_Shown(object sender, EventArgs e)
+        {
+
+
+            AddItem("name",32, categories.burger, "coke.png", "store", 21);
+
+        }
         private void txt_srch_TextChanged(object sender, EventArgs e)
         {
             foreach (var item in pn1.Controls) {

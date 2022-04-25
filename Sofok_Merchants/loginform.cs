@@ -56,7 +56,7 @@ namespace SOFOK_System
             var str = passwordtxt.Text;
             var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
 
-            string query2 = "SELECT tbl_merchant.merchant_id FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            string query2 = "SELECT * FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -67,6 +67,7 @@ namespace SOFOK_System
             while (myreaderfetch.Read())
             {
                 UserDisplay.MerchantID = myreaderfetch.GetString("merchant_ID");
+                UserDisplay.merchantName = myreaderfetch.GetString("name");
 
 
 

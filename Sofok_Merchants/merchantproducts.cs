@@ -11,14 +11,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SOFOK_System.components.widget;
 using System.IO;
+using Magnum.FileSystem;
 
 namespace SOFOK_System
 {
+    
     public partial class merchantproduct_main : Form
     {
         string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
         //MySqlCommand cm;
         String prod_name;
+         String pathIMG;
+     
         public merchantproduct_main()
         {
             InitializeComponent();
@@ -28,7 +32,8 @@ namespace SOFOK_System
         }
         public void addproduct()
         {
-            if (productnametxt.Text == "" || prodpricetxt.Text == "" || prodcategtxt.Text == "")
+
+            if (productnametxt.Text == "" || prodpricetxt.Text == "" )
             {
                 MessageBox.Show("Invalid Input");
             }
@@ -36,12 +41,14 @@ namespace SOFOK_System
             {
                 try
                 {
-                    double price = double.Parse(prodpricetxt.Text);
-                    MemoryStream ms = new MemoryStream();
-                    productpic.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    byte[] arrImage = ms.GetBuffer();
 
-                    String query = "INSERT INTO `tbl_products`(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`, `product_icon`) VALUES ('','" + productnametxt.Text + "','" + prodcategtxt.Text + "','" + prodpricetxt.Text + "','" + merchantnamelbl.Text + "',@product_icon)";
+                    var ImgFile = Path.GetFileName(pathIMG);
+                    double price = double.Parse(prodpricetxt.Text);
+             
+
+                    String query = "INSERT INTO `tbl_products`" +
+                        "(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`, `product_icon`) VALUES " +
+                        "('','"+productnametxt.Text+"','"+c.Text+"','"+prodpricetxt.Text+"','"+lbl_merchant_id.Text+ "','"+ ImgFile + "')"; 
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
                     MySqlDataReader myreader1;
@@ -50,10 +57,12 @@ namespace SOFOK_System
 
                     conn.Open();
                     //cm = new MySqlCommand("insert into tbl_products(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`,product_icon)value('','" + productnametxt.Text + "','" + prodcategtxt.Text + "','" + prodpricetxt.Text + "','" + 1 + "',@product_icon)");
-                    mycommand.Parameters.AddWithValue("@product_icon", arrImage);
+               
                     myreader1 = mycommand.ExecuteReader();
-                    MessageBox.Show("Succesfully Added!");
-                    productflowlayout.Refresh();
+                    productflowlayout.Controls.Clear();
+                    displayProductsAll();
+
+                 
 
 
                     conn.Close();
@@ -71,22 +80,21 @@ namespace SOFOK_System
         }
 
 
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void uploadbtn_Click(object sender, EventArgs e)
         {
             //upload photo
 
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Photo";
-            ofd.Filter = "Image Files(*.png; *.jpeg; *.JPG;)|*.png;*.jpeg;*.JPG;";
-            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            OpenFileDialog open = new OpenFileDialog();
+            open.Title = "Photo";
+            open.Filter = "Image Files(*.png; *.jpeg; *.JPG;)|*.png;*.jpeg;*.JPG;";
+            if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                productpic.Image = new Bitmap(ofd.FileName);
+                 pathIMG = open.FileName;
+                productpic.Image = new Bitmap(open.FileName);
             }
+      
 
         }
 
@@ -97,17 +105,21 @@ namespace SOFOK_System
 
         private void merchantproducts_Load(object sender, EventArgs e)
         {
-            merchantnamelbl.Text = loginform.UserDisplay.MerchantID;
-           
+            lbl_merchant_id.Text = loginform.UserDisplay.MerchantID;
+            lbl_merchantname.Text = loginform.UserDisplay.merchantName;
+
+            c.SelectedIndex = 0;
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-            addproduct();
+
+         
+           addproduct();
        
             productnametxt.Clear();
             prodpricetxt.Clear();
-            prodcategtxt.Clear();
+         
         }
         public void addproduct(String name, double cost, categories category, String icon, String store, int id)
         {
@@ -126,9 +138,10 @@ namespace SOFOK_System
             productflowlayout.Controls.Add(w);
 
 
-            
+
 
         }
+
 
         public void displayProductsAll()
         {
@@ -144,15 +157,14 @@ namespace SOFOK_System
             {
                 prod_name = myreaderfetch.GetString("prod_name");
                 String cat = myreaderfetch.GetString("product_category");
-                String merchant_store = myreaderfetch.GetString("merchant_store");
+                
                 String store_name = myreaderfetch.GetString("merchant_store");
                 double price_prod = myreaderfetch.GetDouble("prod_price");
                 int prod_id = myreaderfetch.GetInt32("prod_id");
+                String Testicon = myreaderfetch.GetString("product_icon");
 
-
-
-
-                addproduct(prod_name, price_prod, categories.burger, "coke.png", store_name, prod_id);
+                MessageBox.Show(Testicon);
+                addproduct(prod_name, price_prod, categories.burger, store_name, prod_id);
 
             }
 
@@ -171,6 +183,32 @@ private void merchantproduct_main_Shown(object sender, EventArgs e)
 
             displayProductsAll();
 
+        }
+
+        private void bunifuButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.IO.File.Copy(pathIMG, Path.Combine(@"C:\Users\RL\Documents\GitHub\SOFOK_System\icons\", Path.GetFileName(pathIMG)), true);
+                MessageBox.Show(pathIMG);
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+         
+            
+        }
+
+        private void txt_srch_TextChange(object sender, EventArgs e)
+        {
+            foreach (var id in productflowlayout.Controls)
+            {
+
+                var wgd = (widget)id;
+                wgd.Visible = wgd.lbl_ID.Text.ToLower().Contains(txt_srch.Text.Trim().ToLower());
+
+            }
         }
     }
 

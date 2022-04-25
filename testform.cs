@@ -52,7 +52,7 @@ namespace SOFOK_System
             da = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             da.Fill(table);
-            txt_ID.Text = table.Rows[0][1].ToString();
+            txt_ID.Text = table.Rows[0][5].ToString();
            byte[] img = (byte[])table.Rows[0][5];
             MemoryStream ms = new MemoryStream(img);
             picbox.Image = Image.FromStream(ms);

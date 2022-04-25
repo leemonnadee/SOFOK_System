@@ -65,6 +65,7 @@ namespace SOFOK_System
             this.btn_drinks = new System.Windows.Forms.Button();
             this.btn_meal = new System.Windows.Forms.Button();
             this.All = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -255,7 +256,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.ShadowDepth = 10;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(380, 582);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(381, 582);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
             this.bunifuShadowPanel1.TabIndex = 2;
             // 
@@ -272,7 +273,7 @@ namespace SOFOK_System
             this.pay_btn.ForeColor = System.Drawing.Color.Black;
             this.pay_btn.Location = new System.Drawing.Point(62, 501);
             this.pay_btn.Name = "pay_btn";
-            this.pay_btn.Size = new System.Drawing.Size(276, 60);
+            this.pay_btn.Size = new System.Drawing.Size(277, 60);
             this.pay_btn.TabIndex = 7;
             this.pay_btn.Text = "Pay";
             this.pay_btn.UseVisualStyleBackColor = false;
@@ -310,7 +311,8 @@ namespace SOFOK_System
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4});
+            this.Column4,
+            this.ID});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,7 +340,7 @@ namespace SOFOK_System
             this.grid.RowTemplate.DividerHeight = 1;
             this.grid.RowTemplate.Height = 50;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(331, 345);
+            this.grid.Size = new System.Drawing.Size(332, 345);
             this.grid.TabIndex = 6;
             this.grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellDoubleClick);
             // 
@@ -376,7 +378,7 @@ namespace SOFOK_System
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(299, 37);
+            this.button1.Location = new System.Drawing.Point(300, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 30);
             this.button1.TabIndex = 5;
@@ -391,7 +393,7 @@ namespace SOFOK_System
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
             this.label1.Location = new System.Drawing.Point(22, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 28);
+            this.label1.Size = new System.Drawing.Size(169, 35);
             this.label1.TabIndex = 4;
             this.label1.Text = "Current Order";
             // 
@@ -401,9 +403,9 @@ namespace SOFOK_System
             this.lbl_tot.AutoSize = true;
             this.lbl_tot.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tot.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot.Location = new System.Drawing.Point(195, 433);
+            this.lbl_tot.Location = new System.Drawing.Point(196, 433);
             this.lbl_tot.Name = "lbl_tot";
-            this.lbl_tot.Size = new System.Drawing.Size(0, 37);
+            this.lbl_tot.Size = new System.Drawing.Size(0, 45);
             this.lbl_tot.TabIndex = 3;
             // 
             // label3
@@ -412,9 +414,9 @@ namespace SOFOK_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(443, 19);
+            this.label3.Location = new System.Drawing.Point(444, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 34);
+            this.label3.Size = new System.Drawing.Size(115, 44);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total";
             // 
@@ -426,7 +428,7 @@ namespace SOFOK_System
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
             this.label2.Location = new System.Drawing.Point(34, 446);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 22);
+            this.label2.Size = new System.Drawing.Size(66, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Total";
             // 
@@ -476,7 +478,7 @@ namespace SOFOK_System
             this.label4.Location = new System.Drawing.Point(85, 6);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(473, 37);
+            this.label4.Size = new System.Drawing.Size(568, 45);
             this.label4.TabIndex = 0;
             this.label4.Text = "Self-Operative Food Ordering Kiosk";
             // 
@@ -594,6 +596,13 @@ namespace SOFOK_System
             this.All.UseVisualStyleBackColor = false;
             this.All.Click += new System.EventHandler(this.All_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,6 +662,7 @@ namespace SOFOK_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button pay_btn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }
 
