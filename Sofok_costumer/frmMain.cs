@@ -144,8 +144,10 @@ namespace SOFOK_System
         private void frmMain_Shown(object sender, EventArgs e)
         {
 
+            for (int i = 0; i <= 15; i++) {
 
             AddItem("name",32, categories.burger, "coke.png", "store", 21);
+            }
 
         }
         private void txt_srch_TextChanged(object sender, EventArgs e)

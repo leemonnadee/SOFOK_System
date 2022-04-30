@@ -30,12 +30,12 @@ namespace SOFOK_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(merchantmainfrm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -112,11 +112,10 @@ namespace SOFOK_System
             this.bunifuPanel4.Controls.Add(this.timelbl);
             this.bunifuPanel4.Controls.Add(this.datelbl);
             this.bunifuPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel4.Location = new System.Drawing.Point(359, 925);
-            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel4.Location = new System.Drawing.Point(269, 752);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(1139, 69);
+            this.bunifuPanel4.Size = new System.Drawing.Size(855, 56);
             this.bunifuPanel4.TabIndex = 3;
             this.bunifuPanel4.Click += new System.EventHandler(this.bunifuPanel4_Click);
             // 
@@ -127,13 +126,12 @@ namespace SOFOK_System
             | System.Windows.Forms.AnchorStyles.Right)));
             this.timelbl.AutoEllipsis = false;
             this.timelbl.CursorType = null;
-            this.timelbl.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timelbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timelbl.ForeColor = System.Drawing.Color.White;
-            this.timelbl.Location = new System.Drawing.Point(867, 11);
-            this.timelbl.Margin = new System.Windows.Forms.Padding(4);
+            this.timelbl.Location = new System.Drawing.Point(651, 9);
             this.timelbl.Name = "timelbl";
             this.timelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.timelbl.Size = new System.Drawing.Size(80, 20);
+            this.timelbl.Size = new System.Drawing.Size(134, 29);
             this.timelbl.TabIndex = 1;
             this.timelbl.Text = "00:00:00PM";
             this.timelbl.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -147,13 +145,12 @@ namespace SOFOK_System
             this.datelbl.AutoEllipsis = false;
             this.datelbl.Cursor = System.Windows.Forms.Cursors.Default;
             this.datelbl.CursorType = System.Windows.Forms.Cursors.Default;
-            this.datelbl.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datelbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datelbl.ForeColor = System.Drawing.Color.White;
-            this.datelbl.Location = new System.Drawing.Point(582, 11);
-            this.datelbl.Margin = new System.Windows.Forms.Padding(4);
+            this.datelbl.Location = new System.Drawing.Point(437, 9);
             this.datelbl.Name = "datelbl";
             this.datelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.datelbl.Size = new System.Drawing.Size(62, 20);
+            this.datelbl.Size = new System.Drawing.Size(106, 29);
             this.datelbl.TabIndex = 0;
             this.datelbl.Text = "00/00/00";
             this.datelbl.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -161,9 +158,6 @@ namespace SOFOK_System
             // 
             // container
             // 
-            this.container.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.container.BackgroundColor = System.Drawing.Color.Transparent;
             this.container.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("container.BackgroundImage")));
             this.container.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -171,28 +165,25 @@ namespace SOFOK_System
             this.container.BorderRadius = 3;
             this.container.BorderThickness = 1;
             this.container.Controls.Add(this.bunifuPictureBox1);
-            this.container.Location = new System.Drawing.Point(357, 55);
-            this.container.Margin = new System.Windows.Forms.Padding(4);
+            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.Location = new System.Drawing.Point(269, 72);
             this.container.Name = "container";
             this.container.ShowBorders = true;
-            this.container.Size = new System.Drawing.Size(1141, 873);
+            this.container.Size = new System.Drawing.Size(855, 736);
             this.container.TabIndex = 2;
             this.container.Click += new System.EventHandler(this.container_Click);
             // 
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox1.AutoSizeHeight = false;
             this.bunifuPictureBox1.BorderRadius = 0;
+            this.bunifuPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.sofok_logo_gif;
             this.bunifuPictureBox1.IsCircle = false;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(1141, 869);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(855, 736);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox1.TabIndex = 0;
             this.bunifuPictureBox1.TabStop = false;
@@ -212,11 +203,10 @@ namespace SOFOK_System
             this.bunifuPanel1.Controls.Add(this.productbtn);
             this.bunifuPanel1.Controls.Add(this.ordersbtn);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 89);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 72);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(359, 905);
+            this.bunifuPanel1.Size = new System.Drawing.Size(269, 736);
             this.bunifuPanel1.TabIndex = 1;
             // 
             // bunifuPanel3
@@ -229,11 +219,10 @@ namespace SOFOK_System
             this.bunifuPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
             this.bunifuPanel3.BorderRadius = 0;
             this.bunifuPanel3.BorderThickness = 0;
-            this.bunifuPanel3.Location = new System.Drawing.Point(0, 674);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel3.Location = new System.Drawing.Point(0, 549);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(359, 204);
+            this.bunifuPanel3.Size = new System.Drawing.Size(269, 166);
             this.bunifuPanel3.TabIndex = 7;
             // 
             // merchantprofilebtn
@@ -256,11 +245,11 @@ namespace SOFOK_System
             this.merchantprofilebtn.ColorContrastOnClick = 45;
             this.merchantprofilebtn.ColorContrastOnHover = 45;
             this.merchantprofilebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.merchantprofilebtn.CustomizableEdges = borderEdges7;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.merchantprofilebtn.CustomizableEdges = borderEdges2;
             this.merchantprofilebtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.merchantprofilebtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.merchantprofilebtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -286,8 +275,7 @@ namespace SOFOK_System
             this.merchantprofilebtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.profile;
             this.merchantprofilebtn.IdleIconRightImage = null;
             this.merchantprofilebtn.IndicateFocus = false;
-            this.merchantprofilebtn.Location = new System.Drawing.Point(0, 465);
-            this.merchantprofilebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.merchantprofilebtn.Location = new System.Drawing.Point(0, 379);
             this.merchantprofilebtn.Name = "merchantprofilebtn";
             this.merchantprofilebtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.merchantprofilebtn.OnDisabledState.BorderRadius = 1;
@@ -321,7 +309,7 @@ namespace SOFOK_System
             this.merchantprofilebtn.OnPressedState.ForeColor = System.Drawing.Color.DarkOrange;
             this.merchantprofilebtn.OnPressedState.IconLeftImage = null;
             this.merchantprofilebtn.OnPressedState.IconRightImage = null;
-            this.merchantprofilebtn.Size = new System.Drawing.Size(359, 68);
+            this.merchantprofilebtn.Size = new System.Drawing.Size(269, 55);
             this.merchantprofilebtn.TabIndex = 3;
             this.merchantprofilebtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.merchantprofilebtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -350,11 +338,11 @@ namespace SOFOK_System
             this.merchantsalesbtn.ColorContrastOnClick = 45;
             this.merchantsalesbtn.ColorContrastOnHover = 45;
             this.merchantsalesbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.merchantsalesbtn.CustomizableEdges = borderEdges8;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.merchantsalesbtn.CustomizableEdges = borderEdges3;
             this.merchantsalesbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.merchantsalesbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.merchantsalesbtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -380,8 +368,7 @@ namespace SOFOK_System
             this.merchantsalesbtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.sales;
             this.merchantsalesbtn.IdleIconRightImage = null;
             this.merchantsalesbtn.IndicateFocus = false;
-            this.merchantsalesbtn.Location = new System.Drawing.Point(0, 553);
-            this.merchantsalesbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.merchantsalesbtn.Location = new System.Drawing.Point(0, 450);
             this.merchantsalesbtn.Name = "merchantsalesbtn";
             this.merchantsalesbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.merchantsalesbtn.OnDisabledState.BorderRadius = 1;
@@ -415,7 +402,7 @@ namespace SOFOK_System
             this.merchantsalesbtn.OnPressedState.ForeColor = System.Drawing.Color.DarkOrange;
             this.merchantsalesbtn.OnPressedState.IconLeftImage = null;
             this.merchantsalesbtn.OnPressedState.IconRightImage = null;
-            this.merchantsalesbtn.Size = new System.Drawing.Size(359, 68);
+            this.merchantsalesbtn.Size = new System.Drawing.Size(269, 55);
             this.merchantsalesbtn.TabIndex = 5;
             this.merchantsalesbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.merchantsalesbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -444,11 +431,11 @@ namespace SOFOK_System
             this.productbtn.ColorContrastOnClick = 45;
             this.productbtn.ColorContrastOnHover = 45;
             this.productbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.productbtn.CustomizableEdges = borderEdges9;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.productbtn.CustomizableEdges = borderEdges4;
             this.productbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.productbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.productbtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -474,8 +461,7 @@ namespace SOFOK_System
             this.productbtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.order;
             this.productbtn.IdleIconRightImage = null;
             this.productbtn.IndicateFocus = false;
-            this.productbtn.Location = new System.Drawing.Point(0, 378);
-            this.productbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.productbtn.Location = new System.Drawing.Point(0, 308);
             this.productbtn.Name = "productbtn";
             this.productbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.productbtn.OnDisabledState.BorderRadius = 1;
@@ -509,7 +495,7 @@ namespace SOFOK_System
             this.productbtn.OnPressedState.ForeColor = System.Drawing.Color.DarkOrange;
             this.productbtn.OnPressedState.IconLeftImage = null;
             this.productbtn.OnPressedState.IconRightImage = null;
-            this.productbtn.Size = new System.Drawing.Size(359, 68);
+            this.productbtn.Size = new System.Drawing.Size(269, 55);
             this.productbtn.TabIndex = 4;
             this.productbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.productbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -538,11 +524,11 @@ namespace SOFOK_System
             this.ordersbtn.ColorContrastOnClick = 45;
             this.ordersbtn.ColorContrastOnHover = 45;
             this.ordersbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.ordersbtn.CustomizableEdges = borderEdges10;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.ordersbtn.CustomizableEdges = borderEdges5;
             this.ordersbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ordersbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ordersbtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -568,8 +554,7 @@ namespace SOFOK_System
             this.ordersbtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.take_away_food_100px;
             this.ordersbtn.IdleIconRightImage = null;
             this.ordersbtn.IndicateFocus = false;
-            this.ordersbtn.Location = new System.Drawing.Point(0, 291);
-            this.ordersbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ordersbtn.Location = new System.Drawing.Point(0, 237);
             this.ordersbtn.Name = "ordersbtn";
             this.ordersbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ordersbtn.OnDisabledState.BorderRadius = 1;
@@ -603,7 +588,7 @@ namespace SOFOK_System
             this.ordersbtn.OnPressedState.ForeColor = System.Drawing.Color.DarkOrange;
             this.ordersbtn.OnPressedState.IconLeftImage = null;
             this.ordersbtn.OnPressedState.IconRightImage = null;
-            this.ordersbtn.Size = new System.Drawing.Size(359, 68);
+            this.ordersbtn.Size = new System.Drawing.Size(269, 55);
             this.ordersbtn.TabIndex = 2;
             this.ordersbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ordersbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -632,11 +617,11 @@ namespace SOFOK_System
             this.logoutbtn.ColorContrastOnClick = 45;
             this.logoutbtn.ColorContrastOnHover = 45;
             this.logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.logoutbtn.CustomizableEdges = borderEdges6;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.logoutbtn.CustomizableEdges = borderEdges1;
             this.logoutbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.logoutbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.logoutbtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -662,8 +647,7 @@ namespace SOFOK_System
             this.logoutbtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.Logout_26px;
             this.logoutbtn.IdleIconRightImage = null;
             this.logoutbtn.IndicateFocus = false;
-            this.logoutbtn.Location = new System.Drawing.Point(0, 922);
-            this.logoutbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.logoutbtn.Location = new System.Drawing.Point(0, 749);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.logoutbtn.OnDisabledState.BorderRadius = 1;
@@ -697,7 +681,7 @@ namespace SOFOK_System
             this.logoutbtn.OnPressedState.ForeColor = System.Drawing.Color.DarkOrange;
             this.logoutbtn.OnPressedState.IconLeftImage = null;
             this.logoutbtn.OnPressedState.IconRightImage = null;
-            this.logoutbtn.Size = new System.Drawing.Size(349, 44);
+            this.logoutbtn.Size = new System.Drawing.Size(262, 36);
             this.logoutbtn.TabIndex = 8;
             this.logoutbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.logoutbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -716,9 +700,8 @@ namespace SOFOK_System
             this.bunifuAppBar1.ForeColor = System.Drawing.Color.White;
             this.bunifuAppBar1.Icon = global::SOFOK_System.Properties.Resources.stall_100px;
             this.bunifuAppBar1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuAppBar1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuAppBar1.Name = "bunifuAppBar1";
-            this.bunifuAppBar1.Size = new System.Drawing.Size(1498, 89);
+            this.bunifuAppBar1.Size = new System.Drawing.Size(1124, 72);
             this.bunifuAppBar1.TabIndex = 0;
             this.bunifuAppBar1.Title = "MERCHANT";
             this.bunifuAppBar1.TitleMargin = new System.Windows.Forms.Padding(47, 12, 0, 0);
@@ -726,17 +709,16 @@ namespace SOFOK_System
             // 
             // merchantmainfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1498, 994);
+            this.ClientSize = new System.Drawing.Size(1124, 808);
             this.Controls.Add(this.logoutbtn);
             this.Controls.Add(this.bunifuPanel4);
             this.Controls.Add(this.container);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuAppBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "merchantmainfrm";
             this.Text = "merchantmainfrm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -292,7 +292,9 @@
     <Compile Include="testform.Designer.cs">
       <DependentUpon>testform.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="icons\coke.png" />
+    <None Include="icons\coke.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <EmbeddedResource Include="sofok_administrator\adminmerchantsales.resx">
       <DependentUpon>adminmerchantsales.cs</DependentUpon>
     </EmbeddedResource>
@@ -555,14 +557,13 @@
     <None Include="Resources\admin_bg.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icons\7.PNG" />
+    <None Include="icons\7.PNG" />
     <Content Include="icons\asd.PNG" />
     <Content Include="icons\ger.jpg" />
     <Content Include="icons\jayp.jpg" />
-    <Content Include="icons\me.jpg" />
-    <Content Include="icons\Tuprio, Rudy Lee L[199].jpg" />
-    <Content Include="icons\wilmar.jpg" />
-    <Content Include="icons\x.PNG" />
+    <None Include="icons\me.jpg" />
+    <None Include="icons\wilmar.jpg" />
+    <None Include="icons\x.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

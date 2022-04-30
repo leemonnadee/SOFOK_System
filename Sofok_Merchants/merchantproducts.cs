@@ -59,10 +59,13 @@ namespace SOFOK_System
                     //cm = new MySqlCommand("insert into tbl_products(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`,product_icon)value('','" + productnametxt.Text + "','" + prodcategtxt.Text + "','" + prodpricetxt.Text + "','" + 1 + "',@product_icon)");
                
                     myreader1 = mycommand.ExecuteReader();
-                    productflowlayout.Controls.Clear();
-                    displayProductsAll();
+                    MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                 
+                    prod_data();
+
+
+
+
 
 
                     conn.Close();
@@ -107,8 +110,9 @@ namespace SOFOK_System
         {
             lbl_merchant_id.Text = loginform.UserDisplay.MerchantID;
             lbl_merchantname.Text = loginform.UserDisplay.merchantName;
-
+            prod_data();
             c.SelectedIndex = 0;
+            
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
@@ -121,67 +125,49 @@ namespace SOFOK_System
             prodpricetxt.Clear();
          
         }
-        public void addproduct(String name, double cost, categories category, String icon, String store, int id)
-        {
-            var w = new widget()
-            {
-
-                Title = name,
-                Cost = cost,
-                Category = category,
-
-
-                Icon = Image.FromFile("icons/" + icon),
-                Store = store,
-                ID = id
-            };
-            productflowlayout.Controls.Add(w);
-
-
-
-
-        }
-
-
-        public void displayProductsAll()
-        {
-            string query2 = "SELECT * FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "'; ";
-            MySqlConnection conn = new MySqlConnection(mycon);
-            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
-
-            MySqlDataReader myreaderfetch;
-
-            conn.Open();
-            myreaderfetch = mycommandfetch.ExecuteReader();
-            while (myreaderfetch.Read())
-            {
-                prod_name = myreaderfetch.GetString("prod_name");
-                String cat = myreaderfetch.GetString("product_category");
-                
-                String store_name = myreaderfetch.GetString("merchant_store");
-                double price_prod = myreaderfetch.GetDouble("prod_price");
-                int prod_id = myreaderfetch.GetInt32("prod_id");
-                String Testicon = myreaderfetch.GetString("product_icon");
-
-                MessageBox.Show(Testicon);
-                addproduct(prod_name, price_prod, categories.burger, store_name, prod_id);
-
-            }
-
-        }
-    
-
   
 
+       
+
+        public void prod_data()
+        {
+
+            try
+            {
+
+                string query = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "' ";
+
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+                MySqlDataAdapter myadapter = new MySqlDataAdapter();
+                myadapter.SelectCommand = mycommand;
+                DataTable dtable = new DataTable();
+                prod_table.DataSource = dtable;
+                myadapter.Fill(dtable);
 
 
 
 
-private void merchantproduct_main_Shown(object sender, EventArgs e)
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+
+
+
+        private void merchantproduct_main_Shown(object sender, EventArgs e)
         {
 
 
-            displayProductsAll();
+     
 
         }
 
@@ -198,17 +184,6 @@ private void merchantproduct_main_Shown(object sender, EventArgs e)
             }
          
             
-        }
-
-        private void txt_srch_TextChange(object sender, EventArgs e)
-        {
-            foreach (var id in productflowlayout.Controls)
-            {
-
-                var wgd = (widget)id;
-                wgd.Visible = wgd.lbl_ID.Text.ToLower().Contains(txt_srch.Text.Trim().ToLower());
-
-            }
         }
     }
 
