@@ -63,7 +63,7 @@ namespace SOFOK_System
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(47, 152);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(319, 345);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(319, 319);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 1;
             this.bunifuPictureBox1.TabStop = false;
@@ -90,6 +90,7 @@ namespace SOFOK_System
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(424, 612);
             this.bunifuPanel1.TabIndex = 0;
+            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // btn_login
             // 
@@ -101,7 +102,7 @@ namespace SOFOK_System
             this.btn_login.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Location = new System.Drawing.Point(151, 493);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(168, 46);
             this.btn_login.TabIndex = 13;
@@ -131,7 +132,7 @@ namespace SOFOK_System
             this.btn_exit.ImageZoomSize = new System.Drawing.Size(38, 41);
             this.btn_exit.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.InitialImage")));
             this.btn_exit.Location = new System.Drawing.Point(384, 2);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Rotation = 0;
             this.btn_exit.ShowActiveImage = true;
@@ -156,7 +157,7 @@ namespace SOFOK_System
             "Merchant",
             "Costumer"});
             this.combo_log.Location = new System.Drawing.Point(158, 402);
-            this.combo_log.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combo_log.Margin = new System.Windows.Forms.Padding(2);
             this.combo_log.Name = "combo_log";
             this.combo_log.Size = new System.Drawing.Size(151, 29);
             this.combo_log.TabIndex = 11;
@@ -250,7 +251,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.DimGray;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.passwordtxt.OnIdleState = stateProperties4;
-            this.passwordtxt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.passwordtxt.Padding = new System.Windows.Forms.Padding(3);
             this.passwordtxt.PasswordChar = '●';
             this.passwordtxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.passwordtxt.PlaceholderText = "Password";
@@ -326,7 +327,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.DimGray;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.usernametxt.OnIdleState = stateProperties8;
-            this.usernametxt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.usernametxt.Padding = new System.Windows.Forms.Padding(3);
             this.usernametxt.PasswordChar = '\0';
             this.usernametxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.usernametxt.PlaceholderText = "Username";
