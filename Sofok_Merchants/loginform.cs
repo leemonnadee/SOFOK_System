@@ -26,7 +26,14 @@ namespace SOFOK_System
         public class UserDisplay
         {
             public static string MerchantID;
+            public static string StoreName;
             public static string merchantName;
+            public static string maritalStatus;
+            public static string address;
+            public static string gender;
+            public static string birthdate;
+            public static string email;
+            public static string contact;  
 
         }
 
@@ -60,8 +67,6 @@ namespace SOFOK_System
             }
         }
 
-
-
         public void getMerchantID() {
             var key = "b14ca5898a4e4133bbce2ea2315a1916";
 
@@ -79,20 +84,84 @@ namespace SOFOK_System
             while (myreaderfetch.Read())
             {
                 UserDisplay.MerchantID = myreaderfetch.GetString("merchant_ID");
-                UserDisplay.merchantName = myreaderfetch.GetString("name");
 
-
-
-
-
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.contact = myreaderfetch.GetString("contact_no");
             }
-         
+        }
+        public void getAddress()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
 
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
 
+            string query2 = "SELECT tbl_merchant.address FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.address = myreaderfetch.GetString("address");
             }
+        }
+        public void getBirthdate()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.birthdate FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
+            }
+        }
+        public void getEmail()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_account.username FROM tbl_account WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.email = myreaderfetch.GetString("username");
+            }
+        }
 
 
-            public void loginAuth()
+
+
+
+
+
+
+
+        public void loginAuth()
         {
             if (usernametxt.Text.Equals("") ||
                 passwordtxt.Text.Equals(""))
@@ -120,11 +189,6 @@ namespace SOFOK_System
 
 
 
-         
-
-
-
-
                         //opening connection
                         conn.Open();
                         //execute the query
@@ -148,6 +212,14 @@ namespace SOFOK_System
                             merchantmainfrm mf = new merchantmainfrm();
                             mf.Show();
                             getMerchantID();
+                            getStoreName();
+                            getMerchantsName();
+                            getMaritalStatus();
+                            getGender();
+                            getContact();
+                            getBirthdate();
+                            getAddress();
+                            getEmail();
                             this.Hide();
 
 
@@ -201,9 +273,10 @@ namespace SOFOK_System
 
         }
 
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
 
