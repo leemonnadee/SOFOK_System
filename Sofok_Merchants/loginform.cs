@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,18 +34,29 @@ namespace SOFOK_System
         {
             System.Windows.Forms.Application.Exit();
         }
-
+        /*   private void ValidateEmail()
+           {
+               string email = usernametxt.Text;
+               Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+               Match match = regex.Match(email);
+               if (match.Success)
+                   loginAuth();
+               else
+                   MessageBox.Show(email + " is Invalid Email Address");
+           }
+        */
         private void btn_login_Click(object sender, EventArgs e)
         {
-           if (combo_log.Text.Equals("Costumer"))
+           
+            if (combo_log.Text.Equals("Costumer"))
             {
                 Mainpage MainCostumer = new Mainpage();
                 MainCostumer.Show();
                 this.Hide();
              
             }
-            else { 
-            loginAuth();
+            else {
+                loginAuth(); ;
             }
         }
 

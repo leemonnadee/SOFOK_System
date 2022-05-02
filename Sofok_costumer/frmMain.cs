@@ -41,8 +41,11 @@ namespace SOFOK_System
       
         
         
-        public  void AddItem(String name, double cost, categories category, String icon, String store, int id) {
-
+        public  void AddItem(String name, double cost, categories category , String icon, String store, int id) {
+            System.IO.DirectoryInfo DI = new System.IO.DirectoryInfo("icons");
+            String imgPath = DI.FullName;
+            
+          
             var w = new widget()
             {
 
@@ -51,7 +54,7 @@ namespace SOFOK_System
                 Category = category,
 
 
-                Icon = Image.FromFile("icons/" + icon),
+                Icon = Image.FromFile(imgPath + @"\" + icon),
                 Store = store,
                 ID = id
             };
@@ -115,7 +118,7 @@ namespace SOFOK_System
                 MessageBox.Show(ex.Message);
             
             }
-            string query2 = "SELECT * FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "'; ";
+            string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -127,16 +130,19 @@ namespace SOFOK_System
             {
                 prod_name = myreaderfetch.GetString("prod_name");
                 String cat = myreaderfetch.GetString("product_category");
-
+                String icon = myreaderfetch.GetString("product_icon");
                 String store_name = myreaderfetch.GetString("merchant_store");
                 double price_prod = myreaderfetch.GetDouble("prod_price");
                 int prod_id = myreaderfetch.GetInt32("prod_id");
 
+   
+
+
+              
 
 
 
-
-                AddItem(prod_name, price_prod, categories.burger, "coke.png", store_name, prod_id);
+                AddItem(prod_name, price_prod, categories.meal, icon, store_name, prod_id);
             }
 
         }
@@ -144,10 +150,7 @@ namespace SOFOK_System
         private void frmMain_Shown(object sender, EventArgs e)
         {
 
-            for (int i = 0; i <= 15; i++) {
-
-            AddItem("name",32, categories.burger, "coke.png", "store", 21);
-            }
+            displayProductsAll();
 
         }
         private void txt_srch_TextChanged(object sender, EventArgs e)
