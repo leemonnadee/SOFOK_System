@@ -84,6 +84,104 @@ namespace SOFOK_System
             while (myreaderfetch.Read())
             {
                 UserDisplay.MerchantID = myreaderfetch.GetString("merchant_ID");
+            }
+        }
+
+        public void getStoreName()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.merchant_store FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.StoreName = myreaderfetch.GetString("merchant_store");
+            }
+        }
+
+        public void getMerchantsName()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.name FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.merchantName = myreaderfetch.GetString("name");
+            }
+        }
+
+        public void getMaritalStatus()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.marital_status FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.maritalStatus = myreaderfetch.GetString("marital_status");
+            }
+        }
+
+        public void getGender()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.gender FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.gender = myreaderfetch.GetString("gender");
+            }
+        }
+        public void getContact()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_merchant.contact_no FROM tbl_account INNER JOIN tbl_merchant ON tbl_account.acc_id = tbl_merchant.acc_id WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
 
             conn.Open();
             myreaderfetch = mycommandfetch.ExecuteReader();
