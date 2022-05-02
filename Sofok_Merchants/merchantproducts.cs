@@ -73,11 +73,12 @@ namespace SOFOK_System
 
                     myreader1 = mycommand.ExecuteReader();
                     addImage();
-                    MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                  
                     clear();
                     productflowlayout.Controls.Clear();
                     displayProductsAll();
+                    MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
 
 
@@ -483,8 +484,7 @@ namespace SOFOK_System
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
 
-                addImage();
-
+              
                 MySqlDataReader myreader1;
 
                 conn.Open();
