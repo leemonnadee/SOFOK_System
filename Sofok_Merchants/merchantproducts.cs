@@ -37,7 +37,7 @@ namespace SOFOK_System
             String imgPath = DI.FullName;
 
             System.IO.File.Copy(pathIMG, Path.Combine(imgPath, Path.GetFileName(pathIMG)), true);
-
+       
         }
 
         //Add Product
@@ -265,8 +265,9 @@ namespace SOFOK_System
 
             w.OnSelect += (ss, ee) =>
             {
+                uploadbtn.Visible = false;
                 var wgd = (widget)ss;
-                prodpricetxt.Text=wgd.lbl_Price.Text;
+                prodpricetxt.Text=wgd.lbl_Price.Text.Remove(0, 1);
                 productnametxt.Text=wgd.lbl_Title.Text;
                 prod_ID.Text = wgd.lbl_ID.Text;
                 lbl_merchantname.Text = wgd.lbl_store.Text;
@@ -461,6 +462,59 @@ namespace SOFOK_System
                 }
             }
 
+        }
+
+
+        public void update_prod() {
+
+            // 
+
+            try
+            {
+               
+
+       
+                double price = Double.Parse(prodpricetxt.Text);
+                
+
+
+                string query = "UPDATE `tbl_products` SET `prod_name`= '"+ productnametxt.Text+"',`product_category`= '"+combo_category.Text+"',`prod_price`= '"+price+"',`merchant_id`= '"+loginform.UserDisplay.MerchantID+"' WHERE prod_id='"+prod_ID.Text+"'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+                addImage();
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+                clear();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+                uploadbtn.Enabled = true;
+
+
+
+                productflowlayout.Controls.Clear();
+                displayProductsAll();
+                MessageBox.Show("Update Complete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+     
+
+
+
+             update_prod();
         }
     }
 }
