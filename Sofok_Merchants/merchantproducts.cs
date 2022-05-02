@@ -510,11 +510,19 @@ namespace SOFOK_System
         }
         private void btn_update_Click(object sender, EventArgs e)
         {
-     
+            if (prodpricetxt.Text.Equals("") ||
+                   productnametxt.Text.Equals(""))
+
+
+            {
+                MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else { 
 
 
 
-             update_prod();
+            update_prod();
+            }
         }
     }
 }
