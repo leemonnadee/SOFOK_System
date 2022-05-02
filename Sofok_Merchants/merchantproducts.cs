@@ -522,6 +522,10 @@ namespace SOFOK_System
 
 
             update_prod();
+                btn_update.Enabled = false;
+                btn_delete.Enabled = false;
+                uploadbtn.Visible = true;
+                save_btn.Enabled = true;
             }
         }
     }

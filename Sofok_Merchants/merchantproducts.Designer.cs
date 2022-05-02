@@ -764,7 +764,7 @@ namespace SOFOK_System
             this.bunifuPictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox4.AutoSizeHeight = false;
-            this.bunifuPictureBox4.BorderRadius = 13;
+            this.bunifuPictureBox4.BorderRadius = 14;
             this.bunifuPictureBox4.Image = global::SOFOK_System.Properties.Resources.peso;
             this.bunifuPictureBox4.IsCircle = true;
             this.bunifuPictureBox4.Location = new System.Drawing.Point(15, 222);
@@ -861,7 +861,7 @@ namespace SOFOK_System
             this.bunifuPictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox3.AutoSizeHeight = false;
-            this.bunifuPictureBox3.BorderRadius = 13;
+            this.bunifuPictureBox3.BorderRadius = 14;
             this.bunifuPictureBox3.Image = global::SOFOK_System.Properties.Resources.stall_100px;
             this.bunifuPictureBox3.IsCircle = true;
             this.bunifuPictureBox3.Location = new System.Drawing.Point(15, 23);
@@ -879,7 +879,7 @@ namespace SOFOK_System
             this.bunifuPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox2.AutoSizeHeight = false;
-            this.bunifuPictureBox2.BorderRadius = 13;
+            this.bunifuPictureBox2.BorderRadius = 14;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.id_number;
             this.bunifuPictureBox2.IsCircle = true;
             this.bunifuPictureBox2.Location = new System.Drawing.Point(15, 91);
@@ -897,7 +897,7 @@ namespace SOFOK_System
             this.bunifuPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox1.AutoSizeHeight = false;
-            this.bunifuPictureBox1.BorderRadius = 13;
+            this.bunifuPictureBox1.BorderRadius = 14;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.food_bar_100px;
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(15, 162);
