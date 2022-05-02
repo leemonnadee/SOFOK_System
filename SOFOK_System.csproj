@@ -571,5 +571,17 @@
   <ItemGroup>
     <None Include="Resources\admin_bg.gif" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <None Include="icons\7.PNG" />
+    <Content Include="icons\asd.PNG" />
+    <Content Include="icons\ger.jpg" />
+    <Content Include="icons\jayp.jpg" />
+    <None Include="icons\me.jpg" />
+    <None Include="icons\wilmar.jpg" />
+    <None Include="icons\x.PNG" />
+  </ItemGroup>
+>>>>>>> parent of 78b4b51 (product)
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

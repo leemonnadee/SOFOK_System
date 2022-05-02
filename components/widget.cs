@@ -21,7 +21,6 @@ namespace SOFOK_System.components
         public widget()
         {
             InitializeComponent();
-            lbl_ID.Visible = false;
         }
 
         private void bunifuPictureBox1_Click(object sender, EventArgs e)

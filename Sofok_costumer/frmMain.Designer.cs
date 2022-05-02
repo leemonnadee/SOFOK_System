@@ -50,7 +50,6 @@ namespace SOFOK_System
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_tot = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@ namespace SOFOK_System
             this.btn_drinks = new System.Windows.Forms.Button();
             this.btn_meal = new System.Windows.Forms.Button();
             this.All = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,8 +122,8 @@ namespace SOFOK_System
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(301, 80);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.splitContainer1.Location = new System.Drawing.Point(226, 65);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -135,8 +135,9 @@ namespace SOFOK_System
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel2.Controls.Add(this.bunifuShadowPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1500, 716);
-            this.splitContainer1.SplitterDistance = 990;
+            this.splitContainer1.Size = new System.Drawing.Size(1125, 582);
+            this.splitContainer1.SplitterDistance = 743;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
             // 
             // txt_srch
@@ -167,8 +168,7 @@ namespace SOFOK_System
             this.txt_srch.IconRight = null;
             this.txt_srch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_srch.Lines = new string[0];
-            this.txt_srch.Location = new System.Drawing.Point(4, 17);
-            this.txt_srch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_srch.Location = new System.Drawing.Point(3, 14);
             this.txt_srch.MaxLength = 32767;
             this.txt_srch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_srch.Modified = false;
@@ -194,7 +194,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_srch.OnIdleState = stateProperties4;
-            this.txt_srch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_srch.Padding = new System.Windows.Forms.Padding(3);
             this.txt_srch.PasswordChar = '\0';
             this.txt_srch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_srch.PlaceholderText = "Enter text";
@@ -204,7 +204,7 @@ namespace SOFOK_System
             this.txt_srch.SelectionLength = 0;
             this.txt_srch.SelectionStart = 0;
             this.txt_srch.ShortcutsEnabled = true;
-            this.txt_srch.Size = new System.Drawing.Size(417, 48);
+            this.txt_srch.Size = new System.Drawing.Size(313, 39);
             this.txt_srch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_srch.TabIndex = 3;
             this.txt_srch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -223,10 +223,10 @@ namespace SOFOK_System
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pn1.AutoScroll = true;
             this.pn1.BackColor = System.Drawing.Color.White;
-            this.pn1.Location = new System.Drawing.Point(3, 71);
-            this.pn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn1.Location = new System.Drawing.Point(2, 58);
+            this.pn1.Margin = new System.Windows.Forms.Padding(2);
             this.pn1.Name = "pn1";
-            this.pn1.Size = new System.Drawing.Size(986, 652);
+            this.pn1.Size = new System.Drawing.Size(740, 530);
             this.pn1.TabIndex = 0;
             // 
             // bunifuShadowPanel1
@@ -248,7 +248,6 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -257,7 +256,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.ShadowDepth = 10;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(510, 716);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(381, 582);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
             this.bunifuShadowPanel1.TabIndex = 2;
             // 
@@ -272,10 +271,9 @@ namespace SOFOK_System
             this.pay_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay_btn.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pay_btn.ForeColor = System.Drawing.Color.Black;
-            this.pay_btn.Location = new System.Drawing.Point(83, 617);
-            this.pay_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pay_btn.Location = new System.Drawing.Point(62, 501);
             this.pay_btn.Name = "pay_btn";
-            this.pay_btn.Size = new System.Drawing.Size(372, 74);
+            this.pay_btn.Size = new System.Drawing.Size(277, 60);
             this.pay_btn.TabIndex = 7;
             this.pay_btn.Text = "Pay";
             this.pay_btn.UseVisualStyleBackColor = false;
@@ -324,8 +322,8 @@ namespace SOFOK_System
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grid.DefaultCellStyle = dataGridViewCellStyle3;
             this.grid.EnableHeadersVisualStyles = false;
-            this.grid.Location = new System.Drawing.Point(35, 106);
-            this.grid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grid.Location = new System.Drawing.Point(26, 86);
+            this.grid.Margin = new System.Windows.Forms.Padding(2);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -342,7 +340,7 @@ namespace SOFOK_System
             this.grid.RowTemplate.DividerHeight = 1;
             this.grid.RowTemplate.Height = 50;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(445, 425);
+            this.grid.Size = new System.Drawing.Size(332, 345);
             this.grid.TabIndex = 6;
             this.grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellDoubleClick);
             // 
@@ -374,23 +372,15 @@ namespace SOFOK_System
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(402, 46);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(300, 37);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 37);
+            this.button1.Size = new System.Drawing.Size(58, 30);
             this.button1.TabIndex = 5;
             this.button1.Text = "Clear All";
             this.button1.UseVisualStyleBackColor = false;
@@ -401,8 +391,7 @@ namespace SOFOK_System
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(29, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(22, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 35);
             this.label1.TabIndex = 4;
@@ -414,8 +403,7 @@ namespace SOFOK_System
             this.lbl_tot.AutoSize = true;
             this.lbl_tot.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tot.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot.Location = new System.Drawing.Point(264, 533);
-            this.lbl_tot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_tot.Location = new System.Drawing.Point(196, 433);
             this.lbl_tot.Name = "lbl_tot";
             this.lbl_tot.Size = new System.Drawing.Size(0, 45);
             this.lbl_tot.TabIndex = 3;
@@ -426,10 +414,9 @@ namespace SOFOK_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(594, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(444, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 44);
+            this.label3.Size = new System.Drawing.Size(115, 44);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total";
             // 
@@ -439,8 +426,7 @@ namespace SOFOK_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(45, 549);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(34, 446);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 26);
             this.label2.TabIndex = 1;
@@ -462,11 +448,11 @@ namespace SOFOK_System
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.pictureBox1);
             this.bunifuPanel2.Controls.Add(this.label4);
-            this.bunifuPanel2.Location = new System.Drawing.Point(16, 12);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPanel2.Location = new System.Drawing.Point(12, 10);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(1771, 63);
+            this.bunifuPanel2.Size = new System.Drawing.Size(1328, 51);
             this.bunifuPanel2.TabIndex = 4;
             // 
             // pictureBox1
@@ -474,10 +460,10 @@ namespace SOFOK_System
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SOFOK_System.Properties.Resources.self_service_kiosk_50px;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 55);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -489,7 +475,8 @@ namespace SOFOK_System
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(43)))), ((int)(((byte)(7)))));
-            this.label4.Location = new System.Drawing.Point(113, 7);
+            this.label4.Location = new System.Drawing.Point(85, 6);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(568, 45);
             this.label4.TabIndex = 0;
@@ -510,11 +497,10 @@ namespace SOFOK_System
             this.bunifuPanel1.Controls.Add(this.btn_drinks);
             this.bunifuPanel1.Controls.Add(this.btn_meal);
             this.bunifuPanel1.Controls.Add(this.All);
-            this.bunifuPanel1.Location = new System.Drawing.Point(16, 80);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(12, 65);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(277, 705);
+            this.bunifuPanel1.Size = new System.Drawing.Size(208, 573);
             this.bunifuPanel1.TabIndex = 3;
             // 
             // btn_back
@@ -526,10 +512,9 @@ namespace SOFOK_System
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.Color.Black;
-            this.btn_back.Location = new System.Drawing.Point(4, 606);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_back.Location = new System.Drawing.Point(3, 492);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(252, 74);
+            this.btn_back.Size = new System.Drawing.Size(189, 60);
             this.btn_back.TabIndex = 4;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = false;
@@ -545,10 +530,9 @@ namespace SOFOK_System
             this.btn_burger.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_burger.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_burger.Image = global::SOFOK_System.Properties.Resources.hamburger_50px;
-            this.btn_burger.Location = new System.Drawing.Point(-13, 441);
-            this.btn_burger.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_burger.Location = new System.Drawing.Point(-10, 358);
             this.btn_burger.Name = "btn_burger";
-            this.btn_burger.Size = new System.Drawing.Size(291, 65);
+            this.btn_burger.Size = new System.Drawing.Size(218, 53);
             this.btn_burger.TabIndex = 3;
             this.btn_burger.Text = "Burger";
             this.btn_burger.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -565,10 +549,9 @@ namespace SOFOK_System
             this.btn_drinks.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_drinks.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_drinks.Image = global::SOFOK_System.Properties.Resources.soda_50px;
-            this.btn_drinks.Location = new System.Drawing.Point(-13, 370);
-            this.btn_drinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_drinks.Location = new System.Drawing.Point(-10, 301);
             this.btn_drinks.Name = "btn_drinks";
-            this.btn_drinks.Size = new System.Drawing.Size(291, 65);
+            this.btn_drinks.Size = new System.Drawing.Size(218, 53);
             this.btn_drinks.TabIndex = 2;
             this.btn_drinks.Text = "Drinks";
             this.btn_drinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -585,10 +568,9 @@ namespace SOFOK_System
             this.btn_meal.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_meal.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_meal.Image = global::SOFOK_System.Properties.Resources.meal_50px;
-            this.btn_meal.Location = new System.Drawing.Point(-17, 299);
-            this.btn_meal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_meal.Location = new System.Drawing.Point(-13, 243);
             this.btn_meal.Name = "btn_meal";
-            this.btn_meal.Size = new System.Drawing.Size(291, 65);
+            this.btn_meal.Size = new System.Drawing.Size(218, 53);
             this.btn_meal.TabIndex = 1;
             this.btn_meal.Text = "Meals";
             this.btn_meal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -605,27 +587,33 @@ namespace SOFOK_System
             this.All.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.All.ForeColor = System.Drawing.Color.DarkOrange;
             this.All.Image = ((System.Drawing.Image)(resources.GetObject("All.Image")));
-            this.All.Location = new System.Drawing.Point(-17, 228);
-            this.All.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.All.Location = new System.Drawing.Point(-13, 185);
             this.All.Name = "All";
-            this.All.Size = new System.Drawing.Size(291, 65);
+            this.All.Size = new System.Drawing.Size(218, 53);
             this.All.TabIndex = 1;
             this.All.Text = "All";
             this.All.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.All.UseVisualStyleBackColor = false;
             this.All.Click += new System.EventHandler(this.All_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1801, 799);
+            this.ClientSize = new System.Drawing.Size(1351, 649);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
