@@ -473,6 +473,26 @@ namespace SOFOK_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_100px1 {
+            get {
+                object obj = ResourceManager.GetObject("search_100px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_50px {
+            get {
+                object obj = ResourceManager.GetObject("search_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap self_service_kiosk_50px {
             get {
                 object obj = ResourceManager.GetObject("self_service_kiosk_50px", resourceCulture);

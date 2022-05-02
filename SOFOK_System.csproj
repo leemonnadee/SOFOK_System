@@ -565,5 +565,11 @@
     <None Include="icons\wilmar.jpg" />
     <None Include="icons\x.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_50px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
