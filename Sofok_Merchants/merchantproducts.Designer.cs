@@ -1087,7 +1087,7 @@ namespace SOFOK_System
             this.productpic.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.productpic.AutoSizeHeight = false;
             this.productpic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(218)))), ((int)(((byte)(252)))));
-            this.productpic.BorderRadius = 0;
+            this.productpic.BorderRadius = 25;
             this.productpic.Image = global::SOFOK_System.Properties.Resources.tableware_100px;
             this.productpic.IsCircle = true;
             this.productpic.Location = new System.Drawing.Point(138, 23);
