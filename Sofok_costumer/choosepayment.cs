@@ -12,6 +12,9 @@ namespace SOFOK_System
 {
     public partial class choosepayment : Form
     {
+
+        public String mod_payment;
+     
         public choosepayment()
         {
             InitializeComponent();
@@ -25,19 +28,32 @@ namespace SOFOK_System
             
 
         }
-  
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void btn_gcash_Click(object sender, EventArgs e)
         {
-
-            frmMain fr = new frmMain();
+            mod_payment = "gcash";
+            frmMain fm = new frmMain();
+            fm.Show();
+            seat st = new seat();
+            st.Hide();
             this.Hide();
-            fr.MaximizeBox = true;
+         
         }
 
-        private void bunifuButton2_Click(object sender, EventArgs e)
+        private void btn_cashier_Click(object sender, EventArgs e)
         {
+            mod_payment = "cashier";
+            frmMain fm = new frmMain();
+            fm.Show();
+            seat st = new seat();
+            st.Hide();
+            this.Hide();
+          
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

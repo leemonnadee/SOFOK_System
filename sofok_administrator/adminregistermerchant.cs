@@ -78,8 +78,11 @@ namespace SOFOK_System
                 try
                 {
 
-
-                    string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name`, `merchant_store`, `acc_id`) VALUES ('','" + txt_merchant.Text + "','" + txt_storename.Text + "','" + lbl_id.Text + "')";
+                   
+                    string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name` , `marital_status`, `gender`, `contact_no`, `address`, `merchant_store`, `profile_img`, `acc_id`) VALUES " +
+                                                             "('','" + txt_merchant.Text + "','none','none','none','none','" + txt_storename.Text + "','none','" + lbl_id.Text + "')";
+                    
+                    //string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name`, `merchant_store`, `acc_id`) VALUES ('','" + txt_merchant.Text + "','" + txt_storename.Text + "','" + lbl_id.Text + "')";
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
 

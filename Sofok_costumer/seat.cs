@@ -12,26 +12,38 @@ namespace SOFOK_System
 {
     public partial class seat : Form
     {
+        public String Seat_availability;
+    
         public seat()
         {
             InitializeComponent();
 
         }
-
+     
        
 
-        private void bunifuButton22_Click(object sender, EventArgs e)
+      
+
+        private void dine_in_Click(object sender, EventArgs e)
         {
             choosepayment fr = new choosepayment();
             fr.Show();
-            this.Hide();
+
+           
+            Seat_availability = "Dine In";
+            
+ 
         }
 
-        private void bunifuButton21_Click(object sender, EventArgs e)
+        private void dine_out_Click(object sender, EventArgs e)
         {
             choosepayment fr = new choosepayment();
             fr.Show();
-            this.Hide();
+         
+           
+         
+            Seat_availability = "Dine Out";
+         
         }
     }
 }

@@ -137,7 +137,7 @@ namespace SOFOK_System
             this.dine_in.BackColor1 = System.Drawing.Color.DarkOrange;
             this.dine_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dine_in.BackgroundImage")));
             this.dine_in.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.dine_in.ButtonText = "Dine in";
+            this.dine_in.ButtonText = "Dine In";
             this.dine_in.ButtonTextMarginLeft = 0;
             this.dine_in.ColorContrastOnClick = 45;
             this.dine_in.ColorContrastOnHover = 45;
@@ -211,7 +211,7 @@ namespace SOFOK_System
             this.dine_in.TextMarginLeft = 0;
             this.dine_in.TextPadding = new System.Windows.Forms.Padding(0);
             this.dine_in.UseDefaultRadiusAndThickness = true;
-            this.dine_in.Click += new System.EventHandler(this.bunifuButton21_Click);
+            this.dine_in.Click += new System.EventHandler(this.dine_in_Click);
             // 
             // bunifuPanel10
             // 
@@ -675,7 +675,7 @@ namespace SOFOK_System
             this.dine_out.TextMarginLeft = 0;
             this.dine_out.TextPadding = new System.Windows.Forms.Padding(0);
             this.dine_out.UseDefaultRadiusAndThickness = true;
-            this.dine_out.Click += new System.EventHandler(this.bunifuButton22_Click);
+            this.dine_out.Click += new System.EventHandler(this.dine_out_Click);
             // 
             // label18
             // 

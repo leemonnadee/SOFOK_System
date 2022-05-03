@@ -156,7 +156,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Downloads\MySql.Data.DLL</HintPath>
+      <HintPath>Important\MySql.Data.DLL</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -292,6 +292,12 @@
     <Compile Include="Sofok_Merchants\updateinfo_frm.designer.cs">
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sofok_Merchants\uploadImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\uploadImage.Designer.cs">
+      <DependentUpon>uploadImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="testform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\updateinfo_frm.resx">
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\uploadImage.resx">
+      <DependentUpon>uploadImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testform.resx">
       <DependentUpon>testform.cs</DependentUpon>
@@ -583,6 +592,7 @@
   <ItemGroup>
     <Content Include="Resources\address_100px.png" />
     <Content Include="Resources\birthday_100px.png" />
+    <None Include="Resources\cashier.png" />
     <Content Include="Resources\gender_100px.png" />
     <Content Include="Resources\iphone_100px.png" />
     <Content Include="Resources\user_100px.png" />

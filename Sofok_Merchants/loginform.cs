@@ -34,7 +34,8 @@ namespace SOFOK_System
             public static string birthdate;
             public static string email;
             public static string contact;
-
+            public static int Acc_id;
+    
         }
 
             private void btn_exit_Click(object sender, EventArgs e)
@@ -87,12 +88,15 @@ namespace SOFOK_System
             {
                 UserDisplay.MerchantID = myreaderfetch.GetString("merchant_ID");
                 UserDisplay.merchantName = myreaderfetch.GetString("name");
+               
                 UserDisplay.StoreName = myreaderfetch.GetString("merchant_store");
+
                 UserDisplay.maritalStatus = myreaderfetch.GetString("marital_status");
                 UserDisplay.address = myreaderfetch.GetString("address");
                 UserDisplay.gender = myreaderfetch.GetString("gender");
-                UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
+        UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
                 UserDisplay.contact = myreaderfetch.GetString("contact_no");
+        
 
             }
          
@@ -105,7 +109,7 @@ namespace SOFOK_System
             var str = passwordtxt.Text;
             var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
 
-            string query2 = "SELECT tbl_account.username FROM tbl_account WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            string query2 = "SELECT tbl_account.username,tbl_account.acc_id FROM tbl_account WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -116,6 +120,7 @@ namespace SOFOK_System
             while (myreaderfetch.Read())
             {
                 UserDisplay.email = myreaderfetch.GetString("username");
+                UserDisplay.Acc_id = myreaderfetch.GetInt32("acc_id");
             }
         }
 
@@ -171,16 +176,23 @@ namespace SOFOK_System
                             af.Show();
                             this.Hide();
                         }
-                      
-                        else
+
+                        else if (combo_log.Text.Equals("Merchant"))
                         {
-                        
+
                             merchantmainfrm mf = new merchantmainfrm();
                             mf.Show();
                             getMerchantID();
                             getEmail();
                             this.Hide();
 
+
+                        }
+                        else {
+                            frmMain mf = new frmMain();
+                            mf.Show();
+                          
+                            this.Hide();
 
                         }
                         
@@ -232,15 +244,9 @@ namespace SOFOK_System
 
         }
 
-<<<<<<< HEAD
         private void loginform_Load(object sender, EventArgs e)
         {
      
-=======
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
->>>>>>> 0932de5c6cbda428a0bd370dc7c99ee4c2702c23
         }
     }
 }

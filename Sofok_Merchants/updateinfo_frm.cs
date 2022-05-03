@@ -72,7 +72,7 @@ namespace SOFOK_System
 
             if (nameupdate_txt.Text.Equals("") ||
                 addressupdate_txt.Text.Equals("") ||
-                birthdate_picker.Text.Equals("") ||
+               
                 gender.Equals("") ||
                 cellphoneupdate_txt.Text.Equals(""))
             {
