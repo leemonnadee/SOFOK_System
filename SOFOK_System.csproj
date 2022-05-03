@@ -156,7 +156,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Desktop\important files\MySql.Data.DLL</HintPath>
+      <HintPath>..\..\..\Downloads\MySql.Data.DLL</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -286,6 +286,12 @@
     <Compile Include="Sofok_Merchants\merchantprofile.Designer.cs">
       <DependentUpon>merchantprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sofok_Merchants\updateinfo_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\updateinfo_frm.designer.cs">
+      <DependentUpon>updateinfo_frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="testform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\merchantprofile.resx">
       <DependentUpon>merchantprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\updateinfo_frm.resx">
+      <DependentUpon>updateinfo_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testform.resx">
       <DependentUpon>testform.cs</DependentUpon>
@@ -570,6 +579,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\address_100px.png" />
+    <Content Include="Resources\birthday_100px.png" />
+    <Content Include="Resources\gender_100px.png" />
+    <Content Include="Resources\iphone_100px.png" />
+    <Content Include="Resources\user_100px.png" />
+    <Content Include="src\address_100px.png" />
+    <Content Include="src\age_100px.png" />
+    <Content Include="src\birthday_100px.png" />
+    <Content Include="src\envelope_100px.png" />
+    <Content Include="src\food_50px.png" />
+    <Content Include="src\gender_100px.png" />
+    <Content Include="src\hamburger_25px.png" />
+    <Content Include="src\iphone_100px.png" />
+    <Content Include="src\phone_100px.png" />
+    <Content Include="src\user_100px.png" />
+    <Content Include="src\user_male_100px.png" />
+    <Content Include="src\wedding_100px.png" />
+    <Content Include="src\white stall_100px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

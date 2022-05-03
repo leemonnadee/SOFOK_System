@@ -240,7 +240,7 @@ namespace SOFOK_System
                 e.Handled = true;
             }
         }
-    
+
 
 
 

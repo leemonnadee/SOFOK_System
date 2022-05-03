@@ -27,6 +27,13 @@ namespace SOFOK_System
         {
             public static string MerchantID;
             public static string merchantName;
+            public static string StoreName;
+            public static string maritalStatus;
+            public static string address;
+            public static string gender;
+            public static string birthdate;
+            public static string email;
+            public static string contact;
 
         }
 
@@ -80,19 +87,42 @@ namespace SOFOK_System
             {
                 UserDisplay.MerchantID = myreaderfetch.GetString("merchant_ID");
                 UserDisplay.merchantName = myreaderfetch.GetString("name");
-
-
-
-
+                UserDisplay.StoreName = myreaderfetch.GetString("merchant_store");
+                UserDisplay.maritalStatus = myreaderfetch.GetString("marital_status");
+                UserDisplay.address = myreaderfetch.GetString("address");
+                UserDisplay.gender = myreaderfetch.GetString("gender");
+                UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
+                UserDisplay.contact = myreaderfetch.GetString("contact_no");
 
             }
          
-
-
             }
 
+        public void getEmail()
+        {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
 
-            public void loginAuth()
+            var str = passwordtxt.Text;
+            var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+
+            string query2 = "SELECT tbl_account.username FROM tbl_account WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                UserDisplay.email = myreaderfetch.GetString("username");
+            }
+        }
+
+
+
+
+        public void loginAuth()
         {
             if (usernametxt.Text.Equals("") ||
                 passwordtxt.Text.Equals(""))
@@ -148,6 +178,7 @@ namespace SOFOK_System
                             merchantmainfrm mf = new merchantmainfrm();
                             mf.Show();
                             getMerchantID();
+                            getEmail();
                             this.Hide();
 
 
@@ -201,9 +232,10 @@ namespace SOFOK_System
 
         }
 
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
 
