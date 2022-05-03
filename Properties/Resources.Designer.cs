@@ -63,9 +63,29 @@ namespace SOFOK_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap address_100px {
+            get {
+                object obj = ResourceManager.GetObject("address_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap admin_bg {
             get {
                 object obj = ResourceManager.GetObject("admin_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap birthday_100px {
+            get {
+                object obj = ResourceManager.GetObject("birthday_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +223,16 @@ namespace SOFOK_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gender_100px {
+            get {
+                object obj = ResourceManager.GetObject("gender_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gender_32px {
             get {
                 object obj = ResourceManager.GetObject("gender_32px", resourceCulture);
@@ -246,6 +276,16 @@ namespace SOFOK_System.Properties {
         internal static System.Drawing.Bitmap id_number {
             get {
                 object obj = ResourceManager.GetObject("id number", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iphone_100px {
+            get {
+                object obj = ResourceManager.GetObject("iphone_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -606,6 +646,16 @@ namespace SOFOK_System.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_100px {
+            get {
+                object obj = ResourceManager.GetObject("user_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
