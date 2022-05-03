@@ -50,52 +50,57 @@ namespace SOFOK_System
             }
             else
             {
-                try
-                {
 
+              
+             
+              
+                    try
+                    {
                     var ImgFile = Path.GetFileName(pathIMG);
-                  
+                    
+
                     double price = double.Parse(prodpricetxt.Text);
-                  
-
-
-                    String query = "INSERT INTO `tbl_products`" +
-                        "(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`, `product_icon`) VALUES " +
-                        "('','" + productnametxt.Text + "','" + combo_category.Text + "','" + prodpricetxt.Text + "','" + loginform.UserDisplay.MerchantID + "','" + ImgFile + "')";
-                    MySqlConnection conn = new MySqlConnection(mycon);
-                    MySqlCommand mycommand = new MySqlCommand(query, conn);
-                    MySqlDataReader myreader1;
 
 
 
-                    conn.Open();
-                    //cm = new MySqlCommand("insert into tbl_products(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`,product_icon)value('','" + productnametxt.Text + "','" + prodcategtxt.Text + "','" + prodpricetxt.Text + "','" + 1 + "',@product_icon)");
-
-                    myreader1 = mycommand.ExecuteReader();
-                    addImage();
-                  
-                    clear();
-                    productflowlayout.Controls.Clear();
-                    displayProductsAll();
-                    MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        String query = "INSERT INTO `tbl_products`" +
+                            "(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`, `product_icon`) VALUES " +
+                            "('','" + productnametxt.Text + "','" + combo_category.Text + "','" + prodpricetxt.Text + "','" + loginform.UserDisplay.MerchantID + "','" + ImgFile + "')";
+                        MySqlConnection conn = new MySqlConnection(mycon);
+                        MySqlCommand mycommand = new MySqlCommand(query, conn);
+                        MySqlDataReader myreader1;
 
 
 
+                        conn.Open();
+                        //cm = new MySqlCommand("insert into tbl_products(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`,product_icon)value('','" + productnametxt.Text + "','" + prodcategtxt.Text + "','" + prodpricetxt.Text + "','" + 1 + "',@product_icon)");
+
+                        myreader1 = mycommand.ExecuteReader();
+                        addImage();
+
+                        clear();
+                        productflowlayout.Controls.Clear();
+                        displayProductsAll();
+                        MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
 
-                    conn.Close();
-
-                    //conn.Close();
 
 
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Icon Already Exist");
-                }
+                        conn.Close();
+
+                        //conn.Close();
+
+                    }
+
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                
             }
         }
 
@@ -152,14 +157,62 @@ namespace SOFOK_System
         //Insert Btn
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-            
+            var ImgFile = Path.GetFileName(pathIMG);
+            if (ImgFile == null)
+            {
+                MessageBox.Show("Please Select Icon", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-             addproduct();
+            }
+
+            else {
+                checkImg();
 
 
+
+            }
+
+            //checkImg();
 
         }
+        public void checkImg()
+        {
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
 
+               
+                   
+                    string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='"+loginform.UserDisplay.MerchantID+"' and `product_icon`='"+ ImgFile + "'";
+
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+                MySqlDataReader myreader1;
+                conn.Open();
+                //execute the query
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+
+
+                    MessageBox.Show("Icon Already Exist , \n Try Again!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clear();
+                    displayProductsAll();
+
+                }
+                else {
+
+                    addproduct();
+
+                }
+                
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        
+        }
 
 
         /*
@@ -460,6 +513,7 @@ namespace SOFOK_System
                     btn_delete.Enabled = false;
                     btn_update.Enabled = false;
                     save_btn.Enabled = true;
+                    uploadbtn.Visible = true;
                 }
             }
 

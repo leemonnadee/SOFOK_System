@@ -201,9 +201,10 @@ namespace SOFOK_System
 
         }
 
-
-
-
+        private void loginform_Load(object sender, EventArgs e)
+        {
+     
+        }
     }
 }
 

@@ -28,7 +28,7 @@ namespace SOFOK_System
             try
             {
 
-                string query = "SELECT `merchant_id`, `name`,`merchant_store`,tbl_account.username, tbl_account.acc_id FROM `tbl_merchant` INNER JOIN tbl_account ON tbl_merchant.acc_id ='"+ loginform.UserDisplay.MerchantID + "' ";
+                string query = "SELECT `merchant_id`, `name`,`merchant_store`,tbl_account.username, tbl_account.acc_id FROM `tbl_merchant` INNER JOIN tbl_account ON tbl_merchant.acc_id=tbl_account.acc_id where tbl_account.log_as='Merchant'";
 
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
