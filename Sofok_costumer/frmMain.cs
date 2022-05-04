@@ -135,14 +135,29 @@ namespace SOFOK_System
                 double price_prod = myreaderfetch.GetDouble("prod_price");
                 int prod_id = myreaderfetch.GetInt32("prod_id");
 
-   
+
+                if (cat.Equals("Meal"))
+                {
+
+                    AddItem(prod_name, price_prod, categories.meal, icon, store_name, prod_id);
+                }
+                else if (cat.Equals("Drink"))
+                {
+                    AddItem(prod_name, price_prod, categories.drink, icon, store_name, prod_id);
+
+                }
+                else if (cat.Equals("Burger"))
+                {
+                    AddItem(prod_name, price_prod, categories.burger, icon, store_name, prod_id);
+                }
 
 
-              
 
 
 
-                AddItem(prod_name, price_prod, categories.meal, icon, store_name, prod_id);
+
+
+
             }
 
         }
