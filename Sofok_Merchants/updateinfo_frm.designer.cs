@@ -89,7 +89,6 @@ namespace SOFOK_System
             // 
             // bunifuGradientPanel1
             // 
-            this.bunifuGradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -121,11 +120,10 @@ namespace SOFOK_System
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(95)))), ((int)(((byte)(157)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, -1);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(712, 663);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(534, 540);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
             // 
@@ -134,8 +132,7 @@ namespace SOFOK_System
             this.male_radio.AutoSize = true;
             this.male_radio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.male_radio.ForeColor = System.Drawing.Color.White;
-            this.male_radio.Location = new System.Drawing.Point(524, 362);
-            this.male_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.male_radio.Location = new System.Drawing.Point(393, 294);
             this.male_radio.Name = "male_radio";
             this.male_radio.Size = new System.Drawing.Size(57, 21);
             this.male_radio.TabIndex = 71;
@@ -149,8 +146,7 @@ namespace SOFOK_System
             this.female_radio.AutoSize = true;
             this.female_radio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.female_radio.ForeColor = System.Drawing.Color.White;
-            this.female_radio.Location = new System.Drawing.Point(411, 362);
-            this.female_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.female_radio.Location = new System.Drawing.Point(308, 294);
             this.female_radio.Name = "female_radio";
             this.female_radio.Size = new System.Drawing.Size(73, 21);
             this.female_radio.TabIndex = 70;
@@ -180,11 +176,9 @@ namespace SOFOK_System
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(20, 415);
-            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(15, 337);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(257, 207);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(232, 168);
             this.bunifuGroupBox1.TabIndex = 69;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Marital Status";
@@ -196,8 +190,7 @@ namespace SOFOK_System
             this.bunifuLabel13.CursorType = null;
             this.bunifuLabel13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuLabel13.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel13.Location = new System.Drawing.Point(81, 164);
-            this.bunifuLabel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel13.Location = new System.Drawing.Point(61, 133);
             this.bunifuLabel13.Name = "bunifuLabel13";
             this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel13.Size = new System.Drawing.Size(67, 17);
@@ -213,8 +206,7 @@ namespace SOFOK_System
             this.bunifuLabel9.CursorType = null;
             this.bunifuLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuLabel9.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel9.Location = new System.Drawing.Point(81, 134);
-            this.bunifuLabel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel9.Location = new System.Drawing.Point(61, 109);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel9.Size = new System.Drawing.Size(63, 17);
@@ -230,8 +222,7 @@ namespace SOFOK_System
             this.bunifuLabel8.CursorType = null;
             this.bunifuLabel8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel8.Location = new System.Drawing.Point(81, 101);
-            this.bunifuLabel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel8.Location = new System.Drawing.Point(61, 82);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(59, 17);
@@ -247,8 +238,7 @@ namespace SOFOK_System
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(81, 68);
-            this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel7.Location = new System.Drawing.Point(61, 55);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(37, 17);
@@ -265,8 +255,7 @@ namespace SOFOK_System
             this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(81, 34);
-            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel6.Location = new System.Drawing.Point(61, 28);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(48, 17);
@@ -293,9 +282,8 @@ namespace SOFOK_System
             this.separated_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.separated_cbox.Cursor = System.Windows.Forms.Cursors.Default;
             this.separated_cbox.CustomCheckmarkImage = null;
-            this.separated_cbox.Location = new System.Drawing.Point(37, 162);
-            this.separated_cbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.separated_cbox.MinimumSize = new System.Drawing.Size(23, 21);
+            this.separated_cbox.Location = new System.Drawing.Point(28, 132);
+            this.separated_cbox.MinimumSize = new System.Drawing.Size(17, 17);
             this.separated_cbox.Name = "separated_cbox";
             this.separated_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
             this.separated_cbox.OnCheck.BorderRadius = 5;
@@ -323,7 +311,7 @@ namespace SOFOK_System
             this.separated_cbox.OnUncheck.BorderRadius = 5;
             this.separated_cbox.OnUncheck.BorderThickness = 1;
             this.separated_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.separated_cbox.Size = new System.Drawing.Size(23, 23);
+            this.separated_cbox.Size = new System.Drawing.Size(17, 17);
             this.separated_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.separated_cbox.TabIndex = 74;
             this.separated_cbox.ThreeState = false;
@@ -348,9 +336,8 @@ namespace SOFOK_System
             this.widowed_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.widowed_cbox.Cursor = System.Windows.Forms.Cursors.Default;
             this.widowed_cbox.CustomCheckmarkImage = null;
-            this.widowed_cbox.Location = new System.Drawing.Point(37, 133);
-            this.widowed_cbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.widowed_cbox.MinimumSize = new System.Drawing.Size(23, 21);
+            this.widowed_cbox.Location = new System.Drawing.Point(28, 108);
+            this.widowed_cbox.MinimumSize = new System.Drawing.Size(17, 17);
             this.widowed_cbox.Name = "widowed_cbox";
             this.widowed_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
             this.widowed_cbox.OnCheck.BorderRadius = 5;
@@ -378,7 +365,7 @@ namespace SOFOK_System
             this.widowed_cbox.OnUncheck.BorderRadius = 5;
             this.widowed_cbox.OnUncheck.BorderThickness = 1;
             this.widowed_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.widowed_cbox.Size = new System.Drawing.Size(23, 23);
+            this.widowed_cbox.Size = new System.Drawing.Size(17, 17);
             this.widowed_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.widowed_cbox.TabIndex = 73;
             this.widowed_cbox.ThreeState = false;
@@ -403,9 +390,8 @@ namespace SOFOK_System
             this.divorced_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.divorced_cbox.Cursor = System.Windows.Forms.Cursors.Default;
             this.divorced_cbox.CustomCheckmarkImage = null;
-            this.divorced_cbox.Location = new System.Drawing.Point(37, 100);
-            this.divorced_cbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.divorced_cbox.MinimumSize = new System.Drawing.Size(23, 21);
+            this.divorced_cbox.Location = new System.Drawing.Point(28, 81);
+            this.divorced_cbox.MinimumSize = new System.Drawing.Size(17, 17);
             this.divorced_cbox.Name = "divorced_cbox";
             this.divorced_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
             this.divorced_cbox.OnCheck.BorderRadius = 5;
@@ -433,7 +419,7 @@ namespace SOFOK_System
             this.divorced_cbox.OnUncheck.BorderRadius = 5;
             this.divorced_cbox.OnUncheck.BorderThickness = 1;
             this.divorced_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.divorced_cbox.Size = new System.Drawing.Size(23, 23);
+            this.divorced_cbox.Size = new System.Drawing.Size(17, 17);
             this.divorced_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.divorced_cbox.TabIndex = 72;
             this.divorced_cbox.ThreeState = false;
@@ -458,9 +444,8 @@ namespace SOFOK_System
             this.single_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.single_cbox.Cursor = System.Windows.Forms.Cursors.Default;
             this.single_cbox.CustomCheckmarkImage = null;
-            this.single_cbox.Location = new System.Drawing.Point(37, 66);
-            this.single_cbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.single_cbox.MinimumSize = new System.Drawing.Size(23, 21);
+            this.single_cbox.Location = new System.Drawing.Point(28, 54);
+            this.single_cbox.MinimumSize = new System.Drawing.Size(17, 17);
             this.single_cbox.Name = "single_cbox";
             this.single_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
             this.single_cbox.OnCheck.BorderRadius = 5;
@@ -488,7 +473,7 @@ namespace SOFOK_System
             this.single_cbox.OnUncheck.BorderRadius = 5;
             this.single_cbox.OnUncheck.BorderThickness = 1;
             this.single_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.single_cbox.Size = new System.Drawing.Size(23, 23);
+            this.single_cbox.Size = new System.Drawing.Size(17, 17);
             this.single_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.single_cbox.TabIndex = 71;
             this.single_cbox.ThreeState = false;
@@ -513,9 +498,8 @@ namespace SOFOK_System
             this.married_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.married_cbox.Cursor = System.Windows.Forms.Cursors.Default;
             this.married_cbox.CustomCheckmarkImage = null;
-            this.married_cbox.Location = new System.Drawing.Point(37, 33);
-            this.married_cbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.married_cbox.MinimumSize = new System.Drawing.Size(23, 21);
+            this.married_cbox.Location = new System.Drawing.Point(28, 27);
+            this.married_cbox.MinimumSize = new System.Drawing.Size(17, 17);
             this.married_cbox.Name = "married_cbox";
             this.married_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
             this.married_cbox.OnCheck.BorderRadius = 5;
@@ -543,7 +527,7 @@ namespace SOFOK_System
             this.married_cbox.OnUncheck.BorderRadius = 5;
             this.married_cbox.OnUncheck.BorderThickness = 1;
             this.married_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.married_cbox.Size = new System.Drawing.Size(23, 23);
+            this.married_cbox.Size = new System.Drawing.Size(17, 17);
             this.married_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.married_cbox.TabIndex = 70;
             this.married_cbox.ThreeState = false;
@@ -558,10 +542,9 @@ namespace SOFOK_System
             this.bunifuPictureBox8.BorderRadius = 0;
             this.bunifuPictureBox8.Image = global::SOFOK_System.Properties.Resources.gender_100px;
             this.bunifuPictureBox8.IsCircle = true;
-            this.bunifuPictureBox8.Location = new System.Drawing.Point(372, 328);
-            this.bunifuPictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox8.Location = new System.Drawing.Point(279, 267);
             this.bunifuPictureBox8.Name = "bunifuPictureBox8";
-            this.bunifuPictureBox8.Size = new System.Drawing.Size(31, 31);
+            this.bunifuPictureBox8.Size = new System.Drawing.Size(23, 23);
             this.bunifuPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox8.TabIndex = 64;
             this.bunifuPictureBox8.TabStop = false;
@@ -575,8 +558,7 @@ namespace SOFOK_System
             this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel10.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel10.Location = new System.Drawing.Point(403, 332);
-            this.bunifuLabel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel10.Location = new System.Drawing.Point(302, 270);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel10.Size = new System.Drawing.Size(57, 18);
@@ -634,8 +616,7 @@ namespace SOFOK_System
             this.cancel_btn.IdleIconLeftImage = null;
             this.cancel_btn.IdleIconRightImage = null;
             this.cancel_btn.IndicateFocus = false;
-            this.cancel_btn.Location = new System.Drawing.Point(405, 560);
-            this.cancel_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancel_btn.Location = new System.Drawing.Point(304, 455);
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.cancel_btn.OnDisabledState.BorderRadius = 15;
@@ -669,7 +650,7 @@ namespace SOFOK_System
             this.cancel_btn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.cancel_btn.OnPressedState.IconLeftImage = null;
             this.cancel_btn.OnPressedState.IconRightImage = null;
-            this.cancel_btn.Size = new System.Drawing.Size(121, 46);
+            this.cancel_btn.Size = new System.Drawing.Size(91, 37);
             this.cancel_btn.TabIndex = 62;
             this.cancel_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cancel_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -727,8 +708,7 @@ namespace SOFOK_System
             this.updateinfo_btn.IdleIconLeftImage = null;
             this.updateinfo_btn.IdleIconRightImage = null;
             this.updateinfo_btn.IndicateFocus = false;
-            this.updateinfo_btn.Location = new System.Drawing.Point(559, 560);
-            this.updateinfo_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updateinfo_btn.Location = new System.Drawing.Point(419, 455);
             this.updateinfo_btn.Name = "updateinfo_btn";
             this.updateinfo_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.updateinfo_btn.OnDisabledState.BorderRadius = 15;
@@ -762,7 +742,7 @@ namespace SOFOK_System
             this.updateinfo_btn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.updateinfo_btn.OnPressedState.IconLeftImage = null;
             this.updateinfo_btn.OnPressedState.IconRightImage = null;
-            this.updateinfo_btn.Size = new System.Drawing.Size(121, 46);
+            this.updateinfo_btn.Size = new System.Drawing.Size(91, 37);
             this.updateinfo_btn.TabIndex = 58;
             this.updateinfo_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.updateinfo_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -779,10 +759,9 @@ namespace SOFOK_System
             this.bunifuPictureBox4.BorderRadius = 0;
             this.bunifuPictureBox4.Image = global::SOFOK_System.Properties.Resources.iphone_100px;
             this.bunifuPictureBox4.IsCircle = true;
-            this.bunifuPictureBox4.Location = new System.Drawing.Point(372, 442);
-            this.bunifuPictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox4.Location = new System.Drawing.Point(279, 360);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
-            this.bunifuPictureBox4.Size = new System.Drawing.Size(23, 23);
+            this.bunifuPictureBox4.Size = new System.Drawing.Size(17, 17);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox4.TabIndex = 51;
             this.bunifuPictureBox4.TabStop = false;
@@ -796,8 +775,7 @@ namespace SOFOK_System
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(403, 449);
-            this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel5.Location = new System.Drawing.Point(302, 365);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(79, 16);
@@ -834,8 +812,7 @@ namespace SOFOK_System
             this.cellphoneupdate_txt.IconRight = null;
             this.cellphoneupdate_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.cellphoneupdate_txt.Lines = new string[0];
-            this.cellphoneupdate_txt.Location = new System.Drawing.Point(373, 474);
-            this.cellphoneupdate_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cellphoneupdate_txt.Location = new System.Drawing.Point(280, 385);
             this.cellphoneupdate_txt.MaxLength = 32767;
             this.cellphoneupdate_txt.MinimumSize = new System.Drawing.Size(1, 1);
             this.cellphoneupdate_txt.Modified = false;
@@ -861,7 +838,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.cellphoneupdate_txt.OnIdleState = stateProperties4;
-            this.cellphoneupdate_txt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cellphoneupdate_txt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.cellphoneupdate_txt.PasswordChar = '\0';
             this.cellphoneupdate_txt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.cellphoneupdate_txt.PlaceholderText = "+63----------";
@@ -871,7 +848,7 @@ namespace SOFOK_System
             this.cellphoneupdate_txt.SelectionLength = 0;
             this.cellphoneupdate_txt.SelectionStart = 0;
             this.cellphoneupdate_txt.ShortcutsEnabled = true;
-            this.cellphoneupdate_txt.Size = new System.Drawing.Size(301, 30);
+            this.cellphoneupdate_txt.Size = new System.Drawing.Size(226, 24);
             this.cellphoneupdate_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.cellphoneupdate_txt.TabIndex = 49;
             this.cellphoneupdate_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -890,10 +867,9 @@ namespace SOFOK_System
             this.bunifuPictureBox3.BorderRadius = 0;
             this.bunifuPictureBox3.Image = global::SOFOK_System.Properties.Resources.birthday_100px;
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(29, 326);
-            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(22, 266);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(23, 23);
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(17, 17);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox3.TabIndex = 48;
             this.bunifuPictureBox3.TabStop = false;
@@ -920,11 +896,10 @@ namespace SOFOK_System
             this.birthdate_picker.IconColor = System.Drawing.Color.Transparent;
             this.birthdate_picker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.birthdate_picker.LeftTextMargin = 5;
-            this.birthdate_picker.Location = new System.Drawing.Point(28, 358);
-            this.birthdate_picker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.birthdate_picker.Location = new System.Drawing.Point(21, 291);
             this.birthdate_picker.MinimumSize = new System.Drawing.Size(4, 32);
             this.birthdate_picker.Name = "birthdate_picker";
-            this.birthdate_picker.Size = new System.Drawing.Size(225, 32);
+            this.birthdate_picker.Size = new System.Drawing.Size(170, 32);
             this.birthdate_picker.TabIndex = 47;
             // 
             // bunifuLabel4
@@ -935,8 +910,7 @@ namespace SOFOK_System
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel4.Location = new System.Drawing.Point(57, 331);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel4.Location = new System.Drawing.Point(43, 269);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(65, 18);
@@ -953,11 +927,10 @@ namespace SOFOK_System
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 3;
             this.bunifuPanel3.BorderThickness = 0;
-            this.bunifuPanel3.Location = new System.Drawing.Point(119, 63);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel3.Location = new System.Drawing.Point(89, 51);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(243, 4);
+            this.bunifuPanel3.Size = new System.Drawing.Size(182, 3);
             this.bunifuPanel3.TabIndex = 44;
             // 
             // bunifuLabel3
@@ -968,8 +941,7 @@ namespace SOFOK_System
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel3.Location = new System.Drawing.Point(71, 15);
-            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel3.Location = new System.Drawing.Point(53, 12);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(271, 36);
@@ -986,11 +958,10 @@ namespace SOFOK_System
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Location = new System.Drawing.Point(-56, 42);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel2.Location = new System.Drawing.Point(-42, 34);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(91, 15);
+            this.bunifuPanel2.Size = new System.Drawing.Size(68, 12);
             this.bunifuPanel2.TabIndex = 42;
             // 
             // bunifuPanel1
@@ -1001,11 +972,10 @@ namespace SOFOK_System
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Location = new System.Drawing.Point(-39, 23);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(-29, 19);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(91, 15);
+            this.bunifuPanel1.Size = new System.Drawing.Size(68, 12);
             this.bunifuPanel1.TabIndex = 41;
             // 
             // bunifuPictureBox2
@@ -1016,10 +986,9 @@ namespace SOFOK_System
             this.bunifuPictureBox2.BorderRadius = 0;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.address_100px;
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(30, 200);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(22, 163);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(33, 33);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox2.TabIndex = 40;
             this.bunifuPictureBox2.TabStop = false;
@@ -1033,10 +1002,9 @@ namespace SOFOK_System
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.user_100px;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(30, 89);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(22, 73);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(33, 33);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox1.TabIndex = 39;
             this.bunifuPictureBox1.TabStop = false;
@@ -1049,8 +1017,7 @@ namespace SOFOK_System
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(71, 210);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel2.Location = new System.Drawing.Point(53, 171);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(61, 19);
@@ -1067,8 +1034,7 @@ namespace SOFOK_System
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(71, 103);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel1.Location = new System.Drawing.Point(53, 84);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(73, 19);
@@ -1105,8 +1071,7 @@ namespace SOFOK_System
             this.addressupdate_txt.IconRight = null;
             this.addressupdate_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.addressupdate_txt.Lines = new string[0];
-            this.addressupdate_txt.Location = new System.Drawing.Point(24, 241);
-            this.addressupdate_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressupdate_txt.Location = new System.Drawing.Point(18, 196);
             this.addressupdate_txt.MaxLength = 32767;
             this.addressupdate_txt.MinimumSize = new System.Drawing.Size(1, 1);
             this.addressupdate_txt.Modified = false;
@@ -1132,7 +1097,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.addressupdate_txt.OnIdleState = stateProperties8;
-            this.addressupdate_txt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressupdate_txt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.addressupdate_txt.PasswordChar = '\0';
             this.addressupdate_txt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.addressupdate_txt.PlaceholderText = "House/Blk no, Street, Barangay, Municipality, City/Province";
@@ -1142,7 +1107,7 @@ namespace SOFOK_System
             this.addressupdate_txt.SelectionLength = 0;
             this.addressupdate_txt.SelectionStart = 0;
             this.addressupdate_txt.ShortcutsEnabled = true;
-            this.addressupdate_txt.Size = new System.Drawing.Size(664, 41);
+            this.addressupdate_txt.Size = new System.Drawing.Size(498, 33);
             this.addressupdate_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.addressupdate_txt.TabIndex = 36;
             this.addressupdate_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1181,8 +1146,7 @@ namespace SOFOK_System
             this.nameupdate_txt.IconRight = null;
             this.nameupdate_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.nameupdate_txt.Lines = new string[0];
-            this.nameupdate_txt.Location = new System.Drawing.Point(24, 142);
-            this.nameupdate_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameupdate_txt.Location = new System.Drawing.Point(18, 115);
             this.nameupdate_txt.MaxLength = 32767;
             this.nameupdate_txt.MinimumSize = new System.Drawing.Size(1, 1);
             this.nameupdate_txt.Modified = false;
@@ -1208,7 +1172,7 @@ namespace SOFOK_System
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.nameupdate_txt.OnIdleState = stateProperties12;
-            this.nameupdate_txt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameupdate_txt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.nameupdate_txt.PasswordChar = '\0';
             this.nameupdate_txt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.nameupdate_txt.PlaceholderText = "First Name, Middle Initial, Last Name";
@@ -1218,7 +1182,7 @@ namespace SOFOK_System
             this.nameupdate_txt.SelectionLength = 0;
             this.nameupdate_txt.SelectionStart = 0;
             this.nameupdate_txt.ShortcutsEnabled = true;
-            this.nameupdate_txt.Size = new System.Drawing.Size(451, 41);
+            this.nameupdate_txt.Size = new System.Drawing.Size(338, 33);
             this.nameupdate_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.nameupdate_txt.TabIndex = 35;
             this.nameupdate_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1231,13 +1195,12 @@ namespace SOFOK_System
             // 
             // updateinfo_frm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(712, 663);
+            this.ClientSize = new System.Drawing.Size(534, 539);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "updateinfo_frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "updateinfo_frm";
