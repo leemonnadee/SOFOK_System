@@ -28,7 +28,7 @@ namespace SOFOK_System
         {
             Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
             fr.Show();
-
+            this.Hide();
            
             Seat_availability = "Dine In";
             
@@ -39,7 +39,7 @@ namespace SOFOK_System
         {
             Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
             fr.Show();
-         
+            this.Hide();
            
          
             Seat_availability = "Dine Out";

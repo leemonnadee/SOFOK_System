@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using SOFOK_System.components;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,21 @@ namespace SOFOK_System.Sofok_costumer
 {
     public partial class merchant_list : Form
     {
+        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
         public merchant_list()
         {
             InitializeComponent();
+
         }
+        public class merchantDisplay
+        {
+
+            public static double merch_id;
+        }
+
+
+
+
 
         private void bunifuFormDock1_FormDragging(object sender, Bunifu.UI.WinForms.BunifuFormDock.FormDraggingEventArgs e)
         {
@@ -28,5 +41,104 @@ namespace SOFOK_System.Sofok_costumer
             this.Opacity = 1;
             docker.WindowState = Bunifu.UI.WinForms.BunifuFormDock.FormWindowStates.Maximized;
         }
+
+
+
+
+        public void AddMerchant_List(String storename, String merchant, String prod, double id)
+        {
+
+
+
+            var w = new merchant_widget()
+            {
+
+                StoreName = storename,
+                Merchant_Name = merchant,
+                Available_prod = prod,
+
+
+
+                ID = id
+            };
+            merchant_widget.Controls.Add(w);
+
+            w.OnSelect += (ss, ee) =>
+            {
+              
+                var merch = (merchant_widget)ss;
+                merchant_list.merchantDisplay.merch_id = id;
+
+                MessageBox.Show(merchantDisplay.merch_id.ToString());
+                frmMain fr = new frmMain();
+                fr.Show();
+                this.Hide();
+
+
+
+            };
+
+
+
+
+
+
+
+        }
+
+     
+
+    public void displayProductsAll()
+        {
+            try
+            {
+
+                String query2= "SELECT tbl_merchant.name,tbl_merchant.merchant_store,tbl_merchant.merchant_id,COUNT(*) FROM `tbl_products` INNER JOIN tbl_merchant ON tbl_products.merchant_id=tbl_merchant.merchant_id GROUP BY tbl_products.merchant_id";
+               // string query2 = "SELECT tbl_merchant.name,tbl_merchant.merchant_store,tbl_merchant.merchant_id FROM `tbl_products` INNER JOIN tbl_merchant ON tbl_products.merchant_id=tbl_merchant.merchant_id;";
+                MySqlConnection conn = new MySqlConnection(mycon);
+
+                MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+                MySqlDataReader myreaderfetch;
+
+                conn.Open();
+                myreaderfetch = mycommandfetch.ExecuteReader();
+                while (myreaderfetch.Read())
+                {
+                    
+                    String name = myreaderfetch.GetString("name");
+
+                    String items = myreaderfetch.GetString("COUNT(*)");
+                    String store_name = myreaderfetch.GetString("merchant_store");
+                    int id = myreaderfetch.GetInt32("merchant_id");
+
+                    AddMerchant_List(store_name, name, items, id);
+                  
+                
+                }
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+}
+
+
+    private void merchant_list_Load(object sender, EventArgs e)
+        {
+              displayProductsAll();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            seat st = new seat();
+            st.Show();
+            this.Hide();
+            
+        }
     }
+
 }

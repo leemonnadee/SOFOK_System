@@ -160,7 +160,7 @@ namespace SOFOK_System
             this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel1);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1593, 884);
@@ -221,7 +221,7 @@ namespace SOFOK_System
             this.txt_srch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_srch.Lines = new string[0];
             this.txt_srch.Location = new System.Drawing.Point(434, 109);
-            this.txt_srch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_srch.Margin = new System.Windows.Forms.Padding(4);
             this.txt_srch.MaxLength = 32767;
             this.txt_srch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_srch.Modified = false;
@@ -247,7 +247,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_srch.OnIdleState = stateProperties4;
-            this.txt_srch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_srch.Padding = new System.Windows.Forms.Padding(4);
             this.txt_srch.PasswordChar = '\0';
             this.txt_srch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_srch.PlaceholderText = "Search Product";
@@ -294,7 +294,7 @@ namespace SOFOK_System
             this.btn_burger.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_burger.Image = global::SOFOK_System.Properties.Resources.hamburger_50px;
             this.btn_burger.Location = new System.Drawing.Point(4, 334);
-            this.btn_burger.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_burger.Margin = new System.Windows.Forms.Padding(4);
             this.btn_burger.Name = "btn_burger";
             this.btn_burger.Size = new System.Drawing.Size(297, 65);
             this.btn_burger.TabIndex = 7;
@@ -314,7 +314,7 @@ namespace SOFOK_System
             this.btn_drinks.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_drinks.Image = global::SOFOK_System.Properties.Resources.soda_50px;
             this.btn_drinks.Location = new System.Drawing.Point(4, 263);
-            this.btn_drinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_drinks.Margin = new System.Windows.Forms.Padding(4);
             this.btn_drinks.Name = "btn_drinks";
             this.btn_drinks.Size = new System.Drawing.Size(297, 65);
             this.btn_drinks.TabIndex = 6;
@@ -334,7 +334,7 @@ namespace SOFOK_System
             this.btn_meal.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_meal.Image = global::SOFOK_System.Properties.Resources.meal_50px;
             this.btn_meal.Location = new System.Drawing.Point(0, 192);
-            this.btn_meal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_meal.Margin = new System.Windows.Forms.Padding(4);
             this.btn_meal.Name = "btn_meal";
             this.btn_meal.Size = new System.Drawing.Size(301, 65);
             this.btn_meal.TabIndex = 4;
@@ -354,7 +354,7 @@ namespace SOFOK_System
             this.All.ForeColor = System.Drawing.Color.DarkOrange;
             this.All.Image = ((System.Drawing.Image)(resources.GetObject("All.Image")));
             this.All.Location = new System.Drawing.Point(0, 121);
-            this.All.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.All.Margin = new System.Windows.Forms.Padding(4);
             this.All.Name = "All";
             this.All.Size = new System.Drawing.Size(301, 65);
             this.All.TabIndex = 5;
@@ -376,7 +376,7 @@ namespace SOFOK_System
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.productflowlayout);
             this.bunifuPanel2.Location = new System.Drawing.Point(323, 184);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(639, 604);
@@ -388,7 +388,7 @@ namespace SOFOK_System
             this.productflowlayout.BackColor = System.Drawing.Color.Transparent;
             this.productflowlayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productflowlayout.Location = new System.Drawing.Point(0, 0);
-            this.productflowlayout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productflowlayout.Margin = new System.Windows.Forms.Padding(4);
             this.productflowlayout.Name = "productflowlayout";
             this.productflowlayout.Size = new System.Drawing.Size(639, 604);
             this.productflowlayout.TabIndex = 5;
@@ -404,7 +404,7 @@ namespace SOFOK_System
             this.productpanel.BorderRadius = 20;
             this.productpanel.BorderThickness = 1;
             this.productpanel.Location = new System.Drawing.Point(-7, 58);
-            this.productpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productpanel.Margin = new System.Windows.Forms.Padding(4);
             this.productpanel.Name = "productpanel";
             this.productpanel.ShowBorders = true;
             this.productpanel.Size = new System.Drawing.Size(0, 0);
@@ -425,7 +425,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(980, 4);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(116)))), ((int)(((byte)(202)))));
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(116)))), ((int)(((byte)(202)))));
@@ -555,7 +555,7 @@ namespace SOFOK_System
             this.uploadproductpanel.Controls.Add(this.bunifuPictureBox1);
             this.uploadproductpanel.Controls.Add(this.productnametxt);
             this.uploadproductpanel.Location = new System.Drawing.Point(37, 285);
-            this.uploadproductpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadproductpanel.Margin = new System.Windows.Forms.Padding(4);
             this.uploadproductpanel.Name = "uploadproductpanel";
             this.uploadproductpanel.ShowBorders = true;
             this.uploadproductpanel.Size = new System.Drawing.Size(520, 430);
@@ -898,13 +898,13 @@ namespace SOFOK_System
             this.bunifuPictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox6.AutoSizeHeight = true;
-            this.bunifuPictureBox6.BorderRadius = 11;
+            this.bunifuPictureBox6.BorderRadius = 24;
             this.bunifuPictureBox6.Image = global::SOFOK_System.Properties.Resources.category;
             this.bunifuPictureBox6.IsCircle = false;
             this.bunifuPictureBox6.Location = new System.Drawing.Point(15, 281);
-            this.bunifuPictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox6.Name = "bunifuPictureBox6";
-            this.bunifuPictureBox6.Size = new System.Drawing.Size(49, 27);
+            this.bunifuPictureBox6.Size = new System.Drawing.Size(49, 49);
             this.bunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox6.TabIndex = 11;
             this.bunifuPictureBox6.TabStop = false;
@@ -916,13 +916,13 @@ namespace SOFOK_System
             this.bunifuPictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox4.AutoSizeHeight = false;
-            this.bunifuPictureBox4.BorderRadius = 12;
+            this.bunifuPictureBox4.BorderRadius = 13;
             this.bunifuPictureBox4.Image = global::SOFOK_System.Properties.Resources.peso;
             this.bunifuPictureBox4.IsCircle = true;
             this.bunifuPictureBox4.Location = new System.Drawing.Point(15, 222);
-            this.bunifuPictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
-            this.bunifuPictureBox4.Size = new System.Drawing.Size(49, 27);
+            this.bunifuPictureBox4.Size = new System.Drawing.Size(49, 49);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox4.TabIndex = 7;
             this.bunifuPictureBox4.TabStop = false;
@@ -959,7 +959,7 @@ namespace SOFOK_System
             this.prodpricetxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.prodpricetxt.Lines = new string[0];
             this.prodpricetxt.Location = new System.Drawing.Point(65, 225);
-            this.prodpricetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodpricetxt.Margin = new System.Windows.Forms.Padding(4);
             this.prodpricetxt.MaxLength = 32767;
             this.prodpricetxt.MinimumSize = new System.Drawing.Size(1, 1);
             this.prodpricetxt.Modified = false;
@@ -985,7 +985,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.prodpricetxt.OnIdleState = stateProperties8;
-            this.prodpricetxt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodpricetxt.Padding = new System.Windows.Forms.Padding(4);
             this.prodpricetxt.PasswordChar = '\0';
             this.prodpricetxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.prodpricetxt.PlaceholderText = "Product Price";
@@ -1013,13 +1013,13 @@ namespace SOFOK_System
             this.bunifuPictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox3.AutoSizeHeight = false;
-            this.bunifuPictureBox3.BorderRadius = 12;
+            this.bunifuPictureBox3.BorderRadius = 13;
             this.bunifuPictureBox3.Image = global::SOFOK_System.Properties.Resources.stall_100px;
             this.bunifuPictureBox3.IsCircle = true;
             this.bunifuPictureBox3.Location = new System.Drawing.Point(15, 23);
-            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(51, 27);
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(51, 51);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox3.TabIndex = 5;
             this.bunifuPictureBox3.TabStop = false;
@@ -1031,13 +1031,13 @@ namespace SOFOK_System
             this.bunifuPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox2.AutoSizeHeight = false;
-            this.bunifuPictureBox2.BorderRadius = 12;
+            this.bunifuPictureBox2.BorderRadius = 13;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.id_number;
             this.bunifuPictureBox2.IsCircle = true;
             this.bunifuPictureBox2.Location = new System.Drawing.Point(15, 90);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(49, 27);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(49, 49);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 3;
             this.bunifuPictureBox2.TabStop = false;
@@ -1049,13 +1049,13 @@ namespace SOFOK_System
             this.bunifuPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox1.AutoSizeHeight = false;
-            this.bunifuPictureBox1.BorderRadius = 12;
+            this.bunifuPictureBox1.BorderRadius = 13;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.food_bar_100px;
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(15, 162);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(49, 27);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(49, 49);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 1;
             this.bunifuPictureBox1.TabStop = false;
@@ -1092,7 +1092,7 @@ namespace SOFOK_System
             this.productnametxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.productnametxt.Lines = new string[0];
             this.productnametxt.Location = new System.Drawing.Point(65, 166);
-            this.productnametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productnametxt.Margin = new System.Windows.Forms.Padding(4);
             this.productnametxt.MaxLength = 32767;
             this.productnametxt.MinimumSize = new System.Drawing.Size(1, 1);
             this.productnametxt.Modified = false;
@@ -1118,7 +1118,7 @@ namespace SOFOK_System
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.productnametxt.OnIdleState = stateProperties12;
-            this.productnametxt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productnametxt.Padding = new System.Windows.Forms.Padding(4);
             this.productnametxt.PasswordChar = '\0';
             this.productnametxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.productnametxt.PlaceholderText = "Product Name";
@@ -1146,13 +1146,13 @@ namespace SOFOK_System
             this.productpic.AutoSizeHeight = false;
             this.productpic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(218)))), ((int)(((byte)(252)))));
             this.productpic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.productpic.BorderRadius = 20;
+            this.productpic.BorderRadius = 0;
             this.productpic.Image = global::SOFOK_System.Properties.Resources.tableware_100px;
             this.productpic.IsCircle = true;
             this.productpic.Location = new System.Drawing.Point(191, 21);
-            this.productpic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productpic.Margin = new System.Windows.Forms.Padding(4);
             this.productpic.Name = "productpic";
-            this.productpic.Size = new System.Drawing.Size(249, 179);
+            this.productpic.Size = new System.Drawing.Size(249, 190);
             this.productpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productpic.TabIndex = 0;
             this.productpic.TabStop = false;
@@ -1167,7 +1167,7 @@ namespace SOFOK_System
             this.ClientSize = new System.Drawing.Size(1593, 884);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "merchantproduct_main";
             this.Text = "merchantproducts";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

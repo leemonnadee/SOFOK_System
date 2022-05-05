@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using SOFOK_System.components;
+using SOFOK_System.Sofok_costumer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,12 +114,8 @@ namespace SOFOK_System
             try
             {
 
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            
-            }
-            string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id; ";
+        
+            string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id WHERE tbl_products.merchant_id='"+merchant_list.merchantDisplay.merch_id+"'";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -159,6 +156,12 @@ namespace SOFOK_System
 
 
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
 
         }
 
@@ -166,7 +169,8 @@ namespace SOFOK_System
         {
 
             displayProductsAll();
-
+            MessageBox.Show("asd");
+            
         }
         private void txt_srch_TextChanged(object sender, EventArgs e)
         {
@@ -308,8 +312,9 @@ namespace SOFOK_System
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            seat st = new seat();
-            st.Show();
+            merchant_list ml = new merchant_list();
+
+           ml.Show();
             this.Hide();
         }
 
@@ -336,6 +341,11 @@ namespace SOFOK_System
     public void enableB() {
           
             this.Opacity = 1;
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            txt_srch.Visible = false;
         }
     }
 

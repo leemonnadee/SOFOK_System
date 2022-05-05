@@ -30,26 +30,14 @@ namespace SOFOK_System.Sofok_costumer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.merchant_widget = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 165);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(793, 519);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // docker
             // 
@@ -102,7 +90,7 @@ namespace SOFOK_System.Sofok_costumer
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(143, 40);
+            this.label1.Location = new System.Drawing.Point(389, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(539, 89);
             this.label1.TabIndex = 2;
@@ -116,7 +104,7 @@ namespace SOFOK_System.Sofok_costumer
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 150);
+            this.panel1.Size = new System.Drawing.Size(1345, 150);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -127,26 +115,42 @@ namespace SOFOK_System.Sofok_costumer
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(629, 713);
+            this.button1.Location = new System.Drawing.Point(1121, 713);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 53);
             this.button1.TabIndex = 3;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // merchant_widget
+            // 
+            this.merchant_widget.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.merchant_widget.AutoScroll = true;
+            this.merchant_widget.BackColor = System.Drawing.Color.White;
+            this.merchant_widget.Location = new System.Drawing.Point(140, 152);
+            this.merchant_widget.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.merchant_widget.Name = "merchant_widget";
+            this.merchant_widget.Size = new System.Drawing.Size(1081, 527);
+            this.merchant_widget.TabIndex = 4;
             // 
             // merchant_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 799);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1344, 799);
+            this.Controls.Add(this.merchant_widget);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "merchant_list";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "merchant_list";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.merchant_list_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -154,11 +158,11 @@ namespace SOFOK_System.Sofok_costumer
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Bunifu.UI.WinForms.BunifuFormDock docker;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel merchant_widget;
     }
 }

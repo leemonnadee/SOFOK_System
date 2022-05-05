@@ -186,11 +186,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="components\merchants.cs">
+    <Compile Include="components\merchant_widget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="components\merchants.Designer.cs">
-      <DependentUpon>merchants.cs</DependentUpon>
+    <Compile Include="components\merchant_widget.Designer.cs">
+      <DependentUpon>merchant_widget.cs</DependentUpon>
     </Compile>
     <Compile Include="EncryptDecryptPassword.cs" />
     <Compile Include="revenue.cs" />
@@ -313,8 +313,8 @@
     <None Include="icons\coke.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="components\merchants.resx">
-      <DependentUpon>merchants.cs</DependentUpon>
+    <EmbeddedResource Include="components\merchant_widget.resx">
+      <DependentUpon>merchant_widget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sofok_administrator\adminmerchantsales.resx">
       <DependentUpon>adminmerchantsales.cs</DependentUpon>
