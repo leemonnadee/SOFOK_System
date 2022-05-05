@@ -186,6 +186,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="components\merchants.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\merchants.Designer.cs">
+      <DependentUpon>merchants.cs</DependentUpon>
+    </Compile>
     <Compile Include="EncryptDecryptPassword.cs" />
     <Compile Include="revenue.cs" />
     <Compile Include="sofok_administrator\adminmerchantsales.cs">
@@ -199,6 +205,12 @@
     </Compile>
     <Compile Include="sofok_administrator\adminregistermerchant.Designer.cs">
       <DependentUpon>adminregistermerchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_costumer\merchant_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_costumer\merchant_list.Designer.cs">
+      <DependentUpon>merchant_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Sofok_Merchants\merchantsales.cs">
       <SubType>Form</SubType>
@@ -292,12 +304,6 @@
     <Compile Include="Sofok_Merchants\updateinfo_frm.designer.cs">
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sofok_Merchants\uploadImage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sofok_Merchants\uploadImage.Designer.cs">
-      <DependentUpon>uploadImage.cs</DependentUpon>
-    </Compile>
     <Compile Include="testform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,11 +313,17 @@
     <None Include="icons\coke.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <EmbeddedResource Include="components\merchants.resx">
+      <DependentUpon>merchants.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sofok_administrator\adminmerchantsales.resx">
       <DependentUpon>adminmerchantsales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sofok_administrator\adminregistermerchant.resx">
       <DependentUpon>adminregistermerchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_costumer\merchant_list.resx">
+      <DependentUpon>merchant_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\merchantsales.resx">
       <DependentUpon>merchantsales.cs</DependentUpon>
@@ -368,9 +380,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\updateinfo_frm.resx">
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sofok_Merchants\uploadImage.resx">
-      <DependentUpon>uploadImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testform.resx">
       <DependentUpon>testform.cs</DependentUpon>

@@ -26,7 +26,7 @@ namespace SOFOK_System
 
         private void dine_in_Click(object sender, EventArgs e)
         {
-            choosepayment fr = new choosepayment();
+            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
             fr.Show();
 
            
@@ -37,7 +37,7 @@ namespace SOFOK_System
 
         private void dine_out_Click(object sender, EventArgs e)
         {
-            choosepayment fr = new choosepayment();
+            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
             fr.Show();
          
            

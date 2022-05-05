@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using SOFOK_System.Sofok_Merchants;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

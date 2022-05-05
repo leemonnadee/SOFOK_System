@@ -18,6 +18,14 @@ namespace SOFOK_System
         {
             InitializeComponent();
             profie = this;
+            frm_transparent();
+        }
+        public void frm_transparent()
+        {
+            this.BackColor = Color.DarkOrange;
+            this.TransparencyKey = Color.DarkOrange;
+
+
         }
         public class UserDisplay
         {
@@ -27,25 +35,7 @@ namespace SOFOK_System
 
         }
 
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void updateinfo_frm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
+     
 
         private void cancel_btn_Click(object sender, EventArgs e)
         {

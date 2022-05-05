@@ -61,8 +61,9 @@ namespace SOFOK_System
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.bunifuPanel1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 571);
+            this.panel1.Size = new System.Drawing.Size(959, 703);
             this.panel1.TabIndex = 0;
             // 
             // bunifuPanel1
@@ -78,10 +79,11 @@ namespace SOFOK_System
             this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel1);
             this.bunifuPanel1.Controls.Add(this.panel2);
             this.bunifuPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(-7, -12);
+            this.bunifuPanel1.Location = new System.Drawing.Point(-9, -15);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(736, 592);
+            this.bunifuPanel1.Size = new System.Drawing.Size(981, 729);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // bunifuShadowPanel2
@@ -94,8 +96,8 @@ namespace SOFOK_System
             this.bunifuShadowPanel2.Controls.Add(this.bunifuPictureBox2);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(378, 71);
-            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(504, 87);
+            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -104,7 +106,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(260, 333);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(347, 410);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 24;
             // 
@@ -155,7 +157,8 @@ namespace SOFOK_System
             this.btn_cashier.IdleIconLeftImage = null;
             this.btn_cashier.IdleIconRightImage = null;
             this.btn_cashier.IndicateFocus = false;
-            this.btn_cashier.Location = new System.Drawing.Point(54, 224);
+            this.btn_cashier.Location = new System.Drawing.Point(72, 276);
+            this.btn_cashier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cashier.Name = "btn_cashier";
             this.btn_cashier.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_cashier.OnDisabledState.BorderRadius = 25;
@@ -189,7 +192,7 @@ namespace SOFOK_System
             this.btn_cashier.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_cashier.OnPressedState.IconLeftImage = null;
             this.btn_cashier.OnPressedState.IconRightImage = null;
-            this.btn_cashier.Size = new System.Drawing.Size(150, 39);
+            this.btn_cashier.Size = new System.Drawing.Size(200, 48);
             this.btn_cashier.TabIndex = 25;
             this.btn_cashier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cashier.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -206,9 +209,10 @@ namespace SOFOK_System
             this.bunifuPictureBox2.BorderRadius = 0;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.cashier;
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(78, 50);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(104, 62);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(113, 113);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(151, 151);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 22;
             this.bunifuPictureBox2.TabStop = false;
@@ -224,8 +228,8 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(75, 71);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(100, 87);
+            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -234,7 +238,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(260, 333);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(347, 410);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 23;
             // 
@@ -285,7 +289,8 @@ namespace SOFOK_System
             this.btn_gcash.IdleIconLeftImage = null;
             this.btn_gcash.IdleIconRightImage = null;
             this.btn_gcash.IndicateFocus = false;
-            this.btn_gcash.Location = new System.Drawing.Point(58, 224);
+            this.btn_gcash.Location = new System.Drawing.Point(77, 276);
+            this.btn_gcash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_gcash.Name = "btn_gcash";
             this.btn_gcash.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_gcash.OnDisabledState.BorderRadius = 25;
@@ -319,7 +324,7 @@ namespace SOFOK_System
             this.btn_gcash.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_gcash.OnPressedState.IconLeftImage = null;
             this.btn_gcash.OnPressedState.IconRightImage = null;
-            this.btn_gcash.Size = new System.Drawing.Size(150, 39);
+            this.btn_gcash.Size = new System.Drawing.Size(200, 48);
             this.btn_gcash.TabIndex = 24;
             this.btn_gcash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_gcash.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -333,12 +338,13 @@ namespace SOFOK_System
             this.bunifuPictureBox1.AllowFocused = false;
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 97;
+            this.bunifuPictureBox1.BorderRadius = 130;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.gcash;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(38, 23);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(51, 28);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(195, 195);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(260, 260);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 21;
             this.bunifuPictureBox1.TabStop = false;
@@ -348,9 +354,10 @@ namespace SOFOK_System
             // 
             this.panel2.BackColor = System.Drawing.Color.Sienna;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(7, 473);
+            this.panel2.Location = new System.Drawing.Point(9, 582);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(716, 110);
+            this.panel2.Size = new System.Drawing.Size(955, 135);
             this.panel2.TabIndex = 20;
             // 
             // label3
@@ -358,7 +365,8 @@ namespace SOFOK_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(135, 34);
+            this.label3.Location = new System.Drawing.Point(180, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(466, 46);
             this.label3.TabIndex = 0;
@@ -367,20 +375,22 @@ namespace SOFOK_System
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SOFOK_System.Properties.Resources.Close_40px;
-            this.pictureBox1.Location = new System.Drawing.Point(669, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(892, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(57, 44);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // choosepayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 571);
+            this.ClientSize = new System.Drawing.Size(956, 703);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "choosepayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
