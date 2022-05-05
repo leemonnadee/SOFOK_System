@@ -94,7 +94,7 @@ namespace SOFOK_System
                 UserDisplay.maritalStatus = myreaderfetch.GetString("marital_status");
                 UserDisplay.address = myreaderfetch.GetString("address");
                 UserDisplay.gender = myreaderfetch.GetString("gender");
-        UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
+                UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
                 UserDisplay.contact = myreaderfetch.GetString("contact_no");
         
 

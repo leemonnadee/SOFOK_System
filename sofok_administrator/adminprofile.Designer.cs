@@ -110,7 +110,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(512, 236);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -172,7 +172,7 @@ namespace SOFOK_System
             this.AdminTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.AdminTable.EnableHeadersVisualStyles = false;
             this.AdminTable.Location = new System.Drawing.Point(28, 82);
-            this.AdminTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdminTable.Margin = new System.Windows.Forms.Padding(2);
             this.AdminTable.MultiSelect = false;
             this.AdminTable.Name = "AdminTable";
             this.AdminTable.ReadOnly = true;
@@ -238,7 +238,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel2.Location = new System.Drawing.Point(512, 74);
-            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
@@ -261,7 +261,7 @@ namespace SOFOK_System
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.admin_bg;
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(422, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(144, 144);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -361,7 +361,7 @@ namespace SOFOK_System
             this.btn_delete.IdleIconRightImage = null;
             this.btn_delete.IndicateFocus = false;
             this.btn_delete.Location = new System.Drawing.Point(59, 528);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delete.OnDisabledState.BorderRadius = 15;
@@ -452,7 +452,7 @@ namespace SOFOK_System
             this.btn_update.IdleIconRightImage = null;
             this.btn_update.IndicateFocus = false;
             this.btn_update.Location = new System.Drawing.Point(191, 528);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_update.OnDisabledState.BorderRadius = 15;
@@ -543,7 +543,7 @@ namespace SOFOK_System
             this.save_btn.IdleIconRightImage = null;
             this.save_btn.IndicateFocus = false;
             this.save_btn.Location = new System.Drawing.Point(322, 528);
-            this.save_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.save_btn.Margin = new System.Windows.Forms.Padding(2);
             this.save_btn.Name = "save_btn";
             this.save_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.save_btn.OnDisabledState.BorderRadius = 15;
@@ -615,7 +615,7 @@ namespace SOFOK_System
             this.txt_password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_password.Lines = new string[0];
             this.txt_password.Location = new System.Drawing.Point(187, 470);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.MaxLength = 32767;
             this.txt_password.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_password.Modified = false;
@@ -641,7 +641,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_password.OnIdleState = stateProperties4;
-            this.txt_password.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Padding = new System.Windows.Forms.Padding(2);
             this.txt_password.PasswordChar = '*';
             this.txt_password.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_password.PlaceholderText = "Enter text";
@@ -691,7 +691,7 @@ namespace SOFOK_System
             this.txt_email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_email.Lines = new string[0];
             this.txt_email.Location = new System.Drawing.Point(188, 407);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_email.MaxLength = 32767;
             this.txt_email.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_email.Modified = false;
@@ -717,7 +717,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_email.OnIdleState = stateProperties8;
-            this.txt_email.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_email.Padding = new System.Windows.Forms.Padding(2);
             this.txt_email.PasswordChar = '\0';
             this.txt_email.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_email.PlaceholderText = "@gmail.com";
@@ -767,7 +767,7 @@ namespace SOFOK_System
             this.txt_mobile.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_mobile.Lines = new string[0];
             this.txt_mobile.Location = new System.Drawing.Point(187, 349);
-            this.txt_mobile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mobile.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mobile.MaxLength = 32767;
             this.txt_mobile.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_mobile.Modified = false;
@@ -793,7 +793,7 @@ namespace SOFOK_System
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_mobile.OnIdleState = stateProperties12;
-            this.txt_mobile.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mobile.Padding = new System.Windows.Forms.Padding(2);
             this.txt_mobile.PasswordChar = '\0';
             this.txt_mobile.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_mobile.PlaceholderText = "+63";
@@ -844,7 +844,7 @@ namespace SOFOK_System
             this.txt_address.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_address.Lines = new string[0];
             this.txt_address.Location = new System.Drawing.Point(187, 288);
-            this.txt_address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(2);
             this.txt_address.MaxLength = 32767;
             this.txt_address.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_address.Modified = false;
@@ -870,7 +870,7 @@ namespace SOFOK_System
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_address.OnIdleState = stateProperties16;
-            this.txt_address.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_address.Padding = new System.Windows.Forms.Padding(2);
             this.txt_address.PasswordChar = '\0';
             this.txt_address.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_address.PlaceholderText = "Enter text";
@@ -920,7 +920,7 @@ namespace SOFOK_System
             this.txt_name.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_name.Lines = new string[0];
             this.txt_name.Location = new System.Drawing.Point(187, 68);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_name.MaxLength = 32767;
             this.txt_name.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_name.Modified = false;
@@ -946,7 +946,7 @@ namespace SOFOK_System
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_name.OnIdleState = stateProperties20;
-            this.txt_name.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_name.Padding = new System.Windows.Forms.Padding(2);
             this.txt_name.PasswordChar = '\0';
             this.txt_name.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_name.PlaceholderText = "Full name";
@@ -998,9 +998,9 @@ namespace SOFOK_System
             this.lbl_age.Location = new System.Drawing.Point(187, 242);
             this.lbl_age.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(65, 28);
+            this.lbl_age.Size = new System.Drawing.Size(34, 28);
             this.lbl_age.TabIndex = 130;
-            this.lbl_age.Text = "label6";
+            this.lbl_age.Text = "00";
             // 
             // combo_log
             // 
@@ -1012,7 +1012,7 @@ namespace SOFOK_System
             "Female",
             "Other"});
             this.combo_log.Location = new System.Drawing.Point(187, 136);
-            this.combo_log.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combo_log.Margin = new System.Windows.Forms.Padding(2);
             this.combo_log.Name = "combo_log";
             this.combo_log.Size = new System.Drawing.Size(151, 29);
             this.combo_log.TabIndex = 129;

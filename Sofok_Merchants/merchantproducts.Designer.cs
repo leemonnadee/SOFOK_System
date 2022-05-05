@@ -35,6 +35,7 @@ namespace SOFOK_System
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
@@ -46,11 +47,12 @@ namespace SOFOK_System
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_srch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_burger = new System.Windows.Forms.Button();
@@ -61,6 +63,7 @@ namespace SOFOK_System
             this.productflowlayout = new System.Windows.Forms.FlowLayoutPanel();
             this.productpanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.uploadbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.uploadproductpanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.btn_delete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btn_update = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -78,10 +81,8 @@ namespace SOFOK_System
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.productnametxt = new Bunifu.UI.WinForms.BunifuTextBox();
             this.productpic = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.uploadbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -92,7 +93,6 @@ namespace SOFOK_System
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productpic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -158,12 +158,36 @@ namespace SOFOK_System
             this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuPanel1.Controls.Add(this.productpanel);
             this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(-2, 32);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1580, 869);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1185, 706);
             this.bunifuPanel1.TabIndex = 0;
+            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label3.Location = new System.Drawing.Point(22, 7);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(366, 46);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "AVAILABLE PRODUCT";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SOFOK_System.Properties.Resources.search_100px1;
+            this.pictureBox1.Location = new System.Drawing.Point(735, 94);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // txt_srch
             // 
@@ -193,8 +217,7 @@ namespace SOFOK_System
             this.txt_srch.IconRight = null;
             this.txt_srch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_srch.Lines = new string[0];
-            this.txt_srch.Location = new System.Drawing.Point(556, 116);
-            this.txt_srch.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_srch.Location = new System.Drawing.Point(417, 94);
             this.txt_srch.MaxLength = 32767;
             this.txt_srch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_srch.Modified = false;
@@ -220,7 +243,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_srch.OnIdleState = stateProperties4;
-            this.txt_srch.Padding = new System.Windows.Forms.Padding(4);
+            this.txt_srch.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_srch.PasswordChar = '\0';
             this.txt_srch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_srch.PlaceholderText = "Search Product";
@@ -230,7 +253,7 @@ namespace SOFOK_System
             this.txt_srch.SelectionLength = 0;
             this.txt_srch.SelectionStart = 0;
             this.txt_srch.ShortcutsEnabled = true;
-            this.txt_srch.Size = new System.Drawing.Size(417, 48);
+            this.txt_srch.Size = new System.Drawing.Size(313, 39);
             this.txt_srch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_srch.TabIndex = 6;
             this.txt_srch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -248,10 +271,10 @@ namespace SOFOK_System
             this.panel1.Controls.Add(this.btn_drinks);
             this.panel1.Controls.Add(this.btn_meal);
             this.panel1.Controls.Add(this.All);
-            this.panel1.Location = new System.Drawing.Point(0, 174);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 141);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 695);
+            this.panel1.Size = new System.Drawing.Size(228, 565);
             this.panel1.TabIndex = 3;
             // 
             // btn_burger
@@ -264,10 +287,9 @@ namespace SOFOK_System
             this.btn_burger.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_burger.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_burger.Image = global::SOFOK_System.Properties.Resources.hamburger_50px;
-            this.btn_burger.Location = new System.Drawing.Point(4, 334);
-            this.btn_burger.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_burger.Location = new System.Drawing.Point(3, 271);
             this.btn_burger.Name = "btn_burger";
-            this.btn_burger.Size = new System.Drawing.Size(297, 65);
+            this.btn_burger.Size = new System.Drawing.Size(223, 53);
             this.btn_burger.TabIndex = 7;
             this.btn_burger.Text = "Burger";
             this.btn_burger.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -284,10 +306,9 @@ namespace SOFOK_System
             this.btn_drinks.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_drinks.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_drinks.Image = global::SOFOK_System.Properties.Resources.soda_50px;
-            this.btn_drinks.Location = new System.Drawing.Point(4, 263);
-            this.btn_drinks.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_drinks.Location = new System.Drawing.Point(3, 214);
             this.btn_drinks.Name = "btn_drinks";
-            this.btn_drinks.Size = new System.Drawing.Size(297, 65);
+            this.btn_drinks.Size = new System.Drawing.Size(223, 53);
             this.btn_drinks.TabIndex = 6;
             this.btn_drinks.Text = "Drinks";
             this.btn_drinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -304,10 +325,9 @@ namespace SOFOK_System
             this.btn_meal.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_meal.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_meal.Image = global::SOFOK_System.Properties.Resources.meal_50px;
-            this.btn_meal.Location = new System.Drawing.Point(0, 192);
-            this.btn_meal.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_meal.Location = new System.Drawing.Point(0, 156);
             this.btn_meal.Name = "btn_meal";
-            this.btn_meal.Size = new System.Drawing.Size(301, 65);
+            this.btn_meal.Size = new System.Drawing.Size(226, 53);
             this.btn_meal.TabIndex = 4;
             this.btn_meal.Text = "Meals";
             this.btn_meal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -324,10 +344,9 @@ namespace SOFOK_System
             this.All.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.All.ForeColor = System.Drawing.Color.DarkOrange;
             this.All.Image = ((System.Drawing.Image)(resources.GetObject("All.Image")));
-            this.All.Location = new System.Drawing.Point(0, 121);
-            this.All.Margin = new System.Windows.Forms.Padding(4);
+            this.All.Location = new System.Drawing.Point(0, 98);
             this.All.Name = "All";
-            this.All.Size = new System.Drawing.Size(301, 65);
+            this.All.Size = new System.Drawing.Size(226, 53);
             this.All.TabIndex = 5;
             this.All.Text = "All";
             this.All.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -343,11 +362,10 @@ namespace SOFOK_System
             this.bunifuPanel2.BorderRadius = 20;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.productflowlayout);
-            this.bunifuPanel2.Location = new System.Drawing.Point(301, 174);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel2.Location = new System.Drawing.Point(226, 141);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(771, 798);
+            this.bunifuPanel2.Size = new System.Drawing.Size(578, 648);
             this.bunifuPanel2.TabIndex = 1;
             // 
             // productflowlayout
@@ -357,10 +375,9 @@ namespace SOFOK_System
             | System.Windows.Forms.AnchorStyles.Right)));
             this.productflowlayout.AutoScroll = true;
             this.productflowlayout.BackColor = System.Drawing.Color.Transparent;
-            this.productflowlayout.Location = new System.Drawing.Point(25, 27);
-            this.productflowlayout.Margin = new System.Windows.Forms.Padding(4);
+            this.productflowlayout.Location = new System.Drawing.Point(19, 22);
             this.productflowlayout.Name = "productflowlayout";
-            this.productflowlayout.Size = new System.Drawing.Size(731, 697);
+            this.productflowlayout.Size = new System.Drawing.Size(548, 566);
             this.productflowlayout.TabIndex = 5;
             // 
             // productpanel
@@ -373,8 +390,7 @@ namespace SOFOK_System
             this.productpanel.BorderColor = System.Drawing.Color.Transparent;
             this.productpanel.BorderRadius = 20;
             this.productpanel.BorderThickness = 1;
-            this.productpanel.Location = new System.Drawing.Point(-7, 58);
-            this.productpanel.Margin = new System.Windows.Forms.Padding(4);
+            this.productpanel.Location = new System.Drawing.Point(-5, 47);
             this.productpanel.Name = "productpanel";
             this.productpanel.ShowBorders = true;
             this.productpanel.Size = new System.Drawing.Size(0, 0);
@@ -392,8 +408,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.Controls.Add(this.productpic);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(1103, 4);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(827, 3);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(116)))), ((int)(((byte)(202)))));
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(116)))), ((int)(((byte)(202)))));
@@ -402,9 +417,100 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(475, 862);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(356, 700);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 5;
+            // 
+            // uploadbtn
+            // 
+            this.uploadbtn.AllowAnimations = true;
+            this.uploadbtn.AllowMouseEffects = true;
+            this.uploadbtn.AllowToggling = false;
+            this.uploadbtn.AnimationSpeed = 200;
+            this.uploadbtn.AutoGenerateColors = false;
+            this.uploadbtn.AutoRoundBorders = false;
+            this.uploadbtn.AutoSizeLeftIcon = true;
+            this.uploadbtn.AutoSizeRightIcon = true;
+            this.uploadbtn.BackColor = System.Drawing.Color.Transparent;
+            this.uploadbtn.BackColor1 = System.Drawing.Color.DarkOrange;
+            this.uploadbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadbtn.BackgroundImage")));
+            this.uploadbtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.uploadbtn.ButtonText = "UPLOAD IMAGE";
+            this.uploadbtn.ButtonTextMarginLeft = 0;
+            this.uploadbtn.ColorContrastOnClick = 45;
+            this.uploadbtn.ColorContrastOnHover = 45;
+            this.uploadbtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.uploadbtn.CustomizableEdges = borderEdges1;
+            this.uploadbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.uploadbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.uploadbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.uploadbtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.uploadbtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.uploadbtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadbtn.ForeColor = System.Drawing.Color.White;
+            this.uploadbtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uploadbtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.uploadbtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.uploadbtn.IconMarginLeft = 11;
+            this.uploadbtn.IconPadding = 10;
+            this.uploadbtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.uploadbtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.uploadbtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.uploadbtn.IconSize = 25;
+            this.uploadbtn.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.uploadbtn.IdleBorderRadius = 25;
+            this.uploadbtn.IdleBorderThickness = 1;
+            this.uploadbtn.IdleFillColor = System.Drawing.Color.DarkOrange;
+            this.uploadbtn.IdleIconLeftImage = null;
+            this.uploadbtn.IdleIconRightImage = null;
+            this.uploadbtn.IndicateFocus = false;
+            this.uploadbtn.Location = new System.Drawing.Point(120, 216);
+            this.uploadbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadbtn.Name = "uploadbtn";
+            this.uploadbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.uploadbtn.OnDisabledState.BorderRadius = 25;
+            this.uploadbtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.uploadbtn.OnDisabledState.BorderThickness = 1;
+            this.uploadbtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.uploadbtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.uploadbtn.OnDisabledState.IconLeftImage = null;
+            this.uploadbtn.OnDisabledState.IconRightImage = null;
+            this.uploadbtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.uploadbtn.onHoverState.BorderRadius = 25;
+            this.uploadbtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.uploadbtn.onHoverState.BorderThickness = 1;
+            this.uploadbtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.uploadbtn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.uploadbtn.onHoverState.IconLeftImage = null;
+            this.uploadbtn.onHoverState.IconRightImage = null;
+            this.uploadbtn.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.uploadbtn.OnIdleState.BorderRadius = 25;
+            this.uploadbtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.uploadbtn.OnIdleState.BorderThickness = 1;
+            this.uploadbtn.OnIdleState.FillColor = System.Drawing.Color.DarkOrange;
+            this.uploadbtn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.uploadbtn.OnIdleState.IconLeftImage = null;
+            this.uploadbtn.OnIdleState.IconRightImage = null;
+            this.uploadbtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.uploadbtn.OnPressedState.BorderRadius = 25;
+            this.uploadbtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.uploadbtn.OnPressedState.BorderThickness = 1;
+            this.uploadbtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.uploadbtn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.uploadbtn.OnPressedState.IconLeftImage = null;
+            this.uploadbtn.OnPressedState.IconRightImage = null;
+            this.uploadbtn.Size = new System.Drawing.Size(138, 34);
+            this.uploadbtn.TabIndex = 3;
+            this.uploadbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uploadbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.uploadbtn.TextMarginLeft = 0;
+            this.uploadbtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.uploadbtn.UseDefaultRadiusAndThickness = true;
+            this.uploadbtn.Click += new System.EventHandler(this.uploadbtn_Click);
             // 
             // uploadproductpanel
             // 
@@ -431,11 +537,10 @@ namespace SOFOK_System
             this.uploadproductpanel.Controls.Add(this.bunifuPictureBox2);
             this.uploadproductpanel.Controls.Add(this.bunifuPictureBox1);
             this.uploadproductpanel.Controls.Add(this.productnametxt);
-            this.uploadproductpanel.Location = new System.Drawing.Point(37, 324);
-            this.uploadproductpanel.Margin = new System.Windows.Forms.Padding(4);
+            this.uploadproductpanel.Location = new System.Drawing.Point(28, 263);
             this.uploadproductpanel.Name = "uploadproductpanel";
             this.uploadproductpanel.ShowBorders = true;
-            this.uploadproductpanel.Size = new System.Drawing.Size(397, 498);
+            this.uploadproductpanel.Size = new System.Drawing.Size(298, 405);
             this.uploadproductpanel.TabIndex = 2;
             // 
             // btn_delete
@@ -485,8 +590,8 @@ namespace SOFOK_System
             this.btn_delete.IdleIconLeftImage = null;
             this.btn_delete.IdleIconRightImage = null;
             this.btn_delete.IndicateFocus = false;
-            this.btn_delete.Location = new System.Drawing.Point(20, 340);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete.Location = new System.Drawing.Point(15, 276);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delete.OnDisabledState.BorderRadius = 15;
@@ -520,7 +625,7 @@ namespace SOFOK_System
             this.btn_delete.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_delete.OnPressedState.IconLeftImage = null;
             this.btn_delete.OnPressedState.IconRightImage = null;
-            this.btn_delete.Size = new System.Drawing.Size(109, 42);
+            this.btn_delete.Size = new System.Drawing.Size(82, 34);
             this.btn_delete.TabIndex = 217;
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_delete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -576,8 +681,8 @@ namespace SOFOK_System
             this.btn_update.IdleIconLeftImage = null;
             this.btn_update.IdleIconRightImage = null;
             this.btn_update.IndicateFocus = false;
-            this.btn_update.Location = new System.Drawing.Point(135, 339);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Location = new System.Drawing.Point(101, 275);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_update.Name = "btn_update";
             this.btn_update.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_update.OnDisabledState.BorderRadius = 15;
@@ -611,7 +716,7 @@ namespace SOFOK_System
             this.btn_update.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_update.OnPressedState.IconLeftImage = null;
             this.btn_update.OnPressedState.IconRightImage = null;
-            this.btn_update.Size = new System.Drawing.Size(117, 43);
+            this.btn_update.Size = new System.Drawing.Size(88, 35);
             this.btn_update.TabIndex = 216;
             this.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_update.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -625,9 +730,10 @@ namespace SOFOK_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(73, 91);
+            this.label2.Location = new System.Drawing.Point(55, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 35);
+            this.label2.Size = new System.Drawing.Size(36, 28);
             this.label2.TabIndex = 16;
             this.label2.Text = "ID.";
             // 
@@ -678,8 +784,8 @@ namespace SOFOK_System
             this.save_btn.IdleIconLeftImage = null;
             this.save_btn.IdleIconRightImage = null;
             this.save_btn.IndicateFocus = false;
-            this.save_btn.Location = new System.Drawing.Point(258, 340);
-            this.save_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.save_btn.Location = new System.Drawing.Point(194, 276);
+            this.save_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.save_btn.Name = "save_btn";
             this.save_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.save_btn.OnDisabledState.BorderRadius = 15;
@@ -713,7 +819,7 @@ namespace SOFOK_System
             this.save_btn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.save_btn.OnPressedState.IconLeftImage = null;
             this.save_btn.OnPressedState.IconRightImage = null;
-            this.save_btn.Size = new System.Drawing.Size(117, 42);
+            this.save_btn.Size = new System.Drawing.Size(88, 34);
             this.save_btn.TabIndex = 215;
             this.save_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.save_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -727,9 +833,10 @@ namespace SOFOK_System
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(73, 23);
+            this.label1.Location = new System.Drawing.Point(55, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 35);
+            this.label1.Size = new System.Drawing.Size(71, 28);
             this.label1.TabIndex = 15;
             this.label1.Text = "Name:";
             // 
@@ -742,10 +849,10 @@ namespace SOFOK_System
             "Meal",
             "Drink",
             "Burger"});
-            this.combo_category.Location = new System.Drawing.Point(65, 281);
-            this.combo_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.combo_category.Location = new System.Drawing.Point(49, 228);
+            this.combo_category.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combo_category.Name = "combo_category";
-            this.combo_category.Size = new System.Drawing.Size(287, 36);
+            this.combo_category.Size = new System.Drawing.Size(216, 29);
             this.combo_category.TabIndex = 14;
             // 
             // prod_ID
@@ -753,20 +860,21 @@ namespace SOFOK_System
             this.prod_ID.AutoSize = true;
             this.prod_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prod_ID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.prod_ID.Location = new System.Drawing.Point(137, 91);
+            this.prod_ID.Location = new System.Drawing.Point(103, 74);
+            this.prod_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.prod_ID.Name = "prod_ID";
-            this.prod_ID.Size = new System.Drawing.Size(84, 35);
+            this.prod_ID.Size = new System.Drawing.Size(0, 28);
             this.prod_ID.TabIndex = 13;
-            this.prod_ID.Text = "label2";
             // 
             // lbl_merchantname
             // 
             this.lbl_merchantname.AutoSize = true;
             this.lbl_merchantname.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_merchantname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_merchantname.Location = new System.Drawing.Point(167, 23);
+            this.lbl_merchantname.Location = new System.Drawing.Point(125, 19);
+            this.lbl_merchantname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_merchantname.Name = "lbl_merchantname";
-            this.lbl_merchantname.Size = new System.Drawing.Size(80, 35);
+            this.lbl_merchantname.Size = new System.Drawing.Size(63, 28);
             this.lbl_merchantname.TabIndex = 12;
             this.lbl_merchantname.Text = "label1";
             // 
@@ -779,10 +887,9 @@ namespace SOFOK_System
             this.bunifuPictureBox6.BorderRadius = 14;
             this.bunifuPictureBox6.Image = global::SOFOK_System.Properties.Resources.category;
             this.bunifuPictureBox6.IsCircle = false;
-            this.bunifuPictureBox6.Location = new System.Drawing.Point(15, 281);
-            this.bunifuPictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox6.Location = new System.Drawing.Point(11, 228);
             this.bunifuPictureBox6.Name = "bunifuPictureBox6";
-            this.bunifuPictureBox6.Size = new System.Drawing.Size(29, 29);
+            this.bunifuPictureBox6.Size = new System.Drawing.Size(22, 24);
             this.bunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox6.TabIndex = 11;
             this.bunifuPictureBox6.TabStop = false;
@@ -797,10 +904,9 @@ namespace SOFOK_System
             this.bunifuPictureBox4.BorderRadius = 14;
             this.bunifuPictureBox4.Image = global::SOFOK_System.Properties.Resources.peso;
             this.bunifuPictureBox4.IsCircle = true;
-            this.bunifuPictureBox4.Location = new System.Drawing.Point(15, 222);
-            this.bunifuPictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox4.Location = new System.Drawing.Point(11, 180);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
-            this.bunifuPictureBox4.Size = new System.Drawing.Size(29, 29);
+            this.bunifuPictureBox4.Size = new System.Drawing.Size(22, 24);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox4.TabIndex = 7;
             this.bunifuPictureBox4.TabStop = false;
@@ -836,8 +942,7 @@ namespace SOFOK_System
             this.prodpricetxt.IconRight = null;
             this.prodpricetxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.prodpricetxt.Lines = new string[0];
-            this.prodpricetxt.Location = new System.Drawing.Point(65, 225);
-            this.prodpricetxt.Margin = new System.Windows.Forms.Padding(4);
+            this.prodpricetxt.Location = new System.Drawing.Point(49, 183);
             this.prodpricetxt.MaxLength = 32767;
             this.prodpricetxt.MinimumSize = new System.Drawing.Size(1, 1);
             this.prodpricetxt.Modified = false;
@@ -863,7 +968,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.prodpricetxt.OnIdleState = stateProperties8;
-            this.prodpricetxt.Padding = new System.Windows.Forms.Padding(4);
+            this.prodpricetxt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.prodpricetxt.PasswordChar = '\0';
             this.prodpricetxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.prodpricetxt.PlaceholderText = "Product Price";
@@ -873,7 +978,7 @@ namespace SOFOK_System
             this.prodpricetxt.SelectionLength = 0;
             this.prodpricetxt.SelectionStart = 0;
             this.prodpricetxt.ShortcutsEnabled = true;
-            this.prodpricetxt.Size = new System.Drawing.Size(288, 49);
+            this.prodpricetxt.Size = new System.Drawing.Size(216, 40);
             this.prodpricetxt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.prodpricetxt.TabIndex = 6;
             this.prodpricetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -894,10 +999,9 @@ namespace SOFOK_System
             this.bunifuPictureBox3.BorderRadius = 14;
             this.bunifuPictureBox3.Image = global::SOFOK_System.Properties.Resources.stall_100px;
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(15, 23);
-            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(11, 19);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(29, 29);
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(22, 24);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox3.TabIndex = 5;
             this.bunifuPictureBox3.TabStop = false;
@@ -912,10 +1016,9 @@ namespace SOFOK_System
             this.bunifuPictureBox2.BorderRadius = 14;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.id_number;
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(15, 91);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(11, 74);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(29, 29);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(22, 24);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 3;
             this.bunifuPictureBox2.TabStop = false;
@@ -930,10 +1033,9 @@ namespace SOFOK_System
             this.bunifuPictureBox1.BorderRadius = 14;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.food_bar_100px;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(15, 162);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(11, 132);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(22, 24);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 1;
             this.bunifuPictureBox1.TabStop = false;
@@ -969,8 +1071,7 @@ namespace SOFOK_System
             this.productnametxt.IconRight = null;
             this.productnametxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.productnametxt.Lines = new string[0];
-            this.productnametxt.Location = new System.Drawing.Point(65, 166);
-            this.productnametxt.Margin = new System.Windows.Forms.Padding(4);
+            this.productnametxt.Location = new System.Drawing.Point(49, 135);
             this.productnametxt.MaxLength = 32767;
             this.productnametxt.MinimumSize = new System.Drawing.Size(1, 1);
             this.productnametxt.Modified = false;
@@ -996,7 +1097,7 @@ namespace SOFOK_System
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.productnametxt.OnIdleState = stateProperties12;
-            this.productnametxt.Padding = new System.Windows.Forms.Padding(4);
+            this.productnametxt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.productnametxt.PasswordChar = '\0';
             this.productnametxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.productnametxt.PlaceholderText = "Product Name";
@@ -1006,7 +1107,7 @@ namespace SOFOK_System
             this.productnametxt.SelectionLength = 0;
             this.productnametxt.SelectionStart = 0;
             this.productnametxt.ShortcutsEnabled = true;
-            this.productnametxt.Size = new System.Drawing.Size(288, 52);
+            this.productnametxt.Size = new System.Drawing.Size(216, 42);
             this.productnametxt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.productnametxt.TabIndex = 0;
             this.productnametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1023,140 +1124,26 @@ namespace SOFOK_System
             this.productpic.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.productpic.AutoSizeHeight = false;
             this.productpic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(218)))), ((int)(((byte)(252)))));
-            this.productpic.BorderRadius = 25;
+            this.productpic.BorderRadius = 0;
             this.productpic.Image = global::SOFOK_System.Properties.Resources.tableware_100px;
             this.productpic.IsCircle = true;
-            this.productpic.Location = new System.Drawing.Point(138, 23);
-            this.productpic.Margin = new System.Windows.Forms.Padding(4);
+            this.productpic.Location = new System.Drawing.Point(104, 19);
             this.productpic.Name = "productpic";
-            this.productpic.Size = new System.Drawing.Size(223, 223);
+            this.productpic.Size = new System.Drawing.Size(167, 181);
             this.productpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productpic.TabIndex = 0;
             this.productpic.TabStop = false;
             this.productpic.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SOFOK_System.Properties.Resources.search_100px1;
-            this.pictureBox1.Location = new System.Drawing.Point(980, 116);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label3.Location = new System.Drawing.Point(30, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(464, 59);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "AVAILABLE PRODUCT";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uploadbtn
-            // 
-            this.uploadbtn.AllowAnimations = true;
-            this.uploadbtn.AllowMouseEffects = true;
-            this.uploadbtn.AllowToggling = false;
-            this.uploadbtn.AnimationSpeed = 200;
-            this.uploadbtn.AutoGenerateColors = false;
-            this.uploadbtn.AutoRoundBorders = false;
-            this.uploadbtn.AutoSizeLeftIcon = true;
-            this.uploadbtn.AutoSizeRightIcon = true;
-            this.uploadbtn.BackColor = System.Drawing.Color.Transparent;
-            this.uploadbtn.BackColor1 = System.Drawing.Color.DarkOrange;
-            this.uploadbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadbtn.BackgroundImage")));
-            this.uploadbtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.uploadbtn.ButtonText = "UPLOAD IMAGE";
-            this.uploadbtn.ButtonTextMarginLeft = 0;
-            this.uploadbtn.ColorContrastOnClick = 45;
-            this.uploadbtn.ColorContrastOnHover = 45;
-            this.uploadbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.uploadbtn.CustomizableEdges = borderEdges1;
-            this.uploadbtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.uploadbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.uploadbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.uploadbtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.uploadbtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.uploadbtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadbtn.ForeColor = System.Drawing.Color.White;
-            this.uploadbtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uploadbtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.uploadbtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.uploadbtn.IconMarginLeft = 11;
-            this.uploadbtn.IconPadding = 10;
-            this.uploadbtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uploadbtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.uploadbtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.uploadbtn.IconSize = 25;
-            this.uploadbtn.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.uploadbtn.IdleBorderRadius = 25;
-            this.uploadbtn.IdleBorderThickness = 1;
-            this.uploadbtn.IdleFillColor = System.Drawing.Color.DarkOrange;
-            this.uploadbtn.IdleIconLeftImage = null;
-            this.uploadbtn.IdleIconRightImage = null;
-            this.uploadbtn.IndicateFocus = false;
-            this.uploadbtn.Location = new System.Drawing.Point(160, 266);
-            this.uploadbtn.Name = "uploadbtn";
-            this.uploadbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.uploadbtn.OnDisabledState.BorderRadius = 25;
-            this.uploadbtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.uploadbtn.OnDisabledState.BorderThickness = 1;
-            this.uploadbtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.uploadbtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.uploadbtn.OnDisabledState.IconLeftImage = null;
-            this.uploadbtn.OnDisabledState.IconRightImage = null;
-            this.uploadbtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.uploadbtn.onHoverState.BorderRadius = 25;
-            this.uploadbtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.uploadbtn.onHoverState.BorderThickness = 1;
-            this.uploadbtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.uploadbtn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.uploadbtn.onHoverState.IconLeftImage = null;
-            this.uploadbtn.onHoverState.IconRightImage = null;
-            this.uploadbtn.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.uploadbtn.OnIdleState.BorderRadius = 25;
-            this.uploadbtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.uploadbtn.OnIdleState.BorderThickness = 1;
-            this.uploadbtn.OnIdleState.FillColor = System.Drawing.Color.DarkOrange;
-            this.uploadbtn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.uploadbtn.OnIdleState.IconLeftImage = null;
-            this.uploadbtn.OnIdleState.IconRightImage = null;
-            this.uploadbtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadbtn.OnPressedState.BorderRadius = 25;
-            this.uploadbtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.uploadbtn.OnPressedState.BorderThickness = 1;
-            this.uploadbtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadbtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.uploadbtn.OnPressedState.IconLeftImage = null;
-            this.uploadbtn.OnPressedState.IconRightImage = null;
-            this.uploadbtn.Size = new System.Drawing.Size(184, 42);
-            this.uploadbtn.TabIndex = 3;
-            this.uploadbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uploadbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.uploadbtn.TextMarginLeft = 0;
-            this.uploadbtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.uploadbtn.UseDefaultRadiusAndThickness = true;
-            this.uploadbtn.Click += new System.EventHandler(this.uploadbtn_Click);
-            // 
             // merchantproduct_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1593, 884);
+            this.ClientSize = new System.Drawing.Size(1195, 718);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "merchantproduct_main";
             this.Text = "merchantproducts";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1164,6 +1151,7 @@ namespace SOFOK_System
             this.Shown += new System.EventHandler(this.merchantproduct_main_Shown);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuShadowPanel1.ResumeLayout(false);
@@ -1175,7 +1163,6 @@ namespace SOFOK_System
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productpic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
