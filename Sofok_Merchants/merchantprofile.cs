@@ -41,6 +41,7 @@ namespace SOFOK_System
             contact_lbl.Text = loginform.UserDisplay.contact;
           String birthdate = loginform.UserDisplay.birthdate;
             String.Format("{0:ddd, MMM d, yyyy}",birthdate);
+            birthdate_lbl.Text = birthdate;
             address_lbl.Text = loginform.UserDisplay.address;
             save_img.Enabled = false;
             

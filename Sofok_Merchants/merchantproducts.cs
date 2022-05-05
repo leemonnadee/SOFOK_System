@@ -129,6 +129,7 @@ namespace SOFOK_System
         {
           
             lbl_merchantname.Text = loginform.UserDisplay.merchantName;
+
             displayProductsAll();
             combo_category.SelectedIndex = 0;
             btn_update.Enabled = false;
@@ -581,6 +582,11 @@ namespace SOFOK_System
                 uploadbtn.Visible = true;
                 save_btn.Enabled = true;
             }
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

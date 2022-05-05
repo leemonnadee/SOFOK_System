@@ -80,15 +80,15 @@ namespace SOFOK_System
             // 
             this.bunifuLabel2.AllowParentOverrides = false;
             this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.AutoSize = false;
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel2.Location = new System.Drawing.Point(49, 64);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel2.Location = new System.Drawing.Point(37, 52);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(309, 48);
+            this.bunifuLabel2.Size = new System.Drawing.Size(281, 52);
             this.bunifuLabel2.TabIndex = 177;
             this.bunifuLabel2.Text = "Register Merchant";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -118,8 +118,8 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.Controls.Add(this.label2);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(49, 167);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(37, 136);
+            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -128,7 +128,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(659, 683);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(494, 555);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 181;
             this.bunifuShadowPanel1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.bunifuShadowPanel1_ControlAdded);
@@ -180,8 +180,8 @@ namespace SOFOK_System
             this.btn_delete.IdleIconLeftImage = null;
             this.btn_delete.IdleIconRightImage = null;
             this.btn_delete.IndicateFocus = false;
-            this.btn_delete.Location = new System.Drawing.Point(81, 476);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete.Location = new System.Drawing.Point(61, 387);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delete.OnDisabledState.BorderRadius = 15;
@@ -215,7 +215,7 @@ namespace SOFOK_System
             this.btn_delete.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_delete.OnPressedState.IconLeftImage = null;
             this.btn_delete.OnPressedState.IconRightImage = null;
-            this.btn_delete.Size = new System.Drawing.Size(160, 64);
+            this.btn_delete.Size = new System.Drawing.Size(120, 52);
             this.btn_delete.TabIndex = 214;
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_delete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -271,8 +271,8 @@ namespace SOFOK_System
             this.btn_update.IdleIconLeftImage = null;
             this.btn_update.IdleIconRightImage = null;
             this.btn_update.IndicateFocus = false;
-            this.btn_update.Location = new System.Drawing.Point(257, 476);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Location = new System.Drawing.Point(193, 387);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_update.Name = "btn_update";
             this.btn_update.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_update.OnDisabledState.BorderRadius = 15;
@@ -306,7 +306,7 @@ namespace SOFOK_System
             this.btn_update.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_update.OnPressedState.IconLeftImage = null;
             this.btn_update.OnPressedState.IconRightImage = null;
-            this.btn_update.Size = new System.Drawing.Size(160, 64);
+            this.btn_update.Size = new System.Drawing.Size(120, 52);
             this.btn_update.TabIndex = 213;
             this.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_update.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -343,8 +343,8 @@ namespace SOFOK_System
             this.txt_storename.IconRight = null;
             this.txt_storename.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_storename.Lines = new string[0];
-            this.txt_storename.Location = new System.Drawing.Point(200, 369);
-            this.txt_storename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_storename.Location = new System.Drawing.Point(150, 300);
+            this.txt_storename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_storename.MaxLength = 32767;
             this.txt_storename.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_storename.Modified = false;
@@ -370,7 +370,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_storename.OnIdleState = stateProperties4;
-            this.txt_storename.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_storename.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_storename.PasswordChar = '\0';
             this.txt_storename.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_storename.PlaceholderText = "Enter text";
@@ -380,7 +380,7 @@ namespace SOFOK_System
             this.txt_storename.SelectionLength = 0;
             this.txt_storename.SelectionStart = 0;
             this.txt_storename.ShortcutsEnabled = true;
-            this.txt_storename.Size = new System.Drawing.Size(399, 66);
+            this.txt_storename.Size = new System.Drawing.Size(299, 54);
             this.txt_storename.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_storename.TabIndex = 212;
             this.txt_storename.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -394,9 +394,10 @@ namespace SOFOK_System
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(524, 76);
+            this.lbl_id.Location = new System.Drawing.Point(393, 62);
+            this.lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(68, 16);
+            this.lbl_id.Size = new System.Drawing.Size(56, 13);
             this.lbl_id.TabIndex = 211;
             this.lbl_id.Text = "ID number";
             // 
@@ -447,8 +448,8 @@ namespace SOFOK_System
             this.save_btn.IdleIconLeftImage = null;
             this.save_btn.IdleIconRightImage = null;
             this.save_btn.IndicateFocus = false;
-            this.save_btn.Location = new System.Drawing.Point(432, 476);
-            this.save_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.save_btn.Location = new System.Drawing.Point(324, 387);
+            this.save_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.save_btn.Name = "save_btn";
             this.save_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.save_btn.OnDisabledState.BorderRadius = 15;
@@ -482,7 +483,7 @@ namespace SOFOK_System
             this.save_btn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.save_btn.OnPressedState.IconLeftImage = null;
             this.save_btn.OnPressedState.IconRightImage = null;
-            this.save_btn.Size = new System.Drawing.Size(160, 64);
+            this.save_btn.Size = new System.Drawing.Size(120, 52);
             this.save_btn.TabIndex = 210;
             this.save_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.save_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -519,8 +520,8 @@ namespace SOFOK_System
             this.txt_merchant.IconRight = null;
             this.txt_merchant.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_merchant.Lines = new string[0];
-            this.txt_merchant.Location = new System.Drawing.Point(200, 297);
-            this.txt_merchant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_merchant.Location = new System.Drawing.Point(150, 241);
+            this.txt_merchant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_merchant.MaxLength = 32767;
             this.txt_merchant.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_merchant.Modified = false;
@@ -546,7 +547,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_merchant.OnIdleState = stateProperties8;
-            this.txt_merchant.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_merchant.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_merchant.PasswordChar = '\0';
             this.txt_merchant.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_merchant.PlaceholderText = "Enter text";
@@ -556,7 +557,7 @@ namespace SOFOK_System
             this.txt_merchant.SelectionLength = 0;
             this.txt_merchant.SelectionStart = 0;
             this.txt_merchant.ShortcutsEnabled = true;
-            this.txt_merchant.Size = new System.Drawing.Size(399, 66);
+            this.txt_merchant.Size = new System.Drawing.Size(299, 54);
             this.txt_merchant.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_merchant.TabIndex = 209;
             this.txt_merchant.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -575,10 +576,9 @@ namespace SOFOK_System
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(49, 309);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(37, 251);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 35);
+            this.label5.Size = new System.Drawing.Size(99, 28);
             this.label5.TabIndex = 208;
             this.label5.Text = "Merchant:";
             // 
@@ -590,10 +590,9 @@ namespace SOFOK_System
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(151, 357);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(113, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 35);
+            this.label1.Size = new System.Drawing.Size(0, 28);
             this.label1.TabIndex = 206;
             // 
             // label4
@@ -604,10 +603,9 @@ namespace SOFOK_System
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(37, 382);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(28, 310);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 35);
+            this.label4.Size = new System.Drawing.Size(115, 28);
             this.label4.TabIndex = 205;
             this.label4.Text = "Store name:";
             // 
@@ -639,8 +637,8 @@ namespace SOFOK_System
             this.txt_password.IconRight = null;
             this.txt_password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_password.Lines = new string[0];
-            this.txt_password.Location = new System.Drawing.Point(200, 206);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_password.Location = new System.Drawing.Point(150, 167);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_password.MaxLength = 32767;
             this.txt_password.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_password.Modified = false;
@@ -666,7 +664,7 @@ namespace SOFOK_System
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_password.OnIdleState = stateProperties12;
-            this.txt_password.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_password.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_password.PasswordChar = '*';
             this.txt_password.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_password.PlaceholderText = "Enter text";
@@ -676,7 +674,7 @@ namespace SOFOK_System
             this.txt_password.SelectionLength = 0;
             this.txt_password.SelectionStart = 0;
             this.txt_password.ShortcutsEnabled = true;
-            this.txt_password.Size = new System.Drawing.Size(399, 66);
+            this.txt_password.Size = new System.Drawing.Size(299, 54);
             this.txt_password.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_password.TabIndex = 204;
             this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -715,8 +713,8 @@ namespace SOFOK_System
             this.txt_email.IconRight = null;
             this.txt_email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_email.Lines = new string[0];
-            this.txt_email.Location = new System.Drawing.Point(200, 132);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_email.Location = new System.Drawing.Point(150, 107);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_email.MaxLength = 32767;
             this.txt_email.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_email.Modified = false;
@@ -742,7 +740,7 @@ namespace SOFOK_System
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_email.OnIdleState = stateProperties16;
-            this.txt_email.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_email.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_email.PasswordChar = '\0';
             this.txt_email.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_email.PlaceholderText = "Enter text";
@@ -752,7 +750,7 @@ namespace SOFOK_System
             this.txt_email.SelectionLength = 0;
             this.txt_email.SelectionStart = 0;
             this.txt_email.ShortcutsEnabled = true;
-            this.txt_email.Size = new System.Drawing.Size(399, 66);
+            this.txt_email.Size = new System.Drawing.Size(299, 54);
             this.txt_email.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_email.TabIndex = 203;
             this.txt_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -771,10 +769,9 @@ namespace SOFOK_System
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(49, 226);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(37, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 35);
+            this.label3.Size = new System.Drawing.Size(97, 28);
             this.label3.TabIndex = 193;
             this.label3.Text = "Password:";
             // 
@@ -786,10 +783,9 @@ namespace SOFOK_System
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(85, 145);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(64, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 35);
+            this.label2.Size = new System.Drawing.Size(71, 28);
             this.label2.TabIndex = 192;
             this.label2.Text = "E-mail:";
             // 
@@ -806,8 +802,8 @@ namespace SOFOK_System
             this.bunifuShadowPanel2.Controls.Add(this.registerTable);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(743, 167);
-            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(557, 136);
+            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -816,16 +812,17 @@ namespace SOFOK_System
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(708, 683);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(531, 555);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 182;
             // 
             // txt_id
             // 
             this.txt_id.AutoSize = true;
-            this.txt_id.Location = new System.Drawing.Point(611, 21);
+            this.txt_id.Location = new System.Drawing.Point(458, 17);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(68, 16);
+            this.txt_id.Size = new System.Drawing.Size(56, 13);
             this.txt_id.TabIndex = 212;
             this.txt_id.Text = "ID number";
             // 
@@ -866,8 +863,8 @@ namespace SOFOK_System
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.registerTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.registerTable.EnableHeadersVisualStyles = false;
-            this.registerTable.Location = new System.Drawing.Point(31, 64);
-            this.registerTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.registerTable.Location = new System.Drawing.Point(23, 52);
+            this.registerTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.registerTable.MultiSelect = false;
             this.registerTable.Name = "registerTable";
             this.registerTable.ReadOnly = true;
@@ -885,21 +882,20 @@ namespace SOFOK_System
             this.registerTable.RowTemplate.DividerHeight = 1;
             this.registerTable.RowTemplate.Height = 50;
             this.registerTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.registerTable.Size = new System.Drawing.Size(637, 575);
+            this.registerTable.Size = new System.Drawing.Size(478, 467);
             this.registerTable.TabIndex = 7;
             this.registerTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.registerTable_CellMouseDoubleClick);
             // 
             // adminregistermerchant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1497, 1006);
+            this.ClientSize = new System.Drawing.Size(1123, 748);
             this.Controls.Add(this.bunifuShadowPanel2);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Controls.Add(this.bunifuLabel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "adminregistermerchant";
             this.Text = "adminregistermerchant";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -910,7 +906,6 @@ namespace SOFOK_System
             this.bunifuShadowPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.registerTable)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
