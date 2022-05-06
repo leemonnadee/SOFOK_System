@@ -13,7 +13,7 @@ namespace SOFOK_System
     public partial class choosepayment : Form
     {
 
-        public String mod_payment;
+        
      
         public choosepayment()
         {
@@ -28,27 +28,29 @@ namespace SOFOK_System
             
 
         }
+        public class MOD_payment {
+
+            public static String mod_payment;
+
+        }
 
         private void btn_gcash_Click(object sender, EventArgs e)
         {
-            mod_payment = "gcash";
-            frmMain fm = new frmMain();
-            fm.Show();
-            seat st = new seat();
-            st.Hide();
+            MOD_payment.mod_payment = "gcash";
             this.Hide();
-         
+            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
+            fr.Show();
         }
 
         private void btn_cashier_Click(object sender, EventArgs e)
         {
-            mod_payment = "cashier";
-            frmMain fm = new frmMain();
-            fm.Show();
-            seat st = new seat();
-            st.Hide();
+            MOD_payment.mod_payment = "cashier";
             this.Hide();
-          
+            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
+            fr.Show();
+           
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -19,14 +19,15 @@ namespace SOFOK_System
         //MySqlCommand cm;
         String prod_name;
         private static bool Enable;
-
+        public static int costumer_id;
         public frmMain()
         {
             InitializeComponent();
             All.BackColor = Color.PeachPuff;
             CalculateTotal();
             lbl_tot.Text.Equals("₱ 0.00");
-
+            
+          
 
 
         }
@@ -169,7 +170,7 @@ namespace SOFOK_System
         {
 
             displayProductsAll();
-            MessageBox.Show("asd");
+          
             
         }
         private void txt_srch_TextChanged(object sender, EventArgs e)
@@ -307,7 +308,7 @@ namespace SOFOK_System
         private void button1_Click(object sender, EventArgs e)
         {
             grid.Rows.Clear();
-            lbl_tot.Text = "₱ 0.00";
+            lbl_tot.Text = "₱0.00";
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -317,28 +318,140 @@ namespace SOFOK_System
            ml.Show();
             this.Hide();
         }
+      
+        public void save_data() {
 
-        private void pay_btn_Click(object sender, EventArgs e)
-        {
-            if (lbl_tot.Text.Equals("₱ 0.00"))
+            //grid
+            try
+            {
+                
+                   
+                for (int i = 0; i <=grid.RowCount-1; i++)
+                {
+                    String item = grid.Rows[i].Cells[0].Value.ToString();
+                    int qty = (int)grid.Rows[i].Cells[1].Value;
+                    String cost = grid.Rows[i].Cells[2].Value.ToString();
+                    String store = grid.Rows[i].Cells[3].Value.ToString();
+                    int prod_id = (int)grid.Rows[i].Cells[4].Value;
+
+                    double final_cost = Double.Parse(cost.Remove(0, 1));
+
+
+
+
+                    string query = "INSERT INTO `tbl_orders`(`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`,`order_action`,`payment`,`status`,`costumer_id`) VALUES ('','" + item + "','" + 2 + "','" + final_cost+ "','" + store + "','" + prod_id + "','"+seat.seatDisplay.Seat_availability+"','"+choosepayment.MOD_payment.mod_payment+"','pending','"+costumer_id+"')";
+                
+                    MySqlConnection conn = new MySqlConnection(mycon);
+                    MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                    MySqlDataReader myreader1;
+
+                    conn.Open();
+
+                    myreader1 = mycommand.ExecuteReader();
+                    conn.Close();
+
+
+
+                  
+                   
+                }
+
+                MessageBox.Show("Order test COmplete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                grid.Rows.Clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+        public void get_costumerID() {
+
+            string query2 = "SELECT * FROM `tbl_costumer`  ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                costumer_id = myreaderfetch.GetInt32("costumer_id");
+
+
+
+            }
+
+            save_data();
+
+
+        }
+        public void buy() {
+        
+            try
             {
 
-            }
-            else {
+
+
+                string query = "INSERT INTO `tbl_costumer`(`costumer_id`, `date`) VALUES ('',CURRENT_DATE)";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+
+                get_costumerID();
+             
+              
                 choosepayment cp = new choosepayment();
-                cp.Show();
+                cp.Hide();
+
+                conn.Close();
 
             }
-            
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
            
-          
+
+        }
+        private void pay_btn_Click(object sender, EventArgs e)
+        {
+
+       
+
+
+            if (lbl_tot.Text.Equals("₱0.00")|| (lbl_tot.Text.Equals("")))
+            {
+                MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                buy();
+
+            }
         
 
 
 
+
+
+
+
+
         }
-    public void enableB() {
+        public void enableB() {
           
             this.Opacity = 1;
         }

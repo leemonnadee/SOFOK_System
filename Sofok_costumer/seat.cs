@@ -12,37 +12,40 @@ namespace SOFOK_System
 {
     public partial class seat : Form
     {
-        public String Seat_availability;
+    
     
         public seat()
         {
             InitializeComponent();
 
         }
-     
-       
+
+        public class seatDisplay { 
+        
+        public static String Seat_availability;
+    }
 
       
 
         private void dine_in_Click(object sender, EventArgs e)
         {
-            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
-            fr.Show();
+        choosepayment cp=new choosepayment();
+            cp.Show();
             this.Hide();
+
+            seatDisplay.Seat_availability = "Dine In";
+
            
-            Seat_availability = "Dine In";
-            
- 
         }
 
         private void dine_out_Click(object sender, EventArgs e)
         {
-            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
-            fr.Show();
+            choosepayment cp = new choosepayment();
+            cp.Show();
             this.Hide();
-           
-         
-            Seat_availability = "Dine Out";
+
+
+            seatDisplay.Seat_availability = "Dine Out";
          
         }
     }

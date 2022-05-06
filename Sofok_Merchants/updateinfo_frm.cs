@@ -55,7 +55,7 @@ namespace SOFOK_System
         private void updateinfo_btn_Click(object sender, EventArgs e)
         {
             string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
-            string query = "update sofok_db.tbl_merchant set name='" + this.nameupdate_txt.Text + "', address='" + this.addressupdate_txt.Text + "', birthdate= '" + this.birthdate_picker.Text + "',gender= '" + gender + "',contact_no= '" + this.cellphoneupdate_txt.Text + "', marital_status= '" +maritalstatus+"' where merchant_id= '"+ loginform.UserDisplay.MerchantID +"';";
+            string query = "update sofok_db.tbl_merchant set name='" + this.nameupdate_txt.Text + "', address='" + this.addressupdate_txt.Text + "', birthdate= '" + this.birthdate_picker.Text + "',gender= '" + gender + "',contact_no= '" + Double.Parse(this.cellphoneupdate_txt.Text) + "', marital_status= '" +maritalstatus+"' where merchant_id= '"+ loginform.UserDisplay.MerchantID +"';";
             MySqlConnection conDataBase = new MySqlConnection(mycon);
             MySqlCommand cmdDataBase = new MySqlCommand(query, conDataBase);
             MySqlDataReader myReader;

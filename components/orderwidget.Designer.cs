@@ -36,14 +36,14 @@ namespace SOFOK_System.components
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.servebtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ordersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.widget3 = new SOFOK_System.components.widget();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.widget2 = new SOFOK_System.components.widget();
             this.widget1 = new SOFOK_System.components.widget();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.widget4 = new SOFOK_System.components.widget();
             this.bunifuPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.ordersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuLabel1
@@ -203,26 +203,26 @@ namespace SOFOK_System.components
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 40;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.flowLayoutPanel1);
+            this.bunifuPanel1.Controls.Add(this.ordersPanel);
             this.bunifuPanel1.Location = new System.Drawing.Point(16, 27);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1047, 183);
             this.bunifuPanel1.TabIndex = 2;
             // 
-            // flowLayoutPanel1
+            // ordersPanel
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Controls.Add(this.widget3);
-            this.flowLayoutPanel1.Controls.Add(this.widget2);
-            this.flowLayoutPanel1.Controls.Add(this.widget1);
-            this.flowLayoutPanel1.Controls.Add(this.widget4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1044, 180);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.ordersPanel.AutoSize = true;
+            this.ordersPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ordersPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ordersPanel.Controls.Add(this.widget3);
+            this.ordersPanel.Controls.Add(this.widget2);
+            this.ordersPanel.Controls.Add(this.widget1);
+            this.ordersPanel.Controls.Add(this.widget4);
+            this.ordersPanel.Location = new System.Drawing.Point(0, 0);
+            this.ordersPanel.Name = "ordersPanel";
+            this.ordersPanel.Size = new System.Drawing.Size(1044, 180);
+            this.ordersPanel.TabIndex = 0;
             // 
             // widget3
             // 
@@ -230,41 +230,14 @@ namespace SOFOK_System.components
             this.widget3.Category = SOFOK_System.components.widget.categories.food;
             this.widget3.Cost = 0D;
             this.widget3.Icon = ((System.Drawing.Image)(resources.GetObject("widget3.Icon")));
+            this.widget3.ID = 0;
             this.widget3.Location = new System.Drawing.Point(2, 2);
-            this.widget3.Margin = new System.Windows.Forms.Padding(2);
+            this.widget3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.widget3.Name = "widget3";
             this.widget3.Size = new System.Drawing.Size(257, 176);
             this.widget3.Store = "Store Name";
             this.widget3.TabIndex = 6;
             this.widget3.Title = "Product Name";
-            // 
-            // widget2
-            // 
-            this.widget2.BackColor = System.Drawing.Color.Transparent;
-            this.widget2.Category = SOFOK_System.components.widget.categories.food;
-            this.widget2.Cost = 0D;
-            this.widget2.Icon = ((System.Drawing.Image)(resources.GetObject("widget2.Icon")));
-            this.widget2.Location = new System.Drawing.Point(263, 2);
-            this.widget2.Margin = new System.Windows.Forms.Padding(2);
-            this.widget2.Name = "widget2";
-            this.widget2.Size = new System.Drawing.Size(257, 176);
-            this.widget2.Store = "Store Name";
-            this.widget2.TabIndex = 7;
-            this.widget2.Title = "Product Name";
-            // 
-            // widget1
-            // 
-            this.widget1.BackColor = System.Drawing.Color.Transparent;
-            this.widget1.Category = SOFOK_System.components.widget.categories.food;
-            this.widget1.Cost = 0D;
-            this.widget1.Icon = ((System.Drawing.Image)(resources.GetObject("widget1.Icon")));
-            this.widget1.Location = new System.Drawing.Point(524, 2);
-            this.widget1.Margin = new System.Windows.Forms.Padding(2);
-            this.widget1.Name = "widget1";
-            this.widget1.Size = new System.Drawing.Size(257, 176);
-            this.widget1.Store = "Store Name";
-            this.widget1.TabIndex = 8;
-            this.widget1.Title = "Product Name";
             // 
             // bunifuLabel4
             // 
@@ -283,14 +256,45 @@ namespace SOFOK_System.components
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // widget2
+            // 
+            this.widget2.BackColor = System.Drawing.Color.Transparent;
+            this.widget2.Category = SOFOK_System.components.widget.categories.food;
+            this.widget2.Cost = 0D;
+            this.widget2.Icon = ((System.Drawing.Image)(resources.GetObject("widget2.Icon")));
+            this.widget2.ID = 0;
+            this.widget2.Location = new System.Drawing.Point(263, 2);
+            this.widget2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.widget2.Name = "widget2";
+            this.widget2.Size = new System.Drawing.Size(257, 176);
+            this.widget2.Store = "Store Name";
+            this.widget2.TabIndex = 7;
+            this.widget2.Title = "Product Name";
+            // 
+            // widget1
+            // 
+            this.widget1.BackColor = System.Drawing.Color.Transparent;
+            this.widget1.Category = SOFOK_System.components.widget.categories.food;
+            this.widget1.Cost = 0D;
+            this.widget1.Icon = ((System.Drawing.Image)(resources.GetObject("widget1.Icon")));
+            this.widget1.ID = 0;
+            this.widget1.Location = new System.Drawing.Point(524, 2);
+            this.widget1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.widget1.Name = "widget1";
+            this.widget1.Size = new System.Drawing.Size(257, 176);
+            this.widget1.Store = "Store Name";
+            this.widget1.TabIndex = 8;
+            this.widget1.Title = "Product Name";
+            // 
             // widget4
             // 
             this.widget4.BackColor = System.Drawing.Color.Transparent;
             this.widget4.Category = SOFOK_System.components.widget.categories.food;
             this.widget4.Cost = 0D;
             this.widget4.Icon = ((System.Drawing.Image)(resources.GetObject("widget4.Icon")));
+            this.widget4.ID = 0;
             this.widget4.Location = new System.Drawing.Point(785, 2);
-            this.widget4.Margin = new System.Windows.Forms.Padding(2);
+            this.widget4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.widget4.Name = "widget4";
             this.widget4.Size = new System.Drawing.Size(257, 176);
             this.widget4.Store = "Store Name";
@@ -315,7 +319,7 @@ namespace SOFOK_System.components
             this.Load += new System.EventHandler(this.orderwidget_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.ordersPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,14 +328,14 @@ namespace SOFOK_System.components
         #endregion
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel ordersPanel;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton servebtn;
         private widget widget3;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private widget widget2;
         private widget widget1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private widget widget4;
     }
 }

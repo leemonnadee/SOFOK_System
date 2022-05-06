@@ -35,6 +35,7 @@ namespace SOFOK_System
             public static string email;
             public static string contact;
             public static int Acc_id;
+            public static string Merchat_status;
     
         }
 
@@ -67,7 +68,27 @@ namespace SOFOK_System
                 loginAuth(); ;
             }
         }
+        public void login_Online() {
+            string query = "UPDATE `tbl_merchant` SET `login_status`=1 WHERE merchant_id='"+UserDisplay.MerchantID+"'";
 
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+            MySqlDataReader myreader1;
+
+
+
+
+
+
+            //opening connection
+            conn.Open();
+            //execute the query
+            myreader1 = mycommand.ExecuteReader();
+            conn.Close();
+
+
+        }
 
 
         public void getMerchantID() {
@@ -96,7 +117,7 @@ namespace SOFOK_System
                 UserDisplay.gender = myreaderfetch.GetString("gender");
                 UserDisplay.birthdate = myreaderfetch.GetString("birthdate");
                 UserDisplay.contact = myreaderfetch.GetString("contact_no");
-        
+                
 
             }
          
@@ -185,6 +206,7 @@ namespace SOFOK_System
                             getMerchantID();
                             getEmail();
                             this.Hide();
+                            login_Online();
 
 
                         }

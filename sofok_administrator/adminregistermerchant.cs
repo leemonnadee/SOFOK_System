@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,7 +21,21 @@ namespace SOFOK_System
             InitializeComponent();
    
         }
-       
+        private void ValidateEmail()
+        {
+            string email = txt_email.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (match.Success)
+            {
+                create_acc();
+
+            }
+            else
+                MessageBox.Show(email + " Invalid email format", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           
+        }
+
         //show ALl data in table
         public void showalldata()
         {
@@ -230,8 +245,9 @@ namespace SOFOK_System
         //save button
         private void save_btn_Click_1(object sender, EventArgs e)
         {
-            
-            create_acc();
+            ValidateEmail();
+
+
         }
 
 
@@ -329,7 +345,7 @@ namespace SOFOK_System
         {
             if (txt_email.Text.Equals("") ||
           txt_merchant.Text.Equals("") ||
-          txt_storename.Text.Equals("")||
+          txt_storename.Text.Equals("") ||
              txt_password.Text.Equals(""))
             {
                 MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -337,19 +353,29 @@ namespace SOFOK_System
             }
             else
             {
-                update_accounts();
-                btn_delete.Enabled = false;
-                btn_update.Enabled = false;
-                save_btn.Enabled = true;
+                string email = txt_email.Text;
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(email);
+                if (match.Success)
+                {
+                    btn_delete.Enabled = false;
+                    btn_update.Enabled = false;
+                    save_btn.Enabled = true;
+                    update_accounts();
+
+                }
+                else
+                    MessageBox.Show(email + " Invalid email format", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-
-
-
-            }
-
-        private void bunifuShadowPanel1_ControlAdded(object sender, ControlEventArgs e)
-        {
-
         }
-    }
-}
+
+
+          
+            }
+
+
+
+            }
+
+   

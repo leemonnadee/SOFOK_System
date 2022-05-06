@@ -69,7 +69,7 @@ namespace SOFOK_System.Sofok_costumer
                 var merch = (merchant_widget)ss;
                 merchant_list.merchantDisplay.merch_id = id;
 
-                MessageBox.Show(merchantDisplay.merch_id.ToString());
+               
                 frmMain fr = new frmMain();
                 fr.Show();
                 this.Hide();
@@ -105,7 +105,7 @@ namespace SOFOK_System.Sofok_costumer
                 myreaderfetch = mycommandfetch.ExecuteReader();
                 while (myreaderfetch.Read())
                 {
-                    
+                   
                     String name = myreaderfetch.GetString("name");
 
                     String items = myreaderfetch.GetString("COUNT(*)");

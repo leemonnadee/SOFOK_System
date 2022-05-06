@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace SOFOK_System
 {
     public partial class merchantmainfrm : Form
     {
+        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
         public merchantmainfrm()
         {
             InitializeComponent();
@@ -79,6 +81,37 @@ namespace SOFOK_System
             timelbl.Text = DateTime.Now.ToLongTimeString();
         }
 
+        public void login_Offline()
+        {
+            string query = "UPDATE `tbl_merchant` SET `login_status`=0 WHERE merchant_id='" + loginform.UserDisplay.MerchantID + "'";
+
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+            MySqlDataReader myreader1;
+
+
+
+
+
+            MessageBox.Show("update_complete");
+
+
+            //opening connection
+            conn.Open();
+            //execute the query
+            myreader1 = mycommand.ExecuteReader();
+            conn.Close();
+
+
+        }
+
+
+
+
+
+
+
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you wish to logout?", "logout", MessageBoxButtons.YesNo);
@@ -87,6 +120,7 @@ namespace SOFOK_System
                 loginform lf = new loginform();
                 lf.Show();
                 this.Hide();
+                login_Offline();
             }
         }
 
