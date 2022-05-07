@@ -32,8 +32,8 @@ namespace SOFOK_System
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.orderwidget1 = new SOFOK_System.components.orderwidget();
             this.orderwidget2 = new SOFOK_System.components.orderwidget();
-            this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.orderwidget3 = new SOFOK_System.components.orderwidget();
+            this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@ namespace SOFOK_System
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(948, 670);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(970, 670);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // orderwidget1
@@ -58,7 +58,7 @@ namespace SOFOK_System
             this.orderwidget1.BackColor = System.Drawing.Color.White;
             this.orderwidget1.Location = new System.Drawing.Point(3, 3);
             this.orderwidget1.Name = "orderwidget1";
-            this.orderwidget1.Size = new System.Drawing.Size(1081, 263);
+            this.orderwidget1.Size = new System.Drawing.Size(512, 256);
             this.orderwidget1.TabIndex = 3;
             // 
             // orderwidget2
@@ -66,10 +66,20 @@ namespace SOFOK_System
             this.orderwidget2.AutoSize = true;
             this.orderwidget2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.orderwidget2.BackColor = System.Drawing.Color.White;
-            this.orderwidget2.Location = new System.Drawing.Point(3, 272);
+            this.orderwidget2.Location = new System.Drawing.Point(3, 265);
             this.orderwidget2.Name = "orderwidget2";
-            this.orderwidget2.Size = new System.Drawing.Size(1081, 263);
+            this.orderwidget2.Size = new System.Drawing.Size(512, 256);
             this.orderwidget2.TabIndex = 4;
+            // 
+            // orderwidget3
+            // 
+            this.orderwidget3.AutoSize = true;
+            this.orderwidget3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.orderwidget3.BackColor = System.Drawing.Color.White;
+            this.orderwidget3.Location = new System.Drawing.Point(3, 527);
+            this.orderwidget3.Name = "orderwidget3";
+            this.orderwidget3.Size = new System.Drawing.Size(512, 256);
+            this.orderwidget3.TabIndex = 5;
             // 
             // docker
             // 
@@ -111,23 +121,13 @@ namespace SOFOK_System
             this.docker.TitleBarOptions.TitleBarControl = null;
             this.docker.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // orderwidget3
-            // 
-            this.orderwidget3.AutoSize = true;
-            this.orderwidget3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.orderwidget3.BackColor = System.Drawing.Color.White;
-            this.orderwidget3.Location = new System.Drawing.Point(3, 541);
-            this.orderwidget3.Name = "orderwidget3";
-            this.orderwidget3.Size = new System.Drawing.Size(1081, 263);
-            this.orderwidget3.TabIndex = 5;
-            // 
             // merchantorders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(948, 670);
+            this.ClientSize = new System.Drawing.Size(970, 670);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "merchantorders";

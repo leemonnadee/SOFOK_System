@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOFOK_System.Sofok_costumer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,24 +32,35 @@ namespace SOFOK_System
         public class MOD_payment {
 
             public static String mod_payment;
+            public static String close;
 
         }
-
-        private void btn_gcash_Click(object sender, EventArgs e)
+    
+        public void btn_gcash_Click(object sender, EventArgs e)
         {
             MOD_payment.mod_payment = "gcash";
+            merchant_list ml = new merchant_list();
+            MOD_payment.close = "close";
+         ml.Show();
+
+
+     
             this.Hide();
-            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
-            fr.Show();
+          
+           
+           
         }
 
         private void btn_cashier_Click(object sender, EventArgs e)
         {
             MOD_payment.mod_payment = "cashier";
+
+            merchant_list ml = new merchant_list();
+            MOD_payment.close = "close";
+            ml.Show();
             this.Hide();
-            Sofok_costumer.merchant_list fr = new Sofok_costumer.merchant_list();
-            fr.Show();
-           
+
+
 
 
         }

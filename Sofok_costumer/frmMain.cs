@@ -20,17 +20,20 @@ namespace SOFOK_System
         String prod_name;
         private static bool Enable;
         public static int costumer_id;
+     
         public frmMain()
         {
+        
             InitializeComponent();
             All.BackColor = Color.PeachPuff;
             CalculateTotal();
             lbl_tot.Text.Equals("₱ 0.00");
-            
-          
+           
 
 
-        }
+
+
+    }
 
      
 
@@ -305,11 +308,14 @@ namespace SOFOK_System
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("test");
+            
             grid.Rows.Clear();
             lbl_tot.Text = "₱0.00";
-        }
+        
+            }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
@@ -337,7 +343,7 @@ namespace SOFOK_System
                     double final_cost = Double.Parse(cost.Remove(0, 1));
 
 
-
+                
 
                     string query = "INSERT INTO `tbl_orders`(`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`,`order_action`,`payment`,`status`,`costumer_id`) VALUES ('','" + item + "','" + 2 + "','" + final_cost+ "','" + store + "','" + prod_id + "','"+seat.seatDisplay.Seat_availability+"','"+choosepayment.MOD_payment.mod_payment+"','pending','"+costumer_id+"')";
                 
@@ -359,7 +365,8 @@ namespace SOFOK_System
                    
                 }
 
-                MessageBox.Show("Order test COmplete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+                 lbl_tot.Text=("₱0.00");
                 grid.Rows.Clear();
 
             }
@@ -430,23 +437,25 @@ namespace SOFOK_System
         private void pay_btn_Click(object sender, EventArgs e)
         {
 
-       
+
+           
+
+                        if (lbl_tot.Text.Equals("₱0.00")|| (lbl_tot.Text.Equals("")))
+                        {
+                            MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else {
+                           buy();
+               
+              
+
+                        }
 
 
-            if (lbl_tot.Text.Equals("₱0.00")|| (lbl_tot.Text.Equals("")))
-            {
-                MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else {
-                buy();
-
-            }
-        
+                       
 
 
-
-
-
+           
 
 
 
