@@ -219,6 +219,7 @@ namespace SOFOK_System
             this.time.Size = new System.Drawing.Size(271, 51);
             this.time.TabIndex = 0;
             this.time.Text = "Time  display";
+            this.time.Click += new System.EventHandler(this.time_Click);
             // 
             // timer1
             // 

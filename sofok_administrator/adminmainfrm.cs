@@ -21,10 +21,15 @@ namespace SOFOK_System
         {
             //open form in panel
             //container.Controls.Clear();
-            adminmerchantsales adminmerchantsales = new adminmerchantsales();
-            adminmerchantsales.TopLevel = false;
-            container.Controls.Add(adminmerchantsales);
-            adminmerchantsales.Show();
+            merchantsrents merchantrents = new merchantsrents();
+            merchantrents.TopLevel = false;
+            container.Controls.Add(merchantrents);
+            merchantrents.Show();
+            
+         //   adminmerchantsales adminmerchantsales = new adminmerchantsales();
+          //  adminmerchantsales.TopLevel = false;
+          //  container.Controls.Add(adminmerchantsales);
+          //  adminmerchantsales.Show(); 
         }
 
         private void adminprofilebtn_Click(object sender, EventArgs e)

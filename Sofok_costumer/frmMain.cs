@@ -446,8 +446,9 @@ namespace SOFOK_System
                         }
                         else {
                            buy();
-               
-              
+
+                Receipt receipt = new Receipt();
+                receipt.Show();
 
                         }
 

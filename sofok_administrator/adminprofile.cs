@@ -25,7 +25,7 @@ namespace SOFOK_System
             combo_log.SelectedIndex = 0;
         }
         
-
+       
 
         // insert function
         public void insert_admin_info()
@@ -473,7 +473,10 @@ namespace SOFOK_System
             timer1.Start();
         }
 
-      
+        private void time_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
