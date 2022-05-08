@@ -117,10 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAe4AAABMCAYAAACrtFQHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP1SURBVHhe7d0hcNtIGAbQHxYWFhYGFh40DAwsDCwMDGvY
+        zUjuGAYeLDxYGHiw8GBhYGGR7NtV9oi9ie3YlqLmfTNvDJyVNuiblVZyiIiIiIiIiIiIiIjIIFm1MevN
+        4zJ93gDA5D102kO/fY43pfKml1UTH7p5LLo2fqR/agUAr0Xqv/vkdtnEeanFl5lS1rd5wrV/BABem66J
+        n92X+CuvyEtdjp9U2O/6SVUmDAA8SAvbu7zILfU5fFaLeNu18WeayK/aBAGATak3v6YOfV/qdJj0l8Xd
+        vwaAZ8mX0NPnRanV0yafqJywOhkAYDfLJq5KvZ4m+QS1EwMAz9PvEzvFo2Tp4NfrJwMADpfve5e6PU7S
+        QS/WTwIAHNV1qd3DUp7PtnMcAE7vsA1r/TPado8DwCDKQvms1PD+SQdYrB8UADid1L13pYb3S3443CVy
+        ABjF/pfMuyb+rhwIADixtHD+Xup4t+QNabUDAQDDWLbxqdTy9vjREAAYV9fEP6WWt8crTQHgBdjlx0jy
+        b4ZWBwMAg9rpcnk3j9vaYABgWF0b30o9P55U3Pe1wQDAsPrHsp/6AZL8ZW0gADCSp+5z5y+rgwCAcbQx
+        KzW9GRvTAOBlWbbxsdT0ZvKXtUEAwDiWTVyVmt5M/rI2CAAYSRs3paY3k7+sDgIAxqG4AWBCFDcATIji
+        BoAJUdwAMCGKGwAmRHEDwIQobgCYEMUNABOiuAFgQhQ3AEyI4gaACVHcADAhihsAJkRxA8CEKG4AmBDF
+        DQATorgBYEKeLO55XG8MAADGs6W4LzcGAADj2XKpfFYdBACM5bLU9GbSl2drfwwAjGjZxHmp6c2sFvG2
+        NggAGEkTH0pN19PN41d1IAAwvCbelYquJxX31+pAAGBQqZO/l3p+POkP7SwHgJfgqR3l/yff53a5HADG
+        t/wSf5R6fjpdG99qBwAAhpG6+Eep5e1ZtvGxdhAAYBjdPBallndLviFeOxAAcFpdEz+37iZfTxp4sX4g
+        AOD0lk1clTreL+51A8Cwunncrz7Hm1LF+yW/rcUOcwAY1OPvJt8lyzY+VQ4KABxZWizflvo9LHlnW+0E
+        AMBxpK69e/Yl8lrc7waA08jPbOcXoJXKPU7KG9XuaicEAJ6nlPb7UrfHTV7C5+vvtRMDAPvpF8THXmnX
+        kp8vq00AANhNvxA+5j3tbVm1Meua+Lc2GQCgLhX2ffo87JGvQ5IfFyuTqE4QAEiFnV9j2sbNoKvsx5In
+        kSfT32CvTBYAXqtc2GmBu9j73eNDJb9trS9xP1ICwCuVF7J9WbcxK/U4jeTt7XnSxQ0A/K6WTZynz1kq
+        7rNSgyIiIiIiIiIiIiIicuxE/AfSiiiO+JZyuAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btn_delete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAA0CAYAAABB/vzFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

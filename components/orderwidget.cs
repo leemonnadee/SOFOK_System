@@ -17,7 +17,9 @@ namespace SOFOK_System.components
     {
         string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
         //MySqlCommand cm;
+        private int _id;
         String prod_name;
+        private double _cost;
         public orderwidget()
         {
             InitializeComponent();
@@ -28,8 +30,33 @@ namespace SOFOK_System.components
             DialogResult result = MessageBox.Show("Serve order?", "SERVE", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
+
+                serve();
+            }
+        }
+        public void serve() {
+            try
+            {
+
+                string query2 = "UPDATE `tbl_orders` SET `status`='accepted' WHERE tbl_orders.costumer_id='" + lbl_oder_num.Text + "'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+                //merchant_list.merchantDisplay.merch_id;
+                MySqlDataReader myreaderfetch;
+
+                conn.Open();
+                myreaderfetch = mycommandfetch.ExecuteReader();
+
+                MessageBox.Show("success");
                 this.Hide();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
         private void orderwidget_Load(object sender, EventArgs e)
@@ -66,8 +93,8 @@ namespace SOFOK_System.components
             {
 
 
-                string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id GROUP BY tbl_merchant.name";
-                MySqlConnection conn = new MySqlConnection(mycon);
+                string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store  FROM tbl_orders INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id INNER JOIN tbl_merchant ON tbl_merchant.merchant_id=tbl_products.merchant_id WHERE tbl_orders.costumer_id='"+merchantorders.orderDisply.costumer_id+"'";
+                    MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
                 MySqlDataReader myreaderfetch;
@@ -123,7 +150,11 @@ namespace SOFOK_System.components
 
 
 
+        public double Cost { get => _cost; set { _cost = value; lbl_Price.Text = _cost.ToString("C2"); } }
+        public String Mod_payment { get => lbl_mod_payment.Text; set => lbl_mod_payment.Text = value; }
+
+        public int ID { get => _id; set { _cost = value; lbl_oder_num.Text = _cost.ToString(); } }
 
 
-        }
+    }
     }

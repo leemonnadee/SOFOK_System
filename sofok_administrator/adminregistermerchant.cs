@@ -16,6 +16,7 @@ namespace SOFOK_System
     {
         //set connection
         string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+        public double rownum;
         public adminregistermerchant()
         {
             InitializeComponent();
@@ -35,7 +36,32 @@ namespace SOFOK_System
                 MessageBox.Show(email + " Invalid email format", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
            
         }
+        public void count_acc() {
+            try
+            {
+                string query = "SELECT count(*) FROM tbl_merchant";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
 
+
+
+                MySqlDataReader myreader2;
+
+                conn.Open();
+                // insert Merchant Data
+                myreader2 = mycommand.ExecuteReader();
+                while (myreader2.Read())
+                {
+
+                    rownum = myreader2.GetDouble("count(*)");
+
+                }
+
+               lbl_Acc_num.Text = "0"+rownum.ToString();
+            }catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
+        }
         //show ALl data in table
         public void showalldata()
         {
@@ -110,6 +136,7 @@ namespace SOFOK_System
                     myreader1 = mycommand.ExecuteReader();
                     conn.Close();
                     MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    count_acc();
 
 
                 }
@@ -222,8 +249,9 @@ namespace SOFOK_System
                     save_btn.Enabled = true;
                     clear();
                     MessageBox.Show("Delete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                count_acc();
 
-                }
+            }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -240,12 +268,14 @@ namespace SOFOK_System
             showalldata();
             btn_delete.Enabled = false;
             btn_update.Enabled = false;
+            count_acc();
         }
 
         //save button
         private void save_btn_Click_1(object sender, EventArgs e)
         {
             ValidateEmail();
+           
 
 
         }

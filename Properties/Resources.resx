@@ -133,9 +133,6 @@
   <data name="purchase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\purchase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\search_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="address_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\address_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,6 +162,9 @@
   </data>
   <data name="birthday_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\birthday_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sofok logo(small)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\sofok logo(small).JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +199,8 @@
   <data name="soda_bottle_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\soda_bottle_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gender_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\gender_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\search_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\lock_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,10 +313,13 @@
   <data name="sales orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\sales orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gender_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\gender_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sofok logo(small)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\sofok logo(small).JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bao-coming-soon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bao-coming-soon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

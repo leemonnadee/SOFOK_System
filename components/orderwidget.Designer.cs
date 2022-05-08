@@ -30,33 +30,35 @@ namespace SOFOK_System.components
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orderwidget));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            this.lbl_oder_num = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_Price = new Bunifu.UI.WinForms.BunifuLabel();
             this.servebtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.ordersPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_mod_payment = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuLabel1
+            // lbl_oder_num
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.bunifuLabel1.Location = new System.Drawing.Point(16, 3);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(63, 18);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "ORDER #";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_oder_num.AllowParentOverrides = false;
+            this.lbl_oder_num.AutoEllipsis = false;
+            this.lbl_oder_num.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_oder_num.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbl_oder_num.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_oder_num.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_oder_num.Location = new System.Drawing.Point(74, 12);
+            this.lbl_oder_num.Name = "lbl_oder_num";
+            this.lbl_oder_num.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_oder_num.Size = new System.Drawing.Size(98, 28);
+            this.lbl_oder_num.TabIndex = 1;
+            this.lbl_oder_num.Text = "ORDER #";
+            this.lbl_oder_num.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_oder_num.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel2
             // 
@@ -75,22 +77,22 @@ namespace SOFOK_System.components
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel3
+            // lbl_Price
             // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel3.Location = new System.Drawing.Point(292, 210);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(69, 37);
-            this.bunifuLabel3.TabIndex = 4;
-            this.bunifuLabel3.Text = "₱0.00";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_Price.AllowParentOverrides = false;
+            this.lbl_Price.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Price.AutoEllipsis = false;
+            this.lbl_Price.CursorType = null;
+            this.lbl_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Price.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Price.Location = new System.Drawing.Point(292, 210);
+            this.lbl_Price.Name = "lbl_Price";
+            this.lbl_Price.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_Price.Size = new System.Drawing.Size(69, 37);
+            this.lbl_Price.TabIndex = 4;
+            this.lbl_Price.Text = "₱0.00";
+            this.lbl_Price.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_Price.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // servebtn
             // 
@@ -112,11 +114,11 @@ namespace SOFOK_System.components
             this.servebtn.ColorContrastOnClick = 45;
             this.servebtn.ColorContrastOnHover = 45;
             this.servebtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.servebtn.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.servebtn.CustomizableEdges = borderEdges2;
             this.servebtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.servebtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.servebtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -199,7 +201,7 @@ namespace SOFOK_System.components
             this.bunifuPanel1.BorderRadius = 40;
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.ordersPanel);
-            this.bunifuPanel1.Location = new System.Drawing.Point(16, 27);
+            this.bunifuPanel1.Location = new System.Drawing.Point(27, 54);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(3, 3);
@@ -215,22 +217,55 @@ namespace SOFOK_System.components
             this.ordersPanel.Size = new System.Drawing.Size(0, 0);
             this.ordersPanel.TabIndex = 0;
             // 
-            // bunifuLabel4
+            // lbl_mod_payment
             // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(117)))), ((int)(((byte)(219)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(18, 223);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(119, 17);
-            this.bunifuLabel4.TabIndex = 5;
-            this.bunifuLabel4.Text = "Mode of Payment:";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_mod_payment.AllowParentOverrides = false;
+            this.lbl_mod_payment.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_mod_payment.AutoEllipsis = false;
+            this.lbl_mod_payment.CursorType = null;
+            this.lbl_mod_payment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_payment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))), ((int)(((byte)(17)))));
+            this.lbl_mod_payment.Location = new System.Drawing.Point(138, 223);
+            this.lbl_mod_payment.Name = "lbl_mod_payment";
+            this.lbl_mod_payment.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_mod_payment.Size = new System.Drawing.Size(50, 16);
+            this.lbl_mod_payment.TabIndex = 5;
+            this.lbl_mod_payment.Text = "Cashier";
+            this.lbl_mod_payment.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_mod_payment.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(117)))), ((int)(((byte)(219)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 223);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(119, 17);
+            this.bunifuLabel1.TabIndex = 6;
+            this.bunifuLabel1.Text = "Mode of Payment:";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(117)))), ((int)(((byte)(219)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(8, 12);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(60, 18);
+            this.bunifuLabel3.TabIndex = 7;
+            this.bunifuLabel3.Text = "Order #:";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // orderwidget
             // 
@@ -239,12 +274,14 @@ namespace SOFOK_System.components
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
+            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.lbl_mod_payment);
+            this.Controls.Add(this.lbl_Price);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.servebtn);
             this.Controls.Add(this.bunifuPanel1);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.lbl_oder_num);
             this.Name = "orderwidget";
             this.Size = new System.Drawing.Size(512, 250);
             this.Load += new System.EventHandler(this.orderwidget_Load);
@@ -256,12 +293,14 @@ namespace SOFOK_System.components
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_oder_num;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.FlowLayoutPanel ordersPanel;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_Price;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton servebtn;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_mod_payment;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }

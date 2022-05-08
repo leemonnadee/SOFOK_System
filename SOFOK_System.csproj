@@ -193,10 +193,10 @@
       <DependentUpon>merchant_widget.cs</DependentUpon>
     </Compile>
     <Compile Include="EncryptDecryptPassword.cs" />
-    <Compile Include="merchantsrents.cs">
+    <Compile Include="sofok_administrator\merchantsrents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="merchantsrents.Designer.cs">
+    <Compile Include="sofok_administrator\merchantsrents.Designer.cs">
       <DependentUpon>merchantsrents.cs</DependentUpon>
     </Compile>
     <Compile Include="merchantsrent_widget.cs">
@@ -340,7 +340,7 @@
     <EmbeddedResource Include="components\merchant_widget.resx">
       <DependentUpon>merchant_widget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="merchantsrents.resx">
+    <EmbeddedResource Include="sofok_administrator\merchantsrents.resx">
       <DependentUpon>merchantsrents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="merchantsrent_widget.resx">
@@ -636,6 +636,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\address_100px.png" />
+    <None Include="Resources\bao-coming-soon-1.png" />
     <Content Include="Resources\birthday_100px.png" />
     <None Include="Resources\cashier.png" />
     <Content Include="Resources\gender_100px.png" />

@@ -29,57 +29,20 @@ namespace SOFOK_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.orderwidget1 = new SOFOK_System.components.orderwidget();
-            this.orderwidget2 = new SOFOK_System.components.orderwidget();
-            this.orderwidget3 = new SOFOK_System.components.orderwidget();
+            this.order_flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowlayout_orders = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // order_flowPanel
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.orderwidget1);
-            this.flowLayoutPanel1.Controls.Add(this.orderwidget2);
-            this.flowLayoutPanel1.Controls.Add(this.orderwidget3);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(970, 670);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // orderwidget1
-            // 
-            this.orderwidget1.AutoSize = true;
-            this.orderwidget1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.orderwidget1.BackColor = System.Drawing.Color.White;
-            this.orderwidget1.Location = new System.Drawing.Point(3, 3);
-            this.orderwidget1.Name = "orderwidget1";
-            this.orderwidget1.Size = new System.Drawing.Size(512, 256);
-            this.orderwidget1.TabIndex = 3;
-            // 
-            // orderwidget2
-            // 
-            this.orderwidget2.AutoSize = true;
-            this.orderwidget2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.orderwidget2.BackColor = System.Drawing.Color.White;
-            this.orderwidget2.Location = new System.Drawing.Point(3, 265);
-            this.orderwidget2.Name = "orderwidget2";
-            this.orderwidget2.Size = new System.Drawing.Size(512, 256);
-            this.orderwidget2.TabIndex = 4;
-            // 
-            // orderwidget3
-            // 
-            this.orderwidget3.AutoSize = true;
-            this.orderwidget3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.orderwidget3.BackColor = System.Drawing.Color.White;
-            this.orderwidget3.Location = new System.Drawing.Point(3, 527);
-            this.orderwidget3.Name = "orderwidget3";
-            this.orderwidget3.Size = new System.Drawing.Size(512, 256);
-            this.orderwidget3.TabIndex = 5;
+            this.order_flowPanel.AutoSize = true;
+            this.order_flowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.order_flowPanel.BackColor = System.Drawing.Color.White;
+            this.order_flowPanel.Location = new System.Drawing.Point(0, 0);
+            this.order_flowPanel.Name = "order_flowPanel";
+            this.order_flowPanel.Size = new System.Drawing.Size(0, 0);
+            this.order_flowPanel.TabIndex = 1;
             // 
             // docker
             // 
@@ -121,20 +84,33 @@ namespace SOFOK_System
             this.docker.TitleBarOptions.TitleBarControl = null;
             this.docker.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
+            // flowlayout_orders
+            // 
+            this.flowlayout_orders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowlayout_orders.AutoScroll = true;
+            this.flowlayout_orders.BackColor = System.Drawing.Color.White;
+            this.flowlayout_orders.Location = new System.Drawing.Point(20, 70);
+            this.flowlayout_orders.Margin = new System.Windows.Forms.Padding(2);
+            this.flowlayout_orders.Name = "flowlayout_orders";
+            this.flowlayout_orders.Size = new System.Drawing.Size(740, 530);
+            this.flowlayout_orders.TabIndex = 2;
+            // 
             // merchantorders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(970, 670);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(780, 670);
+            this.Controls.Add(this.flowlayout_orders);
+            this.Controls.Add(this.order_flowPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "merchantorders";
             this.Text = "merchantorders";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.Load += new System.EventHandler(this.merchantorders_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,10 +118,8 @@ namespace SOFOK_System
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel order_flowPanel;
         private Bunifu.UI.WinForms.BunifuFormDock docker;
-        private components.orderwidget orderwidget1;
-        private components.orderwidget orderwidget2;
-        private components.orderwidget orderwidget3;
+        private System.Windows.Forms.FlowLayoutPanel flowlayout_orders;
     }
 }

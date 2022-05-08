@@ -345,8 +345,7 @@ namespace SOFOK_System
 
                 
 
-                    string query = "INSERT INTO `tbl_orders`(`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`,`order_action`,`payment`,`status`,`costumer_id`) VALUES ('','" + item + "','" + 2 + "','" + final_cost+ "','" + store + "','" + prod_id + "','"+seat.seatDisplay.Seat_availability+"','"+choosepayment.MOD_payment.mod_payment+"','pending','"+costumer_id+"')";
-                
+                    String query = "INSERT INTO `tbl_orders` (`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`, `order_action`, `payment`, `status`, `costumer_id`) VALUES ('', '" + item + "', '" + qty + "', '" + final_cost + "', '" + store + "', '" + prod_id + "', '" + seat.seatDisplay.Seat_availability + "', '" + choosepayment.MOD_payment.mod_payment + "', 'pending', '" + costumer_id + "')";
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -447,8 +446,8 @@ namespace SOFOK_System
                         else {
                            buy();
 
-                Receipt receipt = new Receipt();
-                receipt.Show();
+               // Receipt receipt = new Receipt();
+               // receipt.Show();
 
                         }
 
