@@ -94,7 +94,7 @@ namespace SOFOK_System
 
 
 
-            MessageBox.Show("update_complete");
+
 
 
             //opening connection

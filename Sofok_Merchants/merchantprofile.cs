@@ -19,31 +19,35 @@ namespace SOFOK_System
         String pathIMG;
         public String imgprof;
         public static merchantprofile profile;
+        public static String gender_update;
         public merchantprofile()
         {
             InitializeComponent();
             profile = this;
             
         }
-        
-     
 
-        private void merchantprofile_Load(object sender, EventArgs e)
-        {
+
+        public void show_data() {
+
             merchant_id.Text = loginform.UserDisplay.MerchantID;
             storename_lbl.Text = loginform.UserDisplay.StoreName;
             merchantname_lbl.Text = loginform.UserDisplay.merchantName;
             email_lbl.Text = loginform.UserDisplay.email;
-            txtemail.Text= loginform.UserDisplay.email;
+            txtemail.Text = loginform.UserDisplay.email;
             marital_lbl.Text = loginform.UserDisplay.maritalStatus;
             gender_lbl.Text = loginform.UserDisplay.gender;
             contact_lbl.Text = loginform.UserDisplay.contact;
-          String birthdate = loginform.UserDisplay.birthdate;
-            String.Format("{0:ddd, MMM d, yyyy}",birthdate);
+            String birthdate = loginform.UserDisplay.birthdate;
+            String.Format("{0:ddd, MMM d, yyyy}", birthdate);
             birthdate_lbl.Text = birthdate;
             address_lbl.Text = loginform.UserDisplay.address;
             save_img.Enabled = false;
-            
+
+        }
+        private void merchantprofile_Load(object sender, EventArgs e)
+        {
+            show_data();
             img_display();
 
         }
@@ -63,7 +67,7 @@ namespace SOFOK_System
                 {
 
                      imgprof = myreaderfetch.GetString("profile_img");
-
+                    
                 }
                 if (imgprof == ("none"))
                 {
@@ -91,6 +95,7 @@ namespace SOFOK_System
         {
             updateinfo_frm updateinfo = new updateinfo_frm();
             updateinfo.Show();
+           
 
 
         }

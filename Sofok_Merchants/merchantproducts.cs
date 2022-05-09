@@ -30,6 +30,7 @@ namespace SOFOK_System
 
 
         }
+        
         //to add image in /sofok/bin/debug/icons
         public void addImage()
         {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,7 +17,11 @@ namespace SOFOK_System
     {
         //set connection
         string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+        String pathIMG;
+        public String gcash_image;
+        String checkPath;
         public double rownum;
+
         public adminregistermerchant()
         {
             InitializeComponent();
@@ -101,6 +106,8 @@ namespace SOFOK_System
             txt_password.Text = "";
             txt_id.Text = "";
             lbl_id.Text = "";
+            QR_img.Image = Properties.Resources.Qr_Code_PNG_Photo;
+        
 
 
         }
@@ -118,10 +125,10 @@ namespace SOFOK_System
             {
                 try
                 {
+                    var ImgFile = Path.GetFileName(pathIMG);
 
-                   
-                    string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name` , `marital_status`, `gender`, `contact_no`, `address`, `merchant_store`, `profile_img`, `acc_id`) VALUES " +
-                                                             "('','" + txt_merchant.Text + "','none','none','none','none','" + txt_storename.Text + "','none','" + lbl_id.Text + "')";
+                    string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name` , `marital_status`, `gender`, `contact_no`, `address`, `merchant_store`, `profile_img`,`gcash_img`, `acc_id`) VALUES " +
+                                                             "('','" + txt_merchant.Text + "','none','none','none','none','" + txt_storename.Text + "','none','"+ ImgFile + "','" + lbl_id.Text + "')";
                     
                     //string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name`, `merchant_store`, `acc_id`) VALUES ('','" + txt_merchant.Text + "','" + txt_storename.Text + "','" + lbl_id.Text + "')";
                     MySqlConnection conn = new MySqlConnection(mycon);
@@ -274,13 +281,62 @@ namespace SOFOK_System
         //save button
         private void save_btn_Click_1(object sender, EventArgs e)
         {
-            ValidateEmail();
-           
+            var ImgFile = Path.GetFileName(pathIMG);
+            if (ImgFile == null)
+            {
+                MessageBox.Show("Please Select Icon", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+            else
+            {
+
+                ValidateEmail();
+                addImage();
+
+
+            }
+
+
+
+            
+        
+
 
 
         }
 
+        public void showImg() {
+            try
+            {
+                string query = "SELECT * FROM `tbl_merchant` WHERE merchant_id='" + txt_id.Text + "'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
 
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                while (myreader1.Read())
+                {
+                    System.IO.DirectoryInfo s = new System.IO.DirectoryInfo("icons");
+                    String imgPath2 = s.FullName;
+
+                     gcash_image = myreader1.GetString("gcash_img");
+                    checkPath = imgPath2 + @"\" + gcash_image;
+                    QR_img.Image = Image.FromFile(checkPath);
+                 
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         //datagrid item clicked
         private void registerTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -293,6 +349,11 @@ namespace SOFOK_System
                 txt_storename.Text = row.Cells["merchant_store"].Value.ToString();
                 txt_email.Text = row.Cells["username"].Value.ToString();
                 lbl_id.Text= row.Cells["acc_id"].Value.ToString();
+                showImg();
+
+
+              
+
             }
             save_btn.Enabled = false;
             btn_delete.Enabled = true;
@@ -333,12 +394,13 @@ namespace SOFOK_System
                 // set encryption key on password field
                 var str = txt_password.Text;
                 var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
+            var ImgFile = Path.GetFileName(pathIMG);
 
 
-                try
+            try
                 {
                     string query = "UPDATE `tbl_account` SET `username`='" + txt_email.Text + "',`password`='" + encryptPassword + "' WHERE acc_id='" + lbl_id.Text + "'";
-                    string query2 = "UPDATE `tbl_merchant` SET `name`='" + txt_merchant.Text + "',`merchant_store`='" + txt_storename.Text + "' WHERE merchant_id='" + txt_id.Text + "'";
+                    string query2 = "UPDATE `tbl_merchant` SET `name`='" + txt_merchant.Text + "',`merchant_store`='" + txt_storename.Text + "',`gcash_img`='"+ ImgFile + "' WHERE merchant_id='" + txt_id.Text + "'";
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
                     MySqlCommand mycommand2 = new MySqlCommand(query2, conn);
@@ -362,8 +424,11 @@ namespace SOFOK_System
                 }
                 catch (Exception ex)
                 {
-                  
+     
                     MessageBox.Show("Email is already taken", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btn_delete.Enabled = true;
+                btn_update.Enabled = true;
+                save_btn.Enabled = false;
                 }
            
         }
@@ -388,10 +453,14 @@ namespace SOFOK_System
                 Match match = regex.Match(email);
                 if (match.Success)
                 {
-                    btn_delete.Enabled = false;
-                    btn_update.Enabled = false;
-                    save_btn.Enabled = true;
-                    update_accounts();
+
+
+                    checkImg();
+
+
+
+
+
 
                 }
                 else
@@ -399,10 +468,86 @@ namespace SOFOK_System
 
             }
         }
+        public void checkImg()
+        {
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
 
 
-          
+
+                string query = "SELECT * FROM `tbl_merchant` WHERE merchant_id='"+ txt_id.Text+ "'and gcash_img='"+ImgFile+"'";
+
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+                MySqlDataReader myreader1;
+                conn.Open();
+                //execute the query
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+
+
+                    MessageBox.Show("Icon Already Exist , \n Try Again!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 
+               
+
+                }
+                else
+                {
+
+                    update_accounts();
+                    addImage();
+                }
+
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void uploadbtn_Click(object sender, EventArgs e)
+        {
+            //upload photo
+          
+            OpenFileDialog open = new OpenFileDialog();
+            open.Title = "Photo";
+            open.Filter = "Image Files(*.png; *.jpeg; *.JPG;)|*.png;*.jpeg;*.JPG;";
+            if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                pathIMG = open.FileName;
+                QR_img.Image = new Bitmap(open.FileName);
+            }
+           
+        }
+
+
+        public void addImage()
+        {
+            System.IO.DirectoryInfo DI = new System.IO.DirectoryInfo("icons");
+            String imgPath = DI.FullName;
+
+            System.IO.File.Copy(pathIMG, Path.Combine(imgPath, Path.GetFileName(pathIMG)), true);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 

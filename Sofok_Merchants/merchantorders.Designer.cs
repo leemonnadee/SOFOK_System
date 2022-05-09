@@ -29,9 +29,11 @@ namespace SOFOK_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.order_flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.docker = new Bunifu.UI.WinForms.BunifuFormDock();
             this.flowlayout_orders = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // order_flowPanel
@@ -95,7 +97,11 @@ namespace SOFOK_System
             this.flowlayout_orders.Margin = new System.Windows.Forms.Padding(2);
             this.flowlayout_orders.Name = "flowlayout_orders";
             this.flowlayout_orders.Size = new System.Drawing.Size(740, 530);
-            this.flowlayout_orders.TabIndex = 2;
+            this.flowlayout_orders.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // merchantorders
             // 
@@ -121,5 +127,6 @@ namespace SOFOK_System
         private System.Windows.Forms.FlowLayoutPanel order_flowPanel;
         private Bunifu.UI.WinForms.BunifuFormDock docker;
         private System.Windows.Forms.FlowLayoutPanel flowlayout_orders;
+        private System.Windows.Forms.Timer timer1;
     }
 }

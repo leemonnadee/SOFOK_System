@@ -30,34 +30,26 @@ namespace SOFOK_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateinfo_frm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.male_radio = new System.Windows.Forms.RadioButton();
-            this.female_radio = new System.Windows.Forms.RadioButton();
-            this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.separated_cbox = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.widowed_cbox = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.divorced_cbox = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.single_cbox = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.married_cbox = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.combo_gender = new System.Windows.Forms.ComboBox();
+            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.QR_img = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox8 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cancel_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -79,8 +71,14 @@ namespace SOFOK_System
             this.addressupdate_txt = new Bunifu.UI.WinForms.BunifuTextBox();
             this.nameupdate_txt = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1.SuspendLayout();
-            this.bunifuGroupBox1.SuspendLayout();
+            this.bunifuShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QR_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
@@ -96,9 +94,10 @@ namespace SOFOK_System
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.male_radio);
-            this.bunifuGradientPanel1.Controls.Add(this.female_radio);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuGroupBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.combo_gender);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel11);
+            this.bunifuGradientPanel1.Controls.Add(this.checkedListBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuPictureBox8);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel10);
             this.bunifuGradientPanel1.Controls.Add(this.cancel_btn);
@@ -119,423 +118,106 @@ namespace SOFOK_System
             this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.addressupdate_txt);
             this.bunifuGradientPanel1.Controls.Add(this.nameupdate_txt);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(63)))), ((int)(((byte)(125)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(95)))), ((int)(((byte)(157)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(50)))), ((int)(((byte)(98)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(318, 107);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(76, 107);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(570, 540);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1018, 540);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
             // 
-            // male_radio
+            // combo_gender
             // 
-            this.male_radio.AutoSize = true;
-            this.male_radio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.male_radio.ForeColor = System.Drawing.Color.White;
-            this.male_radio.Location = new System.Drawing.Point(393, 294);
-            this.male_radio.Name = "male_radio";
-            this.male_radio.Size = new System.Drawing.Size(57, 21);
-            this.male_radio.TabIndex = 71;
-            this.male_radio.TabStop = true;
-            this.male_radio.Text = "Male";
-            this.male_radio.UseVisualStyleBackColor = true;
-            this.male_radio.CheckedChanged += new System.EventHandler(this.male_radio_CheckedChanged);
+            this.combo_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_gender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_gender.FormattingEnabled = true;
+            this.combo_gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.combo_gender.Location = new System.Drawing.Point(292, 300);
+            this.combo_gender.Margin = new System.Windows.Forms.Padding(2);
+            this.combo_gender.Name = "combo_gender";
+            this.combo_gender.Size = new System.Drawing.Size(151, 29);
+            this.combo_gender.TabIndex = 76;
             // 
-            // female_radio
+            // bunifuLabel11
             // 
-            this.female_radio.AutoSize = true;
-            this.female_radio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.female_radio.ForeColor = System.Drawing.Color.White;
-            this.female_radio.Location = new System.Drawing.Point(308, 294);
-            this.female_radio.Name = "female_radio";
-            this.female_radio.Size = new System.Drawing.Size(73, 21);
-            this.female_radio.TabIndex = 70;
-            this.female_radio.TabStop = true;
-            this.female_radio.Text = "Female";
-            this.female_radio.UseVisualStyleBackColor = true;
-            this.female_radio.CheckedChanged += new System.EventHandler(this.female_radio_CheckedChanged);
+            this.bunifuLabel11.AllowParentOverrides = false;
+            this.bunifuLabel11.AutoEllipsis = false;
+            this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel11.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel11.Location = new System.Drawing.Point(32, 365);
+            this.bunifuLabel11.Name = "bunifuLabel11";
+            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel11.Size = new System.Drawing.Size(96, 18);
+            this.bunifuLabel11.TabIndex = 75;
+            this.bunifuLabel11.Text = "Marital Status";
+            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuGroupBox1
+            // checkedListBox1
             // 
-            this.bunifuGroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(63)))), ((int)(((byte)(125)))));
-            this.bunifuGroupBox1.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bunifuGroupBox1.BorderRadius = 10;
-            this.bunifuGroupBox1.BorderThickness = 1;
-            this.bunifuGroupBox1.Controls.Add(this.bunifuLabel13);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuLabel9);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuLabel8);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuLabel7);
-            this.bunifuGroupBox1.Controls.Add(this.bunifuLabel6);
-            this.bunifuGroupBox1.Controls.Add(this.separated_cbox);
-            this.bunifuGroupBox1.Controls.Add(this.widowed_cbox);
-            this.bunifuGroupBox1.Controls.Add(this.divorced_cbox);
-            this.bunifuGroupBox1.Controls.Add(this.single_cbox);
-            this.bunifuGroupBox1.Controls.Add(this.married_cbox);
-            this.bunifuGroupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuGroupBox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuGroupBox1.LabelIndent = 10;
-            this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(15, 337);
-            this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(232, 168);
-            this.bunifuGroupBox1.TabIndex = 69;
-            this.bunifuGroupBox1.TabStop = false;
-            this.bunifuGroupBox1.Text = "Marital Status";
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Married",
+            "Single",
+            "Divorced",
+            "Widowed",
+            "Separated"});
+            this.checkedListBox1.Location = new System.Drawing.Point(32, 389);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 105);
+            this.checkedListBox1.TabIndex = 74;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 
-            // bunifuLabel13
+            // bunifuShadowPanel1
             // 
-            this.bunifuLabel13.AllowParentOverrides = false;
-            this.bunifuLabel13.AutoEllipsis = false;
-            this.bunifuLabel13.CursorType = null;
-            this.bunifuLabel13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuLabel13.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel13.Location = new System.Drawing.Point(61, 133);
-            this.bunifuLabel13.Name = "bunifuLabel13";
-            this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel13.Size = new System.Drawing.Size(67, 17);
-            this.bunifuLabel13.TabIndex = 78;
-            this.bunifuLabel13.Text = "Separated";
-            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.BorderRadius = 1;
+            this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.Controls.Add(this.QR_img);
+            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(595, 19);
+            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
+            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel1.ShadowDept = 2;
+            this.bunifuShadowPanel1.ShadowDepth = 5;
+            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(406, 403);
+            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel1.TabIndex = 73;
             // 
-            // bunifuLabel9
+            // QR_img
             // 
-            this.bunifuLabel9.AllowParentOverrides = false;
-            this.bunifuLabel9.AutoEllipsis = false;
-            this.bunifuLabel9.CursorType = null;
-            this.bunifuLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuLabel9.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel9.Location = new System.Drawing.Point(61, 109);
-            this.bunifuLabel9.Name = "bunifuLabel9";
-            this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel9.Size = new System.Drawing.Size(63, 17);
-            this.bunifuLabel9.TabIndex = 77;
-            this.bunifuLabel9.Text = "Widowed";
-            this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel8
-            // 
-            this.bunifuLabel8.AllowParentOverrides = false;
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel8.Location = new System.Drawing.Point(61, 82);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(59, 17);
-            this.bunifuLabel8.TabIndex = 76;
-            this.bunifuLabel8.Text = "Divorced";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(61, 55);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(37, 17);
-            this.bunifuLabel7.TabIndex = 75;
-            this.bunifuLabel7.Text = "Single";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel6
-            // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(61, 28);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(48, 17);
-            this.bunifuLabel6.TabIndex = 70;
-            this.bunifuLabel6.Text = "Married";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // separated_cbox
-            // 
-            this.separated_cbox.AllowBindingControlAnimation = true;
-            this.separated_cbox.AllowBindingControlColorChanges = false;
-            this.separated_cbox.AllowBindingControlLocation = true;
-            this.separated_cbox.AllowCheckBoxAnimation = false;
-            this.separated_cbox.AllowCheckmarkAnimation = true;
-            this.separated_cbox.AllowOnHoverStates = true;
-            this.separated_cbox.AutoCheck = true;
-            this.separated_cbox.BackColor = System.Drawing.Color.Transparent;
-            this.separated_cbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("separated_cbox.BackgroundImage")));
-            this.separated_cbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.separated_cbox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.separated_cbox.BorderRadius = 5;
-            this.separated_cbox.Checked = false;
-            this.separated_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.separated_cbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.separated_cbox.CustomCheckmarkImage = null;
-            this.separated_cbox.Location = new System.Drawing.Point(28, 132);
-            this.separated_cbox.MinimumSize = new System.Drawing.Size(17, 17);
-            this.separated_cbox.Name = "separated_cbox";
-            this.separated_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.separated_cbox.OnCheck.BorderRadius = 5;
-            this.separated_cbox.OnCheck.BorderThickness = 2;
-            this.separated_cbox.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.separated_cbox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.separated_cbox.OnCheck.CheckmarkThickness = 2;
-            this.separated_cbox.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.separated_cbox.OnDisable.BorderRadius = 5;
-            this.separated_cbox.OnDisable.BorderThickness = 2;
-            this.separated_cbox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.separated_cbox.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.separated_cbox.OnDisable.CheckmarkThickness = 2;
-            this.separated_cbox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.separated_cbox.OnHoverChecked.BorderRadius = 5;
-            this.separated_cbox.OnHoverChecked.BorderThickness = 2;
-            this.separated_cbox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.separated_cbox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.separated_cbox.OnHoverChecked.CheckmarkThickness = 2;
-            this.separated_cbox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.separated_cbox.OnHoverUnchecked.BorderRadius = 5;
-            this.separated_cbox.OnHoverUnchecked.BorderThickness = 1;
-            this.separated_cbox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.separated_cbox.OnUncheck.BorderColor = System.Drawing.Color.White;
-            this.separated_cbox.OnUncheck.BorderRadius = 5;
-            this.separated_cbox.OnUncheck.BorderThickness = 1;
-            this.separated_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.separated_cbox.Size = new System.Drawing.Size(17, 17);
-            this.separated_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.separated_cbox.TabIndex = 74;
-            this.separated_cbox.ThreeState = false;
-            this.separated_cbox.ToolTipText = null;
-            this.separated_cbox.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.separated_cbox_CheckedChanged);
-            // 
-            // widowed_cbox
-            // 
-            this.widowed_cbox.AllowBindingControlAnimation = true;
-            this.widowed_cbox.AllowBindingControlColorChanges = false;
-            this.widowed_cbox.AllowBindingControlLocation = true;
-            this.widowed_cbox.AllowCheckBoxAnimation = false;
-            this.widowed_cbox.AllowCheckmarkAnimation = true;
-            this.widowed_cbox.AllowOnHoverStates = true;
-            this.widowed_cbox.AutoCheck = true;
-            this.widowed_cbox.BackColor = System.Drawing.Color.Transparent;
-            this.widowed_cbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("widowed_cbox.BackgroundImage")));
-            this.widowed_cbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.widowed_cbox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.widowed_cbox.BorderRadius = 5;
-            this.widowed_cbox.Checked = false;
-            this.widowed_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.widowed_cbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.widowed_cbox.CustomCheckmarkImage = null;
-            this.widowed_cbox.Location = new System.Drawing.Point(28, 108);
-            this.widowed_cbox.MinimumSize = new System.Drawing.Size(17, 17);
-            this.widowed_cbox.Name = "widowed_cbox";
-            this.widowed_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.widowed_cbox.OnCheck.BorderRadius = 5;
-            this.widowed_cbox.OnCheck.BorderThickness = 2;
-            this.widowed_cbox.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.widowed_cbox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.widowed_cbox.OnCheck.CheckmarkThickness = 2;
-            this.widowed_cbox.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.widowed_cbox.OnDisable.BorderRadius = 5;
-            this.widowed_cbox.OnDisable.BorderThickness = 2;
-            this.widowed_cbox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.widowed_cbox.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.widowed_cbox.OnDisable.CheckmarkThickness = 2;
-            this.widowed_cbox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.widowed_cbox.OnHoverChecked.BorderRadius = 5;
-            this.widowed_cbox.OnHoverChecked.BorderThickness = 2;
-            this.widowed_cbox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.widowed_cbox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.widowed_cbox.OnHoverChecked.CheckmarkThickness = 2;
-            this.widowed_cbox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.widowed_cbox.OnHoverUnchecked.BorderRadius = 5;
-            this.widowed_cbox.OnHoverUnchecked.BorderThickness = 1;
-            this.widowed_cbox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.widowed_cbox.OnUncheck.BorderColor = System.Drawing.Color.White;
-            this.widowed_cbox.OnUncheck.BorderRadius = 5;
-            this.widowed_cbox.OnUncheck.BorderThickness = 1;
-            this.widowed_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.widowed_cbox.Size = new System.Drawing.Size(17, 17);
-            this.widowed_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.widowed_cbox.TabIndex = 73;
-            this.widowed_cbox.ThreeState = false;
-            this.widowed_cbox.ToolTipText = null;
-            this.widowed_cbox.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.widowed_cbox_CheckedChanged);
-            // 
-            // divorced_cbox
-            // 
-            this.divorced_cbox.AllowBindingControlAnimation = true;
-            this.divorced_cbox.AllowBindingControlColorChanges = false;
-            this.divorced_cbox.AllowBindingControlLocation = true;
-            this.divorced_cbox.AllowCheckBoxAnimation = false;
-            this.divorced_cbox.AllowCheckmarkAnimation = true;
-            this.divorced_cbox.AllowOnHoverStates = true;
-            this.divorced_cbox.AutoCheck = true;
-            this.divorced_cbox.BackColor = System.Drawing.Color.Transparent;
-            this.divorced_cbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("divorced_cbox.BackgroundImage")));
-            this.divorced_cbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.divorced_cbox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.divorced_cbox.BorderRadius = 5;
-            this.divorced_cbox.Checked = false;
-            this.divorced_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.divorced_cbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.divorced_cbox.CustomCheckmarkImage = null;
-            this.divorced_cbox.Location = new System.Drawing.Point(28, 81);
-            this.divorced_cbox.MinimumSize = new System.Drawing.Size(17, 17);
-            this.divorced_cbox.Name = "divorced_cbox";
-            this.divorced_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.divorced_cbox.OnCheck.BorderRadius = 5;
-            this.divorced_cbox.OnCheck.BorderThickness = 2;
-            this.divorced_cbox.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.divorced_cbox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.divorced_cbox.OnCheck.CheckmarkThickness = 2;
-            this.divorced_cbox.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.divorced_cbox.OnDisable.BorderRadius = 5;
-            this.divorced_cbox.OnDisable.BorderThickness = 2;
-            this.divorced_cbox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.divorced_cbox.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.divorced_cbox.OnDisable.CheckmarkThickness = 2;
-            this.divorced_cbox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.divorced_cbox.OnHoverChecked.BorderRadius = 5;
-            this.divorced_cbox.OnHoverChecked.BorderThickness = 2;
-            this.divorced_cbox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.divorced_cbox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.divorced_cbox.OnHoverChecked.CheckmarkThickness = 2;
-            this.divorced_cbox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.divorced_cbox.OnHoverUnchecked.BorderRadius = 5;
-            this.divorced_cbox.OnHoverUnchecked.BorderThickness = 1;
-            this.divorced_cbox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.divorced_cbox.OnUncheck.BorderColor = System.Drawing.Color.White;
-            this.divorced_cbox.OnUncheck.BorderRadius = 5;
-            this.divorced_cbox.OnUncheck.BorderThickness = 1;
-            this.divorced_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.divorced_cbox.Size = new System.Drawing.Size(17, 17);
-            this.divorced_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.divorced_cbox.TabIndex = 72;
-            this.divorced_cbox.ThreeState = false;
-            this.divorced_cbox.ToolTipText = null;
-            this.divorced_cbox.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.divorced_cbox_CheckedChanged);
-            // 
-            // single_cbox
-            // 
-            this.single_cbox.AllowBindingControlAnimation = true;
-            this.single_cbox.AllowBindingControlColorChanges = false;
-            this.single_cbox.AllowBindingControlLocation = true;
-            this.single_cbox.AllowCheckBoxAnimation = false;
-            this.single_cbox.AllowCheckmarkAnimation = true;
-            this.single_cbox.AllowOnHoverStates = true;
-            this.single_cbox.AutoCheck = true;
-            this.single_cbox.BackColor = System.Drawing.Color.Transparent;
-            this.single_cbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("single_cbox.BackgroundImage")));
-            this.single_cbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.single_cbox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.single_cbox.BorderRadius = 5;
-            this.single_cbox.Checked = false;
-            this.single_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.single_cbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.single_cbox.CustomCheckmarkImage = null;
-            this.single_cbox.Location = new System.Drawing.Point(28, 54);
-            this.single_cbox.MinimumSize = new System.Drawing.Size(17, 17);
-            this.single_cbox.Name = "single_cbox";
-            this.single_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.single_cbox.OnCheck.BorderRadius = 5;
-            this.single_cbox.OnCheck.BorderThickness = 2;
-            this.single_cbox.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.single_cbox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.single_cbox.OnCheck.CheckmarkThickness = 2;
-            this.single_cbox.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.single_cbox.OnDisable.BorderRadius = 5;
-            this.single_cbox.OnDisable.BorderThickness = 2;
-            this.single_cbox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.single_cbox.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.single_cbox.OnDisable.CheckmarkThickness = 2;
-            this.single_cbox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.single_cbox.OnHoverChecked.BorderRadius = 5;
-            this.single_cbox.OnHoverChecked.BorderThickness = 2;
-            this.single_cbox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.single_cbox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.single_cbox.OnHoverChecked.CheckmarkThickness = 2;
-            this.single_cbox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.single_cbox.OnHoverUnchecked.BorderRadius = 5;
-            this.single_cbox.OnHoverUnchecked.BorderThickness = 1;
-            this.single_cbox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.single_cbox.OnUncheck.BorderColor = System.Drawing.Color.White;
-            this.single_cbox.OnUncheck.BorderRadius = 5;
-            this.single_cbox.OnUncheck.BorderThickness = 1;
-            this.single_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.single_cbox.Size = new System.Drawing.Size(17, 17);
-            this.single_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.single_cbox.TabIndex = 71;
-            this.single_cbox.ThreeState = false;
-            this.single_cbox.ToolTipText = null;
-            this.single_cbox.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.single_cbox_CheckedChanged);
-            // 
-            // married_cbox
-            // 
-            this.married_cbox.AllowBindingControlAnimation = true;
-            this.married_cbox.AllowBindingControlColorChanges = false;
-            this.married_cbox.AllowBindingControlLocation = true;
-            this.married_cbox.AllowCheckBoxAnimation = false;
-            this.married_cbox.AllowCheckmarkAnimation = true;
-            this.married_cbox.AllowOnHoverStates = true;
-            this.married_cbox.AutoCheck = true;
-            this.married_cbox.BackColor = System.Drawing.Color.Transparent;
-            this.married_cbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("married_cbox.BackgroundImage")));
-            this.married_cbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.married_cbox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.married_cbox.BorderRadius = 5;
-            this.married_cbox.Checked = false;
-            this.married_cbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.married_cbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.married_cbox.CustomCheckmarkImage = null;
-            this.married_cbox.Location = new System.Drawing.Point(28, 27);
-            this.married_cbox.MinimumSize = new System.Drawing.Size(17, 17);
-            this.married_cbox.Name = "married_cbox";
-            this.married_cbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.married_cbox.OnCheck.BorderRadius = 5;
-            this.married_cbox.OnCheck.BorderThickness = 2;
-            this.married_cbox.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.married_cbox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.married_cbox.OnCheck.CheckmarkThickness = 2;
-            this.married_cbox.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.married_cbox.OnDisable.BorderRadius = 5;
-            this.married_cbox.OnDisable.BorderThickness = 2;
-            this.married_cbox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.married_cbox.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.married_cbox.OnDisable.CheckmarkThickness = 2;
-            this.married_cbox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.married_cbox.OnHoverChecked.BorderRadius = 5;
-            this.married_cbox.OnHoverChecked.BorderThickness = 2;
-            this.married_cbox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.married_cbox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.married_cbox.OnHoverChecked.CheckmarkThickness = 2;
-            this.married_cbox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.married_cbox.OnHoverUnchecked.BorderRadius = 5;
-            this.married_cbox.OnHoverUnchecked.BorderThickness = 1;
-            this.married_cbox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.married_cbox.OnUncheck.BorderColor = System.Drawing.Color.White;
-            this.married_cbox.OnUncheck.BorderRadius = 5;
-            this.married_cbox.OnUncheck.BorderThickness = 1;
-            this.married_cbox.OnUncheck.CheckBoxColor = System.Drawing.Color.White;
-            this.married_cbox.Size = new System.Drawing.Size(17, 17);
-            this.married_cbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.married_cbox.TabIndex = 70;
-            this.married_cbox.ThreeState = false;
-            this.married_cbox.ToolTipText = null;
-            this.married_cbox.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.married_cbox_CheckedChanged);
+            this.QR_img.AllowFocused = false;
+            this.QR_img.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.QR_img.AutoSizeHeight = true;
+            this.QR_img.BorderRadius = 0;
+            this.QR_img.Image = global::SOFOK_System.Properties.Resources.Qr_Code_PNG_Photo;
+            this.QR_img.IsCircle = true;
+            this.QR_img.Location = new System.Drawing.Point(15, 14);
+            this.QR_img.Name = "QR_img";
+            this.QR_img.Size = new System.Drawing.Size(376, 376);
+            this.QR_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.QR_img.TabIndex = 0;
+            this.QR_img.TabStop = false;
+            this.QR_img.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.QR_img.Click += new System.EventHandler(this.bunifuPictureBox5_Click);
             // 
             // bunifuPictureBox8
             // 
@@ -545,7 +227,7 @@ namespace SOFOK_System
             this.bunifuPictureBox8.BorderRadius = 0;
             this.bunifuPictureBox8.Image = global::SOFOK_System.Properties.Resources.gender_100px;
             this.bunifuPictureBox8.IsCircle = true;
-            this.bunifuPictureBox8.Location = new System.Drawing.Point(275, 267);
+            this.bunifuPictureBox8.Location = new System.Drawing.Point(275, 272);
             this.bunifuPictureBox8.Name = "bunifuPictureBox8";
             this.bunifuPictureBox8.Size = new System.Drawing.Size(23, 23);
             this.bunifuPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -589,11 +271,11 @@ namespace SOFOK_System
             this.cancel_btn.ColorContrastOnClick = 45;
             this.cancel_btn.ColorContrastOnHover = 45;
             this.cancel_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.cancel_btn.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.cancel_btn.CustomizableEdges = borderEdges1;
             this.cancel_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.cancel_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.cancel_btn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -619,7 +301,7 @@ namespace SOFOK_System
             this.cancel_btn.IdleIconLeftImage = null;
             this.cancel_btn.IdleIconRightImage = null;
             this.cancel_btn.IndicateFocus = false;
-            this.cancel_btn.Location = new System.Drawing.Point(304, 455);
+            this.cancel_btn.Location = new System.Drawing.Point(772, 470);
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.cancel_btn.OnDisabledState.BorderRadius = 15;
@@ -681,11 +363,11 @@ namespace SOFOK_System
             this.updateinfo_btn.ColorContrastOnClick = 45;
             this.updateinfo_btn.ColorContrastOnHover = 45;
             this.updateinfo_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.updateinfo_btn.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.updateinfo_btn.CustomizableEdges = borderEdges2;
             this.updateinfo_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.updateinfo_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.updateinfo_btn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -711,7 +393,7 @@ namespace SOFOK_System
             this.updateinfo_btn.IdleIconLeftImage = null;
             this.updateinfo_btn.IdleIconRightImage = null;
             this.updateinfo_btn.IndicateFocus = false;
-            this.updateinfo_btn.Location = new System.Drawing.Point(419, 455);
+            this.updateinfo_btn.Location = new System.Drawing.Point(884, 468);
             this.updateinfo_btn.Name = "updateinfo_btn";
             this.updateinfo_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.updateinfo_btn.OnDisabledState.BorderRadius = 15;
@@ -762,7 +444,7 @@ namespace SOFOK_System
             this.bunifuPictureBox4.BorderRadius = 0;
             this.bunifuPictureBox4.Image = global::SOFOK_System.Properties.Resources.iphone_100px;
             this.bunifuPictureBox4.IsCircle = true;
-            this.bunifuPictureBox4.Location = new System.Drawing.Point(275, 360);
+            this.bunifuPictureBox4.Location = new System.Drawing.Point(275, 365);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
             this.bunifuPictureBox4.Size = new System.Drawing.Size(17, 17);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -821,26 +503,26 @@ namespace SOFOK_System
             this.cellphoneupdate_txt.Modified = false;
             this.cellphoneupdate_txt.Multiline = false;
             this.cellphoneupdate_txt.Name = "cellphoneupdate_txt";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.cellphoneupdate_txt.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.cellphoneupdate_txt.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.cellphoneupdate_txt.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(249)))));
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.cellphoneupdate_txt.OnIdleState = stateProperties16;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.cellphoneupdate_txt.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.cellphoneupdate_txt.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.cellphoneupdate_txt.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(249)))));
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.cellphoneupdate_txt.OnIdleState = stateProperties4;
             this.cellphoneupdate_txt.Padding = new System.Windows.Forms.Padding(3);
             this.cellphoneupdate_txt.PasswordChar = '\0';
             this.cellphoneupdate_txt.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -861,6 +543,7 @@ namespace SOFOK_System
             this.cellphoneupdate_txt.TextPlaceholder = "+63----------";
             this.cellphoneupdate_txt.UseSystemPasswordChar = false;
             this.cellphoneupdate_txt.WordWrap = true;
+            this.cellphoneupdate_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cellphoneupdate_txt_KeyPress);
             // 
             // bunifuPictureBox3
             // 
@@ -870,7 +553,7 @@ namespace SOFOK_System
             this.bunifuPictureBox3.BorderRadius = 0;
             this.bunifuPictureBox3.Image = global::SOFOK_System.Properties.Resources.birthday_100px;
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(18, 266);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(18, 271);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
             this.bunifuPictureBox3.Size = new System.Drawing.Size(17, 17);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -989,7 +672,7 @@ namespace SOFOK_System
             this.bunifuPictureBox2.BorderRadius = 0;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.address_100px;
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(18, 163);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(23, 167);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
             this.bunifuPictureBox2.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1005,7 +688,7 @@ namespace SOFOK_System
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.user_100px;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(18, 73);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(18, 78);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1080,26 +763,26 @@ namespace SOFOK_System
             this.addressupdate_txt.Modified = false;
             this.addressupdate_txt.Multiline = false;
             this.addressupdate_txt.Name = "addressupdate_txt";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.addressupdate_txt.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.addressupdate_txt.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.addressupdate_txt.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(249)))));
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.addressupdate_txt.OnIdleState = stateProperties20;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.addressupdate_txt.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.addressupdate_txt.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.addressupdate_txt.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(249)))));
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.addressupdate_txt.OnIdleState = stateProperties8;
             this.addressupdate_txt.Padding = new System.Windows.Forms.Padding(3);
             this.addressupdate_txt.PasswordChar = '\0';
             this.addressupdate_txt.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1155,26 +838,26 @@ namespace SOFOK_System
             this.nameupdate_txt.Modified = false;
             this.nameupdate_txt.Multiline = false;
             this.nameupdate_txt.Name = "nameupdate_txt";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.nameupdate_txt.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.nameupdate_txt.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.nameupdate_txt.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(249)))));
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.nameupdate_txt.OnIdleState = stateProperties24;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.nameupdate_txt.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.nameupdate_txt.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.nameupdate_txt.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(249)))));
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.nameupdate_txt.OnIdleState = stateProperties12;
             this.nameupdate_txt.Padding = new System.Windows.Forms.Padding(3);
             this.nameupdate_txt.PasswordChar = '\0';
             this.nameupdate_txt.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1206,6 +889,87 @@ namespace SOFOK_System
             this.panel1.Size = new System.Drawing.Size(1215, 748);
             this.panel1.TabIndex = 1;
             // 
+            // bunifuLabel6
+            // 
+            this.bunifuLabel6.AllowParentOverrides = false;
+            this.bunifuLabel6.AutoEllipsis = false;
+            this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel6.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel6.Location = new System.Drawing.Point(61, 28);
+            this.bunifuLabel6.Name = "bunifuLabel6";
+            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel6.Size = new System.Drawing.Size(48, 17);
+            this.bunifuLabel6.TabIndex = 70;
+            this.bunifuLabel6.Text = "Married";
+            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel7.Location = new System.Drawing.Point(61, 55);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(37, 17);
+            this.bunifuLabel7.TabIndex = 75;
+            this.bunifuLabel7.Text = "Single";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel8.Location = new System.Drawing.Point(61, 82);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(59, 17);
+            this.bunifuLabel8.TabIndex = 76;
+            this.bunifuLabel8.Text = "Divorced";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel9
+            // 
+            this.bunifuLabel9.AllowParentOverrides = false;
+            this.bunifuLabel9.AutoEllipsis = false;
+            this.bunifuLabel9.CursorType = null;
+            this.bunifuLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuLabel9.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel9.Location = new System.Drawing.Point(61, 109);
+            this.bunifuLabel9.Name = "bunifuLabel9";
+            this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel9.Size = new System.Drawing.Size(63, 17);
+            this.bunifuLabel9.TabIndex = 77;
+            this.bunifuLabel9.Text = "Widowed";
+            this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel13
+            // 
+            this.bunifuLabel13.AllowParentOverrides = false;
+            this.bunifuLabel13.AutoEllipsis = false;
+            this.bunifuLabel13.CursorType = null;
+            this.bunifuLabel13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuLabel13.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel13.Location = new System.Drawing.Point(61, 133);
+            this.bunifuLabel13.Name = "bunifuLabel13";
+            this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel13.Size = new System.Drawing.Size(67, 17);
+            this.bunifuLabel13.TabIndex = 78;
+            this.bunifuLabel13.Text = "Separated";
+            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // updateinfo_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1218,10 +982,11 @@ namespace SOFOK_System
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "updateinfo_frm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.updateinfo_frm_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            this.bunifuGroupBox1.ResumeLayout(false);
-            this.bunifuGroupBox1.PerformLayout();
+            this.bunifuShadowPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QR_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
@@ -1255,19 +1020,16 @@ namespace SOFOK_System
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuTextBox addressupdate_txt;
         private Bunifu.UI.WinForms.BunifuTextBox nameupdate_txt;
-        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
-        private Bunifu.UI.WinForms.BunifuCheckBox separated_cbox;
-        private Bunifu.UI.WinForms.BunifuCheckBox widowed_cbox;
-        private Bunifu.UI.WinForms.BunifuCheckBox divorced_cbox;
-        private Bunifu.UI.WinForms.BunifuCheckBox single_cbox;
-        private Bunifu.UI.WinForms.BunifuCheckBox married_cbox;
-        private System.Windows.Forms.RadioButton male_radio;
-        private System.Windows.Forms.RadioButton female_radio;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private Bunifu.UI.WinForms.BunifuPictureBox QR_img;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private System.Windows.Forms.ComboBox combo_gender;
     }
 }

@@ -48,7 +48,33 @@ namespace SOFOK_System.components
                 conn.Open();
                 myreaderfetch = mycommandfetch.ExecuteReader();
 
-                MessageBox.Show("success");
+                MessageBox.Show("Order Served Complete ! \n Thank you ");
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        public void serve_decline()
+        {
+            try
+            {
+
+                string query2 = "UPDATE `tbl_orders` SET `status`='decline' WHERE tbl_orders.costumer_id='" + lbl_oder_num.Text + "'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+                //merchant_list.merchantDisplay.merch_id;
+                MySqlDataReader myreaderfetch;
+
+                conn.Open();
+                myreaderfetch = mycommandfetch.ExecuteReader();
+
+                MessageBox.Show("Decline Complete");
                 this.Hide();
             }
             catch (Exception ex)
@@ -155,6 +181,26 @@ namespace SOFOK_System.components
 
         public int ID { get => _id; set { _cost = value; lbl_oder_num.Text = _cost.ToString(); } }
 
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
 
+            DialogResult result = MessageBox.Show("Do you want to decline this order?", "Decline Order", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                serve_decline();
+            }
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+
+        }
     }
     }

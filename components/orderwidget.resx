@@ -151,4 +151,12 @@
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(69, 117, 219); text-align: left; }</value>
   </data>
+  <data name="btn_decline.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAH4AAAAlCAYAAACEal28AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACBSURBVHhe7dyhEcAwEAPB77/FlGFuZ8xTQW7BIsHjmj3z
+        nJlDx20+XwP/J3yU8FHCRwkfJXyU8FHCRwkfJXyU8FHCRwkfJXyU8FHCRwkfJXyU8FHCRwkfJXyU8FHC
+        RwkfJXyU8FHCRwkfJXyU8FHCRwkfJXyU8FH3A2d9DfzXnlkvJZhJTUbG+mUAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

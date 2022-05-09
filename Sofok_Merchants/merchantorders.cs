@@ -79,5 +79,12 @@ namespace SOFOK_System
             view_costumer_Order();
    
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            this.Opacity = 1;
+            docker.WindowState = Bunifu.UI.WinForms.BunifuFormDock.FormWindowStates.Maximized;
+        }
     }
 }

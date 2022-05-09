@@ -328,12 +328,6 @@
     <Compile Include="Sofok_Merchants\updateinfo_frm.designer.cs">
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="testform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="testform.Designer.cs">
-      <DependentUpon>testform.cs</DependentUpon>
-    </Compile>
     <None Include="icons\coke.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -416,9 +410,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_Merchants\updateinfo_frm.resx">
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="testform.resx">
-      <DependentUpon>testform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\revenue.datasource" />
@@ -641,6 +632,7 @@
     <None Include="Resources\cashier.png" />
     <Content Include="Resources\gender_100px.png" />
     <Content Include="Resources\iphone_100px.png" />
+    <None Include="Resources\Qr-Code-PNG-Photo.png" />
     <Content Include="Resources\user_100px.png" />
     <Content Include="src\address_100px.png" />
     <Content Include="src\age_100px.png" />
