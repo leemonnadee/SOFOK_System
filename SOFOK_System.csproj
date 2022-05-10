@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>packages\AngleSharp.0.9.11\lib\net45\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -141,6 +147,33 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\4thyr 1st sem\COGNATE\BARANGAY INFORMATION SYSTEM(final)\BARANGAY INFORMATION SYSTEM(final)\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetZip, Version=1.13.3.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.13.3\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Controls.WinForms, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.WinForms.Free.21.1.870\lib\net45\Gnostice.Controls.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Core, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.Foundation.21.1.870\lib\net45\Gnostice.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Documents, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.Foundation.21.1.870\lib\net45\Gnostice.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Graphics.GDIPlus, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.Foundation.21.1.870\lib\net45\Gnostice.Graphics.GDIPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Graphics.Skia, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.Foundation.21.1.870\lib\net45\Gnostice.Graphics.Skia.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.ImageEngine, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.Foundation.21.1.870\lib\net45\Gnostice.ImageEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PageManager, Version=21.1.870.2167, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>packages\Gnostice.DocumentStudio.WinForms.Free.21.1.870\lib\net45\Gnostice.PageManager.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -149,6 +182,9 @@
     </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Magnum, Version=2.1.3.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
       <HintPath>packages\Magnum.2.1.3\lib\NET40\Magnum.dll</HintPath>
@@ -193,6 +229,7 @@
       <DependentUpon>merchant_widget.cs</DependentUpon>
     </Compile>
     <Compile Include="EncryptDecryptPassword.cs" />
+    <Compile Include="Microsoft\Office.cs" />
     <Compile Include="sofok_administrator\merchantsrents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -633,6 +670,7 @@
     <Content Include="Resources\gender_100px.png" />
     <Content Include="Resources\iphone_100px.png" />
     <None Include="Resources\Qr-Code-PNG-Photo.png" />
+    <None Include="Resources\print_100px.png" />
     <Content Include="Resources\user_100px.png" />
     <Content Include="src\address_100px.png" />
     <Content Include="src\age_100px.png" />

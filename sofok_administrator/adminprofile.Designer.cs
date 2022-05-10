@@ -621,7 +621,7 @@ namespace SOFOK_System
             this.txt_password.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txt_password.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_password.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_password.BorderRadius = 1;
+            this.txt_password.BorderRadius = 15;
             this.txt_password.BorderThickness = 1;
             this.txt_password.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -697,7 +697,7 @@ namespace SOFOK_System
             this.txt_email.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txt_email.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_email.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_email.BorderRadius = 1;
+            this.txt_email.BorderRadius = 15;
             this.txt_email.BorderThickness = 1;
             this.txt_email.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -773,7 +773,7 @@ namespace SOFOK_System
             this.txt_mobile.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txt_mobile.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_mobile.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_mobile.BorderRadius = 1;
+            this.txt_mobile.BorderRadius = 15;
             this.txt_mobile.BorderThickness = 1;
             this.txt_mobile.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_mobile.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -850,7 +850,7 @@ namespace SOFOK_System
             this.txt_address.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txt_address.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_address.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_address.BorderRadius = 1;
+            this.txt_address.BorderRadius = 15;
             this.txt_address.BorderThickness = 1;
             this.txt_address.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_address.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -894,7 +894,7 @@ namespace SOFOK_System
             this.txt_address.Padding = new System.Windows.Forms.Padding(2);
             this.txt_address.PasswordChar = '\0';
             this.txt_address.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_address.PlaceholderText = "Enter text";
+            this.txt_address.PlaceholderText = "house no,brgy ,City";
             this.txt_address.ReadOnly = false;
             this.txt_address.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_address.SelectedText = "";
@@ -908,7 +908,7 @@ namespace SOFOK_System
             this.txt_address.TextMarginBottom = 0;
             this.txt_address.TextMarginLeft = 3;
             this.txt_address.TextMarginTop = 1;
-            this.txt_address.TextPlaceholder = "Enter text";
+            this.txt_address.TextPlaceholder = "house no,brgy ,City";
             this.txt_address.UseSystemPasswordChar = false;
             this.txt_address.WordWrap = true;
             // 
@@ -926,7 +926,7 @@ namespace SOFOK_System
             this.txt_name.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txt_name.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_name.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_name.BorderRadius = 1;
+            this.txt_name.BorderRadius = 15;
             this.txt_name.BorderThickness = 1;
             this.txt_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_name.Cursor = System.Windows.Forms.Cursors.IBeam;

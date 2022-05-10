@@ -42,6 +42,7 @@ namespace SOFOK_System
         }
 
         //Add Product
+      
         public void addproduct()
         {
 
@@ -167,13 +168,72 @@ namespace SOFOK_System
             }
 
             else {
-                checkImg();
 
-
+                
+                duplicate();
 
             }
 
             //checkImg();
+
+        }
+        public void duplicate() {
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+
+
+                string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='" + loginform.UserDisplay.MerchantID + "' and `prod_name`='" + productnametxt.Text + "'";
+
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+                MySqlDataReader myreader1;
+                conn.Open();
+                //execute the query
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+
+
+                    MessageBox.Show("Name is Already Exist , \n Invalid Input!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+                else {
+                    checkImg();
+                }
+              
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
         public void checkImg()
@@ -521,6 +581,72 @@ namespace SOFOK_System
 
         }
 
+        public void update_duplicate()
+        {
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+
+
+                string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='" + loginform.UserDisplay.MerchantID + "' and `prod_name`='" + productnametxt.Text + "'";
+
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+                MySqlDataReader myreader1;
+                conn.Open();
+                //execute the query
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+
+
+                    MessageBox.Show("Name is Already Exist , \n Invalid Input!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+                else
+                {
+                    update_prod();
+                    btn_update.Enabled = false;
+                    btn_delete.Enabled = false;
+                    uploadbtn.Visible = true;
+                    save_btn.Enabled = true;
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
 
         public void update_prod() {
 
@@ -573,15 +699,11 @@ namespace SOFOK_System
             {
                 MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else { 
+            else {
+                update_duplicate();
 
-
-
-            update_prod();
-                btn_update.Enabled = false;
-                btn_delete.Enabled = false;
-                uploadbtn.Visible = true;
-                save_btn.Enabled = true;
+          
+               
             }
         }
 

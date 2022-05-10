@@ -21,6 +21,7 @@ namespace SOFOK_System
         public String gcash_image;
         String checkPath;
         public double rownum;
+        string update_imgchech;
 
         public adminregistermerchant()
         {
@@ -400,10 +401,23 @@ namespace SOFOK_System
             try
                 {
                     string query = "UPDATE `tbl_account` SET `username`='" + txt_email.Text + "',`password`='" + encryptPassword + "' WHERE acc_id='" + lbl_id.Text + "'";
-                    string query2 = "UPDATE `tbl_merchant` SET `name`='" + txt_merchant.Text + "',`merchant_store`='" + txt_storename.Text + "',`gcash_img`='"+ ImgFile + "' WHERE merchant_id='" + txt_id.Text + "'";
-                    MySqlConnection conn = new MySqlConnection(mycon);
+                
+                if (ImgFile == null)
+                {
+                     update_imgchech = "UPDATE `tbl_merchant` SET `name`='" + txt_merchant.Text + "',`merchant_store`='" + txt_storename.Text + "' WHERE merchant_id='" + txt_id.Text + "'";
+
+                }
+                else {
+                    update_imgchech = "UPDATE `tbl_merchant` SET `name`='" + txt_merchant.Text + "',`merchant_store`='" + txt_storename.Text + "',`gcash_img`='" + ImgFile + "' WHERE merchant_id='" + txt_id.Text + "'";
+                    addImage();
+
+                }
+
+
+
+                MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
-                    MySqlCommand mycommand2 = new MySqlCommand(query2, conn);
+                    MySqlCommand mycommand2 = new MySqlCommand(update_imgchech, conn);
 
 
                     MySqlDataReader myreader1;
@@ -498,7 +512,7 @@ namespace SOFOK_System
                 {
 
                     update_accounts();
-                    addImage();
+                 
                 }
 
 
