@@ -93,13 +93,13 @@ namespace SOFOK_System.components
             // 
             this.lbl_Price.AutoSize = true;
             this.lbl_Price.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Price.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Price.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))), ((int)(((byte)(17)))));
             this.lbl_Price.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_Price.Location = new System.Drawing.Point(13, 63);
+            this.lbl_Price.Location = new System.Drawing.Point(14, 55);
             this.lbl_Price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Price.Name = "lbl_Price";
-            this.lbl_Price.Size = new System.Drawing.Size(39, 29);
+            this.lbl_Price.Size = new System.Drawing.Size(49, 37);
             this.lbl_Price.TabIndex = 5;
             this.lbl_Price.Text = "12";
             this.lbl_Price.Click += new System.EventHandler(this.bunifuPictureBox1_Click);
@@ -129,7 +129,7 @@ namespace SOFOK_System.components
             this.img.Image = global::SOFOK_System.Properties.Resources.tableware_100px;
             this.img.IsCircle = true;
             this.img.Location = new System.Drawing.Point(143, 38);
-            this.img.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.img.Margin = new System.Windows.Forms.Padding(2);
             this.img.Name = "img";
             this.img.Size = new System.Drawing.Size(95, 95);
             this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +158,7 @@ namespace SOFOK_System.components
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.bunifuPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "widget";
             this.Size = new System.Drawing.Size(257, 176);
             this.bunifuPanel1.ResumeLayout(false);
