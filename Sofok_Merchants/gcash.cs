@@ -34,8 +34,9 @@ namespace SOFOK_System.Sofok_Merchants
         {
             printPreviewDialog1.Document = printDocument1;
             printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 285);
-            printPreviewDialog1.ShowDialog();
-            //this.Hide();
+            //printPreviewDialog1.ShowDialog();
+            printDocument1.Print();
+            this.Hide();
         }
 
         private void gcash_Shown(object sender, EventArgs e)
@@ -154,7 +155,7 @@ namespace SOFOK_System.Sofok_Merchants
             layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
 
             //order num
-            graphics.DrawString("25", font25, brush, layout, formatCenter);
+            graphics.DrawString(frmMain.tot.order_num+"", font25, brush, layout, formatCenter);
             Offset = Offset + lineheight14;
             layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
             graphics.DrawString("", font7, brush, layout, formatLeft);

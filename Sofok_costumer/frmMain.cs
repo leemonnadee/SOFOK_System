@@ -16,7 +16,8 @@ using static SOFOK_System.components.widget;
 namespace SOFOK_System
 {
     public partial class frmMain : Form
-    { string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+    {
+        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
         //MySqlCommand cm;
         String prod_name;
         private static bool Enable;
@@ -47,7 +48,8 @@ namespace SOFOK_System
 
 
 
-        public void AddItem(String name, double cost, categories category, String icon, String store, int id) {
+        public void AddItem(String name, double cost, categories category, String icon, String store, int id)
+        {
             System.IO.DirectoryInfo DI = new System.IO.DirectoryInfo("icons");
             String imgPath = DI.FullName;
 
@@ -103,7 +105,8 @@ namespace SOFOK_System
 
 
 
-        void CalculateTotal() {
+        void CalculateTotal()
+        {
 
             double tot = 0;
             foreach (DataGridViewRow item in grid.Rows)
@@ -179,7 +182,8 @@ namespace SOFOK_System
         }
         private void txt_srch_TextChanged(object sender, EventArgs e)
         {
-            foreach (var item in pn1.Controls) {
+            foreach (var item in pn1.Controls)
+            {
 
                 var wgd = (widget)item;
                 wgd.Visible = wgd.lbl_Title.Text.ToLower().Contains(txt_srch.Text.Trim().ToLower());
@@ -326,7 +330,8 @@ namespace SOFOK_System
             this.Hide();
         }
 
-        public void save_data() {
+        public void save_data()
+        {
 
             //grid
             try
@@ -377,7 +382,8 @@ namespace SOFOK_System
 
 
         }
-        public void get_costumerID() {
+        public void get_costumerID()
+        {
 
             string query2 = "SELECT * FROM `tbl_costumer`  ";
             MySqlConnection conn = new MySqlConnection(mycon);
@@ -399,7 +405,8 @@ namespace SOFOK_System
 
 
         }
-        public void buy() {
+        public void buy()
+        {
 
             try
             {
@@ -419,7 +426,7 @@ namespace SOFOK_System
                 myreader1 = mycommand.ExecuteReader();
 
                 get_costumerID();
-
+          
 
                 choosepayment cp = new choosepayment();
                 cp.Hide();
@@ -434,17 +441,42 @@ namespace SOFOK_System
 
 
         }
-        public class tot{
+        public class tot
+        {
             public static string total_amount;
+            public static int order_num;
 
         }
-   
+        public void order_id()
+        {
+            string query2 = "SELECT order_id FROM `tbl_orders`ORDER BY order_id DESC LIMIT 1 ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                 tot.order_num= myreaderfetch.GetInt32("order_id");
+
+
+               // MessageBox.Show(tot.order_num.ToString());
+            }
+
+
+        }
+    
+
+
+
+
         private void pay_btn_Click(object sender, EventArgs e)
         {
 
             gcash gc = new gcash();
-
-
+          
             if (lbl_tot.Text.Equals("₱0.00") || (lbl_tot.Text.Equals("")))
             {
                 MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -455,10 +487,14 @@ namespace SOFOK_System
 
                
                 gc.Show();
-                buy(); }
+                buy();
+                    order_id();
+                }
                 else {
                     buy();
-             
+                    order_id();
+
+
                 gc.btn_done_Click(sender, e);
 
 
