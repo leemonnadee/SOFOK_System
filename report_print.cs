@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SOFOK_System
 {
-    public partial class merchantsrent_widget : UserControl
+    public partial class report_print : Form
     {
-        public merchantsrent_widget()
+        public report_print()
         {
             InitializeComponent();
-        }
-
-        private void bunifuLabel9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

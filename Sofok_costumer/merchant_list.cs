@@ -24,6 +24,8 @@ namespace SOFOK_System.Sofok_costumer
         {
 
             public static double merch_id;
+            public static string merch_name;
+            public static string merch_store;
         }
 
 
@@ -68,8 +70,10 @@ namespace SOFOK_System.Sofok_costumer
               
                 var merch = (merchant_widget)ss;
                 merchant_list.merchantDisplay.merch_id = id;
+                merchant_list.merchantDisplay.merch_store = merch.StoreName;
+                merchant_list.merchantDisplay.merch_name = merch.Merchant_Name;
 
-               
+
                 frmMain fr = new frmMain();
                 fr.Show();
                 this.Hide();

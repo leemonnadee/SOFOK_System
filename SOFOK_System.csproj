@@ -230,16 +230,23 @@
     </Compile>
     <Compile Include="EncryptDecryptPassword.cs" />
     <Compile Include="Microsoft\Office.cs" />
+    <Compile Include="recipt.cs" />
+    <Compile Include="report_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_print.Designer.cs">
+      <DependentUpon>report_print.cs</DependentUpon>
+    </Compile>
     <Compile Include="sofok_administrator\merchantsrents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sofok_administrator\merchantsrents.Designer.cs">
       <DependentUpon>merchantsrents.cs</DependentUpon>
     </Compile>
-    <Compile Include="merchantsrent_widget.cs">
+    <Compile Include="components\merchantsrent_widget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="merchantsrent_widget.Designer.cs">
+    <Compile Include="components\merchantsrent_widget.Designer.cs">
       <DependentUpon>merchantsrent_widget.cs</DependentUpon>
     </Compile>
     <Compile Include="Receipt.cs">
@@ -255,17 +262,17 @@
       <DependentUpon>receipt_widget.cs</DependentUpon>
     </Compile>
     <Compile Include="revenue.cs" />
-    <Compile Include="sofok_administrator\adminmerchantsales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sofok_administrator\adminmerchantsales.Designer.cs">
-      <DependentUpon>adminmerchantsales.cs</DependentUpon>
-    </Compile>
     <Compile Include="sofok_administrator\adminregistermerchant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sofok_administrator\adminregistermerchant.Designer.cs">
       <DependentUpon>adminregistermerchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sofok_Merchants\gcash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sofok_Merchants\gcash.Designer.cs">
+      <DependentUpon>gcash.cs</DependentUpon>
     </Compile>
     <Compile Include="Sofok_costumer\merchant_list.cs">
       <SubType>Form</SubType>
@@ -371,10 +378,13 @@
     <EmbeddedResource Include="components\merchant_widget.resx">
       <DependentUpon>merchant_widget.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="report_print.resx">
+      <DependentUpon>report_print.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sofok_administrator\merchantsrents.resx">
       <DependentUpon>merchantsrents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="merchantsrent_widget.resx">
+    <EmbeddedResource Include="components\merchantsrent_widget.resx">
       <DependentUpon>merchantsrent_widget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receipt.resx">
@@ -383,11 +393,11 @@
     <EmbeddedResource Include="receipt_widget.resx">
       <DependentUpon>receipt_widget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sofok_administrator\adminmerchantsales.resx">
-      <DependentUpon>adminmerchantsales.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="sofok_administrator\adminregistermerchant.resx">
       <DependentUpon>adminregistermerchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sofok_Merchants\gcash.resx">
+      <DependentUpon>gcash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sofok_costumer\merchant_list.resx">
       <DependentUpon>merchant_list.cs</DependentUpon>

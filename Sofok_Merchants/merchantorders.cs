@@ -25,11 +25,11 @@ namespace SOFOK_System
         {
             public static int costumer_id;
             public static string payment;
-  
+            public static string seat_ar;
 
         }
 
-        public void Add_orderList(double cost, String mod, int id)
+        public void Add_orderList(double cost, String mod, int id,string seat)
         {
             System.IO.DirectoryInfo DI = new System.IO.DirectoryInfo("icons");
             String imgPath = DI.FullName;
@@ -40,7 +40,7 @@ namespace SOFOK_System
 
                 Mod_payment = mod,
                 Cost = cost,
-
+                Seat=seat,
 
 
                 ID = id
@@ -65,11 +65,11 @@ namespace SOFOK_System
             {
                 orderDisply.costumer_id = myreaderfetch.GetInt32("costumer_id");
                  orderDisply.payment = myreaderfetch.GetString("payment");
-           
+                orderDisply.seat_ar = myreaderfetch.GetString("order_action");
 
                 double price_prod = myreaderfetch.GetDouble("SUM(cost)");
 
-                Add_orderList(price_prod, orderDisply.payment, orderDisply.costumer_id);
+                Add_orderList(price_prod, orderDisply.payment, orderDisply.costumer_id, orderDisply.seat_ar);
 
 
             }

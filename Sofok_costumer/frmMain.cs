@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using SOFOK_System.components;
 using SOFOK_System.Sofok_costumer;
+using SOFOK_System.Sofok_Merchants;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,22 +21,22 @@ namespace SOFOK_System
         String prod_name;
         private static bool Enable;
         public static int costumer_id;
-     
+
         public frmMain()
         {
-        
+
             InitializeComponent();
             All.BackColor = Color.PeachPuff;
             CalculateTotal();
             lbl_tot.Text.Equals("₱ 0.00");
-           
 
 
 
 
-    }
 
-     
+        }
+
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -43,14 +44,14 @@ namespace SOFOK_System
             this.Opacity = 1;
             docker.WindowState = Bunifu.UI.WinForms.BunifuFormDock.FormWindowStates.Maximized;
         }
-      
-        
-        
-        public  void AddItem(String name, double cost, categories category , String icon, String store, int id) {
+
+
+
+        public void AddItem(String name, double cost, categories category, String icon, String store, int id) {
             System.IO.DirectoryInfo DI = new System.IO.DirectoryInfo("icons");
             String imgPath = DI.FullName;
-            
-          
+
+
             var w = new widget()
             {
 
@@ -79,11 +80,11 @@ namespace SOFOK_System
                         CalculateTotal();
                         return;
                     }
-                    
+
                 }
-               
-                grid.Rows.Add(new object[] { wgd.lbl_Title.Text, 1, wgd.lbl_Price.Text,store,id });
-                
+
+                grid.Rows.Add(new object[] { wgd.lbl_Title.Text, 1, wgd.lbl_Price.Text, store, id });
+
                 CalculateTotal();
 
 
@@ -118,48 +119,48 @@ namespace SOFOK_System
             try
             {
 
-        
-            string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id WHERE tbl_products.merchant_id='"+merchant_list.merchantDisplay.merch_id+"'";
-            MySqlConnection conn = new MySqlConnection(mycon);
-            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
-            MySqlDataReader myreaderfetch;
+                string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id WHERE tbl_products.merchant_id='" + merchant_list.merchantDisplay.merch_id + "'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
-            conn.Open();
-            myreaderfetch = mycommandfetch.ExecuteReader();
-            while (myreaderfetch.Read())
-            {
-                prod_name = myreaderfetch.GetString("prod_name");
-                String cat = myreaderfetch.GetString("product_category");
-                String icon = myreaderfetch.GetString("product_icon");
-                String store_name = myreaderfetch.GetString("merchant_store");
-                double price_prod = myreaderfetch.GetDouble("prod_price");
-                int prod_id = myreaderfetch.GetInt32("prod_id");
+                MySqlDataReader myreaderfetch;
 
-
-                if (cat.Equals("Meal"))
+                conn.Open();
+                myreaderfetch = mycommandfetch.ExecuteReader();
+                while (myreaderfetch.Read())
                 {
+                    prod_name = myreaderfetch.GetString("prod_name");
+                    String cat = myreaderfetch.GetString("product_category");
+                    String icon = myreaderfetch.GetString("product_icon");
+                    String store_name = myreaderfetch.GetString("merchant_store");
+                    double price_prod = myreaderfetch.GetDouble("prod_price");
+                    int prod_id = myreaderfetch.GetInt32("prod_id");
 
-                    AddItem(prod_name, price_prod, categories.meal, icon, store_name, prod_id);
+
+                    if (cat.Equals("Meal"))
+                    {
+
+                        AddItem(prod_name, price_prod, categories.meal, icon, store_name, prod_id);
+                    }
+                    else if (cat.Equals("Drink"))
+                    {
+                        AddItem(prod_name, price_prod, categories.drink, icon, store_name, prod_id);
+
+                    }
+                    else if (cat.Equals("Burger"))
+                    {
+                        AddItem(prod_name, price_prod, categories.burger, icon, store_name, prod_id);
+                    }
+
+
+
+
+
+
+
+
                 }
-                else if (cat.Equals("Drink"))
-                {
-                    AddItem(prod_name, price_prod, categories.drink, icon, store_name, prod_id);
-
-                }
-                else if (cat.Equals("Burger"))
-                {
-                    AddItem(prod_name, price_prod, categories.burger, icon, store_name, prod_id);
-                }
-
-
-
-
-
-
-
-
-            }
             }
             catch (Exception ex)
             {
@@ -173,8 +174,8 @@ namespace SOFOK_System
         {
 
             displayProductsAll();
-          
-            
+
+
         }
         private void txt_srch_TextChanged(object sender, EventArgs e)
         {
@@ -182,7 +183,7 @@ namespace SOFOK_System
 
                 var wgd = (widget)item;
                 wgd.Visible = wgd.lbl_Title.Text.ToLower().Contains(txt_srch.Text.Trim().ToLower());
-            
+
             }
         }
 
@@ -198,9 +199,9 @@ namespace SOFOK_System
             {
 
                 var wgd = (widget)item;
-                wgd.Visible = wgd.Category.Equals(categories.burger) || wgd.Category.Equals(categories.drink)|| wgd.Category.Equals(categories.meal) || wgd.Category.Equals(categories.drink);
+                wgd.Visible = wgd.Category.Equals(categories.burger) || wgd.Category.Equals(categories.drink) || wgd.Category.Equals(categories.meal) || wgd.Category.Equals(categories.drink);
             }
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -213,7 +214,7 @@ namespace SOFOK_System
             {
 
                 var wgd = (widget)item;
-                wgd.Visible =  wgd.Category.Equals(categories.meal) ;
+                wgd.Visible = wgd.Category.Equals(categories.meal);
 
 
 
@@ -275,25 +276,25 @@ namespace SOFOK_System
                 int selectedrowindex = grid.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = grid.Rows[selectedrowindex];
                 string cellValue = Convert.ToString(selectedRow.Cells[2].Value);
-                double a = double.Parse(cellValue.Replace("₱", "").ToString())/ int.Parse(row.Cells[1].Value.ToString());
+                double a = double.Parse(cellValue.Replace("₱", "").ToString()) / int.Parse(row.Cells[1].Value.ToString());
                 double b = double.Parse(cellValue.Replace("₱", "").ToString()) - a;
-              
 
 
 
 
-           
 
-                grid.Rows[e.RowIndex].Cells[1].Value= int.Parse(row.Cells[1].Value.ToString()) - 1;
+
+
+                grid.Rows[e.RowIndex].Cells[1].Value = int.Parse(row.Cells[1].Value.ToString()) - 1;
                 grid.Rows[e.RowIndex].Cells[2].Value = "₱" + b;
                 CalculateTotal();
-             
+
                 if (int.Parse(grid.Rows[e.RowIndex].Cells[1].Value.ToString()) <= 0)
                 {
                     grid.Rows.RemoveAt(row.Index);
-               
+
                     MessageBox.Show("Item Remove", "Order List");
-                
+
                 }
 
             }
@@ -311,28 +312,28 @@ namespace SOFOK_System
         public void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("test");
-            
+
             grid.Rows.Clear();
             lbl_tot.Text = "₱0.00";
-        
-            }
+
+        }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
             merchant_list ml = new merchant_list();
 
-           ml.Show();
+            ml.Show();
             this.Hide();
         }
-      
+
         public void save_data() {
 
             //grid
             try
             {
-                
-                   
-                for (int i = 0; i <=grid.RowCount-1; i++)
+
+
+                for (int i = 0; i <= grid.RowCount - 1; i++)
                 {
                     String item = grid.Rows[i].Cells[0].Value.ToString();
                     int qty = (int)grid.Rows[i].Cells[1].Value;
@@ -343,7 +344,7 @@ namespace SOFOK_System
                     double final_cost = Double.Parse(cost.Remove(0, 1));
 
 
-                
+
 
                     String query = "INSERT INTO `tbl_orders` (`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`, `order_action`, `payment`, `status`, `costumer_id`) VALUES ('', '" + item + "', '" + qty + "', '" + final_cost + "', '" + store + "', '" + prod_id + "', '" + seat.seatDisplay.Seat_availability + "', '" + choosepayment.MOD_payment.mod_payment + "', 'pending', '" + costumer_id + "')";
                     MySqlConnection conn = new MySqlConnection(mycon);
@@ -360,12 +361,12 @@ namespace SOFOK_System
 
 
 
-                  
-                   
+
+
                 }
 
-               
-                 lbl_tot.Text=("₱0.00");
+
+                lbl_tot.Text = ("₱0.00");
                 grid.Rows.Clear();
 
             }
@@ -399,7 +400,7 @@ namespace SOFOK_System
 
         }
         public void buy() {
-        
+
             try
             {
 
@@ -418,8 +419,8 @@ namespace SOFOK_System
                 myreader1 = mycommand.ExecuteReader();
 
                 get_costumerID();
-             
-              
+
+
                 choosepayment cp = new choosepayment();
                 cp.Hide();
 
@@ -430,26 +431,48 @@ namespace SOFOK_System
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
 
         }
+        public class tot{
+            public static string total_amount;
+
+        }
+   
         private void pay_btn_Click(object sender, EventArgs e)
         {
 
+            gcash gc = new gcash();
 
-           
 
-                        if (lbl_tot.Text.Equals("₱0.00")|| (lbl_tot.Text.Equals("")))
-                        {
-                            MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else {
-                           buy();
+            if (lbl_tot.Text.Equals("₱0.00") || (lbl_tot.Text.Equals("")))
+            {
+                MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                if (choosepayment.MOD_payment.mod_payment.Equals("gcash")) { 
+                    tot.total_amount = lbl_tot.Text;
+
+               
+                gc.Show();
+                buy(); }
+                else {
+                    buy();
+             
+                gc.btn_done_Click(sender, e);
+
+
+
+
+                }
+
+            }
+                  
 
                // Receipt receipt = new Receipt();
                // receipt.Show();
 
-                        }
+                        
 
 
                        

@@ -30,8 +30,8 @@ namespace SOFOK_System.components
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orderwidget));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lbl_oder_num = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_Price = new Bunifu.UI.WinForms.BunifuLabel();
@@ -42,6 +42,7 @@ namespace SOFOK_System.components
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_decline = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.lbl_seat = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,11 +117,11 @@ namespace SOFOK_System.components
             this.servebtn.ColorContrastOnClick = 45;
             this.servebtn.ColorContrastOnHover = 45;
             this.servebtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.servebtn.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.servebtn.CustomizableEdges = borderEdges3;
             this.servebtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.servebtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.servebtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -289,11 +290,11 @@ namespace SOFOK_System.components
             this.btn_decline.ColorContrastOnClick = 45;
             this.btn_decline.ColorContrastOnHover = 45;
             this.btn_decline.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn_decline.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btn_decline.CustomizableEdges = borderEdges4;
             this.btn_decline.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_decline.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_decline.DisabledFillColor = System.Drawing.Color.Empty;
@@ -362,6 +363,23 @@ namespace SOFOK_System.components
             this.btn_decline.UseDefaultRadiusAndThickness = true;
             this.btn_decline.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
+            // lbl_seat
+            // 
+            this.lbl_seat.AllowParentOverrides = false;
+            this.lbl_seat.AutoEllipsis = false;
+            this.lbl_seat.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_seat.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbl_seat.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_seat.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_seat.Location = new System.Drawing.Point(641, 12);
+            this.lbl_seat.Name = "lbl_seat";
+            this.lbl_seat.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_seat.Size = new System.Drawing.Size(87, 28);
+            this.lbl_seat.TabIndex = 9;
+            this.lbl_seat.Text = "dineout";
+            this.lbl_seat.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_seat.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // orderwidget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +387,7 @@ namespace SOFOK_System.components
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbl_seat);
             this.Controls.Add(this.btn_decline);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel1);
@@ -399,5 +418,6 @@ namespace SOFOK_System.components
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_decline;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_seat;
     }
 }

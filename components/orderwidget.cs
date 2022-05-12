@@ -175,7 +175,7 @@ namespace SOFOK_System.components
 
 
 
-
+        public String Seat { get => lbl_seat.Text; set => lbl_seat.Text = value; }
         public double Cost { get => _cost; set { _cost = value; lbl_Price.Text = _cost.ToString("C2"); } }
         public String Mod_payment { get => lbl_mod_payment.Text; set => lbl_mod_payment.Text = value; }
 

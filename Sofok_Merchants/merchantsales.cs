@@ -87,7 +87,7 @@ namespace SOFOK_System
                 myreader1 = mycommand.ExecuteReader();
                 while (myreader1.Read())
                 {
-                    String total_gcash = myreader1.GetString("SUM(cost)");
+                    String total_gcash = myreader1.GetString("SUM(cost))");
                     lbl_gcash.Text = total_gcash;
 
 

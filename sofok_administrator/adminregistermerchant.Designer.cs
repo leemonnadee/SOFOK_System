@@ -200,7 +200,7 @@ namespace SOFOK_System
             this.uploadbtn.IdleIconLeftImage = null;
             this.uploadbtn.IdleIconRightImage = null;
             this.uploadbtn.IndicateFocus = false;
-            this.uploadbtn.Location = new System.Drawing.Point(70, 228);
+            this.uploadbtn.Location = new System.Drawing.Point(70, 245);
             this.uploadbtn.Margin = new System.Windows.Forms.Padding(2);
             this.uploadbtn.Name = "uploadbtn";
             this.uploadbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -256,7 +256,7 @@ namespace SOFOK_System
             this.QR_img.IsCircle = true;
             this.QR_img.Location = new System.Drawing.Point(70, 22);
             this.QR_img.Name = "QR_img";
-            this.QR_img.Size = new System.Drawing.Size(218, 218);
+            this.QR_img.Size = new System.Drawing.Size(206, 204);
             this.QR_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.QR_img.TabIndex = 215;
             this.QR_img.TabStop = false;

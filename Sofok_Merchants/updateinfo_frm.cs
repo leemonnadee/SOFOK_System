@@ -78,8 +78,7 @@ namespace SOFOK_System
             DialogResult result = MessageBox.Show("Do you want to cancel update?", "Cancel Update", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                merchantprofile mp = new merchantprofile();
-                mp.Show();
+                
                 this.Hide();
 
             }

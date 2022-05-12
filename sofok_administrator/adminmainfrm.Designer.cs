@@ -103,10 +103,10 @@ namespace SOFOK_System
             this.container.BorderRadius = 3;
             this.container.BorderThickness = 1;
             this.container.Controls.Add(this.bunifuPictureBox1);
-            this.container.Location = new System.Drawing.Point(263, 47);
+            this.container.Location = new System.Drawing.Point(277, 47);
             this.container.Name = "container";
             this.container.ShowBorders = true;
-            this.container.Size = new System.Drawing.Size(809, 839);
+            this.container.Size = new System.Drawing.Size(795, 723);
             this.container.TabIndex = 2;
             // 
             // bunifuPictureBox1
@@ -119,9 +119,9 @@ namespace SOFOK_System
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.sofok_logo_gif;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 0);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(809, 723);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(792, 723);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox1.TabIndex = 0;
             this.bunifuPictureBox1.TabStop = false;
@@ -307,7 +307,7 @@ namespace SOFOK_System
             this.logoutbtn.IdleIconLeftImage = global::SOFOK_System.Properties.Resources.Logout_26px;
             this.logoutbtn.IdleIconRightImage = null;
             this.logoutbtn.IndicateFocus = false;
-            this.logoutbtn.Location = new System.Drawing.Point(3, 121);
+            this.logoutbtn.Location = new System.Drawing.Point(0, 79);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.logoutbtn.OnDisabledState.BorderRadius = 1;
