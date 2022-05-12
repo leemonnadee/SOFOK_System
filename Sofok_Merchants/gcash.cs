@@ -36,6 +36,7 @@ namespace SOFOK_System.Sofok_Merchants
             printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 500, 500);
             //printPreviewDialog1.ShowDialog();
             printDocument1.Print();
+            MessageBox.Show("Order Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
         }
 
