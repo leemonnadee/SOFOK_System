@@ -18,7 +18,7 @@ namespace SOFOK_System
 
     public partial class merchantproduct_main : Form
     {
-        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
         //MySqlCommand cm;
         String prod_name;
         String pathIMG;

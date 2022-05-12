@@ -14,7 +14,7 @@ namespace SOFOK_System.Sofok_costumer
 {
     public partial class merchant_list : Form
     {
-        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
         public merchant_list()
         {
             InitializeComponent();

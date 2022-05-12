@@ -16,7 +16,7 @@ namespace SOFOK_System
     public partial class adminregistermerchant : Form
     {
         //set connection
-        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
         String pathIMG;
         int merchant_id;
         public String gcash_image;
@@ -530,8 +530,8 @@ namespace SOFOK_System
 
         private void adminregistermerchant_Load(object sender, EventArgs e)
         {
-            lbl_id.Visible = true;
-            txt_id.Visible = true;
+            lbl_id.Visible = false;
+            txt_id.Visible = false;
             showalldata();
             btn_delete.Enabled = false;
             btn_update.Enabled = false;

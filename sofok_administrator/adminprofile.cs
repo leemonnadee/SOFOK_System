@@ -12,12 +12,11 @@ using System.Windows.Forms;
 namespace SOFOK_System
 {
     public partial class adminprofile : Form
-    { 
-        
-        
-        //set connection
-        string mycon = "datasource=localhost;username=root;password=;database=sofok_db";
+    {
 
+
+        //set connection
+        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
         public adminprofile()
         {
            
