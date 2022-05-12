@@ -52,11 +52,16 @@ namespace SOFOK_System
 
                 conn.Open();
                 myreaderfetch = mycommandfetch.ExecuteReader();
-                while (myreaderfetch.Read()) {
+                if (myreaderfetch.Read())
+                {
+                    while (myreaderfetch.Read())
+                    {
 
-                    rent_lbl.Text = myreaderfetch.GetDateTime("date((DATE_ADD(rent_recieve, INTERVAL 30 DAY)))").ToString("MMM dd,yyyy");
+                        rent_lbl.Text = myreaderfetch.GetDateTime("date((DATE_ADD(rent_recieve, INTERVAL 30 DAY)))").ToString("MMM dd,yyyy");
+                    }
                 }
-
+                else { 
+                }
             }
             catch (Exception ex)
             {
@@ -117,15 +122,21 @@ namespace SOFOK_System
                 conn.Open();
                 myreaderfetch = mycommandfetch.ExecuteReader();
 
-               
-                    while (myreaderfetch.Read())
+                if (myreaderfetch.Read())
                 {
-                    
-                         total = myreaderfetch.GetDouble("SUM(monthy_rent)");
-                   
+                    while (myreaderfetch.Read())
+                    {
+
+                        total = myreaderfetch.GetDouble("SUM(monthy_rent)");
+
                         total_merch.Text = (total.ToString());
 
-                    finaltot=total = +total;
+                        finaltot = total = +total;
+
+                    }
+                }
+                else
+                {
 
                 }
 
@@ -153,9 +164,11 @@ namespace SOFOK_System
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
+            conn.Open();
             MySqlDataReader myreaderfetch;
 
-            conn.Open();
+          
+
 
             MessageBox.Show("Rent Paid successfully", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

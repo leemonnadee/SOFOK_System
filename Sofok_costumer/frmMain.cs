@@ -351,7 +351,9 @@ namespace SOFOK_System
 
 
 
-                    String query = "INSERT INTO `tbl_orders` (`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`, `order_action`, `payment`, `status`, `costumer_id`) VALUES ('', '" + item + "', '" + qty + "', '" + final_cost + "', '" + store + "', '" + prod_id + "', '" + seat.seatDisplay.Seat_availability + "', '" + choosepayment.MOD_payment.mod_payment + "', 'pending', '" + costumer_id + "')";
+                    String query = "INSERT INTO `tbl_orders` (`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`, `order_action`, `payment`, `status`, `costumer_id`,`merchant_id`) " +
+                        "VALUES ('', '" + item + "', '" + qty + "', '" + final_cost + "', '" + store + "', '" + prod_id + "', '" + seat.seatDisplay.Seat_availability + "', " +
+                        "'" + choosepayment.MOD_payment.mod_payment + "', 'pending', '" + costumer_id + "','"+merchant_list.merchantDisplay.merch_id+"')";
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
 

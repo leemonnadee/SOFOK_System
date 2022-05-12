@@ -33,7 +33,7 @@ namespace SOFOK_System.Sofok_Merchants
         public void btn_done_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 285);
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 500, 500);
             //printPreviewDialog1.ShowDialog();
             printDocument1.Print();
             this.Hide();

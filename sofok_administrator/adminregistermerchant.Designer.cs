@@ -256,7 +256,7 @@ namespace SOFOK_System
             this.QR_img.IsCircle = true;
             this.QR_img.Location = new System.Drawing.Point(70, 22);
             this.QR_img.Name = "QR_img";
-            this.QR_img.Size = new System.Drawing.Size(206, 204);
+            this.QR_img.Size = new System.Drawing.Size(206, 206);
             this.QR_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.QR_img.TabIndex = 215;
             this.QR_img.TabStop = false;

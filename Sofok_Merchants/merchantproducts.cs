@@ -550,8 +550,53 @@ namespace SOFOK_System
 
 
         }
+       
+            public void delete_orders()
+            {
+                try
+                {
+                    string query = "DELETE FROM `tbl_orders` WHERE merchant_id='" + loginform.UserDisplay.MerchantID + "'";
+                    MySqlConnection conn = new MySqlConnection(mycon);
+                    MySqlCommand mycommand = new MySqlCommand(query, conn);
 
 
+
+                    MySqlDataReader myreader1;
+                    conn.Open();
+                    myreader1 = mycommand.ExecuteReader();
+
+
+
+                    conn.Close();
+
+
+
+
+
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
@@ -571,6 +616,7 @@ namespace SOFOK_System
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     clear();
+                    delete_orders();
                     deleteProduct();
                     btn_delete.Enabled = false;
                     btn_update.Enabled = false;
@@ -700,10 +746,23 @@ namespace SOFOK_System
                 MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else {
-                update_duplicate();
 
-          
+                var name = productnametxt.Text;
                
+                if (name == prod_name)
+                {
+
+                    update_prod();
+                }
+                else {
+                    update_duplicate();
+                }
+
+                
+
+
+
+
             }
         }
 

@@ -278,49 +278,260 @@ namespace SOFOK_System
 
         }
 
-        // delete account
-
-        public void deleteAccount() {
-         
-                try
-                {
 
 
-                    string query = "DELETE tbl_merchant,tbl_account FROM `tbl_merchant` INNER JOIN  tbl_account ON tbl_merchant.acc_id = tbl_account.acc_id WHERE merchant_id = '" + txt_id.Text+ "';";
-                    MySqlConnection conn = new MySqlConnection(mycon);
-                    MySqlCommand mycommand = new MySqlCommand(query, conn);
+        //rent table delete
+        public void delete_rent() {
+
+            try
+            {
+
+
+                string query = "DELETE FROM `tbl_rent` WHERE  merchant_id = '" + txt_id.Text + "';";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
 
 
 
-                    MySqlDataReader myreader1;
+                MySqlDataReader myreader1;
 
-                    conn.Open();
+                conn.Open();
 
-                    myreader1 = mycommand.ExecuteReader();
-                    conn.Close();
-                  
-                    showalldata();
-                    save_btn.Enabled = true;
-                    clear();
-                    MessageBox.Show("Delete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                count_acc();
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
 
-            }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+
+                
                 save_btn.Enabled = true;
-                clear();
+             
+                //MessageBox.Show("", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //delete_merchant();
+                count_acc();
+               
+
             }
-            
+            catch (Exception ex)
+            {
+             
+            }
+
 
         }
+        // delete merchant()
+        public void delete_merchant()
+        {
+            try { 
+            string query = "DELETE FROM `tbl_merchant` WHERE merchant_id='" + txt_id.Text + "';";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+            MySqlDataReader myreader1;
+
+            conn.Open();
+
+            myreader1 = mycommand.ExecuteReader();
+            conn.Close();
+
+            //MessageBox.Show("", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //count_acc();
+
+            }
+            catch (Exception ex)
+            {
+            MessageBox.Show(ex.Message);
+             
+            }
+
+
+
+}
+
+        public void delete_acc()
+        {
+            try
+            {
+                string query = "DELETE FROM `tbl_account` WHERE acc_id='" + lbl_id.Text + "';";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+                //MessageBox.Show("", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        public void delete_product() {
+            try
+            {
+                string query = "DELETE FROM `tbl_products` WHERE merchant_id='" +txt_id.Text + "';";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+                conn.Open();
+                myreader1 =mycommand.ExecuteReader();
+           
+
+               
+                conn.Close();
+
+
+
+          
+
+
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+        public void delete_orders()
+        {
+            try
+            {
+                string query = "DELETE FROM `tbl_orders` WHERE merchant_id='"+txt_id.Text+"'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+                conn.Open();
+                myreader1 = mycommand.ExecuteReader();
+
+
+
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // delete account
+
+
+
         //Load form 
-   
+
         private void adminregistermerchant_Load(object sender, EventArgs e)
         {
-            lbl_id.Visible = false;
-            txt_id.Visible = false;
+            lbl_id.Visible = true;
+            txt_id.Visible = true;
             showalldata();
             btn_delete.Enabled = false;
             btn_update.Enabled = false;
@@ -425,7 +636,17 @@ namespace SOFOK_System
             DialogResult result = MessageBox.Show("Do you want to delete this Account?", "Delete", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                deleteAccount();
+                    //top to bottom
+                    delete_orders();
+                   
+                   
+                    delete_product();
+                    delete_rent();
+                    delete_merchant();
+                    delete_acc();
+                    showalldata();
+                    count_acc();
+                    clear();
                     btn_delete.Enabled = false;
                     btn_update.Enabled = false;
                     save_btn.Enabled = true;

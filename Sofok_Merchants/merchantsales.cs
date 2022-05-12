@@ -62,7 +62,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+           
             }
 
 
@@ -99,7 +99,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
             }
 
 
@@ -136,7 +136,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
             }
 
 
@@ -173,7 +173,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
             }
 
         }
@@ -209,7 +209,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+            
             }
 
         }
@@ -246,7 +246,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
             }
 
             
@@ -306,7 +306,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+           
             }
 
 
