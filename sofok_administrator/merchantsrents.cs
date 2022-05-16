@@ -13,52 +13,23 @@ namespace SOFOK_System
 {
     public partial class merchantsrents : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        String rent_next1;
+        int merch_id;
         public merchantsrents()
         {
             InitializeComponent();
-        }
-
-        public void total_rent() {
-            try
-            {
-
-                string query = "SELECT count(*) FROM `tbl_merchant`";
-                MySqlConnection conn = new MySqlConnection(mycon);
-                MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-
-
-
-                MySqlDataReader myreader1;
-
-                conn.Open();
-
-                myreader1 = mycommand.ExecuteReader();
-                while (myreader1.Read())
-                {
-                    String total_product = myreader1.GetString("count(*)");
-                    lbl_merchant_no.Text = total_product;
-
-
-                }
-                conn.Close();
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+         
 
 
         }
+
+      
         public void merchant_number() {
             try
             {
 
-                string query = "SELECT count(*) FROM `tbl_merchant`";
+                string query = "SELECT count(*) FROM `tbl_merchant` where status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -154,13 +125,16 @@ namespace SOFOK_System
 
 
         }
+
+
+      
+    
         public void display_merchants()
         {
             try
             {
-
-
-                string query2 = "SELECT * FROM `tbl_merchant`";
+                
+                string query2 = "SELECT * FROM `tbl_merchant` where status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -174,15 +148,15 @@ namespace SOFOK_System
                     String merchant_name = myreaderfetch.GetString("name");
                     String icon = myreaderfetch.GetString("profile_img");
                     String store_name = myreaderfetch.GetString("merchant_store");
-                    int id = myreaderfetch.GetInt32("merchant_id");
+                    merch_id = myreaderfetch.GetInt32("merchant_id");
                     if (icon.Equals("none"))
                     {
-                        merchant_list_no_img(store_name, merchant_name, id);
+                        merchant_list_no_img(store_name, merchant_name, merch_id);
                     }
                     else { 
-                    merchant_list(store_name, merchant_name, icon, id);
+                    merchant_list(store_name, merchant_name, icon, merch_id);
                     }
-
+                   
                 }
 
 
@@ -231,7 +205,7 @@ namespace SOFOK_System
             //MessageBox.Show(month_name);
 
         }
-
       
+
     }
 }

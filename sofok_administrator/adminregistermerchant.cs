@@ -16,19 +16,21 @@ namespace SOFOK_System
     public partial class adminregistermerchant : Form
     {
         //set connection
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         String pathIMG;
         int merchant_id;
         public String gcash_image;
         String checkPath;
         public double rownum;
         string update_imgchech;
+        String audit_info;
 
         public adminregistermerchant()
         {
             InitializeComponent();
 
         }
+
         private void ValidateEmail()
         {
             string email = txt_email.Text;
@@ -63,8 +65,9 @@ namespace SOFOK_System
         }
         public void insert_rent()
         {
+        
 
-            string query2 = "INSERT INTO `tbl_rent`(`rent_id`, `merchant_id`, `monthy_rent`,status) VALUES('','" + merchant_id + "','3500','paid')";
+            string query2 = "INSERT INTO `tbl_rent`(`rent_id`, `merchant_id`, `monthy_rent`,status,next_rent) VALUES('','" + merchant_id + "','3500','paid',DATE_ADD(CURRENT_DATE, INTERVAL 30 DAY))";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -74,7 +77,7 @@ namespace SOFOK_System
             myreaderfetch = mycommandfetch.ExecuteReader();
             //MessageBox.Show("paid Complete");
             conn.Close();
-
+            rent_audit();
 
 
         }
@@ -83,7 +86,7 @@ namespace SOFOK_System
         public void count_acc() {
             try
             {
-                string query = "SELECT count(*) FROM tbl_merchant";
+                string query = "SELECT count(*) FROM tbl_merchant where status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -113,7 +116,7 @@ namespace SOFOK_System
             try
             {
 
-                string query = "SELECT `merchant_id`, `name`,`merchant_store`,tbl_account.username, tbl_account.acc_id FROM `tbl_merchant` INNER JOIN tbl_account ON tbl_merchant.acc_id=tbl_account.acc_id where tbl_account.log_as='Merchant'";
+                string query = "SELECT `merchant_id`, `name`,`merchant_store`,tbl_account.username, tbl_account.acc_id FROM `tbl_merchant` INNER JOIN tbl_account ON tbl_merchant.acc_id=tbl_account.acc_id where tbl_account.log_as='Merchant' and tbl_merchant.status='active'";
 
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
@@ -166,8 +169,8 @@ namespace SOFOK_System
                 {
                     var ImgFile = Path.GetFileName(pathIMG);
                     
-                    string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name` , `marital_status`, `gender`, `contact_no`, `address`, `merchant_store`, `profile_img`,`gcash_img`, `acc_id`) VALUES " +
-                                                             "('','" + txt_merchant.Text + "','none','none','none','none','" + txt_storename.Text + "','none','"+ ImgFile + "','" + lbl_id.Text + "')";
+                    string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name` , `marital_status`, `gender`, `contact_no`, `address`, `merchant_store`, `profile_img`,`gcash_img`, `acc_id`,status) VALUES " +
+                                                             "('','" + txt_merchant.Text + "','none','none','none','none','" + txt_storename.Text + "','none','"+ ImgFile + "','" + lbl_id.Text + "','active')";
                     
                     //string query = "INSERT INTO `tbl_merchant`(`merchant_id`, `name`, `merchant_store`, `acc_id`) VALUES ('','" + txt_merchant.Text + "','" + txt_storename.Text + "','" + lbl_id.Text + "')";
                     MySqlConnection conn = new MySqlConnection(mycon);
@@ -220,7 +223,7 @@ namespace SOFOK_System
              
 
 
-                    string query = "INSERT INTO `tbl_account`(`acc_id`, `username`, `password`, `log_as`) VALUES ('','" + txt_email.Text + "','" + encryptPassword + "','Merchant')";
+                    string query = "INSERT INTO `tbl_account`(`acc_id`, `username`, `password`, `log_as`,status) VALUES ('','" + txt_email.Text + "','" + encryptPassword + "','Merchant','active')";
                     string id = "SELECT acc_id FROM `tbl_account` ORDER BY acc_id DESC LIMIT 1";
 
                     MySqlConnection conn = new MySqlConnection(mycon);
@@ -252,7 +255,7 @@ namespace SOFOK_System
                     add_merchant_account();
                     get_merch_id();
                     showalldata();
-
+                    add_audit();
                   
                     clear();
 
@@ -281,13 +284,13 @@ namespace SOFOK_System
 
 
         //rent table delete
-        public void delete_rent() {
+      
 
+        public void remove_acc()
+        {
             try
             {
-
-
-                string query = "DELETE FROM `tbl_rent` WHERE  merchant_id = '" + txt_id.Text + "';";
+                string query = "UPDATE `tbl_merchant` SET `status`='inactive' WHERE merchant_id='" + txt_id.Text + "';";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -299,61 +302,26 @@ namespace SOFOK_System
 
                 myreader1 = mycommand.ExecuteReader();
                 conn.Close();
+                remove_audit();
 
 
-                
-                save_btn.Enabled = true;
-             
-                //MessageBox.Show("", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //delete_merchant();
-                count_acc();
-               
+                //MessageBox.Show("Remove Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                clear();
 
             }
             catch (Exception ex)
             {
-             
+                MessageBox.Show(ex.Message);
+
             }
-
-
         }
-        // delete merchant()
-        public void delete_merchant()
-        {
-            try { 
-            string query = "DELETE FROM `tbl_merchant` WHERE merchant_id='" + txt_id.Text + "';";
-            MySqlConnection conn = new MySqlConnection(mycon);
-            MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-
-
-            MySqlDataReader myreader1;
-
-            conn.Open();
-
-            myreader1 = mycommand.ExecuteReader();
-            conn.Close();
-
-            //MessageBox.Show("", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //count_acc();
-
-            }
-            catch (Exception ex)
-            {
-            MessageBox.Show(ex.Message);
-             
-            }
-
-
-
-}
-
-        public void delete_acc()
+        public void remove_acc2()
         {
             try
             {
-                string query = "DELETE FROM `tbl_account` WHERE acc_id='" + lbl_id.Text + "';";
+                string query = "UPDATE `tbl_acc` SET `status`='inactive' WHERE merchant_id='" + lbl_id.Text + "';";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -368,7 +336,7 @@ namespace SOFOK_System
 
 
 
-                //MessageBox.Show("", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Remove Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 clear();
@@ -381,77 +349,10 @@ namespace SOFOK_System
             }
         }
 
-        public void delete_product() {
-            try
-            {
-                string query = "DELETE FROM `tbl_products` WHERE merchant_id='" +txt_id.Text + "';";
-                MySqlConnection conn = new MySqlConnection(mycon);
-                MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-
-
-                MySqlDataReader myreader1;
-                conn.Open();
-                myreader1 =mycommand.ExecuteReader();
-           
-
-               
-                conn.Close();
-
-
-
-          
-
-
-                
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-
-        }
-
-        public void delete_orders()
-        {
-            try
-            {
-                string query = "DELETE FROM `tbl_orders` WHERE merchant_id='"+txt_id.Text+"'";
-                MySqlConnection conn = new MySqlConnection(mycon);
-                MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-
-
-                MySqlDataReader myreader1;
-                conn.Open();
-                myreader1 = mycommand.ExecuteReader();
-
-
-
-                conn.Close();
 
 
 
 
-
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-
-        }
-
-
-
-
-      
 
 
 
@@ -553,6 +454,7 @@ namespace SOFOK_System
 
                 ValidateEmail();
                 addImage();
+             
 
 
             }
@@ -633,17 +535,14 @@ namespace SOFOK_System
                 MessageBox.Show("Please Fill all form", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else {
-            DialogResult result = MessageBox.Show("Do you want to delete this Account?", "Delete", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Do you want to remove this Account?", "Remove", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                     //top to bottom
-                    delete_orders();
-                   
-                   
-                    delete_product();
-                    delete_rent();
-                    delete_merchant();
-                    delete_acc();
+
+
+                  
+                    remove_acc();
                     showalldata();
                     count_acc();
                     clear();
@@ -702,6 +601,7 @@ namespace SOFOK_System
                     conn.Close();
                     clear();
                     showalldata();
+                update_audit();
 
                     MessageBox.Show("Update successfully","SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -740,6 +640,7 @@ namespace SOFOK_System
 
                     checkImg();
 
+              
 
 
 
@@ -820,6 +721,216 @@ namespace SOFOK_System
 
 
 
+        public void add_audit() {
+
+            try
+            { var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " ");
+                }
+                else
+                {
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " " + ImgFile.ToString() + " ");
+
+                }
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','ADD MERCHANT ACCOUNT" + audit_info + "','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+        public void update_audit()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text +  " ");
+                }
+                else {
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " " + ImgFile.ToString() + " ");
+
+                }
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','UPDATE MERCHANT ACCOUNT" + audit_info + "','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+        public void remove_audit()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " ");
+                }
+                else
+                {
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " " + ImgFile.ToString() + " ");
+
+                }
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','REMOVE MERCHANT ACCOUNT" + audit_info + "','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+
+
+        public void rent_audit()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+                if (ImgFile == null)
+                {
+
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " ");
+                }
+                else
+                {
+                    audit_info = (txt_email.Text + " " + txt_merchant.Text + " " + txt_storename.Text + " " + ImgFile.ToString() + " ");
+
+                }
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','RENT ADDED MERCHANT ACCOUNT " + audit_info + "','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
 
 
 
@@ -834,6 +945,6 @@ namespace SOFOK_System
 
 
 
-            }
+}
 
    

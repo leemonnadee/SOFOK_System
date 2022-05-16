@@ -228,6 +228,7 @@
     <Compile Include="components\merchant_widget.Designer.cs">
       <DependentUpon>merchant_widget.cs</DependentUpon>
     </Compile>
+    <Compile Include="connection.cs" />
     <Compile Include="EncryptDecryptPassword.cs" />
     <Compile Include="Microsoft\Office.cs" />
     <Compile Include="sofok_administrator\merchantsrents.cs">
@@ -431,6 +432,7 @@
       <DependentUpon>updateinfo_frm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Bunifu.UI.WinForms.BunifuButton.BunifuButton.datasource" />
     <None Include="Properties\DataSources\revenue.datasource" />
     <None Include="Sofok_costumer\packages.config" />
     <None Include="Properties\Settings.settings">
@@ -647,12 +649,16 @@
   <ItemGroup>
     <Content Include="Resources\address_100px.png" />
     <None Include="Resources\bao-coming-soon-1.png" />
+    <None Include="Resources\add_20px.png" />
+    <None Include="Resources\add_40px.png" />
     <Content Include="Resources\birthday_100px.png" />
     <None Include="Resources\cashier.png" />
     <Content Include="Resources\gender_100px.png" />
     <Content Include="Resources\iphone_100px.png" />
     <None Include="Resources\Qr-Code-PNG-Photo.png" />
     <None Include="Resources\print_100px.png" />
+    <None Include="Resources\minus_20px.png" />
+    <None Include="Resources\minus_40px.png" />
     <Content Include="Resources\user_100px.png" />
     <Content Include="src\address_100px.png" />
     <Content Include="src\age_100px.png" />

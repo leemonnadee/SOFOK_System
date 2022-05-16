@@ -15,7 +15,7 @@ namespace SOFOK_System
 {
     public partial class merchantorders : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
 
         public merchantorders()
         {
@@ -52,7 +52,7 @@ namespace SOFOK_System
 
         public void view_costumer_Order()
         {
-            string query2 = "SELECT *,SUM(cost)FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='"+loginform.UserDisplay.MerchantID+"' and status='pending' GROUP BY tbl_orders.costumer_id";
+            string query2 = "SELECT *,SUM(cost)FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='"+loginform.UserDisplay.MerchantID+ "' and tbl_orders.status='pending' GROUP BY tbl_orders.costumer_id";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 

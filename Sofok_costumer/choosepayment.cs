@@ -19,16 +19,11 @@ namespace SOFOK_System
         public choosepayment()
         {
             InitializeComponent();
-            frm_transparent();
+            //frm_transparent();
 
 
         }
-        public void frm_transparent() {
-           this.BackColor = Color.DarkOrange;
-            this.TransparencyKey = Color.DarkOrange;
-            
-
-        }
+       
         public class MOD_payment {
 
             public static String mod_payment;

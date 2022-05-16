@@ -30,7 +30,7 @@ namespace SOFOK_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(merchantsrent_widget));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.img = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbl_id = new Bunifu.UI.WinForms.BunifuLabel();
@@ -46,11 +46,11 @@ namespace SOFOK_System
             this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_pay = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.next_rent = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.total_merch = new Bunifu.UI.WinForms.BunifuLabel();
-            this.rent_lbl = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -197,7 +197,7 @@ namespace SOFOK_System
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.Location = new System.Drawing.Point(39, 199);
+            this.bunifuLabel7.Location = new System.Drawing.Point(33, 199);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(10, 23);
@@ -212,7 +212,7 @@ namespace SOFOK_System
             this.lbl_rent.AutoEllipsis = false;
             this.lbl_rent.CursorType = null;
             this.lbl_rent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rent.Location = new System.Drawing.Point(55, 202);
+            this.lbl_rent.Location = new System.Drawing.Point(49, 202);
             this.lbl_rent.Name = "lbl_rent";
             this.lbl_rent.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_rent.Size = new System.Drawing.Size(52, 20);
@@ -288,11 +288,11 @@ namespace SOFOK_System
             this.btn_pay.ColorContrastOnClick = 45;
             this.btn_pay.ColorContrastOnHover = 45;
             this.btn_pay.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_pay.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn_pay.CustomizableEdges = borderEdges2;
             this.btn_pay.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_pay.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_pay.DisabledFillColor = System.Drawing.Color.Empty;
@@ -368,8 +368,8 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.BorderRadius = 1;
             this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.Controls.Add(this.next_rent);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuShadowPanel1.Controls.Add(this.rent_lbl);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuLabel6);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuPanel1);
@@ -392,6 +392,40 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(386, 320);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 10;
+            // 
+            // next_rent
+            // 
+            this.next_rent.AllowParentOverrides = false;
+            this.next_rent.AutoEllipsis = false;
+            this.next_rent.Cursor = System.Windows.Forms.Cursors.Default;
+            this.next_rent.CursorType = System.Windows.Forms.Cursors.Default;
+            this.next_rent.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.next_rent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.next_rent.Location = new System.Drawing.Point(25, 277);
+            this.next_rent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.next_rent.Name = "next_rent";
+            this.next_rent.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.next_rent.Size = new System.Drawing.Size(93, 28);
+            this.next_rent.TabIndex = 14;
+            this.next_rent.Text = "sadasdsad";
+            this.next_rent.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.next_rent.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(20, 252);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(101, 20);
+            this.bunifuLabel1.TabIndex = 12;
+            this.bunifuLabel1.Text = "Next Payment";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuPanel2
             // 
@@ -442,38 +476,6 @@ namespace SOFOK_System
             this.total_merch.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.total_merch.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // rent_lbl
-            // 
-            this.rent_lbl.AllowParentOverrides = false;
-            this.rent_lbl.AutoEllipsis = false;
-            this.rent_lbl.CursorType = null;
-            this.rent_lbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rent_lbl.ForeColor = System.Drawing.Color.Green;
-            this.rent_lbl.Location = new System.Drawing.Point(25, 278);
-            this.rent_lbl.Name = "rent_lbl";
-            this.rent_lbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rent_lbl.Size = new System.Drawing.Size(87, 23);
-            this.rent_lbl.TabIndex = 11;
-            this.rent_lbl.Text = "Rent Paid";
-            this.rent_lbl.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.rent_lbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(20, 252);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(101, 20);
-            this.bunifuLabel1.TabIndex = 12;
-            this.bunifuLabel1.Text = "Next Payment";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // merchantsrent_widget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,7 +515,7 @@ namespace SOFOK_System
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel total_merch;
-        private Bunifu.UI.WinForms.BunifuLabel rent_lbl;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel next_rent;
     }
 }

@@ -31,18 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gcash));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btn_done = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbl_total_amount = new Bunifu.UI.WinForms.BunifuLabel();
+            this.QR_img = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.btn_done = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.QR_img = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QR_img)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuShadowPanel1
             // 
-            this.bunifuShadowPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.BorderRadius = 1;
@@ -50,9 +49,10 @@
             this.bunifuShadowPanel1.Controls.Add(this.btn_done);
             this.bunifuShadowPanel1.Controls.Add(this.lbl_total_amount);
             this.bunifuShadowPanel1.Controls.Add(this.QR_img);
+            this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(22, 22);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -61,45 +61,16 @@
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(1399, 844);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(1458, 878);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 0;
-            // 
-            // lbl_total_amount
-            // 
-            this.lbl_total_amount.AllowParentOverrides = false;
-            this.lbl_total_amount.AutoEllipsis = false;
-            this.lbl_total_amount.AutoSize = false;
-            this.lbl_total_amount.CursorType = null;
-            this.lbl_total_amount.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Bold);
-            this.lbl_total_amount.Location = new System.Drawing.Point(85, 684);
-            this.lbl_total_amount.Name = "lbl_total_amount";
-            this.lbl_total_amount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_total_amount.Size = new System.Drawing.Size(1229, 106);
-            this.lbl_total_amount.TabIndex = 10;
-            this.lbl_total_amount.Text = "TOTAL";
-            this.lbl_total_amount.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_total_amount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
             // 
             // btn_done
             // 
             this.btn_done.AllowAnimations = true;
             this.btn_done.AllowMouseEffects = true;
             this.btn_done.AllowToggling = false;
+            this.btn_done.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_done.AnimationSpeed = 200;
             this.btn_done.AutoGenerateColors = false;
             this.btn_done.AutoRoundBorders = false;
@@ -187,6 +158,23 @@
             this.btn_done.UseDefaultRadiusAndThickness = true;
             this.btn_done.Click += new System.EventHandler(this.btn_done_Click);
             // 
+            // lbl_total_amount
+            // 
+            this.lbl_total_amount.AllowParentOverrides = false;
+            this.lbl_total_amount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_total_amount.AutoEllipsis = false;
+            this.lbl_total_amount.AutoSize = false;
+            this.lbl_total_amount.CursorType = null;
+            this.lbl_total_amount.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Bold);
+            this.lbl_total_amount.Location = new System.Drawing.Point(85, 684);
+            this.lbl_total_amount.Name = "lbl_total_amount";
+            this.lbl_total_amount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_total_amount.Size = new System.Drawing.Size(1229, 106);
+            this.lbl_total_amount.TabIndex = 10;
+            this.lbl_total_amount.Text = "TOTAL";
+            this.lbl_total_amount.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_total_amount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // QR_img
             // 
             this.QR_img.AllowFocused = false;
@@ -195,13 +183,27 @@
             this.QR_img.BorderRadius = 0;
             this.QR_img.Image = ((System.Drawing.Image)(resources.GetObject("QR_img.Image")));
             this.QR_img.IsCircle = true;
-            this.QR_img.Location = new System.Drawing.Point(371, 17);
+            this.QR_img.Location = new System.Drawing.Point(401, 34);
             this.QR_img.Name = "QR_img";
             this.QR_img.Size = new System.Drawing.Size(661, 661);
             this.QR_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.QR_img.TabIndex = 9;
             this.QR_img.TabStop = false;
             this.QR_img.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // gcash
             // 

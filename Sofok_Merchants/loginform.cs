@@ -14,13 +14,13 @@ namespace SOFOK_System
 {
     public partial class loginform : Form
     {
-
+       
         // setup connection  username , password and database
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='"+ connection.ipconnection+"';username=root;password=123456;database=sofok_db";
         public loginform()
         {
             InitializeComponent();
-            combo_log.SelectedIndex = 0;
+          
         }
 
         public class UserDisplay
@@ -36,6 +36,8 @@ namespace SOFOK_System
             public static string contact;
             public static int Acc_id;
             public static string Merchat_status;
+            public static string email_admin;
+           
     
         }
 
@@ -43,30 +45,13 @@ namespace SOFOK_System
         {
             System.Windows.Forms.Application.Exit();
         }
-        /*   private void ValidateEmail()
-           {
-               string email = usernametxt.Text;
-               Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-               Match match = regex.Match(email);
-               if (match.Success)
-                   loginAuth();
-               else
-                   MessageBox.Show(email + " is Invalid Email Address");
-           }
-        */
+     
         private void btn_login_Click(object sender, EventArgs e)
         {
            
-            if (combo_log.Text.Equals("Costumer"))
-            {
-                Mainpage MainCostumer = new Mainpage();
-                MainCostumer.Show();
-                this.Hide();
-             
-            }
-            else {
-                loginAuth(); ;
-            }
+           
+                loginAuth();
+            
         }
         public void login_Online() {
             string query = "UPDATE `tbl_merchant` SET `login_status`=1 WHERE merchant_id='"+UserDisplay.MerchantID+"'";
@@ -130,7 +115,7 @@ namespace SOFOK_System
             var str = passwordtxt.Text;
             var encryptPassword = EncryptDecryptPassword.EncryptString(key, str);
 
-            string query2 = "SELECT tbl_account.username,tbl_account.acc_id FROM tbl_account WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "'; ";
+            string query2 = "SELECT tbl_account.username,tbl_account.acc_id FROM tbl_account WHERE username = '" + usernametxt.Text + "' and password ='" + encryptPassword + "' and status='active'; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -146,7 +131,7 @@ namespace SOFOK_System
         }
 
 
-
+        // login Authentication
 
         public void loginAuth()
         {
@@ -167,19 +152,12 @@ namespace SOFOK_System
 
 
                     //connection query you can try on  workbench first 
-                    string query = "Select * from tbl_account where username='" + usernametxt.Text + "' and password='" + encryptPassword + "'and log_as='" + combo_log.Text + "'";
+                    string query = "Select * from tbl_account where username='" + usernametxt.Text + "' and password='" + encryptPassword +"'and status='active'";
                  
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
 
                     MySqlDataReader myreader1;
-
-
-
-         
-
-
-
 
                         //opening connection
                         conn.Open();
@@ -187,35 +165,37 @@ namespace SOFOK_System
                         myreader1 = mycommand.ExecuteReader();
 
 
-                        if (myreader1.Read())
-                        {
+                    if (myreader1.Read())
+                    {
 
-                        if (combo_log.Text.Equals("Administrator"))
-                        {
-                            this.Hide();
-                            adminmainfrm af = new adminmainfrm();
-                            af.Show();
-                            this.Hide();
-                        }
 
-                        else if (combo_log.Text.Equals("Merchant"))
-                        {
 
+                        String s = myreader1.GetString("log_as");
+                       
+                        if (s.Equals("Merchant"))
+                        {
+                            //MessageBox.Show(UserDisplay.email);
                             merchantmainfrm mf = new merchantmainfrm();
                             mf.Show();
                             getMerchantID();
                             getEmail();
                             this.Hide();
                             login_Online();
-
-
+                          
                         }
-                        else {
-                            Mainpage mp = new Mainpage();
-                            mp.Show();
+                        else if (s.Equals("Administrator")) {
+                            
                             this.Hide();
+                            adminmainfrm af = new adminmainfrm();
+                            getEmail();
+                            af.Show();
+                            this.Hide();
+                            
+                          
                         }
-                   
+                    
+                            
+
                         
                         // always close
 

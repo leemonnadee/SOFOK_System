@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOFOK_System.Sofok_Merchants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace SOFOK_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginform());
+            Application.Run(new Mainpage());
         }
     }
 }

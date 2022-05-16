@@ -16,14 +16,16 @@ namespace SOFOK_System
 
 
         //set connection
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        public string s;
         public adminprofile()
         {
            
             InitializeComponent();
             combo_log.SelectedIndex = 0;
+       
         }
-        
+    
        
 
         // insert function
@@ -47,7 +49,7 @@ namespace SOFOK_System
                 conn.Close();
                 MessageBox.Show("Successfully Added", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                audit_trail_Add();
             }
             catch (Exception ex) {
 
@@ -70,6 +72,130 @@ namespace SOFOK_System
             txt_name.Text = ("");
             lbl_id.Text="";
             dateTimePicker1.Value= DateTime.Now;
+
+        }
+        //audit trail
+
+        public void audit_trail_Add()
+        {
+            try
+            {
+                s = (txt_name.Text + " " + combo_log.Text + " " + dateTimePicker1.Text + " " + txt_address.Text + " " + txt_mobile.Text + " " + txt_email.Text+" ");
+             
+               
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','"+loginform.UserDisplay.email+"','ADD ADMIN ACCOUNT"+s+"','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+            
+            }
+        
+        
+        }
+        public void audit_trail_update()
+        {
+            try
+            {
+                s = (txt_name.Text + " " + combo_log.Text + " " + dateTimePicker1.Text + " " + txt_address.Text + " " + txt_mobile.Text + " " + txt_email.Text + " ");
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','UPDATE ADMIN ACCOUNT" + s + "','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+        }
+        public void audit_trail_remove()
+        {
+            try
+            {
+                s = (txt_name.Text + " " + combo_log.Text + " " + dateTimePicker1.Text + " " + txt_address.Text + " " + txt_mobile.Text + " " + txt_email.Text + " ");
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','REMOVE ADMIN ACCOUNT" + s + "','Admin Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
 
         }
 
@@ -103,7 +229,7 @@ namespace SOFOK_System
 
 
 
-                    string query = "INSERT INTO `tbl_account`(`acc_id`, `username`, `password`, `log_as`) VALUES ('','" + txt_email.Text + "','" + encryptPassword + "','Administrator')";
+                    string query = "INSERT INTO `tbl_account`(`acc_id`, `username`, `password`, `log_as`,status) VALUES ('','" + txt_email.Text + "','" + encryptPassword + "','Administrator','active')";
                     string id = "SELECT acc_id FROM `tbl_account` ORDER BY acc_id DESC LIMIT 1";
 
                     MySqlConnection conn = new MySqlConnection(mycon);
@@ -205,7 +331,7 @@ namespace SOFOK_System
             try
             {
 
-                string query = " SELECT admin_id, name, birthdate, address, gender, contact,tbl_account.username, tbl_account.acc_id FROM `tbl_admin` INNER JOIN tbl_account ON tbl_admin.acc_id=tbl_account.acc_id where tbl_account.log_as='Administrator'";
+                string query = " SELECT admin_id, name, birthdate, address, gender, contact,tbl_account.username, tbl_account.acc_id FROM `tbl_admin` INNER JOIN tbl_account ON tbl_admin.acc_id=tbl_account.acc_id where tbl_account.log_as='Administrator' and status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -230,14 +356,14 @@ namespace SOFOK_System
 
 
         //delete function
-        public void deleteAccount()
+        public void remove_acc()
         {
 
             try
             {
 
 
-                string query = "DELETE tbl_admin,tbl_account FROM tbl_admin INNER JOIN  tbl_account ON tbl_admin.acc_id = tbl_account.acc_id WHERE admin_id= '" + txt_id.Text + "'; ";
+                string query = "UPDATE `tbl_account` SET `status`='inactive' WHERE acc_id='"+lbl_id.Text+"'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -253,7 +379,7 @@ namespace SOFOK_System
                 showalldata();
                 save_btn.Enabled = true;
                 clear();
-                MessageBox.Show("Delete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Remove Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -370,6 +496,7 @@ namespace SOFOK_System
             else
             {
                 update_accounts();
+                audit_trail_update();
                 btn_delete.Enabled = false;
                 btn_update.Enabled = false;
                 save_btn.Enabled = true;
@@ -381,16 +508,18 @@ namespace SOFOK_System
         private void save_btn_Click(object sender, EventArgs e)
         {
             create_acc();
+
         
         }
 
         private void adminprofile_Load(object sender, EventArgs e)
         {
+            //MessageBox.Show(loginform.UserDisplay.email);
             time.Text = DateTime.Now.ToString("hh:m tt");
             date.Text = DateTime.Now.ToString("MMMM dd, yyyy");
             timer1.Start();
             lbl_id.Visible = false;
-            txt_id.Visible = false;
+            txt_id.Visible = true;
             btn_delete.Enabled = false;
             btn_update.Enabled = false;
             save_btn.Enabled = true;
@@ -434,7 +563,7 @@ namespace SOFOK_System
         //delete button
         private void btn_delete_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to delete this Account?", "Delete", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Do you want to remove this Account?", "remove", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
 
@@ -451,14 +580,15 @@ namespace SOFOK_System
 
 
                 }
-                else { 
+                else {
 
 
 
 
-
-                deleteAccount();
-                btn_delete.Enabled = false;
+                   
+                remove_acc();
+                    audit_trail_remove();
+                    btn_delete.Enabled = false;
                 btn_update.Enabled = false;
                 save_btn.Enabled = true;
                 }
@@ -473,6 +603,16 @@ namespace SOFOK_System
         }
 
         private void time_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
         {
 
         }

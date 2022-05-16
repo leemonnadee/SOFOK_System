@@ -134,12 +134,13 @@ namespace SOFOK_System
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label9.Location = new System.Drawing.Point(195, 30);
+            this.label9.Location = new System.Drawing.Point(40, 24);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(223, 51);
+            this.label9.Size = new System.Drawing.Size(428, 51);
             this.label9.TabIndex = 215;
-            this.label9.Text = "Admin List";
+            this.label9.Text = "Owner\'s Account List ";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txt_id
             // 
@@ -208,7 +209,7 @@ namespace SOFOK_System
             this.AdminTable.RowTemplate.DividerHeight = 1;
             this.AdminTable.RowTemplate.Height = 50;
             this.AdminTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AdminTable.Size = new System.Drawing.Size(547, 379);
+            this.AdminTable.Size = new System.Drawing.Size(547, 359);
             this.AdminTable.TabIndex = 213;
             this.AdminTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminTable_CellDoubleClick);
             // 
@@ -348,7 +349,7 @@ namespace SOFOK_System
             this.btn_delete.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delete.BackgroundImage")));
             this.btn_delete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn_delete.ButtonText = "Delete";
+            this.btn_delete.ButtonText = "Remove";
             this.btn_delete.ButtonTextMarginLeft = 0;
             this.btn_delete.ColorContrastOnClick = 45;
             this.btn_delete.ColorContrastOnHover = 45;
@@ -1139,16 +1140,17 @@ namespace SOFOK_System
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(108, 12);
+            this.label6.Location = new System.Drawing.Point(14, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(297, 51);
+            this.label6.Size = new System.Drawing.Size(464, 76);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Administrator ";
+            this.label6.Text = "OWNER";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // adminprofile
             // 
@@ -1174,7 +1176,6 @@ namespace SOFOK_System
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

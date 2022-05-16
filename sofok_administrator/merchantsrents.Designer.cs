@@ -50,7 +50,8 @@ namespace SOFOK_System
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.bunifuLabel1.Location = new System.Drawing.Point(22, 12);
+            this.bunifuLabel1.Location = new System.Drawing.Point(29, 15);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(253, 23);
@@ -70,7 +71,8 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.Controls.Add(this.bunifuLabel2);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(125, 58);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(167, 71);
+            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.DarkOrange;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.DarkOrange;
@@ -79,7 +81,7 @@ namespace SOFOK_System
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.ForwardDiagonal;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(216, 154);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(288, 190);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 3;
             // 
@@ -91,7 +93,8 @@ namespace SOFOK_System
             this.lbl_merchant_no.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_merchant_no.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold);
             this.lbl_merchant_no.ForeColor = System.Drawing.Color.White;
-            this.lbl_merchant_no.Location = new System.Drawing.Point(85, 64);
+            this.lbl_merchant_no.Location = new System.Drawing.Point(113, 79);
+            this.lbl_merchant_no.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_merchant_no.Name = "lbl_merchant_no";
             this.lbl_merchant_no.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_merchant_no.Size = new System.Drawing.Size(36, 77);
@@ -108,7 +111,8 @@ namespace SOFOK_System
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(21, 16);
+            this.bunifuLabel2.Location = new System.Drawing.Point(28, 20);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(171, 42);
@@ -129,7 +133,8 @@ namespace SOFOK_System
             this.date.CursorType = System.Windows.Forms.Cursors.Default;
             this.date.Font = new System.Drawing.Font("Microsoft New Tai Lue", 48F, System.Drawing.FontStyle.Bold);
             this.date.ForeColor = System.Drawing.Color.Coral;
-            this.date.Location = new System.Drawing.Point(506, 47);
+            this.date.Location = new System.Drawing.Point(675, 58);
+            this.date.Margin = new System.Windows.Forms.Padding(4);
             this.date.Name = "date";
             this.date.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.date.Size = new System.Drawing.Size(378, 84);
@@ -145,7 +150,8 @@ namespace SOFOK_System
             this.time.CursorType = null;
             this.time.Font = new System.Drawing.Font("Microsoft New Tai Lue", 18F, System.Drawing.FontStyle.Bold);
             this.time.ForeColor = System.Drawing.Color.Coral;
-            this.time.Location = new System.Drawing.Point(605, 137);
+            this.time.Location = new System.Drawing.Point(807, 169);
+            this.time.Margin = new System.Windows.Forms.Padding(4);
             this.time.Name = "time";
             this.time.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.time.Size = new System.Drawing.Size(147, 31);
@@ -161,10 +167,10 @@ namespace SOFOK_System
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rent_flow.AutoScroll = true;
             this.rent_flow.BackColor = System.Drawing.Color.White;
-            this.rent_flow.Location = new System.Drawing.Point(22, 262);
-            this.rent_flow.Margin = new System.Windows.Forms.Padding(2);
+            this.rent_flow.Location = new System.Drawing.Point(29, 322);
+            this.rent_flow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rent_flow.Name = "rent_flow";
-            this.rent_flow.Size = new System.Drawing.Size(1319, 647);
+            this.rent_flow.Size = new System.Drawing.Size(1759, 796);
             this.rent_flow.TabIndex = 6;
             // 
             // docker
@@ -209,16 +215,17 @@ namespace SOFOK_System
             // 
             // merchantsrents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1376, 920);
+            this.ClientSize = new System.Drawing.Size(1835, 1100);
             this.Controls.Add(this.rent_flow);
             this.Controls.Add(this.time);
             this.Controls.Add(this.date);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Controls.Add(this.bunifuLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "merchantsrents";
             this.Text = "merchantsrents";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -17,7 +17,8 @@ namespace SOFOK_System
 {
     public partial class frmMain : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
         //MySqlCommand cm;
         String prod_name;
         private static bool Enable;
@@ -50,6 +51,7 @@ namespace SOFOK_System
 
         public void AddItem(String name, double cost, categories category, String icon, String store, int id)
         {
+
             System.IO.DirectoryInfo DI = new System.IO.DirectoryInfo("icons");
             String imgPath = DI.FullName;
 
@@ -71,24 +73,41 @@ namespace SOFOK_System
             w.OnSelect += (ss, ee) =>
             {
                 var wgd = (widget)ss;
+
                 foreach (DataGridViewRow item in grid.Rows)
                 {
+                    ;
+
+
                     if (item.Cells[0].Value.ToString() == wgd.lbl_Title.Text)
                     {
                         item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) + 1;
                         item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(wgd.lbl_Price.Text.Replace("₱", ""))).ToString("C2");
                         item.Cells[3].Value = store;
                         item.Cells[4].Value = id;
+
                         CalculateTotal();
+                        // a=grid.Columns.Add(btn);
                         return;
                     }
 
                 }
 
                 grid.Rows.Add(new object[] { wgd.lbl_Title.Text, 1, wgd.lbl_Price.Text, store, id });
+                btn_sub.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+                btn_sub.Image = Properties.Resources.minus_40px;
+
+                btn_add1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+                btn_add1.Image = Properties.Resources.add_40px;
+
 
                 CalculateTotal();
 
+                btn.HeaderText = "Click Data";
+                btn.Text = "Click Here";
+                btn.Name = "btn";
+
+                btn.UseColumnTextForButtonValue = true;
 
 
             };
@@ -123,7 +142,7 @@ namespace SOFOK_System
             {
 
 
-                string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id WHERE tbl_products.merchant_id='" + merchant_list.merchantDisplay.merch_id + "'";
+                string query2 = "SELECT tbl_products.prod_id,tbl_products.prod_name,tbl_products.product_category,tbl_products.prod_price,tbl_products.product_icon,tbl_merchant.merchant_store FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id WHERE tbl_products.merchant_id='" + merchant_list.merchantDisplay.merch_id + "' and tbl_products.status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -262,19 +281,10 @@ namespace SOFOK_System
 
         private void grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
             widget w = new widget();
 
-            /*
 
-            foreach (DataGridViewRow item in grid.Rows)
-            {
-                item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) - 1;
-
-
-
-
-            }
-            */
             foreach (DataGridViewRow row in grid.SelectedRows)
             {
                 int selectedrowindex = grid.SelectedCells[0].RowIndex;
@@ -315,7 +325,7 @@ namespace SOFOK_System
 
         public void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("test");
+    
 
             grid.Rows.Clear();
             lbl_tot.Text = "₱0.00";
@@ -353,7 +363,7 @@ namespace SOFOK_System
 
                     String query = "INSERT INTO `tbl_orders` (`order_id`, `item`, `qty`, `cost`, `store`, `prod_id`, `order_action`, `payment`, `status`, `costumer_id`,`merchant_id`) " +
                         "VALUES ('', '" + item + "', '" + qty + "', '" + final_cost + "', '" + store + "', '" + prod_id + "', '" + seat.seatDisplay.Seat_availability + "', " +
-                        "'" + choosepayment.MOD_payment.mod_payment + "', 'pending', '" + costumer_id + "','"+merchant_list.merchantDisplay.merch_id+"')";
+                        "'" + choosepayment.MOD_payment.mod_payment + "', 'pending', '" + costumer_id + "','" + merchant_list.merchantDisplay.merch_id + "')";
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -428,7 +438,7 @@ namespace SOFOK_System
                 myreader1 = mycommand.ExecuteReader();
 
                 get_costumerID();
-          
+
 
                 choosepayment cp = new choosepayment();
                 cp.Hide();
@@ -461,15 +471,20 @@ namespace SOFOK_System
             myreaderfetch = mycommandfetch.ExecuteReader();
             while (myreaderfetch.Read())
             {
-                 tot.order_num= myreaderfetch.GetInt32("order_id");
+                tot.order_num = myreaderfetch.GetInt32("order_id");
 
 
-               // MessageBox.Show(tot.order_num.ToString());
+                // MessageBox.Show(tot.order_num.ToString());
             }
 
 
         }
-    
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
 
 
 
@@ -478,26 +493,29 @@ namespace SOFOK_System
         {
 
             gcash gc = new gcash();
-          
+
             if (lbl_tot.Text.Equals("₱0.00") || (lbl_tot.Text.Equals("")))
             {
                 MessageBox.Show("Select Item First", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else {
-                if (choosepayment.MOD_payment.mod_payment.Equals("gcash")) { 
+            else
+            {
+                if (choosepayment.MOD_payment.mod_payment.Equals("gcash"))
+                {
                     tot.total_amount = lbl_tot.Text;
 
-               
-                gc.Show();
-                buy();
+
+                    gc.Show();
+                    buy();
                     order_id();
                 }
-                else {
+                else
+                {
                     buy();
                     order_id();
 
 
-                gc.btn_done_Click(sender, e);
+                    gc.btn_done_Click(sender, e);
 
 
 
@@ -505,35 +523,138 @@ namespace SOFOK_System
                 }
 
             }
-                  
-
-               // Receipt receipt = new Receipt();
-               // receipt.Show();
-
-                        
 
 
-                       
+            // Receipt receipt = new Receipt();
+            // receipt.Show();
 
 
-           
+
+
+
+
+
+
 
 
 
         }
-        public void enableB() {
-          
+        public void enableB()
+        {
+
             this.Opacity = 1;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             txt_srch.Visible = false;
+
         }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+
+
+            if (e.ColumnIndex == grid.Columns[5].Index && e.RowIndex >= 0)
+            {
+                widget w = new widget();
+
+
+                foreach (DataGridViewRow row in grid.SelectedRows)
+                {
+                    int selectedrowindex = grid.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = grid.Rows[selectedrowindex];
+                    string cellValue = Convert.ToString(selectedRow.Cells[2].Value);
+                    double a = double.Parse(cellValue.Replace("₱", "").ToString()) / int.Parse(row.Cells[1].Value.ToString());
+                    double b = double.Parse(cellValue.Replace("₱", "").ToString()) - a;
+
+
+
+
+
+
+
+                    grid.Rows[e.RowIndex].Cells[1].Value = int.Parse(row.Cells[1].Value.ToString()) - 1;
+                    grid.Rows[e.RowIndex].Cells[2].Value = "₱" + b;
+                    CalculateTotal();
+
+                    if (int.Parse(grid.Rows[e.RowIndex].Cells[1].Value.ToString()) <= 0)
+                    {
+                        grid.Rows.RemoveAt(row.Index);
+
+                
+
+                    }
+                }
+            }
+
+
+
+
+
+           else if (e.ColumnIndex == grid.Columns[6].Index && e.RowIndex >= 0)
+            {
+                widget w = new widget();
+
+
+                foreach (DataGridViewRow row in grid.SelectedRows)
+                {
+                    int selectedrowindex = grid.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = grid.Rows[selectedrowindex];
+                    string cellValue = Convert.ToString(selectedRow.Cells[2].Value);
+                    double a = double.Parse(cellValue.Replace("₱", "").ToString()) / int.Parse(row.Cells[1].Value.ToString());
+                    double b = double.Parse(cellValue.Replace("₱", "").ToString()) + a;
+
+
+
+
+
+
+
+                    grid.Rows[e.RowIndex].Cells[1].Value = int.Parse(row.Cells[1].Value.ToString()) + 1;
+                    grid.Rows[e.RowIndex].Cells[2].Value = "₱" + b;
+                    CalculateTotal();
+
+                    if (int.Parse(grid.Rows[e.RowIndex].Cells[1].Value.ToString()) <= 0)
+                    {
+                        grid.Rows.RemoveAt(row.Index);
+
+               
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
-
-
-
-        }
+}
     
 

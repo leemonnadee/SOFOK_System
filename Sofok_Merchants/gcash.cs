@@ -15,7 +15,7 @@ namespace SOFOK_System.Sofok_Merchants
 
     public partial class gcash : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         String imgprof;
         public gcash()
         {
@@ -33,9 +33,12 @@ namespace SOFOK_System.Sofok_Merchants
         public void btn_done_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 500, 500);
-            //printPreviewDialog1.ShowDialog();
-            printDocument1.Print();
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 300, 250);
+            printPreviewDialog1.ShowDialog();
+           // printDocument1.Print();
+            
+
+
             MessageBox.Show("Order Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
         }

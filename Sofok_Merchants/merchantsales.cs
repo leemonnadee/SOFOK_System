@@ -20,8 +20,9 @@ namespace SOFOK_System
 {
     public partial class merchantsales : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         string show_data;
+        String audit_info;
         public merchantsales()
         {
 
@@ -36,7 +37,7 @@ namespace SOFOK_System
             try
             {
 
-                string query = "SELECT COUNT(prod_id)FROM `tbl_products` WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'";
+                string query = "SELECT COUNT(prod_id)FROM `tbl_products` WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "' and status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -62,7 +63,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-           
+
             }
 
 
@@ -73,10 +74,9 @@ namespace SOFOK_System
             try
             {
 
-                string query = "SELECT SUM(cost) FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_orders.status='accepted' and tbl_orders.payment='gcash' and tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'";
+                string query = "SELECT SUM(cost) FROM `tbl_orders` WHERE merchant_id='" + loginform.UserDisplay.MerchantID + "' and `status`='accepted' and `payment`='gcash'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
-
 
 
 
@@ -87,8 +87,8 @@ namespace SOFOK_System
                 myreader1 = mycommand.ExecuteReader();
                 while (myreader1.Read())
                 {
-                    String total_gcash = myreader1.GetString("SUM(cost))");
-                    lbl_gcash.Text = total_gcash;
+                    String total_cashier = myreader1.GetString("SUM(cost)");
+                    lbl_gcash.Text = total_cashier;
 
 
                 }
@@ -99,7 +99,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-               
+
             }
 
 
@@ -110,7 +110,7 @@ namespace SOFOK_System
             try
             {
 
-                string query = "SELECT SUM(cost) FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_orders.status='accepted' and tbl_orders.payment='cashier' and tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'";
+                string query = "SELECT SUM(cost) FROM `tbl_orders` WHERE merchant_id='" + loginform.UserDisplay.MerchantID + "' and `status`='accepted' and `payment`='cashier'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -136,7 +136,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-               
+
             }
 
 
@@ -173,7 +173,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-               
+
             }
 
         }
@@ -209,13 +209,13 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-            
+
             }
 
         }
         public void show_total_sales()
         {
-           
+
             try
             {
 
@@ -225,7 +225,7 @@ namespace SOFOK_System
 
 
 
-              
+
                 MySqlDataReader myreader1;
 
                 conn.Open();
@@ -246,10 +246,10 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-               
+
             }
 
-            
+
 
         }
 
@@ -261,12 +261,12 @@ namespace SOFOK_System
             {
                 if (combo_log.Text == ("Accepted Orders"))
                 {
-                    show_data = "SELECT tbl_orders.status,tbl_orders.`costumer_id`,tbl_orders.`item`,tbl_orders.`qty`,tbl_orders.`cost`,tbl_orders.`store`,tbl_orders.`prod_id` FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'and status='accepted'GROUP BY tbl_orders.costumer_id";
+                    show_data = "SELECT tbl_orders.status,tbl_orders.`costumer_id`,tbl_orders.`item`,tbl_orders.`qty`,tbl_orders.`cost`,tbl_orders.`store`,tbl_orders.`prod_id` FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'and tbl_orders.status='accepted'GROUP BY tbl_orders.costumer_id";
 
                 }
                 else if (combo_log.Text == ("Pending Orders"))
                 {
-                    show_data = "SELECT tbl_orders.status,tbl_orders.`costumer_id`,tbl_orders.`item`,tbl_orders.`qty`,tbl_orders.`cost`,tbl_orders.`store`,tbl_orders.`prod_id` FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'and status='pending' GROUP BY tbl_orders.costumer_id";
+                    show_data = "SELECT tbl_orders.status,tbl_orders.`costumer_id`,tbl_orders.`item`,tbl_orders.`qty`,tbl_orders.`cost`,tbl_orders.`store`,tbl_orders.`prod_id` FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'and  tbl_orders.status='pending' GROUP BY tbl_orders.costumer_id";
 
 
                 }
@@ -280,7 +280,7 @@ namespace SOFOK_System
 
                 else if (combo_log.Text == ("Declined Orders"))
                 {
-                    show_data = "SELECT tbl_orders.status,tbl_orders.`costumer_id`,tbl_orders.`item`,tbl_orders.`qty`,tbl_orders.`cost`,tbl_orders.`store`,tbl_orders.`prod_id` FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'and status='decline' GROUP BY tbl_orders.costumer_id";
+                    show_data = "SELECT tbl_orders.status,tbl_orders.`costumer_id`,tbl_orders.`item`,tbl_orders.`qty`,tbl_orders.`cost`,tbl_orders.`store`,tbl_orders.`prod_id` FROM `tbl_orders` INNER JOIN tbl_products ON tbl_orders.prod_id=tbl_products.prod_id WHERE tbl_products.merchant_id='" + loginform.UserDisplay.MerchantID + "'and tbl_orders.status='decline' GROUP BY tbl_orders.costumer_id";
 
 
                 }
@@ -306,7 +306,7 @@ namespace SOFOK_System
             }
             catch (Exception ex)
             {
-           
+
             }
 
 
@@ -347,8 +347,9 @@ namespace SOFOK_System
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Output.pdf";
+                sfd.FileName = "SOFOK product report.pdf";
                 bool fileError = false;
+
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     if (File.Exists(sfd.FileName))
@@ -365,16 +366,19 @@ namespace SOFOK_System
                     }
                     if (!fileError)
                     {
+                    
                         try
                         {
                             PdfPTable pdfTable = new PdfPTable(grid_sales.Columns.Count);
                             pdfTable.DefaultCell.Padding = 3;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-                          
+
+
                             foreach (DataGridViewColumn column in grid_sales.Columns)
                             {
                                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+
                                 pdfTable.AddCell(cell);
                             }
 
@@ -395,8 +399,10 @@ namespace SOFOK_System
                                 pdfDoc.Close();
                                 stream.Close();
                             }
+                            export_product_data();
 
                             MessageBox.Show("Data Exported Successfully !!!", "Info");
+                          
                         }
                         catch (Exception ex)
                         {
@@ -414,8 +420,47 @@ namespace SOFOK_System
 
 
 
+        public void export_product_data()
+        {
+
+            try
+            {
+
+
+                audit_info = ("" + loginform.UserDisplay.MerchantID + " " + loginform.UserDisplay.StoreName + " " + loginform.UserDisplay.merchantName +  " ");
+           
+       
+
+            string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                    " VALUES ('','" + loginform.UserDisplay.email + "','EXPORT PRODUCT RECORD  " + audit_info + "','Merchant Module')";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommand = new MySqlCommand(query, conn);
 
 
 
-    }
+            MySqlDataReader myreader1;
+
+            conn.Open();
+
+            myreader1 = mycommand.ExecuteReader();
+            conn.Close();
+
+
+
+
+
+
+
+
+        }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+}
+
+
+        }
 }

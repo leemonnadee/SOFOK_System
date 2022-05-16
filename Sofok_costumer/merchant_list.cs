@@ -14,7 +14,7 @@ namespace SOFOK_System.Sofok_costumer
 {
     public partial class merchant_list : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         public merchant_list()
         {
             InitializeComponent();
@@ -97,7 +97,7 @@ namespace SOFOK_System.Sofok_costumer
             try
             {
 
-                String query2= "SELECT tbl_merchant.name,tbl_merchant.merchant_store,tbl_merchant.merchant_id,COUNT(*) FROM `tbl_products` INNER JOIN tbl_merchant ON tbl_products.merchant_id=tbl_merchant.merchant_id GROUP BY tbl_products.merchant_id";
+                String query2= "SELECT tbl_merchant.name,tbl_merchant.merchant_store,tbl_merchant.merchant_id,COUNT(*) FROM `tbl_products` INNER JOIN tbl_merchant ON tbl_products.merchant_id=tbl_merchant.merchant_id WHERE tbl_merchant.status='active' AND tbl_products.status='active' GROUP BY tbl_products.merchant_id";
                // string query2 = "SELECT tbl_merchant.name,tbl_merchant.merchant_store,tbl_merchant.merchant_id FROM `tbl_products` INNER JOIN tbl_merchant ON tbl_products.merchant_id=tbl_merchant.merchant_id;";
                 MySqlConnection conn = new MySqlConnection(mycon);
 

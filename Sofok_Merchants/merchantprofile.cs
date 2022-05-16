@@ -15,11 +15,12 @@ namespace SOFOK_System
 {
     public partial class merchantprofile : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         String pathIMG;
         public String imgprof;
         public static merchantprofile profile;
         public static String gender_update;
+        String audit_info;
         public merchantprofile()
         {
             InitializeComponent();
@@ -124,7 +125,7 @@ namespace SOFOK_System
                 conn.Close();
 
 
-
+                acc_update_audit_merch();
                 MessageBox.Show("Update successfully", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -196,6 +197,7 @@ namespace SOFOK_System
 
                 MessageBox.Show("Update successfully", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 img_display();
+                profile_audit_merch();
                 save_img.Enabled = false;
             }
 
@@ -212,5 +214,139 @@ namespace SOFOK_System
             //var ImgFile = Path.GetFileName(pathIMG);
            // MessageBox.Show(ImgFile);
         }
+
+
+
+
+
+        public void profile_audit_merch()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = (" " + merchantname_lbl.Text + " " + storename_lbl.Text + " " + ImgFile + " ");
+                }
+                else
+                {
+                    audit_info = (" "+ merchantname_lbl .Text+ " "+ storename_lbl.Text+ " ");
+                    // audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " ");
+                }
+
+
+
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','UPDATE PROFILE " + audit_info + "','Merchant Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        public void acc_update_audit_merch()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+             
+
+                    audit_info = (" " + merchantname_lbl.Text + " " + storename_lbl.Text + "  ");
+         
+
+
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','UPDATE ACCOUNT " + audit_info + "','Merchant Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

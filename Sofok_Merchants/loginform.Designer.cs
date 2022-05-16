@@ -42,7 +42,6 @@ namespace SOFOK_System
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btn_login = new System.Windows.Forms.Button();
             this.btn_exit = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.combo_log = new System.Windows.Forms.ComboBox();
             this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.passwordtxt = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -80,7 +79,6 @@ namespace SOFOK_System
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.btn_login);
             this.bunifuPanel1.Controls.Add(this.btn_exit);
-            this.bunifuPanel1.Controls.Add(this.combo_log);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox3);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox2);
             this.bunifuPanel1.Controls.Add(this.passwordtxt);
@@ -147,21 +145,6 @@ namespace SOFOK_System
             this.btn_exit.Zoom = 20;
             this.btn_exit.ZoomSpeed = 10;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
-            // combo_log
-            // 
-            this.combo_log.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_log.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_log.FormattingEnabled = true;
-            this.combo_log.Items.AddRange(new object[] {
-            "Administrator",
-            "Merchant",
-            "Costumer"});
-            this.combo_log.Location = new System.Drawing.Point(133, 410);
-            this.combo_log.Margin = new System.Windows.Forms.Padding(2);
-            this.combo_log.Name = "combo_log";
-            this.combo_log.Size = new System.Drawing.Size(151, 29);
-            this.combo_log.TabIndex = 11;
             // 
             // bunifuPictureBox3
             // 
@@ -383,7 +366,6 @@ namespace SOFOK_System
         private Bunifu.UI.WinForms.BunifuTextBox passwordtxt;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox3;
-        private System.Windows.Forms.ComboBox combo_log;
         private Bunifu.UI.WinForms.BunifuImageButton btn_exit;
         private System.Windows.Forms.Button btn_login;
     }

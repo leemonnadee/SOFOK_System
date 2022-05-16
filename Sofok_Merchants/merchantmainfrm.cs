@@ -13,7 +13,7 @@ namespace SOFOK_System
 {
     public partial class merchantmainfrm : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         public merchantmainfrm()
         {
             InitializeComponent();
@@ -72,7 +72,8 @@ namespace SOFOK_System
         private void merchantmainfrm_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            
+            MessageBox.Show(loginform.UserDisplay.email);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace SOFOK_System
                 loginform lf = new loginform();
                 lf.Show();
                 this.Hide();
+                loginform.UserDisplay.email="";
                 login_Offline();
             }
         }

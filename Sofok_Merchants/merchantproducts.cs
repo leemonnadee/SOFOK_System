@@ -18,10 +18,12 @@ namespace SOFOK_System
 
     public partial class merchantproduct_main : Form
     {
-        string mycon = "datasource=192.168.100.201;username=root;password=123456;database=sofok_db";
+        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
         //MySqlCommand cm;
         String prod_name;
         String pathIMG;
+        String update_prod_img;
+        String audit_info;
 
         public merchantproduct_main()
         {
@@ -66,8 +68,8 @@ namespace SOFOK_System
 
 
                         String query = "INSERT INTO `tbl_products`" +
-                            "(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`, `product_icon`) VALUES " +
-                            "('','" + productnametxt.Text + "','" + combo_category.Text + "','" + prodpricetxt.Text + "','" + loginform.UserDisplay.MerchantID + "','" + ImgFile + "')";
+                            "(`prod_id`, `prod_name`, `product_category`, `prod_price`, `merchant_id`, `product_icon`,status) VALUES " +
+                            "('','" + productnametxt.Text + "','" + combo_category.Text + "','" + prodpricetxt.Text + "','" + loginform.UserDisplay.MerchantID + "','" + ImgFile + "','active')";
                         MySqlConnection conn = new MySqlConnection(mycon);
                         MySqlCommand mycommand = new MySqlCommand(query, conn);
                         MySqlDataReader myreader1;
@@ -129,7 +131,9 @@ namespace SOFOK_System
         //Load Screen
         private void merchantproducts_Load(object sender, EventArgs e)
         {
-          
+            btn_inactive.Enabled = true;
+            btn_add_back.Visible = false;
+            btn_active.Enabled = false;
             lbl_merchantname.Text = loginform.UserDisplay.merchantName;
 
             displayProductsAll();
@@ -170,72 +174,14 @@ namespace SOFOK_System
             else {
 
                 
-                duplicate();
+                checkImg();
 
             }
 
-            //checkImg();
+           
 
         }
-        public void duplicate() {
-            try
-            {
-                var ImgFile = Path.GetFileName(pathIMG);
 
-
-
-                string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='" + loginform.UserDisplay.MerchantID + "' and `prod_name`='" + productnametxt.Text + "'";
-
-                MySqlConnection conn = new MySqlConnection(mycon);
-                MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-                MySqlDataReader myreader1;
-                conn.Open();
-                //execute the query
-                myreader1 = mycommand.ExecuteReader();
-                if (myreader1.Read())
-                {
-
-
-                    MessageBox.Show("Name is Already Exist , \n Invalid Input!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                }
-                else {
-                    checkImg();
-                }
-              
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
         public void checkImg()
         {
             try
@@ -244,7 +190,7 @@ namespace SOFOK_System
 
                
                    
-                    string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='"+loginform.UserDisplay.MerchantID+"' and `product_icon`='"+ ImgFile + "'";
+                    string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='"+loginform.UserDisplay.MerchantID+"' and `product_icon`='"+ ImgFile + "' and status='active'";
 
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
@@ -265,6 +211,7 @@ namespace SOFOK_System
                 else {
 
                     addproduct();
+                    insert_audit_merch();
 
                 }
                 
@@ -381,7 +328,7 @@ namespace SOFOK_System
 
             w.OnSelect += (ss, ee) =>
             {
-                uploadbtn.Visible = false;
+              
                 var wgd = (widget)ss;
                 prodpricetxt.Text=wgd.lbl_Price.Text.Remove(0, 1);
                 productnametxt.Text=wgd.lbl_Title.Text;
@@ -409,7 +356,7 @@ namespace SOFOK_System
         }
         public void displayProductsAll()
         {
-            string query2 = "SELECT * FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "'; ";
+            string query2 = "SELECT * FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "' and tbl_products.status='active'; ";
             MySqlConnection conn = new MySqlConnection(mycon);
             MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
 
@@ -523,7 +470,7 @@ namespace SOFOK_System
             {
 
 
-                string query = "DELETE FROM `tbl_products` WHERE `prod_id`='" + prod_ID.Text + "'";
+                string query = "UPDATE `tbl_products` SET `status`='inactive'  WHERE `prod_id`='" + prod_ID.Text + "'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -536,11 +483,11 @@ namespace SOFOK_System
                 myreader1 = mycommand.ExecuteReader();
                 conn.Close();
 
-              
+                remove_audit_merch();
 
                 productflowlayout.Controls.Clear();
                 displayProductsAll();
-                MessageBox.Show("Delete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Remove Complete ", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -551,39 +498,7 @@ namespace SOFOK_System
 
         }
        
-            public void delete_orders()
-            {
-                try
-                {
-                    string query = "DELETE FROM `tbl_orders` WHERE merchant_id='" + loginform.UserDisplay.MerchantID + "'";
-                    MySqlConnection conn = new MySqlConnection(mycon);
-                    MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-
-
-                    MySqlDataReader myreader1;
-                    conn.Open();
-                    myreader1 = mycommand.ExecuteReader();
-
-
-
-                    conn.Close();
-
-
-
-
-
-
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-
-                }
-
-            }
+         
 
 
 
@@ -612,11 +527,11 @@ namespace SOFOK_System
             }
             else
             {
-                DialogResult result = MessageBox.Show("Do you want to delete this Account?", "Delete", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Do you want to Remove this product?", "Remove", MessageBoxButtons.YesNo);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     clear();
-                    delete_orders();
+                  
                     deleteProduct();
                     btn_delete.Enabled = false;
                     btn_update.Enabled = false;
@@ -627,47 +542,7 @@ namespace SOFOK_System
 
         }
 
-        public void update_duplicate()
-        {
-            try
-            {
-                var ImgFile = Path.GetFileName(pathIMG);
-
-
-
-                string query = "SELECT * FROM `tbl_products` WHERE `merchant_id`='" + loginform.UserDisplay.MerchantID + "' and `prod_name`='" + productnametxt.Text + "'";
-
-                MySqlConnection conn = new MySqlConnection(mycon);
-                MySqlCommand mycommand = new MySqlCommand(query, conn);
-
-                MySqlDataReader myreader1;
-                conn.Open();
-                //execute the query
-                myreader1 = mycommand.ExecuteReader();
-                if (myreader1.Read())
-                {
-
-
-                    MessageBox.Show("Name is Already Exist , \n Invalid Input!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                }
-                else
-                {
-                    update_prod();
-                    btn_update.Enabled = false;
-                    btn_delete.Enabled = false;
-                    uploadbtn.Visible = true;
-                    save_btn.Enabled = true;
-                }
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+      
 
 
 
@@ -689,9 +564,7 @@ namespace SOFOK_System
 
 
 
-
-
-        }
+        
 
 
         public void update_prod() {
@@ -704,36 +577,47 @@ namespace SOFOK_System
 
        
                 double price = Double.Parse(prodpricetxt.Text);
+                var ImgFile = Path.GetFileName(pathIMG);
+
+
+
+                if (ImgFile == null)
+                {
+                    update_prod_img = "UPDATE `tbl_products` SET `prod_name`= '" + productnametxt.Text + "',`product_category`= '" + combo_category.Text + "',`prod_price`= '" + price + "',`merchant_id`= '" + loginform.UserDisplay.MerchantID + "',`status`='active' WHERE prod_id='" + prod_ID.Text + "'";
+
+                }
+                else {
+                    update_prod_img = "UPDATE `tbl_products` SET `prod_name`= '" + productnametxt.Text + "',`product_category`= '" + combo_category.Text + "',`prod_price`= '" + price + "',`merchant_id`= '" + loginform.UserDisplay.MerchantID + "',`product_icon`='"+ImgFile+ "', `status`='active' WHERE prod_id='" + prod_ID.Text + "'";
+                    addImage();
+                   
+                }
                 
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommand = new MySqlCommand(update_prod_img, conn);
 
 
-                string query = "UPDATE `tbl_products` SET `prod_name`= '"+ productnametxt.Text+"',`product_category`= '"+combo_category.Text+"',`prod_price`= '"+price+"',`merchant_id`= '"+loginform.UserDisplay.MerchantID+"' WHERE prod_id='"+prod_ID.Text+"'";
-                MySqlConnection conn = new MySqlConnection(mycon);
-                MySqlCommand mycommand = new MySqlCommand(query, conn);
 
+            MySqlDataReader myreader1;
 
-              
-                MySqlDataReader myreader1;
+            conn.Open();
+            clear();
 
-                conn.Open();
-                clear();
-
-                myreader1 = mycommand.ExecuteReader();
-                conn.Close();
-                uploadbtn.Enabled = true;
-
-
+            myreader1 = mycommand.ExecuteReader();
+            conn.Close();
 
                 productflowlayout.Controls.Clear();
+
                 displayProductsAll();
-                MessageBox.Show("Update Complete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
+                //MessageBox.Show("Update Complete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
 
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
-            }
 
+            }
 
         }
         private void btn_update_Click(object sender, EventArgs e)
@@ -747,18 +631,14 @@ namespace SOFOK_System
             }
             else {
 
-                var name = productnametxt.Text;
-               
-                if (name == prod_name)
-                {
-
+             
                     update_prod();
-                }
-                else {
-                    update_duplicate();
-                }
+                update_audit_merch();
+                MessageBox.Show("Update Complete Complete", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+
+
+
 
 
 
@@ -770,5 +650,362 @@ namespace SOFOK_System
         {
 
         }
+
+        private void btn_inactive_Click(object sender, EventArgs e)
+        {
+            inactive();
+        }
+        public void inactive() {
+            productflowlayout.Controls.Clear();
+            uploadbtn.Visible = false;
+            string query2 = "SELECT * FROM tbl_products INNER JOIN tbl_merchant ON tbl_products.merchant_id = tbl_merchant.merchant_id  WHERE tbl_products.merchant_id = '" + loginform.UserDisplay.MerchantID + "' and tbl_products.status='inactive'; ";
+            MySqlConnection conn = new MySqlConnection(mycon);
+            MySqlCommand mycommandfetch = new MySqlCommand(query2, conn);
+
+            MySqlDataReader myreaderfetch;
+
+            conn.Open();
+            myreaderfetch = mycommandfetch.ExecuteReader();
+            while (myreaderfetch.Read())
+            {
+                prod_name = myreaderfetch.GetString("prod_name");
+                String cat = myreaderfetch.GetString("product_category");
+                String merchant_store = myreaderfetch.GetString("merchant_store");
+                String store_name = myreaderfetch.GetString("merchant_store");
+                double price_prod = myreaderfetch.GetDouble("prod_price");
+                int prod_id = myreaderfetch.GetInt32("prod_id");
+                String icon = myreaderfetch.GetString("product_icon");
+
+                if (cat.Equals("Meal"))
+                {
+
+                    addproduct(prod_name, price_prod, categories.meal, icon, store_name, prod_id);
+                }
+                else if (cat.Equals("Drink"))
+                {
+                    addproduct(prod_name, price_prod, categories.drink, icon, store_name, prod_id);
+
+                }
+                else if (cat.Equals("Burger"))
+                {
+                    addproduct(prod_name, price_prod, categories.burger, icon, store_name, prod_id);
+                }
+
+                btn_active.Enabled = true;
+                btn_inactive.Enabled = false;
+                label3.Text = "Inactive Products";
+
+                btn_add_back.Visible = true;
+                btn_delete.Visible = false;
+                btn_update.Visible = false;
+                save_btn.Visible = false;
+
+
+            }
+
+        }
+
+        private void btn_active_Click(object sender, EventArgs e)
+        {
+            active();
+        }
+        public void active() {
+            uploadbtn.Visible = true;
+            label3.Text = "Active Products";
+            productflowlayout.Controls.Clear();
+            displayProductsAll();
+            btn_active.Enabled = false;
+            btn_inactive.Enabled = true;
+            btn_add_back.Visible = false;
+            btn_delete.Visible = true;
+            save_btn.Visible=true;
+            btn_update.Visible = true;
+
+        }
+        private void btn_add_back_Click(object sender, EventArgs e)
+        {
+      ;
+          
+            btn_delete.Enabled = false;
+            btn_update.Enabled = false;
+            save_btn.Enabled = true;
+
+            if (prodpricetxt.Text.Equals("") ||
+               productnametxt.Text.Equals(""))
+
+
+            {
+                MessageBox.Show("Please select product ", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Inactive Product added successfully!", "SoFOK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                update_prod();
+                active();
+                activate_audit_merch();
+            }
+          
+           
+
+        }
+
+
+        public void activate_audit_merch()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " " + ImgFile + " ");
+                }
+                else
+                {
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " ");
+                }
+
+
+
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','ACTIVATE  PRODUCT " + audit_info + "','Merchant Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+        public void insert_audit_merch()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = (""+lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " "+ prodpricetxt .Text+ " " + ImgFile + " " );
+                }
+                else
+                {
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text +  " ");
+                }
+
+
+            
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','ADD PRODUCT " + audit_info + "','Merchant Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+
+
+        public void update_audit_merch()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " " + ImgFile + " ");
+                }
+                else
+                {
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " ");
+                }
+
+
+
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','UPDATE PRODUCT " + audit_info + "','Merchant Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+        //remove
+
+        public void remove_audit_merch()
+        {
+
+            try
+            {
+                var ImgFile = Path.GetFileName(pathIMG);
+
+                if (ImgFile == null)
+                {
+
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " " + ImgFile + " ");
+                }
+                else
+                {
+                    audit_info = ("" + lbl_merchantname.Text + " " + productnametxt.Text + " " + combo_category.Text + " " + prodpricetxt.Text + " ");
+                }
+
+
+
+
+
+
+
+
+                string query = " INSERT INTO `tbl_audittrail`(`id`, `user`, `transaction_summary`, `module`)" +
+                        " VALUES ('','" + loginform.UserDisplay.email + "','REMOVE PRODUCT " + audit_info + "','Merchant Module')";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+                conn.Open();
+
+                myreader1 = mycommand.ExecuteReader();
+                conn.Close();
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
