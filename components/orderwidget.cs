@@ -16,7 +16,7 @@ namespace SOFOK_System.components
     public partial class orderwidget : UserControl
     {
 
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         //MySqlCommand cm;
         private int _id;
         String prod_name;

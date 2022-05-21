@@ -16,7 +16,7 @@ namespace SOFOK_System
     public partial class adminregistermerchant : Form
     {
         //set connection
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         String pathIMG;
         int merchant_id;
         public String gcash_image;

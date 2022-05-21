@@ -15,7 +15,7 @@ namespace SOFOK_System.Sofok_Merchants
 
     public partial class gcash : Form
     {
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         String imgprof;
         public gcash()
         {

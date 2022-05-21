@@ -15,7 +15,7 @@ namespace SOFOK_System
     {
         double total;
         public static double finaltot;
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         private double _cost;
         private double _id;
         public string s;

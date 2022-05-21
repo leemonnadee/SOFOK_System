@@ -20,7 +20,7 @@ namespace SOFOK_System
 {
     public partial class merchantsales : Form
     {
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         string show_data;
         String audit_info;
         public merchantsales()

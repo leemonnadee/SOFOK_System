@@ -16,7 +16,7 @@ namespace SOFOK_System
     {
        
         // setup connection  username , password and database
-        string mycon = "datasource='"+ connection.ipconnection+"';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         public loginform()
         {
             InitializeComponent();

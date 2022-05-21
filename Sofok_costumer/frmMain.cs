@@ -17,7 +17,7 @@ namespace SOFOK_System
 {
     public partial class frmMain : Form
     {
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
         //MySqlCommand cm;
         String prod_name;

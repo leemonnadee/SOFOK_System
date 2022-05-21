@@ -15,7 +15,7 @@ namespace SOFOK_System
     public partial class updateinfo_frm : Form
     {
         public static updateinfo_frm profie;
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         String update_query;
         String pathIMG;
         public string imgprof;

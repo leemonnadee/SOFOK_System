@@ -15,7 +15,7 @@ namespace SOFOK_System
 {
     public partial class merchantprofile : Form
     {
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         String pathIMG;
         public String imgprof;
         public static merchantprofile profile;

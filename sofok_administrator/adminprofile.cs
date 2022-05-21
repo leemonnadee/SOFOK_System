@@ -16,7 +16,7 @@ namespace SOFOK_System
 
 
         //set connection
-        string mycon = "datasource='" + connection.ipconnection + "';username=root;password=123456;database=sofok_db";
+        string mycon = connection.ipconnection;
         public string s;
         public adminprofile()
         {

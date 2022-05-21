@@ -9,6 +9,6 @@ namespace SOFOK_System
     public class connection
     {
 
-        public static string ipconnection = "192.168.100.179";
+        public static string ipconnection = "datasource=localhost;username=root;password=;database=sofok_db";
     }
 }
