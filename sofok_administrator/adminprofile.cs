@@ -331,7 +331,7 @@ namespace SOFOK_System
             try
             {
 
-                string query = " SELECT admin_id, name, birthdate, address, gender, contact,tbl_account.username, tbl_account.acc_id FROM `tbl_admin` INNER JOIN tbl_account ON tbl_admin.acc_id=tbl_account.acc_id where tbl_account.log_as='Administrator' and status='active'";
+                string query = " SELECT admin_id, name, birthdate, address, gender, contact,tbl_account.username, tbl_account.acc_id FROM `tbl_admin` INNER JOIN tbl_account ON tbl_admin.acc_id=tbl_account.acc_id where tbl_account.log_as='Administrator' and tbl_account.status='active'";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
