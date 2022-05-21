@@ -20,7 +20,7 @@ namespace SOFOK_System.Sofok_Merchants
         public gcash()
         {
             InitializeComponent();
-            frm_transparent();
+           // frm_transparent();
          
         }
         public void frm_transparent()

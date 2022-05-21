@@ -24,7 +24,7 @@ namespace SOFOK_System
         {
             InitializeComponent();
             profie = this;
-            frm_transparent();
+           // frm_transparent();
      
         }
         public void frm_transparent()
