@@ -72,7 +72,7 @@ namespace SOFOK_System
         private void merchantmainfrm_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            MessageBox.Show(loginform.UserDisplay.email);
+           // MessageBox.Show(loginform.UserDisplay.email);
 
         }
 
