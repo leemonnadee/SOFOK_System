@@ -33,8 +33,8 @@ namespace SOFOK_System.Sofok_Merchants
         public void btn_done_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 300, 250);
-           // printPreviewDialog1.ShowDialog();
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 200, 1000);
+            printPreviewDialog1.ShowDialog();
             printDocument1.Print();
             
 
@@ -123,8 +123,32 @@ namespace SOFOK_System.Sofok_Merchants
             RectangleF layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
 
             Brush brush = Brushes.Black;
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+
+            graphics.DrawString("", font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight14;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+
+            //line
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+
+            Offset = Offset + lineheight14;
+
             //title
-            graphics.DrawString("Welcome to SOFOK", font14, brush, layout, formatCenter);
+            graphics.DrawString("  SOFOK", font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight14;
+            
+
+            //line
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+
             Offset = Offset + lineheight14;
 
             //recipt no.
@@ -149,29 +173,81 @@ namespace SOFOK_System.Sofok_Merchants
 
 
 
-
+            Offset = Offset + lineheight14;
 
 
 
             //line
-            graphics.DrawString("".PadRight(46, '_'), font7, brush, layout, formatLeft);
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
             Offset = Offset + lineheight10;
             layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            Offset = Offset + lineheight14;
 
             //order num
-            graphics.DrawString(frmMain.tot.order_num+"", font25, brush, layout, formatCenter);
+            graphics.DrawString("   " + frmMain.tot.order_num+"", font25, brush, layout, formatLeft);
             Offset = Offset + lineheight14;
             layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
             graphics.DrawString("", font7, brush, layout, formatLeft);
             Offset = Offset + lineheight10;
             layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
 
             //order text
-            graphics.DrawString("Order Number", font12, brush, layout, formatCenter);
+            graphics.DrawString("  Order Number", font14, brush, layout, formatLeft);
             Offset = Offset + lineheight14;
             layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            Offset = Offset + lineheight14;
 
-       font10.Dispose(); font12.Dispose(); font14.Dispose(); font7.Dispose(); font25.Dispose();
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+
+            //line
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+
+            //line
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+
+            //line
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+            Offset = Offset + lineheight14;
+
+            //line
+            graphics.DrawString("".PadRight(46, '_'), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+            graphics.DrawString("".PadRight(46,'='), font25, brush, layout, formatLeft);
+            Offset = Offset + lineheight10;
+            layout = new RectangleF(new PointF(startX, startY + Offset), layoutSize);
+
+            font10.Dispose(); font12.Dispose(); font14.Dispose(); font7.Dispose(); font25.Dispose();
 
           ;
 
