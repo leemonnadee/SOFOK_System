@@ -34,7 +34,7 @@ namespace SOFOK_System.Sofok_Merchants
         {
             printPreviewDialog1.Document = printDocument1;
             printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 200, 1000);
-            printPreviewDialog1.ShowDialog();
+            //printPreviewDialog1.ShowDialog();
             printDocument1.Print();
             
 
