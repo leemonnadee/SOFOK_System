@@ -249,6 +249,11 @@ namespace SOFOK_System
         {
      
         }
+
+        private void bunifuPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
