@@ -60,14 +60,15 @@ namespace SOFOK_System
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::SOFOK_System.Properties.Resources.sofok_logo_gif;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(2, 77);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 95);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(412, 412);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(549, 507);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 1;
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.bunifuPictureBox1.Click += new System.EventHandler(this.bunifuPictureBox1_Click);
             // 
             // bunifuPanel1
             // 
@@ -84,11 +85,11 @@ namespace SOFOK_System
             this.bunifuPanel1.Controls.Add(this.passwordtxt);
             this.bunifuPanel1.Controls.Add(this.usernametxt);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuPanel1.Location = new System.Drawing.Point(414, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(552, 0);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(424, 612);
+            this.bunifuPanel1.Size = new System.Drawing.Size(565, 753);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // btn_login
@@ -100,10 +101,10 @@ namespace SOFOK_System
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(123, 501);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_login.Location = new System.Drawing.Point(164, 617);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(168, 46);
+            this.btn_login.Size = new System.Drawing.Size(224, 57);
             this.btn_login.TabIndex = 13;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = false;
@@ -127,18 +128,18 @@ namespace SOFOK_System
             this.btn_exit.ImageActive = null;
             this.btn_exit.ImageLocation = null;
             this.btn_exit.ImageMargin = 20;
-            this.btn_exit.ImageSize = new System.Drawing.Size(18, 21);
-            this.btn_exit.ImageZoomSize = new System.Drawing.Size(38, 41);
+            this.btn_exit.ImageSize = new System.Drawing.Size(31, 30);
+            this.btn_exit.ImageZoomSize = new System.Drawing.Size(51, 50);
             this.btn_exit.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.InitialImage")));
-            this.btn_exit.Location = new System.Drawing.Point(384, 2);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_exit.Location = new System.Drawing.Point(512, 2);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Rotation = 0;
             this.btn_exit.ShowActiveImage = true;
             this.btn_exit.ShowCursorChanges = true;
             this.btn_exit.ShowImageBorders = true;
             this.btn_exit.ShowSizeMarkers = false;
-            this.btn_exit.Size = new System.Drawing.Size(38, 41);
+            this.btn_exit.Size = new System.Drawing.Size(51, 50);
             this.btn_exit.TabIndex = 12;
             this.btn_exit.ToolTipText = "";
             this.btn_exit.WaitOnLoad = false;
@@ -155,10 +156,10 @@ namespace SOFOK_System
             this.bunifuPictureBox3.BorderRadius = 0;
             this.bunifuPictureBox3.Image = global::SOFOK_System.Properties.Resources.password;
             this.bunifuPictureBox3.IsCircle = false;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(38, 303);
-            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(51, 373);
+            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(33, 27);
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(44, 33);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox3.TabIndex = 10;
             this.bunifuPictureBox3.TabStop = false;
@@ -173,10 +174,10 @@ namespace SOFOK_System
             this.bunifuPictureBox2.BorderRadius = 0;
             this.bunifuPictureBox2.Image = global::SOFOK_System.Properties.Resources.user;
             this.bunifuPictureBox2.IsCircle = false;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(38, 207);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(51, 255);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(33, 27);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(44, 33);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox2.TabIndex = 9;
             this.bunifuPictureBox2.TabStop = false;
@@ -211,8 +212,8 @@ namespace SOFOK_System
             this.passwordtxt.IconRight = null;
             this.passwordtxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.passwordtxt.Lines = new string[0];
-            this.passwordtxt.Location = new System.Drawing.Point(91, 284);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.passwordtxt.Location = new System.Drawing.Point(121, 350);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.passwordtxt.MaxLength = 32767;
             this.passwordtxt.MinimumSize = new System.Drawing.Size(1, 1);
             this.passwordtxt.Modified = false;
@@ -238,7 +239,7 @@ namespace SOFOK_System
             stateProperties4.ForeColor = System.Drawing.Color.DimGray;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.passwordtxt.OnIdleState = stateProperties4;
-            this.passwordtxt.Padding = new System.Windows.Forms.Padding(4);
+            this.passwordtxt.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.passwordtxt.PasswordChar = '●';
             this.passwordtxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.passwordtxt.PlaceholderText = "Password";
@@ -248,7 +249,7 @@ namespace SOFOK_System
             this.passwordtxt.SelectionLength = 0;
             this.passwordtxt.SelectionStart = 0;
             this.passwordtxt.ShortcutsEnabled = true;
-            this.passwordtxt.Size = new System.Drawing.Size(243, 51);
+            this.passwordtxt.Size = new System.Drawing.Size(324, 63);
             this.passwordtxt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.passwordtxt.TabIndex = 7;
             this.passwordtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -288,8 +289,8 @@ namespace SOFOK_System
             this.usernametxt.IconRight = null;
             this.usernametxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.usernametxt.Lines = new string[0];
-            this.usernametxt.Location = new System.Drawing.Point(91, 197);
-            this.usernametxt.Margin = new System.Windows.Forms.Padding(4);
+            this.usernametxt.Location = new System.Drawing.Point(121, 242);
+            this.usernametxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.usernametxt.MaxLength = 32767;
             this.usernametxt.MinimumSize = new System.Drawing.Size(1, 1);
             this.usernametxt.Modified = false;
@@ -315,7 +316,7 @@ namespace SOFOK_System
             stateProperties8.ForeColor = System.Drawing.Color.DimGray;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.usernametxt.OnIdleState = stateProperties8;
-            this.usernametxt.Padding = new System.Windows.Forms.Padding(4);
+            this.usernametxt.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.usernametxt.PasswordChar = '\0';
             this.usernametxt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.usernametxt.PlaceholderText = "email";
@@ -325,7 +326,7 @@ namespace SOFOK_System
             this.usernametxt.SelectionLength = 0;
             this.usernametxt.SelectionStart = 0;
             this.usernametxt.ShortcutsEnabled = true;
-            this.usernametxt.Size = new System.Drawing.Size(243, 51);
+            this.usernametxt.Size = new System.Drawing.Size(324, 63);
             this.usernametxt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.usernametxt.TabIndex = 6;
             this.usernametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -338,14 +339,14 @@ namespace SOFOK_System
             // 
             // loginform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(44)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(838, 612);
+            this.ClientSize = new System.Drawing.Size(1117, 753);
             this.Controls.Add(this.bunifuPictureBox1);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "loginform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
