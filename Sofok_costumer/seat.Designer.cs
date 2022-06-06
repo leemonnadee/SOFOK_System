@@ -29,9 +29,10 @@ namespace SOFOK_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(seat));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.dine_in = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel10 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -67,6 +68,8 @@ namespace SOFOK_System
             this.label17 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel10.SuspendLayout();
             this.bunifuPanel11.SuspendLayout();
@@ -142,11 +145,11 @@ namespace SOFOK_System
             this.dine_in.ColorContrastOnClick = 45;
             this.dine_in.ColorContrastOnHover = 45;
             this.dine_in.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.dine_in.CustomizableEdges = borderEdges1;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.dine_in.CustomizableEdges = borderEdges7;
             this.dine_in.DialogResult = System.Windows.Forms.DialogResult.None;
             this.dine_in.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.dine_in.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -606,11 +609,11 @@ namespace SOFOK_System
             this.dine_out.ColorContrastOnClick = 45;
             this.dine_out.ColorContrastOnHover = 45;
             this.dine_out.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.dine_out.CustomizableEdges = borderEdges2;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.dine_out.CustomizableEdges = borderEdges8;
             this.dine_out.DialogResult = System.Windows.Forms.DialogResult.None;
             this.dine_out.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.dine_out.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -733,6 +736,16 @@ namespace SOFOK_System
             this.label16.TabIndex = 20;
             this.label16.Text = "Legend";
             // 
+            // serialPort1
+            // 
+            this.serialPort1.PortName = "COM5";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // seat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,5 +826,7 @@ namespace SOFOK_System
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 dine_in;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
