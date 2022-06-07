@@ -94,7 +94,8 @@ namespace SOFOK_System
 
 
 
-                //Dine in dissabler
+                //DISSABLES DINE IN OPTIONS
+
                 if (a == 4)
                 {
 

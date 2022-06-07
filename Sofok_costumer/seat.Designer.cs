@@ -31,8 +31,8 @@ namespace SOFOK_System
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(seat));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.dine_in = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel10 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -145,11 +145,11 @@ namespace SOFOK_System
             this.dine_in.ColorContrastOnClick = 45;
             this.dine_in.ColorContrastOnHover = 45;
             this.dine_in.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.dine_in.CustomizableEdges = borderEdges7;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.dine_in.CustomizableEdges = borderEdges1;
             this.dine_in.DialogResult = System.Windows.Forms.DialogResult.None;
             this.dine_in.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.dine_in.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -307,7 +307,7 @@ namespace SOFOK_System
             // bunifuPanel13
             // 
             this.bunifuPanel13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel13.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.bunifuPanel13.BackgroundColor = System.Drawing.Color.LightCoral;
             this.bunifuPanel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel13.BackgroundImage")));
             this.bunifuPanel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel13.BorderColor = System.Drawing.Color.Transparent;
@@ -335,7 +335,7 @@ namespace SOFOK_System
             // bunifuPanel6
             // 
             this.bunifuPanel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel6.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.bunifuPanel6.BackgroundColor = System.Drawing.Color.LightCoral;
             this.bunifuPanel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel6.BackgroundImage")));
             this.bunifuPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel6.BorderColor = System.Drawing.Color.Transparent;
@@ -363,7 +363,7 @@ namespace SOFOK_System
             // bunifuPanel7
             // 
             this.bunifuPanel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel7.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.bunifuPanel7.BackgroundColor = System.Drawing.Color.LightCoral;
             this.bunifuPanel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel7.BackgroundImage")));
             this.bunifuPanel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel7.BorderColor = System.Drawing.Color.Transparent;
@@ -391,7 +391,7 @@ namespace SOFOK_System
             // bunifuPanel8
             // 
             this.bunifuPanel8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel8.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.bunifuPanel8.BackgroundColor = System.Drawing.Color.LightCoral;
             this.bunifuPanel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel8.BackgroundImage")));
             this.bunifuPanel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel8.BorderColor = System.Drawing.Color.Transparent;
@@ -419,7 +419,7 @@ namespace SOFOK_System
             // bunifuPanel9
             // 
             this.bunifuPanel9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel9.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.bunifuPanel9.BackgroundColor = System.Drawing.Color.LightCoral;
             this.bunifuPanel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel9.BackgroundImage")));
             this.bunifuPanel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel9.BorderColor = System.Drawing.Color.Transparent;
@@ -609,11 +609,11 @@ namespace SOFOK_System
             this.dine_out.ColorContrastOnClick = 45;
             this.dine_out.ColorContrastOnHover = 45;
             this.dine_out.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.dine_out.CustomizableEdges = borderEdges8;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.dine_out.CustomizableEdges = borderEdges2;
             this.dine_out.DialogResult = System.Windows.Forms.DialogResult.None;
             this.dine_out.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.dine_out.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
